@@ -1,0 +1,300 @@
+\documentclass[12pt,a4paper,oneside]{article}
+\usepackage{amsmath,amsthm,amsfonts,amssymb}
+\usepackage{pst-eucl,pstricks,pstricks-add}
+%\usepackage[utf8]{inputenc}
+\usepackage[latin1]{inputenc}
+\usepackage[spanish,activeacute]{babel}
+\usepackage[a4paper,margin=2.5cm]{geometry}
+\usepackage{times}
+\usepackage[T1]{fontenc}
+\usepackage{titlesec}
+\usepackage{color}
+\usepackage{url}
+\usepackage{float}
+\usepackage{cite}
+\usepackage{graphicx}
+%\usepackage{lipsum}
+\usepackage{multicol}
+\usepackage{lmodern}
+
+\newcommand{\code}[1]{\fcolorbox{blue!80}{gray!10}{#1}}
+
+\parindent=0mm
+
+%\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+%\newenvironment{Shaded}{}{}
+
+\begin{document}
+\pagecolor[gray]{0.95}
+% Portada
+\begin{titlepage}
+\begin{center}
+~\\[3cm]
+\textbf{\Huge \textcolor{blue!90}{\fontsize{12mm}{5em}\selectfont SOURCE STAT LAB}}\vspace{0.6cm}\\
+\textbf{\Large \textcolor{blue}{Training, Reporting and Consultancy}}\vspace{4cm}\\
+\textbf{\huge CURSO:} \vspace{0.6cm}\\
+\textbf{\Large Introducción al programa estadístico R} \vspace{4cm}\\
+\textbf{\Large Programa de capacitación para estudiantes universitarios}\vspace{2cm}\\
+\includegraphics[scale=.7]{logo_source.eps}
+\vspace{1.5cm}
+
+\textbf{\Large Quito, Enero 2015}
+\end{center}
+\end{titlepage}
+
+\pagecolor{white}
+%Derechos
+
+% Contenidos
+
+\tableofcontents
+\newpage
+
+\section{Introducción}
+
+El programa R es un software libre distribuido bajo GNU General Public License  muy utilizado por la comunidad científica el cual es considerado un lenguaje de comandos de manipulación y análisis estadístico debido a la gran variedad de métodos estadísticos que cubre, así como a las capacidades gráficas que ofrece. R fue desarrollado en el año 1993 por los profesores del Departamento de Estadística {\bf Ross Ihaka} y {\bf Robert Gentleman} de la Universidad de Aukland, se distribuye gratuitamente desde 1995 a través del repositorio \emph{Comprehensive R Archive Network} (CRAN) en \url{http://www.r-project.org} su mantenimiento se encuentra a cargo del grupo {\bf R Core Team} desde el año 1997 asistido por una gran cantidad de colaboradores internacionales. \newline
+
+Por otra parte, R es considerado la versión libre del programa comercial S-Plus, el cual fue desarrollado para AT$\&$T Bell Laboratories por John M. Chambers en el año 1988, aunque son evidentes las diferencias entre R y S, la gran mayoría del código escrito para S funciona sin inconvenientes en R.\newline
+
+Dadas su características R tiene gran potencial para ser utilizado en diferentes áreas de la estadística, simulación, reportería dinámica, biomatemática, minería de datos, big data, etc. Al ser un software libre puede ser instalado en diversas plataformas y sistemas operativos: Windows, Linux, Mac OS X y Unix.\newline
+
+El mayor inconveniente para los nuevos usuarios es adaptarse a su interfaz gráfica que para muchos es \emph{poco amigable}, en el sentido que se deben tipear las funciones predefinidas o a su vez programar las funciones nuevas a diferencia de programas clásicos como SPSS, STATA, etc. en los cuales se tienen botones o ventanas que despliegan opciones de análisis para el usuario. \newline
+
+Dada la popularidad que ha adquirido R en los últimos años se han desarrollado varias interfaces gráficas libres  GUIS's (Grafical User Interface) con el fin de volver más amigable la interacción con el usuario. Entre las interfaces más populares y utilizadas por la comunidad R se encuentran:
+\begin{multicols}{3}
+\begin{itemize}
+  \item RStudio
+  \item Rattle
+  \item Deducer
+  \item RKWard
+  \item Eclipse
+  \item Knime
+  \item R Analytic Flow
+  \item JGR
+  \item ESS
+  \item Red -R
+  \item R Commander
+\end{itemize}
+\end{multicols}
+
+R al ser un programa GPL carece de soporte técnico, sin embargo, en la actualidad existen empresas que proveen varios tipos de soportes para R bajo pago. Entre las más destacadas se encuentran:
+\begin{multicols}{2}
+\begin{itemize}
+  \item Revolution Analytics, Inc.
+  \item RStudio, Inc.
+  \item XL - Solutions Corporation.
+\end{itemize}
+\end{multicols}
+
+\section{Funcionamiento}
+
+R es un lenguaje orientado a objetos (OOP) dise\~nado en un entorno auténtico bajo el cual esconde su simplicidad y flexibilidad, lo cual permite a sus usuarios a\~nadir funcionalidad mediante la definición de nuevas \emph{funciones}. El término \emph{orientado a objetos} significa que las variables, datos, funciones, resultados, etc., se guardan en la memoria activa del computador en forma de objetos con un nombre específico y pueden ser modificados o manipulados por el usuario mediante operadores y funciones. El uso y funcionamiento de los operadores en R es bastante intuitivo y se lo verá a detalle más adelante.\newline
+
+El hecho que R sea un lenguaje de programación puede desmotivar a muchos usuarios los cuales piensan que para iniciarse en el programa se necesita \emph{alma de programador} lo cual no es cierto. Primero R es un lenguaje interpretado similar a Java, y segundo no es un lenguaje compilado a diferencia de C, C++, Fortran, Pascal, ect. sino más bien mediante comandos ingresados por teclado ejecutamos directamente sin necesidad de construir ejecutables.\newline
+
+El programa R incluye 8 bibliotecas o paquetes estándar, sin embargo, las capacidades de R pueden ser ampliadas fácilmente mediante la incorporación de paquetes que se encuentran disponibles en varios repositorios como:
+\begin{multicols}{2}
+\begin{itemize}
+  \item CRAN
+  \item BioConductor
+  \item Omegahat
+  \item RForge, entre otros.
+\end{itemize}
+\end{multicols}
+
+Los paquetes estándar de R pueden visualizarse al teclear \code{\texttt{search()}}
+
+<<>>=
+search()
+@
+
+En la actualidad\footnote{Información obtenida al 24 de Octubre 2014.} existen 5986 paquetes válidos en el repositorio CRAN, los cuáles se encuentran ordenados por fecha de publicación o alfabéticamente agrupadas en diversas líneas de investigación.
+
+\section{Ventajas}
+
+Entre las principales ventajas que posee el software R podemos anotar lo siguiente:
+\begin{itemize}
+  \item Al tratarse de un software libre el costo es nulo.
+  \item Se han implementado una gran cantidad de métodos estadísticos desde los más básicos hasta los más avanzados y modernos. Todos los métodos se encuentran organizados en librerías, las cuales se encuentran en constante crecimiento.
+  \item Tiene la capacidad para acceder a datos de múltiples formatos. En la actualidad existen varias librerias para leer datos desde SPSS, SAS, STATA, MySQL, Excel, etc.
+  \item Gran capacidad para la manipulación de datos y funciones, así como para la generación de gráficos de alta calidad.
+  \item Facilidad para enlazarse con LaTeX y generar reportes dinámicos.
+  \item Amplia bibliografía tanto en internet como en libros publicados por prestigiosas editoriales como: Springer, Wiley, O'Reilly, Chapman $\&$ Hall/CRC, etc.
+  \item Fácil visualización e interpretación de los algoritmos implementados en R con lo cual el usuario puede conocer exactamente lo que el ordenador ejecuta con cada comando.
+  \item Permite visualizar los algoritmos en él implementados, modificarlos y ajustarlos a nuestras necesidades (esto no es permitido en los softwares licenciados).
+\end{itemize}
+
+\section{Desventajas}
+
+Los inconvenientes a los cuales se deben enfrentar los usuarios de R son:
+\begin{itemize}
+  \item Al ser un programa libre carece de un departamento de atención al cliente al cual se pueda recurrir en caso de que se reporte un inconveniente con el mismo. Sin embargo existe una comunidad en crecimiento de usuarios de R que se encuentran dispuestos a colaborar desinteresadamente en la resolución de problemas.
+  \item El software R como tal no dispone de una interfaz amigable para el usuario, las tareas se llevan a cabo a través de líneas de comando lo cual puede resultar difícil para el usuario común. No obstante con el desarrollo de GUI's se ha facilitado en gran medida la experiencia del programa con el usuario común.
+  \item El código en R es interpretado, no compilado, lo cual puede ocasionar una ejecución lenta en ocasiones en las que se realizan simulaciones intensas. Con el fin de remediar lo anterior el grupo R Core Team a partir de la versión 2.14 ha precompilado todas las funciones y librerías de R con el objetivo de acelerar la ejecución.
+\end{itemize}
+
+\section{Instalación y actualización}
+
+\subsection{Software R}
+
+La instalación del software R se describe en los siguientes pasos:
+\begin{enumerate}
+  \item Accedemos al repositorio de la CRAN a través de un navegador tecleando la dirección: \url{http://cran.es.r-project.org/}.
+  \item Nos dirigimos a la parte superior de la página, y nos ubicamos en \texttt{Download and install R} seguido elegimos el sistema operativo. Para nuestro caso hacemos click en \texttt{Windows}.
+  \item A continuación elegimos entre los 2 subdirectorios: \texttt{base} y \texttt{control}. Damos click sobre \texttt{base}.
+  \item Finalmente, en la pantalla damos click sobre \texttt{Download R X.Y.Z for Windows}, con lo cual descargamos la versión de R más reciente.
+\end{enumerate}
+
+En la actualidad, el software R puede ser instalado incluso sobre la plataforma Android\footnote{\url{https://play.google.com/store/apps/details?id=com.appsopensource.R&hl=es_419}}, esto permite que muchos usuarios puedan tener el programa al alcance y en todo momento con tan sólo tener un smartphone operativo.
+
+\subsection{Instalación de paquetes}
+
+Como habíamos señalado en la sección anterior, una de las principales ventajas de R es su capacidad para incrementar su funcionalidad mediante la incorporación de nuevos paquetes o librerías.\newline
+
+Para entender de mejor manera la necesidad de emplear paquetes en R usaremos la siguiente metáfora: Imaginemos que tener instalado el programa en el computador es como haber adquirido un auto nuevo el cual cumple con ciertas funciones principales y no trae contratiempos, una vez que lo empezamos a rodar nos vamos dando cuenta de la necesidad de mejorar el rendimiento de ciertos mecanismos ya existentes del auto debido que lo vamos exponiendo a diferentes ambientes y condiciones. Lo anterior pasa exactamente con R, cuando  descargamos e instalamos el sotfware contamos con ciertas características y paquetes básicos pero existen miles de paquetes adicionales que pueden ser agregados para lograr mejorar su funcionalidad y a la vez realizar cosas estupendas.
+
+\subsubsection{Repositorio CRAN}
+
+La instalación de paquetes en R desde el repositorio CRAN es sencillo, una vez conocido el nombre del paquete ha ser instalado basta con introducir el siguiente comando en la consola:
+<<eval=FALSE>>=
+install.packages("nombre_paquete")
+@
+Ciertos paquetes de R requieren la instalación de otros paquetes adicionales debido que entre estos comparten algunas funciones (\emph{paquetes sugeridos}) para evitar tener inconvenientes con la instalación de un paquete se aconseja adicionar el parametro siguiente: 
+<<eval=FALSE>>=
+install.packages("nombre_paquete", dependencies=TRUE)
+@
+En el caso que se desee instalar un lista de $n$ paquetes planteamos la siguiente solución:
+<<eval=FALSE>>=
+paquetes <- c("pckg_1","pckg_2", ... , "pckg_n")
+lapply(seq_along(paquetes), function(i){
+      install.packages(paquetes[[i]], dependencies=TRUE)
+      })
+@
+
+Una segunda alternativa al momento de instalar los paquetes de R consiste en obtener el archivo zipeado (.zip) desde el repositorio CRAN e instalarlo manualmente a través del menú del programa.\newline
+
+Una vez instalado un paquete el paso siguiente consiste en cargar las funciones y datos del mismo dentro del área de trabajo, para esto tenemos dos comandos útiles: \code{\texttt{library()}} y \code{\texttt{require()}}, sin embargo lo más recomendable es utilizar el primero de ellos como se detalla a continuación:
+
+<<eval=FALSE>>=
+library('translate2R')
+
+## Error in library("translate2R") : 
+## there is no package called ‘translate2R’
+
+require('translate2R')
+
+## Loading required package: translate2R
+## Warning message:
+## In library(package, lib.loc=lib.loc, character.only=TRUE,
+##          logical.return=TRUE,  
+##         : there is no package called ‘translate2R’
+@
+
+Para mostrar la diferencia entre de los comandos anteriores trataremos de cargar el paquete \texttt{translate2R}, el mismo que no ha sido descargado previamente. Al emplear \texttt{library} observamos que nos arroja un error, mientras que al emplear \texttt{require} únicamente tenemos una advertencia. En el caso puntual que nos encontremos trabajando en un script la segunda opción nos causaría serios problemas dado que permite continuar con la ejecución del proceso sin que el usuario se percate, mientras que la primera opción alerta al usuario. Por todo lo antes mencionado la gran mayoría de usuarios R prefieren usar el comando \texttt{library}.\newline
+
+Si deseamos visualizar el listado completo de los paquetes instalados podemos recurrir al comando \code{\texttt{library()}}. Además, si deseamos conocer el lugar en el cual se instalan los paquetes podemos hacer lo siguiente:
+<<>>=
+.libPaths()
+@
+
+En algunas ocasiones los usuarios desean descargar los paquetes de R en una carpeta específica (C:/pckg\_down) e instalar los paquetes en otra carpeta diferente (D:/pckg\_inst), a continuación mostramos una posible solución al problema:
+<<eval=FALSE>>=
+install.packages("pckgs", destdir="C:/pckg_down", lib="D:/pckg_inst")
+library("pckgs",lib.loc="D:/pckg_inst")
+@
+Conocer la totalidad de paquetes que se encuentran albergados en la CRAN, y a su vez verificar cuales de ellos se encuentran válidos y disponibles para su uso es posible mediante los siguientes comandos:
+<<eval=FALSE>>=
+installed.packages()
+available.packages()
+@
+En el caso que se requiera conocer los paquetes que se encuentra cargados en el área de trabajo emplearemos el siguiente comando:
+<<>>=
+sessionInfo()
+@
+El comando anterior imprime información acerca de la versión y plataforma del ejecutable de R que se encuentra utilizando, adicionalmente muestra información de la localidad y de los paquetes adjuntos o cargados.
+
+\subsubsection{Repositorios externos}
+
+Habiamos comentado sobre la existencia de varios repositorios adicionales al CRAN de entre los cuales destacan R-Forge\footnote{Sistema para el desarrollo y versionamiento de paquetes en R.}, BioConductor\footnote{Subproyecto dedicado a la investigación en bioestadística.} y Omegahat\footnote{Subproyecto dedicado al desarrollo de interfaces para la programación estadística basado en Java.}, dentro de estos repositorios se pueden encontrar paquetes que no se encuentran en el CRAN, o bien, versiones más actualizadas de los mismos.\newline
+
+Para instalar los paquetes desde los repositorios externos antes mencionados basta la siguiente sentencia:
+<<eval=FALSE>>=
+install.packages("pckgname", repos="http://r-forge.r-project.org")
+install.packages("pckgname", repos="http://www.omegahat.org/R")
+install.packages("pckgname", repos="http://r-forge.r-project.org")
+@
+Algunos de los paquetes se encuentran en formato binario, para su instalación basta adicionar el parámetro \texttt{type="source"}.
+
+\subsubsection{Github}
+
+En la actualidad gran cantidad de usuarios R han alojado sus proyectos en el sistema de control de versiones GitHub, Inc. por lo cual se hace necesario contar con una solución al momento de instalar algún paquete alojado en dicho sistema. Nuestra solución consiste en lo siguiente:
+<<eval=FALSE>>=
+install.packages('devtools', dependencies=TRUE)
+devtools::install_github("rstudio/rmarkdown")
+@
+Iniciamos instalando el paquete \texttt{devtools} el cual nos provee la función \texttt{install\_github}, esta última es la encargada de acceder al sistema Github e instala el paquete deseado, para esta ocasión hemos seleccionado el paquete \texttt{rmarkdown} alojado en el repositorio Github dentro del proyecto \texttt{rstudio}.\newline
+
+En el caso que se requiera información acerca de un paquete previamente instalado podemos recurrir a:
+<<eval=FALSE>>=
+library(help='pckgname')
+@
+También podemos enlistar todas las funciones que han sido implementadas dentro de un paquete como muestra el siguiente ejemplo:
+<<eval=TRUE>>=
+library(foreign)
+ls('package:foreign')
+@
+Si deseamos conocer los parámetros de cada una de las funciones implementadas dentro de un paquete podemos recurrir a lo siguiente:
+<<eval=FALSE>>=
+lsf.str('package:foreign')
+@
+
+\subsection{Actualización de paquetes}
+
+En el caso que se desee actualizar todos los paquetes previamente instalados contamos con el comando \texttt{update.packages}, el mismo que revisa las actualizaciones de los paquetes. El anterior comando nos preguntará si deseamos actualizar uno por uno los paquetes, lo cual es tedioso pues si contamos con un gran número de paquetes nos demandará bastante tiempo aprobar la actualización de los mismos. Para subsanar lo anterior basta añadir el parámetro \texttt{ask = TRUE}.
+<<eval=FALSE>>=
+update.packages(ask=TRUE)
+@
+En el caso que se desee conocer únicamente los paquetes que fueron instalados previamente y en la actualidad constan con un versionamiento emplearemos lo siguiente:
+<<eval=FALSE>>=
+old.packages()
+@
+El comando anterior nos mostrará la versión del paquete que ha sido instalada y la última versión disponible del mismo.
+
+\subsection{Actualización de R}
+
+Mantener actualizado R y sus paquetes es relativamente fácil a través del tecleo de los siguientes comandos en la consola, los mismos que se detallan a continuación:
+<<eval=FALSE>>=
+install.packages('installr', dependencies = TRUE)
+library('installr')
+updateR()
+@
+
+Iniciamos instalando el paquete \textbf{installr}, acto seguido procedemos a cargar el paquete a través del comando \texttt{library}, y finalmente, mediante el comando \texttt{updateR} verificamos la versión más reciente del programa  y descargamos la misma.
+
+
+\subsection{RStudio}
+
+RStudio es un IDE (Integrated Development Enviroment o Entorno de Desarrollo Integrado) de código abierto para R, lanzando en Febrero 2011. Reúne todas las características que acabamos de citar, a las que se une una muy interesante organización del escritorio de trabajo, que nos muestra un entorno muy compacto con una ventana de edición, otra de resultados, otra para gráficos y una cuarta para la gestión de variables en memoria. Asimismo los menús de ayuda y la descarga de librarías se organizan en pestañas fácilmente accesibles. Cuenta además con la ventaja de ser multiplataforma, lo que significa que existem versiones para Windows, Linux y Mac. En la figura podemos ver el aspecto de RStudio. Este programa puede descargarse libremente de la web \url{http://www.rstudio.org/}. La organización del escritorio y la excelente integración con R hacen muy recomendable el uso de este programa.
+
+
+
+% Revisar John Verzanni - RStudio
+
+\section{Estructura de datos}
+
+
+En este capítulo se resumen las estructuras de datos más importantes en la base de R. Usted probablemente ha utilizado muchos (si no todos) de ellos antes, pero no puede haber pensado profundamente acerca de la forma en que se relacionan entre sí. En este breve resumen, no voy a discutir los tipos individuales en profundidad. En su lugar, te voy a mostrar cómo encajan entre sí como un todo. Si usted necesita más detalles, puede encontrarlos en la documentación del R.
+
+Estructuras de datos de base de R pueden ser organizados por su dimensionalidad (1d, 2d, o sin fecha) y si son homogéneos (todos los contenidos deben ser del mismo tipo) o heterogéneo (el contenido puede ser de diferentes tipos). Esto da lugar a los cinco tipos de datos más a menudo utilizados en el análisis de datos:
+
+\subsection{Vectores}
+
+\subsection{Matrices $\&$ Arrays}
+
+\subsection{Data Frames}
+
+
+
+
+
+\end{document}
