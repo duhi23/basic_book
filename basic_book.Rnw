@@ -284,10 +284,27 @@ RStudio es un IDE (Integrated Development Enviroment o Entorno de Desarrollo Int
 
 En las secciones anteriores mencionamos que R es un lenguaje de programación orientada a objetos, por lo que cualquier cosa que exista en R (variables, datos, funciones, etc.) es un objeto.\newline
 
-Los nombres que se les asigna a los objetos en R pueden ser de cualquier longitud y éstos pueden combinar letras, números y caracteres especiales tales como: "_", ",", "." la única exigencia al momento de asignar un nombre a un objeto es que el mismo inicie con una letra. Aunque se recomienda en lo posible no hacer uso del caracter "." debido que el mismo tiene una funcionalidad más avanzada que será detallada más adelante.  
+Los nombres que se les asigna a los objetos en R pueden ser de cualquier longitud y éstos pueden combinar letras, números y caracteres especiales (coma, punto, guión bajo, etc.), la única exigencia al momento de asignar un nombre a un objeto es que el mismo inicie con una letra.\newline
 
+La construcción explícita de un objeto nos proporcionará un mejor entendimiento de su estructura, y nos permitirá ahondar en algunas nociones mencionadas previamente.
 
 \subsection{Estructura de datos}
+
+R cuenta con una variedad de estructuras de datos tales como: vectores, factores, data frames, matrices, arrays y listas, las mismas que son detalladas a continuación:
+
+\subsubsection{Vectores}
+Son objetos que contienen un conjunto de valores llamados \emph{elementos} y consta de dos parámetros o argumentos: \texttt{mode}, \texttt{length}. El primero de los argumentos especifica el tipo de elementos que serán almacenados de entre los cuales destacan los tipos numéricos, booleanos y caracteres.
+
+\subsubsection{Factores}
+
+
+%elementos pueden ser de tipo num´erico, l´ogico o caracter dependiendo del argumento especificado
+%en mode (0, FALSE o “ ” respectivamente). Las siguientes funciones tienen exactamente
+%el mismo efecto y tienen un solo argumento (la longitud del vector): numeric(),
+%logical(), y character().
+
+
+
 
 
 En este capítulo se resumen las estructuras de datos más importantes en la base de R. Usted probablemente ha utilizado muchos (si no todos) de ellos antes, pero no puede haber pensado profundamente acerca de la forma en que se relacionan entre sí. En este breve resumen, no voy a discutir los tipos individuales en profundidad. En su lugar, te voy a mostrar cómo encajan entre sí como un todo. Si usted necesita más detalles, puede encontrarlos en la documentación del R.
