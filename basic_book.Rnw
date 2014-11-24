@@ -280,7 +280,14 @@ RStudio es un IDE (Integrated Development Enviroment o Entorno de Desarrollo Int
 
 % Revisar John Verzanni - RStudio
 
-\section{Estructura de datos}
+\section{Conceptos básicos de programación}
+
+En las secciones anteriores mencionamos que R es un lenguaje de programación orientada a objetos, por lo que cualquier cosa que exista en R (variables, datos, funciones, etc.) es un objeto.\newline
+
+Los nombres que se les asigna a los objetos en R pueden ser de cualquier longitud y éstos pueden combinar letras, números y caracteres especiales tales como: "_", ",", "." la única exigencia al momento de asignar un nombre a un objeto es que el mismo inicie con una letra. Aunque se recomienda en lo posible no hacer uso del caracter "." debido que el mismo tiene una funcionalidad más avanzada que será detallada más adelante.  
+
+
+\subsection{Estructura de datos}
 
 
 En este capítulo se resumen las estructuras de datos más importantes en la base de R. Usted probablemente ha utilizado muchos (si no todos) de ellos antes, pero no puede haber pensado profundamente acerca de la forma en que se relacionan entre sí. En este breve resumen, no voy a discutir los tipos individuales en profundidad. En su lugar, te voy a mostrar cómo encajan entre sí como un todo. Si usted necesita más detalles, puede encontrarlos en la documentación del R.
@@ -288,6 +295,8 @@ En este capítulo se resumen las estructuras de datos más importantes en la bas
 Estructuras de datos de base de R pueden ser organizados por su dimensionalidad (1d, 2d, o sin fecha) y si son homogéneos (todos los contenidos deben ser del mismo tipo) o heterogéneo (el contenido puede ser de diferentes tipos). Esto da lugar a los cinco tipos de datos más a menudo utilizados en el análisis de datos:
 
 \subsection{Vectores}
+
+
 
 \subsection{Matrices $\&$ Arrays}
 
