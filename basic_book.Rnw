@@ -1,8 +1,8 @@
 \documentclass[12pt,a4paper,oneside]{article}
 \usepackage{amsmath,amsthm,amsfonts,amssymb}
 \usepackage{pst-eucl,pstricks,pstricks-add}
-%\usepackage[utf8]{inputenc}
-\usepackage[latin1]{inputenc}
+\usepackage[utf8]{inputenc}
+%\usepackage[latin1]{inputenc}
 \usepackage[spanish,activeacute]{babel}
 \usepackage[a4paper,margin=2.5cm]{geometry}
 \usepackage{times}
@@ -35,7 +35,7 @@
 \textbf{\huge CURSO:} \vspace{0.6cm}\\
 \textbf{\Large Introducción al programa estadístico R} \vspace{4cm}\\
 \textbf{\Large Programa de capacitación para estudiantes universitarios}\vspace{2cm}\\
-\includegraphics[scale=.7]{logo_source.eps}
+%\includegraphics[scale=.7]{logo_source.eps}
 \vspace{1.5cm}
 
 \textbf{\Large Quito, Enero 2015}
@@ -86,7 +86,7 @@ R al ser un programa GPL carece de soporte técnico, sin embargo, en la actualid
 \end{itemize}
 \end{multicols}
 
-\section{Funcionamiento}
+\subsection{Funcionamiento}
 
 R es un lenguaje orientado a objetos (OOP) dise\~nado en un entorno auténtico bajo el cual esconde su simplicidad y flexibilidad, lo cual permite a sus usuarios a\~nadir funcionalidad mediante la definición de nuevas \emph{funciones}. El término \emph{orientado a objetos} significa que las variables, datos, funciones, resultados, etc., se guardan en la memoria activa del computador en forma de objetos con un nombre específico y pueden ser modificados o manipulados por el usuario mediante operadores y funciones. El uso y funcionamiento de los operadores en R es bastante intuitivo y se lo verá a detalle más adelante.\newline
 
@@ -110,7 +110,7 @@ search()
 
 En la actualidad\footnote{Información obtenida al 24 de Octubre 2014.} existen 5986 paquetes válidos en el repositorio CRAN, los cuáles se encuentran ordenados por fecha de publicación o alfabéticamente agrupadas en diversas líneas de investigación.
 
-\section{Ventajas}
+\subsection{Ventajas}
 
 Entre las principales ventajas que posee el software R podemos anotar lo siguiente:
 \begin{itemize}
@@ -124,7 +124,7 @@ Entre las principales ventajas que posee el software R podemos anotar lo siguien
   \item Permite visualizar los algoritmos en él implementados, modificarlos y ajustarlos a nuestras necesidades (esto no es permitido en los softwares licenciados).
 \end{itemize}
 
-\section{Desventajas}
+\subsection{Desventajas}
 
 Los inconvenientes a los cuales se deben enfrentar los usuarios de R son:
 \begin{itemize}
@@ -133,11 +133,34 @@ Los inconvenientes a los cuales se deben enfrentar los usuarios de R son:
   \item El código en R es interpretado, no compilado, lo cual puede ocasionar una ejecución lenta en ocasiones en las que se realizan simulaciones intensas. Con el fin de remediar lo anterior el grupo R Core Team a partir de la versión 2.14 ha precompilado todas las funciones y librerías de R con el objetivo de acelerar la ejecución.
 \end{itemize}
 
+\section{Entorno de trabajo}
+Es muy importante para el usuario de R, conocer su entorno de trabajo, y es precisamente lo que trataremos en esta sección. Antes de iniciar, debemos aclarar que el presente documento está enfocado en la plataforma \texttt{Windows}, sin embargo en los diferentes sistemas operativos no existe mayor diferencia.\newline
+
+%http://unbarquero.blogspot.com/2009/02/r-entorno-de-trabajo.html
+
+\subsection{Área de trabajo}
+El área de trabajo de R
+<<>>=
+options(width=50)
+rnorm(10)
+@
+
+<<>>=
+options(width=60)
+rnorm(10)
+@
+
+<<>>=
+options(width=65)
+rnorm(10)
+@
+
+
 \section{Instalación y actualización}
 
-\subsection{Software R}
+\subsection{Programa R}
 
-La instalación del software R se describe en los siguientes pasos:
+La instalación del programa R se describe en los siguientes pasos:
 \begin{enumerate}
   \item Accedemos al repositorio de la CRAN a través de un navegador tecleando la dirección: \url{http://cran.es.r-project.org/}.
   \item Nos dirigimos a la parte superior de la página, y nos ubicamos en \texttt{Download and install R} seguido elegimos el sistema operativo. Para nuestro caso hacemos click en \texttt{Windows}.
@@ -221,7 +244,8 @@ Para instalar los paquetes desde los repositorios externos antes mencionados bas
 <<eval=FALSE>>=
 install.packages("pckgname", repos="http://r-forge.r-project.org")
 install.packages("pckgname", repos="http://www.omegahat.org/R")
-install.packages("pckgname", repos="http://r-forge.r-project.org")
+install.packages("pckgname", repos="http://www.bioconductor.org/
+                                    packages/2.10/bioc")
 @
 Algunos de los paquetes se encuentran en formato binario, para su instalación basta adicionar el parámetro \texttt{type="source"}.
 
@@ -248,6 +272,28 @@ Si deseamos conocer los parámetros de cada una de las funciones implementadas d
 lsf.str('package:foreign')
 @
 
+Cuando un paquete es empleado dentro de una investigación surge la necesidad de citar a los autores del paquete, lo anterior lo solventamos mediante el comando \texttt{citation}.
+<<eval=FALSE>>=
+citation("foreign")
+
+## To cite package ‘foreign’ in publications use:
+##
+##  R Core Team (2014). foreign: Read Data Stored by Minitab, S, SAS, 
+##  SPSS, Stata, Systat, Weka, dBase, .... R
+##  package version 0.8-61. http://CRAN.R-project.org/package=foreign
+##
+## A BibTeX entry for LaTeX users is
+##
+##  @Manual{,
+##    title = {foreign: Read Data Stored by Minitab, S, SAS, SPSS,
+##  Stata, Systat, Weka,dBase, ...},
+##    author = {{R Core Team}},
+##    year = {2014},
+##    note = {R package version 0.8-61},
+##    url = {http://CRAN.R-project.org/package=foreign},
+##  }
+@
+
 \subsection{Actualización de paquetes}
 
 En el caso que se desee actualizar todos los paquetes previamente instalados contamos con el comando \texttt{update.packages}, el mismo que revisa las actualizaciones de los paquetes. El anterior comando nos preguntará si deseamos actualizar uno por uno los paquetes, lo cual es tedioso pues si contamos con un gran número de paquetes nos demandará bastante tiempo aprobar la actualización de los mismos. Para subsanar lo anterior basta añadir el parámetro \texttt{ask = TRUE}.
@@ -269,19 +315,69 @@ library('installr')
 updateR()
 @
 
-Iniciamos instalando el paquete \textbf{installr}, acto seguido procedemos a cargar el paquete a través del comando \texttt{library}, y finalmente, mediante el comando \texttt{updateR} verificamos la versión más reciente del programa  y descargamos la misma.
+Iniciamos instalando el paquete \textbf{installr}, acto seguido procedemos a cargar el paquete a través del comando \texttt{library}, y finalmente, mediante el comando \texttt{updateR} verificamos la versión más reciente del programa  y descargamos la misma.\newline
 
+En el caso que se desee conocer la versión de R que se encuentra instalada podemos teclear en la consola el comando: \code{\texttt{R.version.string}}.
 
 \subsection{RStudio}
 
-RStudio es un IDE (Integrated Development Enviroment o Entorno de Desarrollo Integrado) de código abierto para R, lanzando en Febrero 2011. Reúne todas las características que acabamos de citar, a las que se une una muy interesante organización del escritorio de trabajo, que nos muestra un entorno muy compacto con una ventana de edición, otra de resultados, otra para gráficos y una cuarta para la gestión de variables en memoria. Asimismo los menús de ayuda y la descarga de librarías se organizan en pestañas fácilmente accesibles. Cuenta además con la ventaja de ser multiplataforma, lo que significa que existem versiones para Windows, Linux y Mac. En la figura podemos ver el aspecto de RStudio. Este programa puede descargarse libremente de la web \url{http://www.rstudio.org/}. La organización del escritorio y la excelente integración con R hacen muy recomendable el uso de este programa.
+RStudio\footnote{El programa RStudio puede obtenerse libremente de la página \url{http://www.rstudio.org/}} es un entorno IDE (Integrated Development Enviroment) de código abierto lanzado en Febrero 2011 el cual nos ofrece un marco de trabajo más amigable con el software R y lo podemos encontrar para la gran mayoría de plataformas (Windows, Mac, Linux) así como también puede ser ejecutado a través de un navegador web\footnote{Opción válida para la versión \texttt{server}.}.\newline
+
+A continuación elistamos algunas IDE's existentes para R:
+\begin{multicols}{2}
+\begin{itemize}
+  \item ESS
+  \item Eclipse
+  \item SciViews
+  \item JGR
+  \item Tinn-R
+  \item Notepad ++
+  \item RGui
+\end{itemize}
+\end{multicols}
 
 
+El programa se encuentra organizado en cuatro ventanas de trabajo distintas:
+\begin{itemize}
+  \item {\bf Editor de código fuente:} Se encuentra en la zona superior izquierda, esta ventana nos permite abrir  y editar ficheros con código R.
+  \item {\bf Consola:} Se ubica en la zona inferior izquierda, esta ventana es también conocida como consola y nos permite ejecutar comandos de R.
+  \item {\bf Navegador de objetos:} La zona superior derecha posee dos ventanas auxiliares:
+  \begin{itemize}
+    \item {\bf Workspace:} En esta ventana se enlistan todos los objetos creados en memoria.
+    \item {\bf History:} En esta ventana se almacena el histórico de las líneas de código que han sido ejecutadas en R. 
+  \end{itemize}
+  \item {\bf Visualización e información:} Esta última ventana ubicada en la zona inferior derecha se encuentra conformada por 4 ventanas auxiliares:
+  \begin{itemize}
+    \item {\bf Files:} Provee el acceso al árbol de directorios y ficheros del disco duro.
+    \item {\bf Plots:} Ventana auxiliar en la cual aparecen los gráficos creados en la consola.
+    \item {\bf Packages:} Esta ventana  facilita la administración de los paquetes de R instalados en el computador.
+    \item {\bf Help:} Esta última ventana nos ayuda en la búsqueda de información respecto a un comando en específico.
+  \end{itemize}
+\end{itemize}
 
-% Revisar John Verzanni - RStudio
+\subsection{Obteniendo ayuda}
+
+Existen algunas funciones en R que nos facilitan la vida al momento de indagar sobre la funcionalidad de ciertos comandos con tan sólo tener disponible una conexión de Internet. Por ejemplo, si nos encontramos interesados en obtener información acerca de la función \code{\texttt{seq()}} podemos escribir en la consola lo siguiente:
+<<eval=FALSE>>=
+help(seq)
+@
+Una forma alternativa es
+<<eval=FALSE>>=
+?seq
+@
+Para el caso que se encuentren trabajando con funciones especificadas por caracteres especiales, el argumento debería ir entre comillas, con el fin de transformarlo en una \emph{cadena de caracteres}:
+<<eval=FALSE>>=
+help("[[")
+@
+Se pueden utilizar tanto comillas simples como dobles sin que esto conlleve problemas a posteriori.\newline
+
+Adicionalmente, si nos encontramos interesados en buscar información relacionada al término "normal", o algún otro término en específico podemos teclear lo siguiente:
+<<eval=FALSE>>=
+help.search("normal")
+help.search("término_específico")
+@
 
 \section{Conceptos básicos de programación}
-
 En las secciones anteriores mencionamos que R es un lenguaje de programación orientada a objetos, por lo que cualquier cosa que exista en R (variables, datos, funciones, etc.) es un objeto.\newline
 
 Los nombres que se les asigna a los objetos en R pueden ser de cualquier longitud y éstos pueden combinar letras, números y caracteres especiales (coma, punto, guión bajo, etc.), la única exigencia al momento de asignar un nombre a un objeto es que el mismo inicie con una letra.\newline
@@ -290,36 +386,50 @@ La construcción explícita de un objeto nos proporcionará un mejor entendimien
 
 \subsection{Estructura de datos}
 
-R cuenta con una variedad de estructuras de datos tales como: vectores, factores, data frames, matrices, arrays y listas, las mismas que son detalladas a continuación:
+Las estructuras de datos en R pueden ser organizados por su dimensionalidad (1 dimensión, 2 dimensiones o n-dimensiones), así como también por su tipo (homogéneo, heterogéneo) lo anterior da lugar a 5 tipos de estructuras que se resumen a continuación:
+\begin{table}
+\centering
+\begin{tabular}{cccc}\hline
+{\bf Dimensión} & {\bf 1-d} & {\bf 2-d} & {\bf n-d} \\ \hline
+{\bf Homogéneo} & Vector & Matriz & Array \\ \hline
+{\bf Heterogéneo} & Lista & Data Frame & \\ \hline
+\end{tabular}
+\caption{Estructura de datos}
+\end{table}
 
 \subsubsection{Vectores}
-Son objetos que contienen un conjunto de valores llamados \emph{elementos} y consta de dos parámetros o argumentos: \texttt{mode}, \texttt{length}. El primero de los argumentos especifica el tipo de elementos que serán almacenados de entre los cuales destacan los tipos numéricos, booleanos y caracteres.
+Es la estructura más simple de R que sirven para almacenar un conjunto de valores del mismo tipo llamados \emph{elementos} y consta de dos parámetros o argumentos: \texttt{mode}, \texttt{length}. El primero de los argumentos especifica el tipo de elementos que serán almacenados de entre los cuales destacan los tipos numéricos, booleanos y caracteres. El segundo argumento especifica la longitud del vector.
+
+
+
 
 \subsubsection{Factores}
+Son vectores que sirven para realizar un agrupamiento de los componentes de otro vector del mismo tamaño.
 
+\subsubsection{Matrices}
+Colección de datos a los que se accede por varios índices enteros (dimensiones).
 
-%elementos pueden ser de tipo num´erico, l´ogico o caracter dependiendo del argumento especificado
-%en mode (0, FALSE o “ ” respectivamente). Las siguientes funciones tienen exactamente
-%el mismo efecto y tienen un solo argumento (la longitud del vector): numeric(),
-%logical(), y character().
+\subsubsection{Listas}
+Colección ordenada de objetos, en la que los elementos pueden ser de distinto tipo.
 
+\subsubsection{Arrays}
+Un arreglo (array) de datos es un objeto que puede ser concebido como una matriz multidimensional (hasta 8 dimensiones). Una ventaja de este tipo de objeto es que sigue las reglas que hemos descrito para las matrices. La sintaxis para definir un arreglo es
+<<eval=FALSE>>=
+array(data, dim)
+@
+Las componentes data y dim deben presentarse como una sola expresión, por ejemplo
+<<eval=FALSE>>=
+c(2,4,6,8,10)
+c(2,3,2)
+x <- array (1:24, c(3,4,2))
+@
+produce un arreglo tridimensional: la primera dimensión tiene tres niveles, la segunda tiene cuatro y la tercera tiene dos. Al imprimir el arreglo R comienza con la dimensión mayor y va bajando hacia la dimensión menor, imprimiendo matrices bidimensionales en cada etapa.
 
+\subsubsection{Data Frames}
+Tipo particular de listas de gran utilidad para el trabajo estadístico.
 
-
-
-En este capítulo se resumen las estructuras de datos más importantes en la base de R. Usted probablemente ha utilizado muchos (si no todos) de ellos antes, pero no puede haber pensado profundamente acerca de la forma en que se relacionan entre sí. En este breve resumen, no voy a discutir los tipos individuales en profundidad. En su lugar, te voy a mostrar cómo encajan entre sí como un todo. Si usted necesita más detalles, puede encontrarlos en la documentación del R.
-
-Estructuras de datos de base de R pueden ser organizados por su dimensionalidad (1d, 2d, o sin fecha) y si son homogéneos (todos los contenidos deben ser del mismo tipo) o heterogéneo (el contenido puede ser de diferentes tipos). Esto da lugar a los cinco tipos de datos más a menudo utilizados en el análisis de datos:
-
-\subsection{Vectores}
-
-
-
-\subsection{Matrices $\&$ Arrays}
-
-\subsection{Data Frames}
-
-
+\section{Funciones}
+Objetos que pueden ser creados por el usuario y reutilizados para realizar operaciones específicas.
 
 
 
