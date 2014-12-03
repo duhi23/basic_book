@@ -1,8 +1,8 @@
 \documentclass[12pt,a4paper,oneside]{article}
 \usepackage{amsmath,amsthm,amsfonts,amssymb}
 \usepackage{pst-eucl,pstricks,pstricks-add}
-\usepackage[utf8]{inputenc}
-%\usepackage[latin1]{inputenc}
+%\usepackage[utf8]{inputenc}
+\usepackage[latin1]{inputenc}
 \usepackage[spanish,activeacute]{babel}
 \usepackage[a4paper,margin=2.5cm]{geometry}
 \usepackage{times}
@@ -35,7 +35,7 @@
 \textbf{\huge CURSO:} \vspace{0.6cm}\\
 \textbf{\Large Introducción al programa estadístico R} \vspace{4cm}\\
 \textbf{\Large Programa de capacitación para estudiantes universitarios}\vspace{2cm}\\
-%\includegraphics[scale=.7]{logo_source.eps}
+\includegraphics[scale=.7]{logo_source.eps}
 \vspace{1.5cm}
 
 \textbf{\Large Quito, Enero 2015}
@@ -133,12 +133,97 @@ Los inconvenientes a los cuales se deben enfrentar los usuarios de R son:
   \item El código en R es interpretado, no compilado, lo cual puede ocasionar una ejecución lenta en ocasiones en las que se realizan simulaciones intensas. Con el fin de remediar lo anterior el grupo R Core Team a partir de la versión 2.14 ha precompilado todas las funciones y librerías de R con el objetivo de acelerar la ejecución.
 \end{itemize}
 
-\section{Entorno de trabajo}
+
+\section{Instalación y actualización}
+
+\subsection{Programa R}
+
+La instalación del programa R se describe en los siguientes pasos:
+\begin{enumerate}
+  \item Accedemos al repositorio de la CRAN a través de un navegador tecleando la dirección: \url{http://cran.es.r-project.org/}.
+  \item Nos dirigimos a la parte superior de la página, y nos ubicamos en \texttt{Download and install R} seguido elegimos el sistema operativo. Para nuestro caso hacemos click en \texttt{Windows}.
+  \item A continuación elegimos entre los 2 subdirectorios: \texttt{base} y \texttt{control}. Damos click sobre \texttt{base}.
+  \item Finalmente, en la pantalla damos click sobre \texttt{Download R X.Y.Z for Windows}, con lo cual descargamos la versión de R más reciente.
+\end{enumerate}
+
+En la actualidad, el software R puede ser instalado incluso sobre la plataforma Android\footnote{\url{https://play.google.com/store/apps/details?id=com.appsopensource.R&hl=es_419}}, esto permite que muchos usuarios puedan tener el programa al alcance y en todo momento con tan sólo tener un smartphone operativo.
+
+
+
+\subsection{Entorno de trabajo}
 Es muy importante para el usuario de R, conocer su entorno de trabajo, y es precisamente lo que trataremos en esta sección. Antes de iniciar, debemos aclarar que el presente documento está enfocado en la plataforma \texttt{Windows}, sin embargo en los diferentes sistemas operativos no existe mayor diferencia.\newline
 
+\begin{center}
+\includegraphics[scale=.45]{console.eps}
+\end{center}
 %http://unbarquero.blogspot.com/2009/02/r-entorno-de-trabajo.html
 
-\subsection{Área de trabajo}
+Iniciaremos explicando  la barra de herramientas, la misma que consta de las secciones: Archivo, Editar, Visualizar, Misc, Paquetes, Ventanas y Ayuda. Todas serán explicadas con detalle a continuación:
+
+\begin{itemize}
+  \item {\bf \Large Archivo:} En esta sección se podrá tratar todo lo relacionado con el manejo de archivos y salir del programa. Los elementos que lo componen son los siguientes:
+    \begin{itemize}
+      \item {\bf Interpretar código fuente R:} Hay que recordar que R es un lenguaje de programación derivado del S, es por ello que podemos realizar programas en un editor externo, con esta opción podemos ejecutar dicho programa en la consola siempre y cuando, la extensión de guardado sea del tipo .R.
+      \item {\bf Nuevo script:} Si lo ejecutamos, se nos abrirá un editor de lenguaje R para crear script que luegos podemos llamar desde la consola, el tipo de archivo que podemos generar son R o S.
+      \item {\bf Abrir script:} Los script que hemos generados o que tengamos del tipo R o S podemos abrirlos en un editor para poder editarlos.
+      \item {\bf Mostrar archivo(s):} Siver para abrir y poder visualizar o editar cualquier archivo, es interesante para los que tengan relación con el lenguaje R o S. Se diferencia con la opción Abrir script de que éste no puede editarlos directamente, simplemente visualizarlos. Se pueden abrir varios archivos a la vez.
+      \item {\bf Cargar área de trabajo:} Pues como su nombre indica, sirve para cargar un área de trabajo que hayamos configurado y guardado previamente, es útil por ejemplo, cuando hemos definido el tipo de letra, el espacio de trabajo, los colores, etc, y queremos usarlo. La extensión común es .RData aunque también puede cargarse entornos de trabajo con formato antiguo tipo .rda.
+      \item {\bf Guardar área de trabajo:} Cuando se haya configurado el entorno de consola de R, colores, tipo de letra, tamaño, etc, podemos guardarlo para cargarlo posteriormente en futuras aplicaciones ya que el propio programa R no guarda, de momento, dicha configuración. El formato del entorno de trabajo es .RData.
+      \item {\bf Cargar Histórico:} Podemos cargar el archivo de comandos que se hayan ejecutado en una sesión previamente guardada. El formato de salida es .history.
+      \item {\bf Guardar Histórico:} Con él, podemos guardar los comandos que hayamos instroducido por consola en una sesión. El formato de guardado es .history.
+      \item {\bf Cambiar dir:} Podemos configurar el directorio de trabajo que está definido por defecto cuando se instalo el programa.
+      \item {\bf Imprimir:} Podemos configurar e imprimir el entorno de trabajo de R, la consola.
+      \item {\bf Guardar en archivo:} Se guardará todo lo que se haya escrito por la consola en formato .txt que después podremos recuperar.
+      \item {\bf Salir:} Sirve para salir del programa R, antes nos preguntará si queremos guardar el área de trabajo.
+    \end{itemize}
+  \item {\bf \Large Editar:} Es la sección encargada de editar la consola de R, así como de configurar el entorno de trabajo.
+    \begin{itemize}
+      \item {\bf Copiar:} Podemos copiar al portapapeles el comando o sentencia o lo que queramos de la consola. Para acceder de forma rápida por teclado se debe pulsar: Ctrl + C.
+      \item {\bf Pegar:} Podemos pegar en la consola todo aquello que tengamos en el portapapeles. Para acceder de forma rápida por teclado se debe pulsar: Ctrl + V.
+      \item {\bf Pegar solo comandos:} La diferencia básica con la opción Pegar es que con esta opción, sólo se pegarán en la consola aquello que sea comandos para ejecutarse.
+      \item {\bf Copiar y Pegar:} Todo aquello que copiemos, directamente se pegará, de forma inmediata, en la consola. Para acceder de forma rápida por teclado se debe pulsar: Ctrl + X.
+      \item {\bf Seleccionar todo:} Como su nombre indica, se selecciona todo lo que esté presente en la consola.
+      \item {\bf Limpiar consola:} Se borrarán todo lo que esté presente en la consola, pero ojo, no se borrarán las variables y estructuras definidas. Es útil cuando tenemos en la consola mucha información que ya no es útil. Para acceder de forma rápida por teclado se debe pulsar: Ctrl + L.
+      \item {\bf Editor de datos:} Podemos definir datos (vectores, estructuras, funciones, etc) y guardarlos para posteriormente llamarlos en la consola. Estos datos estarán definidos en la consola cuando se guarde.
+      \item {\bf Preferencias de la interfaz gráfica:} En esta opción es donde podremos configurar todo lo relacionado a la visualización de texto reflejado en la consola: tamaño de letra, colores, tipo de letra, etc. También, se puede configurar el entorno de trabajo, para multiventana o una única ventana.
+    \end{itemize}
+  \item {\bf \Large Visualizar:}
+  \item {\bf \Large Misc:} Esta es la sección denominada misceláneas, donde hay más de un control interesante.
+    \begin{itemize}
+      \item {\bf Parar computación actual:} Este control es muy interesante y útil, con él, podremos parar cualquier archivo, sentencia o código que esté ejecutando la consola R. Para acceder de forma rápida por teclado se debe pulsar: ESC.
+      \item {\bf Salida con buffer:} Para acceder de forma rápida por teclado se debe pulsar: Ctrl + W.
+      \item {\bf Terminar palabra:} Es una ayuda interactiva, que nos ayuda a completar las palabras mientras estamos escribiendo en caso que la consola las reconózca.
+      \item {\bf Terminar nombre de archivo:} Realiza la misma función que la opción Terminar palabra pero en archivos.
+      \item {\bf Listar objetos:} Se nos mostrará por consola los objetos que hasta en este momento hemos definido en la consola.
+      \item {\bf Remover todos los objetos:} Como su nombre indica, elimina de memoria todos los objetos que hayamos definido (datos, variables, matrices, vectores, etc) en la consola de R. Cuando pulsemos sobre dicha opción, el programa, nos preguntará si realmente queremos borrarlos.
+      \item {\bf Listar el camino de búsqueda:} Nos ofrece por consola las librerias y complementos que tenemos instalados en R.
+    \end{itemize}
+  \item {\bf \Large Paquetes:} Dedicado al manejo de las librerias que posee el programa R.
+    \begin{itemize}
+      \item {\bf Cargar paquete:} Con él, podemos cargar en la consola cualquier libreria que tengamos instalada.
+      \item {\bf Seleccionar espejo CRAN:} Sirve para configurar el servidor de librerias.
+      \item {\bf Seleccionar repositórios:} En consola nos mostrará los repositorios que tenemos instalados y nos pedirá cual usar para la sesión activa.
+      \item {\bf Instalar paquetes(s):} Podremos actualizar o instalar librerias nuevas en red, para ello, debemos elegir un servidor.
+      \item {\bf Actualizar paquetes(s):} Podemos actualizar las librerias que tengamos instaladas en caso de haber una actualización reciente por red, para ello, debemos seleccionar un servidor
+      \item {\bf Instalar paquetes(s) a partir de archivos zip locales:} En caso de haber descargado una libreria y tenerla en nuestro ordenador, podemos instalarlo mediante esta opción.
+    \end{itemize}
+  \item {\bf \Large Ventanas:}
+  \item {\bf \Large Ayuda:} Es un apartado que debemos tenerlo siempre presente, ya que en él se dispone al usuario, los manuales de utilización y específicos de R.
+    \begin{itemize}
+      \item {\bf Console:} Nos mostrará en una ventana los atajos por teclado que posee la consola.
+      \item {\bf FAQ en R:} Ayuda en html que se carga desde nuestro ordenador, donde nos ofrece las preguntas frecuentes que se suelen hacer los usuarios al utilizar R. No hace falta estar conectado a Internet.
+      \item {\bf FAQ en R para Windows:} Preguntas frecuentes para los usuarios de Windows.
+      \item {\bf Manuales en PDF:} Una recopilación de los manuales para el manejo del programa, esta opción es bastante interesante.
+      \item {\bf Funciones R(texto):} Es una opción donde podremos introducir sentencias de comando para obtener ayuda sobre ellas, es bastante útil.
+      \item {\bf Ayuda Html:} Se nos abrirá en el navegador una ayuda interactiva, no es necesario estar conectado a Internet.
+      \item {\bf Html search page:} Consiste en una página html donde podremos buscar las instrucciones que queramos consultar.
+      \item {\bf Página principal R:} Es un enlace directo a la web del proyecto R.
+      \item {\bf Página principal de CRAN:} Enlace directo al directorio de librerias de R.
+      \item {\bf Sobre:} Indica información de la compilación que se tenga instalada de R.
+    \end{itemize}
+\end{itemize}
+
+\subsubsection{Área de trabajo}
 El área de trabajo de R
 <<>>=
 options(width=50)
@@ -156,19 +241,6 @@ rnorm(10)
 @
 
 
-\section{Instalación y actualización}
-
-\subsection{Programa R}
-
-La instalación del programa R se describe en los siguientes pasos:
-\begin{enumerate}
-  \item Accedemos al repositorio de la CRAN a través de un navegador tecleando la dirección: \url{http://cran.es.r-project.org/}.
-  \item Nos dirigimos a la parte superior de la página, y nos ubicamos en \texttt{Download and install R} seguido elegimos el sistema operativo. Para nuestro caso hacemos click en \texttt{Windows}.
-  \item A continuación elegimos entre los 2 subdirectorios: \texttt{base} y \texttt{control}. Damos click sobre \texttt{base}.
-  \item Finalmente, en la pantalla damos click sobre \texttt{Download R X.Y.Z for Windows}, con lo cual descargamos la versión de R más reciente.
-\end{enumerate}
-
-En la actualidad, el software R puede ser instalado incluso sobre la plataforma Android\footnote{\url{https://play.google.com/store/apps/details?id=com.appsopensource.R&hl=es_419}}, esto permite que muchos usuarios puedan tener el programa al alcance y en todo momento con tan sólo tener un smartphone operativo.
 
 \subsection{Instalación de paquetes}
 
