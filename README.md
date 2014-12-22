@@ -7,6 +7,8 @@ Conceptos básicos e introductorios al Lenguaje de Programación R.
 
 2) R como Lenguaje de Programación
 
+3) Estructuras de datos
+
 
 Source Stat Lab Ec
 
