@@ -1,0 +1,98 @@
+\documentclass[12pt,a4paper,oneside]{article}
+\usepackage{amsmath,amsthm,amsfonts,amssymb}
+\usepackage{pst-eucl,pstricks,pstricks-add}
+\usepackage[utf8]{inputenc}
+%\usepackage[latin1]{inputenc}
+\usepackage[spanish,activeacute]{babel}
+\usepackage[a4paper,margin=2.5cm]{geometry}
+\usepackage{times}
+\usepackage[T1]{fontenc}
+\usepackage{titlesec}
+\usepackage{color}
+\usepackage{url}
+\usepackage{float}
+\usepackage{cite}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{lmodern}
+\usepackage{setspace}
+%\doublespace %para doble espacio
+\onehalfspace %para espacio y medio
+\newcommand{\code}[1]{\fcolorbox{blue!80}{gray!10}{#1}}
+\parindent=0mm
+
+\begin{document}
+\begin{minipage}[d]{95mm}
+%\includegraphics[scale=.55]{logo_source.eps}
+\end{minipage}
+\begin{minipage}[d]{50mm}
+\textsf{\textbf{\sc \scriptsize QUITO:}}\\
+\textsf{\textbf{\sc \scriptsize \qquad Av. 12 de Octubre}}\\
+\textsf{\textbf{\sc \scriptsize Contacto: (593) 0998890021}}
+\end{minipage}\\
+\vspace{0.6cm}
+%\rule[1mm]{150mm}{0.5mm}
+
+\section{Quiénes somos ?}
+
+Source Stat Lab (SSL) es una empresa Ecuatoriana con sede en Quito especializada en fomentar el avance del conocimiento, misma que presta sus servicios de entrenamiento y capacitación en el lenguaje de programación R para profesionales en todas sus vertientes (investigación, docencia, empresarial). SSL brinda capacitación, reportería y consultoría estadística/matemática con el uso de herramientas de software libre como: R, RStudio, R Analytic Flow $\&$ LaTeX a empresas globales y locales, así como instituciones públicas.
+
+\section{Historia}
+
+SSL nació en Septiembre 2014 con el propósito de dar servicio y asesoramiento en investigaciones aplicadas que requieran de estudios estadísticos/matemáticos asociado a las mismas.
+
+\section{Objetivos}
+
+Entre los objetivos de SSL se encuentran:
+\begin{itemize}
+  \item Potenciar las actividades relacionadas con la Estadística que se llevan a cabo en varias universidades Ecuatorianas, así como ofrecer asesoramiento estadístico tanto a grupos de investigación como a particulares y empresas.  Dicho asesoramiento se complementa con cursos de formación adaptados a las necesidades y requerimientos del usuario.
+  \item 
+\end{itemize}
+ 
+
+\section{Cursos}
+
+Durante los últimos años, las nuevas tecnologías han permitido generar, almacenar y difundir grandes cantidades de información. Para poder extraer conocimiento y generar valor, hacen falta herramientas analíticas.\newline
+
+Dado que la estadística es la herramienta determinante para la toma de decisiones y la obtención de conocimiento, SSL ofrece los siguientes cursos:
+\begin{itemize}
+  \item R Nivel Básico
+  \item R Nivel Intermedio
+  \item R Nivel Avanzado
+  \item Gráficos con ggplot2
+  \item Interfaces Web con Shiny
+  \item Reportería Dinámica
+%  \item Series Temporales
+%  \item Minería de datos
+%  \item Modelos lineales y de riesgo
+\end{itemize}
+
+
+\newpage
+
+\begin{center}
+{\bf \Large R Nivel Básico}
+\end{center}
+
+
+{\bf \large Descripción:}\newline
+  En el presente curso el estudiante 
+  
+{\bf \large Duración:}\newline
+  20 Hrs.
+  
+{\bf \large Requisitos:}\newline
+  Ninguno
+  
+{\bf \large Contenidos del curso:}
+\begin{enumerate}
+  \item Introducción
+  \item Instalación y actualización
+  \item IDE
+  \item Estructura de datos
+\end{enumerate}
+
+
+
+
+\end{document}
