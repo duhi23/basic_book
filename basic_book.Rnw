@@ -391,14 +391,18 @@ help.search("normal")
 help.search("término_específico")
 @
 
-\section{Conceptos básicos de programación}
-En las secciones anteriores mencionamos que R es un lenguaje de programación orientada a objetos, por lo que cualquier cosa que exista en R (variables, datos, funciones, etc.) es un objeto.\newline
-Los nombres que se les asigna a los objetos en R pueden ser de cualquier longitud y éstos pueden combinar letras, números y caracteres especiales (coma, punto, guión bajo, etc.), la única exigencia al momento de asignar un nombre a un objeto es que el mismo inicie con una letra.\newline
-La construcción explícita de un objeto nos proporcionará un mejor entendimiento de su estructura, y nos permitirá ahondar en algunas nociones mencionadas previamente.
+\section{Estructura de datos}
+En las secciones anteriores mencionamos que R es un lenguaje de programación orientada a objetos, por lo que cualquier cosa que exista en R (variables, datos, funciones, etc.) es un objeto. Para conocer los objetos que se tienen en el espacio de trabajo utilizaremos el siguiente comando:
+<<>>=
+ls()
+@
 
-\subsection{Estructura de datos}
+Los nombres que se les asigna a los objetos en R pueden ser de cualquier longitud y éstos pueden combinar letras, números y caracteres especiales (coma, punto, guión bajo, etc.), la única exigencia al momento de asignar un nombre a un objeto es que el mismo inicie con una letra.\newline
+La construcción explícita de un objeto nos proporcionará un mejor entendimiento de su estructura, y nos permitirá ahondar en algunas nociones mencionadas previamente.\newline
+
+
 Las estructuras de datos en R pueden ser organizados por su dimensionalidad (1 dimensión, 2 dimensiones o n-dimensiones), así como también por su tipo (homogéneo, heterogéneo) lo anterior da lugar a 5 tipos de estructuras que se resumen a continuación:
-\begin{table}
+\begin{table}[H]
 \centering
 \begin{tabular}{cccc}\hline
 {\bf Dimensión} & {\bf 1-d} & {\bf 2-d} & {\bf n-d} \\ \hline
@@ -408,19 +412,33 @@ Las estructuras de datos en R pueden ser organizados por su dimensionalidad (1 d
 \caption{Estructura de datos}
 \end{table}
 
-\subsubsection{Vectores}
+\subsection{Vectores}
 Es la estructura más simple de R que sirven para almacenar un conjunto de valores del mismo tipo llamados \emph{elementos} y consta de dos parámetros o argumentos: \texttt{mode}, \texttt{length}. El primero de los argumentos especifica el tipo de elementos que serán almacenados de entre los cuales destacan los tipos numéricos, booleanos y caracteres. El segundo argumento especifica la longitud del vector.
 
-\subsubsection{Factores}
-Son vectores que sirven para realizar un agrupamiento de los componentes de otro vector del mismo tamaño.
+\subsection{Factores}
+Son variables en R que tienen un número limitado de valores diferentes, dichas variables se conocen como variables categóricas a menudo; por ejemplo: el conjunto de observaciones acerca del color de ojos de un grupo de personas. 
 
-\subsubsection{Matrices}
+<<>>=
+ojos <- c("negro", "azul", "negro", "verde", "verde", "café", "negro")
+table(ojos)
+@
+
+\subsubsection{Uso de factores}
+El uso más importante de los factores se encuentra en el modelamiento estadístico; dado que ciertas variables categóricas ingresan a los modelos de manera diferente a las variables continuas.
+
+Los factores en R se almacenan como un vector de valores enteros con un conjunto correspondiente de valores de caracteres para usar cuando aparezca el factor.
+
+
+
+
+
+\subsection{Matrices}
 Colección de datos a los que se accede por varios índices enteros (dimensiones).
 
-\subsubsection{Listas}
+\subsection{Listas}
 Colección ordenada de objetos, en la que los elementos pueden ser de distinto tipo.
 
-\subsubsection{Arrays}
+\subsection{Arrays}
 Un arreglo (array) de datos es un objeto que puede ser concebido como una matriz multidimensional (hasta 8 dimensiones). Una ventaja de este tipo de objeto es que sigue las reglas que hemos descrito para las matrices. La sintaxis para definir un arreglo es
 <<eval=FALSE>>=
 array(data, dim)
@@ -433,7 +451,7 @@ x <- array (1:24, c(3,4,2))
 @
 produce un arreglo tridimensional: la primera dimensión tiene tres niveles, la segunda tiene cuatro y la tercera tiene dos. Al imprimir el arreglo R comienza con la dimensión mayor y va bajando hacia la dimensión menor, imprimiendo matrices bidimensionales en cada etapa.
 
-\subsubsection{Data Frames}
+\subsection{Data Frames}
 Tipo particular de listas de gran utilidad para el trabajo estadístico.
 
 \section{Funciones}
