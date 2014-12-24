@@ -22,206 +22,304 @@
 %\newenvironment{Shaded}{}{}
 \begin{document}
 \pagecolor[gray]{0.95}
+
 % Portada
 \begin{titlepage}
 \begin{center}
 ~\\[3cm]
 \textbf{\Huge \textcolor{blue!90}{\fontsize{12mm}{5em}\selectfont SOURCE STAT LAB}}\vspace{0.6cm}\\
-\textbf{\Large \textcolor{blue}{Training, Reporting and Consultancy}}\vspace{4cm}\\
+\textbf{\Large \textcolor{blue}{Training, Reporting and Consultancy}}
+\vspace{4cm}\\
 \textbf{\huge CURSO:} \vspace{0.6cm}\\
 \textbf{\Large Introducción al programa estadístico R} \vspace{4cm}\\
 \textbf{\Large Programa de capacitación para estudiantes universitarios}\vspace{2cm}\\
-%\includegraphics[scale=.7]{logo_source.eps}
+\includegraphics[scale=.7]{logo_source.eps}
 \vspace{1.5cm}
+
 \textbf{\Large Quito, Enero 2015}
 \end{center}
 \end{titlepage}
 \pagecolor{white}
+
 %Derechos
+
 % Contenidos
 \tableofcontents
 \newpage
 
 \section{Introducción}
-El programa R es un software libre distribuido bajo GNU General Public License muy utilizado por la comunidad científica el cual es considerado un lenguaje de comandos de manipulación y análisis estadístico debido a la gran variedad de métodos estadísticos que cubre, así como a las capacidades gráficas que ofrece. R fue desarrollado en el año 1993 por los profesores del Departamento de Estadística {\bf Ross Ihaka} y {\bf Robert Gentleman} de la Universidad de Aukland, se distribuye gratuitamente desde 1995 a través del repositorio \emph{Comprehensive R Archive Network} (CRAN) en \url{http://www.r-project.org} su mantenimiento se encuentra a cargo del grupo {\bf R Core Team} desde el año 1997 asistido por una gran cantidad de colaboradores internacionales. \newline
 
-Por otra parte, R es considerado la versión libre del programa comercial S-Plus, el cual fue desarrollado para AT$\&$T Bell Laboratories por John M. Chambers en el año 1988, aunque son evidentes las diferencias entre R y S, la gran mayoría del código escrito para S funciona sin inconvenientes en R.\newline
+El programa R es un software libre distribuido bajo GNU General Public License  muy utilizado por la comunidad científica el cual es considerado un lenguaje de comandos de manipulación y análisis estadístico debido a la gran variedad de métodos estadísticos que cubre, así como a las capacidades gráficas que ofrece. R fue desarrollado en el año 1993 por los profesores del Departamento de Estadística {\bf Ross Ihaka} y {\bf Robert Gentleman} de la Universidad de Aukland, se distribuye gratuitamente desde 1995 a través del repositorio \emph{Comprehensive R Archive Network} (CRAN) en \url{http://www.r-project.org} su mantenimiento se encuentra a cargo del grupo {\bf R Core Team} desde el año 1997 asistido por una gran cantidad de colaboradores internacionales.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=.15]{logo_r.eps}
+\caption{Logo del programa R}
+\label{logo_r}
+\end{figure}
+
+R es considerado la versión libre del programa comercial S-Plus, el cual fue desarrollado para AT$\&$T Bell Laboratories por John M. Chambers en el año 1988, aunque son evidentes las diferencias entre R y S, la gran mayoría del código escrito para S funciona sin inconvenientes en R.\newline
 
 Dadas su características R tiene gran potencial para ser utilizado en diferentes áreas de la estadística, simulación, reportería dinámica, biomatemática, minería de datos, big data, etc. Al ser un software libre puede ser instalado en diversas plataformas y sistemas operativos: Windows, Linux, Mac OS X y Unix.\newline
 
 El mayor inconveniente para los nuevos usuarios es adaptarse a su interfaz gráfica que para muchos es \emph{poco amigable}, en el sentido que se deben tipear las funciones predefinidas o a su vez programar las funciones nuevas a diferencia de programas clásicos como SPSS, STATA, etc. en los cuales se tienen botones o ventanas que despliegan opciones de análisis para el usuario. \newline
 
-Dada la popularidad que ha adquirido R en los últimos años se han desarrollado varias interfaces gráficas libres GUIS's (Grafical User Interface) con el fin de volver más amigable la interacción con el usuario. Entre las interfaces más populares y utilizadas por la comunidad R se encuentran:
+Dada la popularidad que ha adquirido R en los últimos años se han desarrollado varias interfaces gráficas libres  GUIS's (Grafical User Interface) con el fin de volver más amigable la interacción con el usuario. Entre las interfaces más populares y utilizadas por la comunidad R se encuentran:
 \begin{multicols}{3}
 \begin{itemize}
-\item RStudio
-\item Rattle
-\item Deducer
-\item RKWard
-\item Eclipse
-\item Knime
-\item R Analytic Flow
-\item JGR
-\item ESS
-\item Red -R
-\item R Commander
+  \item RStudio
+  \item Rattle
+  \item Deducer
+  \item RKWard
+  \item Eclipse
+  \item Knime
+  \item R Analytic Flow
+  \item JGR
+  \item ESS
+  \item Red -R
+  \item R Commander
 \end{itemize}
 \end{multicols}
-R al ser un programa GPL carece de soporte técnico, sin embargo, en la actualidad existen empresas que proveen varios tipos de soportes para R bajo pago. Entre las más destacadas se encuentran:
+
+R al ser un programa GNU General Public License carece de soporte técnico, sin embargo, en la actualidad existen empresas que proveen varios tipos de soportes para R bajo pago. Entre las más destacadas se encuentran:
 \begin{multicols}{2}
 \begin{itemize}
-\item Revolution Analytics, Inc.
-\item RStudio, Inc.
-\item XL - Solutions Corporation.
+  \item RStudio, Inc.
+  \item Revolution Analytics, Inc.
+  \item XL - Solutions Corporation.
 \end{itemize}
 \end{multicols}
 
 \subsection{Funcionamiento}
-R es un lenguaje orientado a objetos (OOP) dise\~nado en un entorno auténtico bajo el cual esconde su simplicidad y flexibilidad, lo cual permite a sus usuarios a\~nadir funcionalidad mediante la definición de nuevas \emph{funciones}. El término \emph{orientado a objetos} significa que las variables, datos, funciones, resultados, etc., se guardan en la memoria activa del computador en forma de objetos con un nombre específico y pueden ser modificados o manipulados por el usuario mediante operadores y funciones. El uso y funcionamiento de los operadores en R es bastante intuitivo y se lo verá a detalle más adelante.\newline
 
-El hecho que R sea un lenguaje de programación puede desmotivar a muchos usuarios los cuales piensan que para iniciarse en el programa se necesita \emph{alma de programador} lo cual no es cierto. Primero R es un lenguaje interpretado similar a Java, y segundo no es un lenguaje compilado a diferencia de C, C++, Fortran, Pascal, ect. sino más bien mediante comandos ingresados por teclado ejecutamos directamente sin necesidad de construir ejecutables.\newline
+R es un lenguaje orientado a objetos (OOP\footnote{La programación OOP está basada en varias técnicas: herencia, clasificación, identidad, polimorfismo y encapsulamiento.}) dise\~nado en un entorno auténtico bajo el cual esconde su simplicidad y flexibilidad, lo cual permite a sus usuarios a\~nadir funcionalidad mediante la definición de nuevas \emph{funciones}. El término \emph{orientado a objetos} hace referencia a un paradigma de la programación que emplea objetos en sus interacciones y diseño de aplicaciones. R almacena sus variables, datos, funciones, resultados, etc., en la memoria activa del computador en forma de objetos con un nombre específico y pueden ser modificados o manipulados por el usuario mediante operadores y funciones. El uso y funcionamiento de los operadores en R es bastante intuitivo y se lo verá a detalle más adelante.\newline
+
+El hecho que R sea un lenguaje de programación puede desmotivar a muchos usuarios los cuales piensan que para iniciarse en el programa se necesita \emph{alma de programador} lo cual no es cierto. Primero R es un lenguaje interpretado similar a Java, y segundo no es un lenguaje compilado a diferencia de C, C++, Fortran, Pascal, ect. sino más bien mediante comandos ingresados por teclado los cuales se ejecutan directamente sin necesidad de construir archivos ejecutables.\newline
 
 El programa R incluye 8 bibliotecas o paquetes estándar, sin embargo, las capacidades de R pueden ser ampliadas fácilmente mediante la incorporación de paquetes que se encuentran disponibles en varios repositorios como:
 \begin{multicols}{2}
 \begin{itemize}
-\item CRAN
-\item BioConductor
-\item Omegahat
-\item RForge, entre otros.
+  \item CRAN
+  \item BioConductor
+  \item Omegahat
+  \item RForge, entre otros.
 \end{itemize}
 \end{multicols}
-Los paquetes estándar de R pueden visualizarse al teclear \code{\texttt{search()}}
+
+Los paquetes estándar de R pueden ser visualizados a través del siguiente comando:
+
 <<>>=
 search()
 @
-En la actualidad\footnote{Información obtenida al 24 de Octubre 2014.} existen 5986 paquetes válidos en el repositorio CRAN, los cuáles se encuentran ordenados por fecha de publicación o alfabéticamente agrupadas en diversas líneas de investigación.
+
+En la actualidad\footnote{Información obtenida al 21 de Diciembre 2014.} existen 6129 paquetes válidos en el repositorio CRAN, los cuáles se encuentran ordenados por fecha de publicación o alfabéticamente agrupadas en diversas líneas de investigación.
 
 \subsection{Ventajas}
+
 Entre las principales ventajas que posee el software R podemos anotar lo siguiente:
 \begin{itemize}
-\item Al tratarse de un software libre el costo es nulo.
-\item Se han implementado una gran cantidad de métodos estadísticos desde los más básicos hasta los más avanzados y modernos. Todos los métodos se encuentran organizados en librerías, las cuales se encuentran en constante crecimiento.
-\item Tiene la capacidad para acceder a datos de múltiples formatos. En la actualidad existen varias librerias para leer datos desde SPSS, SAS, STATA, MySQL, Excel, etc.
-\item Gran capacidad para la manipulación de datos y funciones, así como para la generación de gráficos de alta calidad.
-\item Facilidad para enlazarse con LaTeX y generar reportes dinámicos.
-\item Amplia bibliografía tanto en internet como en libros publicados por prestigiosas editoriales como: Springer, Wiley, O'Reilly, Chapman $\&$ Hall/CRC, etc.
-\item Fácil visualización e interpretación de los algoritmos implementados en R con lo cual el usuario puede conocer exactamente lo que el ordenador ejecuta con cada comando.
-\item Permite visualizar los algoritmos en él implementados, modificarlos y ajustarlos a nuestras necesidades (esto no es permitido en los softwares licenciados).
+  \item Al tratarse de un software libre el costo es nulo.
+  \item Se han implementado una gran cantidad de métodos estadísticos desde los más básicos hasta los más avanzados y modernos. Todos los métodos se encuentran organizados en librerías, las cuales se encuentran en constante crecimiento.
+  \item Capacidad para acceder a datos de múltiples formatos. En la actualidad existen varias librerias para leer datos desde SPSS, SAS, STATA, MySQL, Excel, etc.
+  \item Gran capacidad para la manipulación de datos y funciones, así como para la generación de gráficos de alta calidad.
+  \item Facilidad para enlazarse con LaTeX y generar reportes dinámicos.
+  \item Amplia bibliografía tanto en internet como en libros publicados por prestigiosas editoriales como: Springer, Wiley, O'Reilly, Chapman $\&$ Hall/CRC, etc.
+  \item Fácil visualización e interpretación de los algoritmos implementados en R con lo cual el usuario puede conocer exactamente lo que el ordenador ejecuta.
+  \item Permite visualizar los algoritmos en él implementados, modificarlos y ajustarlos a nuestras necesidades (esto no es permitido en los softwares licenciados).
 \end{itemize}
 
 \subsection{Desventajas}
+
 Los inconvenientes a los cuales se deben enfrentar los usuarios de R son:
 \begin{itemize}
-\item Al ser un programa libre carece de un departamento de atención al cliente al cual se pueda recurrir en caso de que se reporte un inconveniente con el mismo. Sin embargo existe una comunidad en crecimiento de usuarios de R que se encuentran dispuestos a colaborar desinteresadamente en la resolución de problemas.
-\item El software R como tal no dispone de una interfaz amigable para el usuario, las tareas se llevan a cabo a través de líneas de comando lo cual puede resultar difícil para el usuario común. No obstante con el desarrollo de GUI's se ha facilitado en gran medida la experiencia del programa con el usuario común.
-\item El código en R es interpretado, no compilado, lo cual puede ocasionar una ejecución lenta en ocasiones en las que se realizan simulaciones intensas. Con el fin de remediar lo anterior el grupo R Core Team a partir de la versión 2.14 ha precompilado todas las funciones y librerías de R con el objetivo de acelerar la ejecución.
+  \item Al ser un programa libre carece de un departamento de atención al cliente al cual se pueda recurrir en caso de que se reporte un inconveniente con el mismo. Sin embargo existe una comunidad en crecimiento de usuarios de R que se encuentran dispuestos a colaborar desinteresadamente en la resolución de problemas.
+  \item El software R como tal no dispone de una interfaz amigable para el usuario, las tareas se llevan a cabo a través de líneas de comando lo cual puede resultar difícil para el usuario común. No obstante con el desarrollo de GUI's se ha facilitado en gran medida la experiencia del programa con el usuario común.
+  \item El código en R es interpretado, no compilado, lo cual puede ocasionar una ejecución lenta en ocasiones en las que se realizan simulaciones intensas. Con el fin de remediar lo anterior el grupo R Core Team a partir de la versión 2.14 ha precompilado todas las funciones y librerías de R con el objetivo de acelerar la ejecución.
 \end{itemize}
 
+
 \section{Instalación y actualización}
+
 \subsection{Programa R}
+
 La instalación del programa R se describe en los siguientes pasos:
 \begin{enumerate}
-\item Accedemos al repositorio de la CRAN a través de un navegador tecleando la dirección: \url{http://cran.es.r-project.org/}.
-\item Nos dirigimos a la parte superior de la página, y nos ubicamos en \texttt{Download and install R} seguido elegimos el sistema operativo. Para nuestro caso hacemos click en \texttt{Windows}.
-\item A continuación elegimos entre los 2 subdirectorios: \texttt{base} y \texttt{control}. Damos click sobre \texttt{base}.
-\item Finalmente, en la pantalla damos click sobre \texttt{Download R X.Y.Z for Windows}, con lo cual descargamos la versión de R más reciente.
+  \item Accedemos al repositorio de la CRAN a través de un navegador tecleando la dirección: \url{http://cran.es.r-project.org/}.
+  \item Nos dirigimos a la parte superior de la página, y nos ubicamos en \texttt{Download and install R} seguido elegimos el sistema operativo. Para nuestro caso hacemos click en \texttt{Windows}.
+  \item A continuación elegimos entre los 2 subdirectorios: \texttt{base} y \texttt{control}. Damos click sobre \texttt{base}.
+  \item Finalmente, en la pantalla damos click sobre \texttt{Download R X.Y.Z for Windows}, con lo cual descargamos la versión de R más reciente.
 \end{enumerate}
 
 En la actualidad, el software R puede ser instalado incluso sobre la plataforma Android\footnote{\url{https://play.google.com/store/apps/details?id=com.appsopensource.R&hl=es_419}}, esto permite que muchos usuarios puedan tener el programa al alcance y en todo momento con tan sólo tener un smartphone operativo.
 
 \subsection{Entorno de trabajo}
-Es muy importante para el usuario de R, conocer su entorno de trabajo, y es precisamente lo que trataremos en esta sección. Antes de iniciar, debemos aclarar que el presente documento está enfocado en la plataforma \texttt{Windows}, sin embargo en los diferentes sistemas operativos no existe mayor diferencia.\newline
-%\begin{center}
-%\includegraphics[scale=.45]{console.eps}
-%\end{center}
+Es muy importante para el usuario de R, conocer su entorno de trabajo, y es precisamente lo que trataremos en esta sección. Antes de iniciar, debemos aclarar que el presente documento está enfocado en la plataforma \texttt{Windows}, sin embargo en los diferentes sistemas operativos no existe mayor diferencia.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=.5]{console.eps}
+\caption{Entorno de trabajo de R}
+\label{entorno}
+\end{figure}
 %http://unbarquero.blogspot.com/2009/02/r-entorno-de-trabajo.html
-Iniciaremos explicando la barra de herramientas, la misma que consta de las secciones: Archivo, Editar, Visualizar, Misc, Paquetes, Ventanas y Ayuda. Todas serán explicadas con detalle a continuación:
+
+Iniciaremos explicando  la barra de herramientas, la misma que consta de las secciones: Archivo, Editar, Visualizar, Misc, Paquetes, Ventanas y Ayuda. Todas serán explicadas con detalle a continuación:
+
 \begin{itemize}
-\item {\bf \Large Archivo:} En esta sección se podrá tratar todo lo relacionado con el manejo de archivos y la salida del programa. Los elementos que lo componen son los siguientes:
-\begin{itemize}
-\item {\bf Interpretar código fuente R:} Al ser R un lenguaje de programación derivado del S nos permite realizar \texttt{scripts}\footnote{Desde el punto de vista informático un {\bf script} es un archivo de órdenes o procesamiento que por lo regular se almacena en un archivo de texto plano.} desde un editor externo, con esta opción podemos ejecutar dicho código en la consola siempre y cuando, la extensión del archivo sea del tipo \texttt{.R}.
-\item {\bf Nuevo script:} Al ejecutarse se abrirá un editor de lenguaje R para crear scripts, el mismo que puede ser llamado desde la consola.
-\item {\bf Abrir script:} Mediante esta opción, los scripts que han sido generados u obtenidos de alguna manera pueden ser visualizados para posteriormente editarlos.
-\item {\bf Mostrar archivo(s):} Sirve para abrir, visualizar o editar cualquier script, la principal diferencia con la opción Abrir script es que éste no puede editarlos directamente, simplemente visualizarlos. Se pueden abrir varios archivos a la vez.
-\item {\bf Cargar área de trabajo:} Pues como su nombre indica, sirve para cargar un área de trabajo que hayamos configurado y guardado previamente, es útil por ejemplo, cuando hemos definido el tipo de letra, el espacio de trabajo, los colores, etc, y queremos usarlo. La extensión común es .RData aunque también puede cargarse entornos de trabajo con formato antiguo tipo .rda.
-\item {\bf Guardar área de trabajo:} Cuando se haya configurado el entorno de consola de R, colores, tipo de letra, tamaño, etc, podemos guardarlo para cargarlo posteriormente en futuras aplicaciones ya que el propio programa R no guarda, de momento, dicha configuración. El formato del entorno de trabajo es .RData.
-\item {\bf Cargar Histórico:} Podemos cargar el archivo de comandos que se hayan ejecutado en una sesión previamente guardada. El formato de salida es .history.
-\item {\bf Guardar Histórico:} Con él, podemos guardar los comandos que hayamos instroducido por consola en una sesión. El formato de guardado es .history.
-\item {\bf Cambiar dir:} Podemos configurar el directorio de trabajo que está definido por defecto cuando se instalo el programa.
-\item {\bf Imprimir:} Podemos configurar e imprimir el entorno de trabajo de R, la consola.
-\item {\bf Guardar en archivo:} Se guardará todo lo que se haya escrito por la consola en formato .txt que después podremos recuperar.
-\item {\bf Salir:} Sirve para salir del programa R, antes nos preguntará si queremos guardar el área de trabajo.
+  \item {\bf \Large Archivo:} En esta sección se podrá tratar todo lo relacionado con el manejo de archivos y salir del programa. Los elementos que lo componen son los siguientes:
+  \begin{figure}[H]
+  \centering
+  \includegraphics[scale=.35]{archivo.eps}
+  \caption{Sección Archivo}
+  \label{archivo}
+  \end{figure}
+
+    \begin{itemize}
+      \item {\bf Interpretar código fuente R:} Hay que recordar que R es un lenguaje de programación derivado del S, es por ello que podemos realizar programas en un editor externo, con esta opción podemos ejecutar dicho programa en la consola siempre y cuando, la extensión de guardado sea del tipo .R.
+      \item {\bf Nuevo script:} Si lo ejecutamos, se nos abrirá un editor de lenguaje R para crear script que luegos podemos llamar desde la consola, el tipo de archivo que podemos generar son R o S.
+      \item {\bf Abrir script:} Los script que hemos generados o que tengamos del tipo R o S podemos abrirlos en un editor para poder editarlos.
+      \item {\bf Mostrar archivo(s):} Siver para abrir y poder visualizar o editar cualquier archivo, es interesante para los que tengan relación con el lenguaje R o S. Se diferencia con la opción Abrir script de que éste no puede editarlos directamente, simplemente visualizarlos. Se pueden abrir varios archivos a la vez.
+      \item {\bf Cargar área de trabajo:} Pues como su nombre indica, sirve para cargar un área de trabajo que hayamos configurado y guardado previamente, es útil por ejemplo, cuando hemos definido el tipo de letra, el espacio de trabajo, los colores, etc, y queremos usarlo. La extensión común es .RData aunque también puede cargarse entornos de trabajo con formato antiguo tipo .rda.
+      \item {\bf Guardar área de trabajo:} Cuando se haya configurado el entorno de consola de R, colores, tipo de letra, tamaño, etc, podemos guardarlo para cargarlo posteriormente en futuras aplicaciones ya que el propio programa R no guarda, de momento, dicha configuración. El formato del entorno de trabajo es .RData.
+      \item {\bf Cargar Histórico:} Podemos cargar el archivo de comandos que se hayan ejecutado en una sesión previamente guardada. El formato de salida es .history.
+      \item {\bf Guardar Histórico:} Con él, podemos guardar los comandos que hayamos instroducido por consola en una sesión. El formato de guardado es .history.
+      \item {\bf Cambiar dir:} Podemos configurar el directorio de trabajo que está definido por defecto cuando se instalo el programa.
+      \item {\bf Imprimir:} Podemos configurar e imprimir el entorno de trabajo de R, la consola.
+      \item {\bf Guardar en archivo:} Se guardará todo lo que se haya escrito por la consola en formato .txt que después podremos recuperar.
+      \item {\bf Salir:} Sirve para salir del programa R, antes nos preguntará si queremos guardar el área de trabajo.
+    \end{itemize}
+  \item {\bf \Large Editar:} Es la sección encargada de editar la consola de R, así como de configurar el entorno de trabajo.
+  \begin{itemize}
+  \begin{figure}[H]
+  \centering
+  \includegraphics[scale=.35]{editar.eps}
+  \caption{Sección Editar}
+  \label{editar}
+  \end{figure}
+  
+      \item {\bf Copiar:} Podemos copiar al portapapeles el comando o sentencia o lo que queramos de la consola. Para acceder de forma
+      rápida por teclado se debe pulsar: Ctrl + C.
+      \item {\bf Pegar:} Podemos pegar en la consola aquello que tengamos en el portapapeles. Para acceder de forma rápida por teclado
+      se debe pulsar: Ctrl + V.
+      \item {\bf Pegar solo comandos:} La diferencia básica con la opción Pegar es que con esta opción, sólo se pegarán en la consola
+      aquello que sea comandos para ejecutarse.
+      \item {\bf Copiar y Pegar:} Todo aquello que copiemos, directamente se pegará, de forma inmediata, en la consola. Para acceder de
+      forma rápida por teclado se debe pulsar: Ctrl + X.
+      \item {\bf Seleccionar todo:} Como su nombre indica, se selecciona todo lo que esté presente en la consola.
+      \item {\bf Limpiar consola:} Se borrarán todo lo que esté presente en la consola, pero ojo, no se borrarán las variables y
+      estructuras definidas. Es útil cuando tenemos en la consola mucha información que ya no es útil. Para acceder de forma rápida por
+      teclado se debe pulsar: Ctrl + L.
+      \item {\bf Editor de datos:} Podemos definir datos (vectores, estructuras, funciones, etc) y guardarlos para posteriormente
+      llamarlos en la consola. Estos datos estarán definidos en la consola cuando se guarde.
+      \item {\bf Preferencias de la interfaz gráfica:} En esta opción es donde podremos configurar todo lo relacionado a la 
+      visualización de texto reflejado en la consola: tamaño de letra, colores, tipo de letra, etc. También, se puede configurar el
+      entorno de trabajo, para multiventana o una única ventana.
+    \end{itemize}
+  \item {\bf \Large Visualizar:} Activa la visualización de algunos iconos en la parte superior tales como: Abrir script, Cargar área
+  de trabajo, etc., mismas que ya se detallaron anteriormente.
+  \begin{figure}[H]
+  \centering
+  \includegraphics[scale=.35]{visualizar.eps}
+  \caption{Sección Visualizar}
+  \label{visualizar}
+  \end{figure}
+  
+  \item {\bf \Large Misc:} Esta es la sección denominada misceláneas, donde hay más de un control interesante.
+  \begin{figure}[H]
+  \centering
+  \includegraphics[scale=.35]{misc.eps}
+  \caption{Sección Misc}
+  \label{misc}
+  \end{figure}
+    \begin{itemize}
+      \item {\bf Parar computación actual:} Este control es muy interesante y útil, con él, podremos parar cualquier archivo, sentencia
+      o código que esté ejecutando la consola R. Para acceder de forma rápida por teclado se debe pulsar: ESC.
+      \item {\bf Salida con buffer:} Para acceder de forma rápida por teclado se debe pulsar: Ctrl + W.
+      \item {\bf Terminar palabra:} Es una ayuda interactiva, que nos ayuda a completar las palabras mientras estamos escribiendo en
+      caso que la consola las reconózca.
+      \item {\bf Terminar nombre de archivo:} Realiza la misma función que la opción Terminar palabra pero en archivos.
+      \item {\bf Listar objetos:} Se nos mostrará por consola los objetos que hasta en este momento hemos definido en la consola.
+      \item {\bf Remover todos los objetos:} Como su nombre indica, elimina de memoria todos los objetos que hayamos definido (datos,
+      variables, matrices, vectores, etc) en la consola de R. Cuando pulsemos sobre dicha opción, el programa, nos preguntará si
+      realmente queremos borrarlos.
+      \item {\bf Listar el camino de búsqueda:} Nos ofrece por consola las librerias y complementos que tenemos instalados en R.
+    \end{itemize}
+  \item {\bf \Large Paquetes:} Dedicado al manejo de las librerias que posee el programa R.
+  \begin{figure}[H]
+  \centering
+  \includegraphics[scale=.35]{paquetes.eps}
+  \caption{Sección Paquetes}
+  \label{paquetes}
+  \end{figure}
+    \begin{itemize}
+      \item {\bf Cargar paquete:} Con él, podemos cargar en la consola cualquier libreria que tengamos instalada.
+      \item {\bf Seleccionar espejo CRAN:} Sirve para configurar el servidor de librerias.
+      \item {\bf Seleccionar repositórios:} En consola nos mostrará los repositorios que tenemos instalados y nos pedirá cual usar para la sesión activa.
+      \item {\bf Instalar paquetes(s):} Podremos actualizar o instalar librerias nuevas en red, para ello, debemos elegir un servidor.
+      \item {\bf Actualizar paquetes(s):} Podemos actualizar las librerias que tengamos instaladas en caso de haber una actualización reciente por red, para ello, debemos seleccionar un servidor
+      \item {\bf Instalar paquetes(s) a partir de archivos zip locales:} En caso de haber descargado una libreria y tenerla en nuestro ordenador, podemos instalarlo mediante esta opción.
+    \end{itemize}
+  \item {\bf \Large Ventanas:} Permite configurar la visualización de las ventanas: consola, área de gráficos y editor de script en modo vertical, horizontal, etc.
+  \begin{figure}[H]
+  \centering
+  \includegraphics[scale=.35]{ventanas.eps}
+  \caption{Sección Ventanas}
+  \label{ventanas}
+  \end{figure}
+  
+  \item {\bf \Large Ayuda:} Es un apartado que debemos tenerlo siempre presente, ya que en él se dispone al usuario, los manuales de utilización y específicos de R.
+  \begin{figure}[H]
+  \centering
+  \includegraphics[scale=.35]{ayuda.eps}
+  \caption{Sección Ayuda}
+  \label{ayuda}
+  \end{figure}
+    \begin{itemize}
+      \item {\bf Console:} Nos mostrará en una ventana los atajos por teclado que posee la consola.
+      \item {\bf FAQ en R:} Ayuda en html que se carga desde nuestro ordenador, donde nos ofrece las preguntas frecuentes que se suelen hacer los usuarios al utilizar R. No hace falta estar conectado a Internet.
+      \item {\bf FAQ en R para Windows:} Preguntas frecuentes para los usuarios de Windows.
+      \item {\bf Manuales en PDF:} Una recopilación de los manuales para el manejo del programa, esta opción es bastante interesante.
+      \item {\bf Funciones R(texto):} Es una opción donde podremos introducir sentencias de comando para obtener ayuda sobre ellas, es bastante útil.
+      \item {\bf Ayuda Html:} Se nos abrirá en el navegador una ayuda interactiva, no es necesario estar conectado a Internet.
+      \item {\bf Html search page:} Consiste en una página html donde podremos buscar las instrucciones que queramos consultar.
+      \item {\bf Página principal R:} Es un enlace directo a la web del proyecto R.
+      \item {\bf Página principal de CRAN:} Enlace directo al directorio de librerias de R.
+      \item {\bf Sobre:} Indica información de la compilación que se tenga instalada de R.
+    \end{itemize}
 \end{itemize}
-\item {\bf \Large Editar:} Es la sección encargada de editar la consola de R, así como de configurar el entorno de trabajo.
-\begin{itemize}
-\item {\bf Copiar:} Podemos copiar al portapapeles el comando o sentencia o lo que queramos de la consola. Para acceder de forma rápida por teclado se debe pulsar: Ctrl + C.
-\item {\bf Pegar:} Podemos pegar en la consola todo aquello que tengamos en el portapapeles. Para acceder de forma rápida por teclado se debe pulsar: Ctrl + V.
-\item {\bf Pegar solo comandos:} La diferencia básica con la opción Pegar es que con esta opción, sólo se pegarán en la consola aquello que sea comandos para ejecutarse.
-\item {\bf Copiar y Pegar:} Todo aquello que copiemos, directamente se pegará, de forma inmediata, en la consola. Para acceder de forma rápida por teclado se debe pulsar: Ctrl + X.
-\item {\bf Seleccionar todo:} Como su nombre indica, se selecciona todo lo que esté presente en la consola.
-\item {\bf Limpiar consola:} Se borrarán todo lo que esté presente en la consola, pero ojo, no se borrarán las variables y estructuras definidas. Es útil cuando tenemos en la consola mucha información que ya no es útil. Para acceder de forma rápida por teclado se debe pulsar: Ctrl + L.
-\item {\bf Editor de datos:} Podemos definir datos (vectores, estructuras, funciones, etc) y guardarlos para posteriormente llamarlos en la consola. Estos datos estarán definidos en la consola cuando se guarde.
-\item {\bf Preferencias de la interfaz gráfica:} En esta opción es donde podremos configurar todo lo relacionado a la visualización de texto reflejado en la consola: tamaño de letra, colores, tipo de letra, etc. También, se puede configurar el entorno de trabajo, para multiventana o una única ventana.
-\end{itemize}
-\item {\bf \Large Visualizar:}
-\item {\bf \Large Misc:} Esta es la sección denominada misceláneas, donde hay más de un control interesante.
-\begin{itemize}
-\item {\bf Parar computación actual:} Este control es muy interesante y útil, con él, podremos parar cualquier archivo, sentencia o código que esté ejecutando la consola R. Para acceder de forma rápida por teclado se debe pulsar: ESC.
-\item {\bf Salida con buffer:} Para acceder de forma rápida por teclado se debe pulsar: Ctrl + W.
-\item {\bf Terminar palabra:} Es una ayuda interactiva, que nos ayuda a completar las palabras mientras estamos escribiendo en caso que la consola las reconózca.
-\item {\bf Terminar nombre de archivo:} Realiza la misma función que la opción Terminar palabra pero en archivos.
-\item {\bf Listar objetos:} Se nos mostrará por consola los objetos que hasta en este momento hemos definido en la consola.
-\item {\bf Remover todos los objetos:} Como su nombre indica, elimina de memoria todos los objetos que hayamos definido (datos, variables, matrices, vectores, etc) en la consola de R. Cuando pulsemos sobre dicha opción, el programa, nos preguntará si realmente queremos borrarlos.
-\item {\bf Listar el camino de búsqueda:} Nos ofrece por consola las librerias y complementos que tenemos instalados en R.
-\end{itemize}
-\item {\bf \Large Paquetes:} Dedicado al manejo de las librerias que posee el programa R.
-\begin{itemize}
-\item {\bf Cargar paquete:} Con él, podemos cargar en la consola cualquier libreria que tengamos instalada.
-\item {\bf Seleccionar espejo CRAN:} Sirve para configurar el servidor de librerias.
-\item {\bf Seleccionar repositórios:} En consola nos mostrará los repositorios que tenemos instalados y nos pedirá cual usar para la sesión activa.
-\item {\bf Instalar paquetes(s):} Podremos actualizar o instalar librerias nuevas en red, para ello, debemos elegir un servidor.
-\item {\bf Actualizar paquetes(s):} Podemos actualizar las librerias que tengamos instaladas en caso de haber una actualización reciente por red, para ello, debemos seleccionar un servidor
-\item {\bf Instalar paquetes(s) a partir de archivos zip locales:} En caso de haber descargado una libreria y tenerla en nuestro ordenador, podemos instalarlo mediante esta opción.
-\end{itemize}
-\item {\bf \Large Ventanas:}
-\item {\bf \Large Ayuda:} Es un apartado que debemos tenerlo siempre presente, ya que en él se dispone al usuario, los manuales de utilización y específicos de R.
-\begin{itemize}
-\item {\bf Console:} Nos mostrará en una ventana los atajos por teclado que posee la consola.
-\item {\bf FAQ en R:} Ayuda en html que se carga desde nuestro ordenador, donde nos ofrece las preguntas frecuentes que se suelen hacer los usuarios al utilizar R. No hace falta estar conectado a Internet.
-\item {\bf FAQ en R para Windows:} Preguntas frecuentes para los usuarios de Windows.
-\item {\bf Manuales en PDF:} Una recopilación de los manuales para el manejo del programa, esta opción es bastante interesante.
-\item {\bf Funciones R(texto):} Es una opción donde podremos introducir sentencias de comando para obtener ayuda sobre ellas, es bastante útil.
-\item {\bf Ayuda Html:} Se nos abrirá en el navegador una ayuda interactiva, no es necesario estar conectado a Internet.
-\item {\bf Html search page:} Consiste en una página html donde podremos buscar las instrucciones que queramos consultar.
-\item {\bf Página principal R:} Es un enlace directo a la web del proyecto R.
-\item {\bf Página principal de CRAN:} Enlace directo al directorio de librerias de R.
-\item {\bf Sobre:} Indica información de la compilación que se tenga instalada de R.
-\end{itemize}
-\end{itemize}
+
 \subsubsection{Área de trabajo}
 El área de trabajo de R
 <<>>=
 options(width=50)
 rnorm(10)
 @
+
 <<>>=
 options(width=60)
 rnorm(10)
 @
+
 <<>>=
 options(width=65)
 rnorm(10)
 @
+
+
+
 \subsection{Instalación de paquetes}
+
 Como habíamos señalado en la sección anterior, una de las principales ventajas de R es su capacidad para incrementar su funcionalidad mediante la incorporación de nuevos paquetes o librerías.\newline
-Para entender de mejor manera la necesidad de emplear paquetes en R usaremos la siguiente metáfora: Imaginemos que tener instalado el programa en el computador es como haber adquirido un auto nuevo el cual cumple con ciertas funciones principales y no trae contratiempos, una vez que lo empezamos a rodar nos vamos dando cuenta de la necesidad de mejorar el rendimiento de ciertos mecanismos ya existentes del auto debido que lo vamos exponiendo a diferentes ambientes y condiciones. Lo anterior pasa exactamente con R, cuando descargamos e instalamos el sotfware contamos con ciertas características y paquetes básicos pero existen miles de paquetes adicionales que pueden ser agregados para lograr mejorar su funcionalidad y a la vez realizar cosas estupendas.
+
+Para entender de mejor manera la necesidad de emplear paquetes en R usaremos la siguiente metáfora: Imaginemos que tener instalado el programa en el computador es como haber adquirido un auto nuevo el cual cumple con ciertas funciones principales y no trae contratiempos, una vez que lo empezamos a rodar nos vamos dando cuenta de la necesidad de mejorar el rendimiento de ciertos mecanismos ya existentes del auto debido que lo vamos exponiendo a diferentes ambientes y condiciones. Lo anterior pasa exactamente con R, cuando  descargamos e instalamos el sotfware contamos con ciertas características y paquetes básicos pero existen miles de paquetes adicionales que pueden ser agregados para lograr mejorar su funcionalidad y a la vez realizar cosas estupendas.
 
 \subsubsection{Repositorio CRAN}
+
 La instalación de paquetes en R desde el repositorio CRAN es sencillo, una vez conocido el nombre del paquete ha ser instalado basta con introducir el siguiente comando en la consola:
 <<eval=FALSE>>=
 install.packages("nombre_paquete")
 @
-Ciertos paquetes de R requieren la instalación de otros paquetes adicionales debido que entre estos comparten algunas funciones (\emph{paquetes sugeridos}) para evitar tener inconvenientes con la instalación de un paquete se aconseja adicionar el parametro siguiente:
+Ciertos paquetes de R requieren la instalación de otros paquetes adicionales debido que entre estos comparten algunas funciones (\emph{paquetes sugeridos}) para evitar tener inconvenientes con la instalación de un paquete se aconseja adicionar el parametro siguiente: 
 <<eval=FALSE>>=
 install.packages("nombre_paquete", dependencies=TRUE)
 @
@@ -229,27 +327,36 @@ En el caso que se desee instalar un lista de $n$ paquetes planteamos la siguient
 <<eval=FALSE>>=
 paquetes <- c("pckg_1","pckg_2", ... , "pckg_n")
 lapply(seq_along(paquetes), function(i){
-install.packages(paquetes[[i]], dependencies=TRUE)
-})
+      install.packages(paquetes[[i]], dependencies=TRUE)
+      })
 @
+
 Una segunda alternativa al momento de instalar los paquetes de R consiste en obtener el archivo zipeado (.zip) desde el repositorio CRAN e instalarlo manualmente a través del menú del programa.\newline
+
 Una vez instalado un paquete el paso siguiente consiste en cargar las funciones y datos del mismo dentro del área de trabajo, para esto tenemos dos comandos útiles: \code{\texttt{library()}} y \code{\texttt{require()}}, sin embargo lo más recomendable es utilizar el primero de ellos como se detalla a continuación:
+
 <<eval=FALSE>>=
 library('translate2R')
-## Error in library("translate2R") :
+
+## Error in library("translate2R") : 
 ## there is no package called ‘translate2R’
+
 require('translate2R')
+
 ## Loading required package: translate2R
 ## Warning message:
 ## In library(package, lib.loc=lib.loc, character.only=TRUE,
-## logical.return=TRUE,
-## : there is no package called ‘translate2R’
+##          logical.return=TRUE,  
+##         : there is no package called ‘translate2R’
 @
+
 Para mostrar la diferencia entre de los comandos anteriores trataremos de cargar el paquete \texttt{translate2R}, el mismo que no ha sido descargado previamente. Al emplear \texttt{library} observamos que nos arroja un error, mientras que al emplear \texttt{require} únicamente tenemos una advertencia. En el caso puntual que nos encontremos trabajando en un script la segunda opción nos causaría serios problemas dado que permite continuar con la ejecución del proceso sin que el usuario se percate, mientras que la primera opción alerta al usuario. Por todo lo antes mencionado la gran mayoría de usuarios R prefieren usar el comando \texttt{library}.\newline
+
 Si deseamos visualizar el listado completo de los paquetes instalados podemos recurrir al comando \code{\texttt{library()}}. Además, si deseamos conocer el lugar en el cual se instalan los paquetes podemos hacer lo siguiente:
 <<>>=
 .libPaths()
 @
+
 En algunas ocasiones los usuarios desean descargar los paquetes de R en una carpeta específica (C:/pckg\_down) e instalar los paquetes en otra carpeta diferente (D:/pckg\_inst), a continuación mostramos una posible solución al problema:
 <<eval=FALSE>>=
 install.packages("pckgs", destdir="C:/pckg_down", lib="D:/pckg_inst")
@@ -267,23 +374,43 @@ sessionInfo()
 El comando anterior imprime información acerca de la versión y plataforma del ejecutable de R que se encuentra utilizando, adicionalmente muestra información de la localidad y de los paquetes adjuntos o cargados.
 
 \subsubsection{Repositorios externos}
+
 Habiamos comentado sobre la existencia de varios repositorios adicionales al CRAN de entre los cuales destacan R-Forge\footnote{Sistema para el desarrollo y versionamiento de paquetes en R.}, BioConductor\footnote{Subproyecto dedicado a la investigación en bioestadística.} y Omegahat\footnote{Subproyecto dedicado al desarrollo de interfaces para la programación estadística basado en Java.}, dentro de estos repositorios se pueden encontrar paquetes que no se encuentran en el CRAN, o bien, versiones más actualizadas de los mismos.\newline
+
 Para instalar los paquetes desde los repositorios externos antes mencionados basta la siguiente sentencia:
 <<eval=FALSE>>=
 install.packages("pckgname", repos="http://r-forge.r-project.org")
 install.packages("pckgname", repos="http://www.omegahat.org/R")
 install.packages("pckgname", repos="http://www.bioconductor.org/
-packages/2.10/bioc")
+                                    packages/2.10/bioc")
 @
 Algunos de los paquetes se encuentran en formato binario, para su instalación basta adicionar el parámetro \texttt{type="source"}.
 
 \subsubsection{Github}
+
+GitHub es un repositorio de archivos y proyectos el cual emplea un sistema de control de versiones conocido como Git. Github fue lanzado a inicios del 2010, el código alojado en el repositorio se almacena de forma pública, aunque también se puede almacenar de forma privada siempre y cuando se tenga una cuenta de pago.\newline
+
+La instalación y sincronización de Github con RStudio se realiza de la siguiente manera:
+\begin{enumerate}
+  \item Descargar e instalar la plataforma específica de Git\footnote{http://www.git-scm.com/} (no Github) con las opciones por default.
+  \item Configurar Git con los comandos globales a través de la versión bash, teclear lo siguiente:
+  \begin{center}
+  git config $–-$global user.name ''nombre de la cuenta de Github''\\
+  git config $–-$global user.email ''Github-Email@something.com''
+  \end{center}
+  \item Abrir RStudio y configurar la ruta del ejecutable de Git. Ir a Tools > Options > Git/SVN.
+\end{enumerate}
+
+
+
+
 En la actualidad gran cantidad de usuarios R han alojado sus proyectos en el sistema de control de versiones GitHub, Inc. por lo cual se hace necesario contar con una solución al momento de instalar algún paquete alojado en dicho sistema. Nuestra solución consiste en lo siguiente:
 <<eval=FALSE>>=
 install.packages('devtools', dependencies=TRUE)
 devtools::install_github("rstudio/rmarkdown")
 @
-Iniciamos instalando el paquete \texttt{devtools} el cual nos provee la función \texttt{install\_github}, esta última es la encargada de acceder al sistema Github e instala el paquete deseado, para esta ocasión hemos seleccionado el paquete \texttt{rmarkdown} alojado en el repositorio Github dentro del proyecto \texttt{rstudio}.\newline
+Iniciamos instalando el paquete \texttt{devtools} el cual nos provee la función \texttt{install\_github}, esta última es la encargada de acceder al sistema Github e instalar el paquete deseado, para esta ocasión hemos seleccionado el paquete \texttt{rmarkdown} alojado en el repositorio Github dentro del proyecto \texttt{rstudio}.\newline
+
 En el caso que se requiera información acerca de un paquete previamente instalado podemos recurrir a:
 <<eval=FALSE>>=
 library(help='pckgname')
@@ -297,28 +424,31 @@ Si deseamos conocer los parámetros de cada una de las funciones implementadas d
 <<eval=FALSE>>=
 lsf.str('package:foreign')
 @
+
 Cuando un paquete es empleado dentro de una investigación surge la necesidad de citar a los autores del paquete, lo anterior lo solventamos mediante el comando \texttt{citation}.
 <<eval=FALSE>>=
 citation("foreign")
+
 ## To cite package ‘foreign’ in publications use:
 ##
-## R Core Team (2014). foreign: Read Data Stored by Minitab, S, SAS,
-## SPSS, Stata, Systat, Weka, dBase, .... R
-## package version 0.8-61. http://CRAN.R-project.org/package=foreign
+##  R Core Team (2014). foreign: Read Data Stored by Minitab, S, SAS, 
+##  SPSS, Stata, Systat, Weka, dBase, .... R
+##  package version 0.8-61. http://CRAN.R-project.org/package=foreign
 ##
 ## A BibTeX entry for LaTeX users is
 ##
-## @Manual{,
-## title = {foreign: Read Data Stored by Minitab, S, SAS, SPSS,
-## Stata, Systat, Weka,dBase, ...},
-## author = {{R Core Team}},
-## year = {2014},
-## note = {R package version 0.8-61},
-## url = {http://CRAN.R-project.org/package=foreign},
-## }
+##  @Manual{,
+##    title = {foreign: Read Data Stored by Minitab, S, SAS, SPSS,
+##  Stata, Systat, Weka,dBase, ...},
+##    author = {{R Core Team}},
+##    year = {2014},
+##    note = {R package version 0.8-61},
+##    url = {http://CRAN.R-project.org/package=foreign},
+##  }
 @
 
 \subsection{Actualización de paquetes}
+
 En el caso que se desee actualizar todos los paquetes previamente instalados contamos con el comando \texttt{update.packages}, el mismo que revisa las actualizaciones de los paquetes. El anterior comando nos preguntará si deseamos actualizar uno por uno los paquetes, lo cual es tedioso pues si contamos con un gran número de paquetes nos demandará bastante tiempo aprobar la actualización de los mismos. Para subsanar lo anterior basta añadir el parámetro \texttt{ask = TRUE}.
 <<eval=FALSE>>=
 update.packages(ask=TRUE)
@@ -330,48 +460,56 @@ old.packages()
 El comando anterior nos mostrará la versión del paquete que ha sido instalada y la última versión disponible del mismo.
 
 \subsection{Actualización de R}
+
 Mantener actualizado R y sus paquetes es relativamente fácil a través del tecleo de los siguientes comandos en la consola, los mismos que se detallan a continuación:
 <<eval=FALSE>>=
 install.packages('installr', dependencies = TRUE)
 library('installr')
 updateR()
 @
-Iniciamos instalando el paquete \textbf{installr}, acto seguido procedemos a cargar el paquete a través del comando \texttt{library}, y finalmente, mediante el comando \texttt{updateR} verificamos la versión más reciente del programa y descargamos la misma.\newline
+
+Iniciamos instalando el paquete \textbf{installr}, acto seguido procedemos a cargar el paquete a través del comando \texttt{library}, y finalmente, mediante el comando \texttt{updateR} verificamos la versión más reciente del programa  y descargamos la misma.\newline
+
 En el caso que se desee conocer la versión de R que se encuentra instalada podemos teclear en la consola el comando: \code{\texttt{R.version.string}}.
 
 \subsection{RStudio}
+
 RStudio\footnote{El programa RStudio puede obtenerse libremente de la página \url{http://www.rstudio.org/}} es un entorno IDE (Integrated Development Enviroment) de código abierto lanzado en Febrero 2011 el cual nos ofrece un marco de trabajo más amigable con el software R y lo podemos encontrar para la gran mayoría de plataformas (Windows, Mac, Linux) así como también puede ser ejecutado a través de un navegador web\footnote{Opción válida para la versión \texttt{server}.}.\newline
+
 A continuación elistamos algunas IDE's existentes para R:
 \begin{multicols}{2}
 \begin{itemize}
-\item ESS
-\item Eclipse
-\item SciViews
-\item JGR
-\item Tinn-R
-\item Notepad ++
-\item RGui
+  \item ESS
+  \item Eclipse
+  \item SciViews
+  \item JGR
+  \item Tinn-R
+  \item Notepad ++
+  \item RGui
 \end{itemize}
 \end{multicols}
+
+
 El programa se encuentra organizado en cuatro ventanas de trabajo distintas:
 \begin{itemize}
-\item {\bf Editor de código fuente:} Se encuentra en la zona superior izquierda, esta ventana nos permite abrir y editar ficheros con código R.
-\item {\bf Consola:} Se ubica en la zona inferior izquierda, esta ventana es también conocida como consola y nos permite ejecutar comandos de R.
-\item {\bf Navegador de objetos:} La zona superior derecha posee dos ventanas auxiliares:
-\begin{itemize}
-\item {\bf Workspace:} En esta ventana se enlistan todos los objetos creados en memoria.
-\item {\bf History:} En esta ventana se almacena el histórico de las líneas de código que han sido ejecutadas en R.
-\end{itemize}
-\item {\bf Visualización e información:} Esta última ventana ubicada en la zona inferior derecha se encuentra conformada por 4 ventanas auxiliares:
-\begin{itemize}
-\item {\bf Files:} Provee el acceso al árbol de directorios y ficheros del disco duro.
-\item {\bf Plots:} Ventana auxiliar en la cual aparecen los gráficos creados en la consola.
-\item {\bf Packages:} Esta ventana facilita la administración de los paquetes de R instalados en el computador.
-\item {\bf Help:} Esta última ventana nos ayuda en la búsqueda de información respecto a un comando en específico.
-\end{itemize}
+  \item {\bf Editor de código fuente:} Se encuentra en la zona superior izquierda, esta ventana nos permite abrir  y editar ficheros con código R.
+  \item {\bf Consola:} Se ubica en la zona inferior izquierda, esta ventana es también conocida como consola y nos permite ejecutar comandos de R.
+  \item {\bf Navegador de objetos:} La zona superior derecha posee dos ventanas auxiliares:
+  \begin{itemize}
+    \item {\bf Workspace:} En esta ventana se enlistan todos los objetos creados en memoria.
+    \item {\bf History:} En esta ventana se almacena el histórico de las líneas de código que han sido ejecutadas en R. 
+  \end{itemize}
+  \item {\bf Visualización e información:} Esta última ventana ubicada en la zona inferior derecha se encuentra conformada por 4 ventanas auxiliares:
+  \begin{itemize}
+    \item {\bf Files:} Provee el acceso al árbol de directorios y ficheros del disco duro.
+    \item {\bf Plots:} Ventana auxiliar en la cual aparecen los gráficos creados en la consola.
+    \item {\bf Packages:} Esta ventana  facilita la administración de los paquetes de R instalados en el computador.
+    \item {\bf Help:} Esta última ventana nos ayuda en la búsqueda de información respecto a un comando en específico.
+  \end{itemize}
 \end{itemize}
 
 \subsection{Obteniendo ayuda}
+
 Existen algunas funciones en R que nos facilitan la vida al momento de indagar sobre la funcionalidad de ciertos comandos con tan sólo tener disponible una conexión de Internet. Por ejemplo, si nos encontramos interesados en obtener información acerca de la función \code{\texttt{seq()}} podemos escribir en la consola lo siguiente:
 <<eval=FALSE>>=
 help(seq)
@@ -385,6 +523,7 @@ Para el caso que se encuentren trabajando con funciones especificadas por caract
 help("[[")
 @
 Se pueden utilizar tanto comillas simples como dobles sin que esto conlleve problemas a posteriori.\newline
+
 Adicionalmente, si nos encontramos interesados en buscar información relacionada al término "normal", o algún otro término en específico podemos teclear lo siguiente:
 <<eval=FALSE>>=
 help.search("normal")
