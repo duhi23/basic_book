@@ -1,8 +1,8 @@
 \documentclass[12pt,a4paper,oneside]{article}
 \usepackage{amsmath,amsthm,amsfonts,amssymb}
 \usepackage{pst-eucl,pstricks,pstricks-add}
-\usepackage[utf8]{inputenc}
-%\usepackage[latin1]{inputenc}
+%\usepackage[utf8]{inputenc}
+\usepackage[latin1]{inputenc}
 \usepackage[spanish,activeacute]{babel}
 \usepackage[a4paper,margin=2.5cm]{geometry}
 \usepackage{times}
@@ -393,8 +393,13 @@ La instalación y sincronización de Github con RStudio se realiza de la siguien
   \item Descargar e instalar la plataforma específica de Git\footnote{http://www.git-scm.com/} (no Github) con las opciones por default.
   \item Configurar Git con los comandos globales a través de la versión bash, teclear lo siguiente:
   \begin{center}
+<<<<<<< HEAD
   git config –-global user.name ''nombre de la cuenta de Github''\\
   git config –-global user.email ''Github-Email@something.com''
+=======
+  git config $–-$global user.name ''nombre de la cuenta de Github''\\
+  git config $–-$global user.email ''Github-Email@something.com''
+>>>>>>> 558d2c42e0a79f4bff8379fc1f120880c7c82f63
   \end{center}
   \item Abrir RStudio y configurar la ruta del ejecutable de Git. Ir a Tools > Options > Git/SVN.
 \end{enumerate}
