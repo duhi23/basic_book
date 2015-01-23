@@ -604,6 +604,7 @@ c(2,4,6,8,10)
 c(2,3,2)
 x <- array (1:24, c(3,4,2))
 @
+
 produce un arreglo tridimensional: la primera dimensión tiene tres niveles, la segunda tiene cuatro y la tercera tiene dos. Al imprimir el arreglo R comienza con la dimensión mayor y va bajando hacia la dimensión menor, imprimiendo matrices bidimensionales en cada etapa.
 
 \subsection{Data Frames}
