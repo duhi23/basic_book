@@ -77,7 +77,7 @@ Dado que la estadística es la herramienta determinante para la toma de decision
 
 {\bf \large Descripción:}\newline
   
-  El curso de R Nivel Básico tiene como objetivo principal proporcionar al estudiante los elementos básicos para iniciarse con el trabajo en el lenguaje de programación R.\newline
+  El curso de R Nivel Básico tiene como objetivo principal proporcionar al estudiante una visión general del entorno del lenguaje de programación R y sus aplicaciones. Al final del curso, el estudiante se encontrará en la capacidad de crear sus propias funciones, importar y exportar datos. \newline
   
   El enfoque del curso se lo hará sobre el ámbito estadístico, sin embargo, lo anterior no resta méritos para que el estudiante amplie sus posibilidades en diversas áreas. Por tratarse de un curso inicial el estudiante recibirá abundante información la cual le permita profundizar de forma autónoma en la utilización del programa.\newline
   
@@ -91,7 +91,6 @@ Dado que la estadística es la herramienta determinante para la toma de decision
 
 \begin{enumerate}
   \item {\Large Introducción}
-  %\renewcommand{\theenumi}{\thesection.\arabic{enumi}}
   \begin{enumerate}
     \item[1.1] Funcionamiento
     \item[1.2] Ventajas
@@ -119,17 +118,24 @@ Dado que la estadística es la herramienta determinante para la toma de decision
     \item[4.3] Arrays
     \item[4.4] Data Frames
     \item[4.5] Listas
+    \item[4.6] Factores $\&$ Tablas
+  \end{enumerate}
+  \item {\Large Lectura y escritura de datos}
+  \begin{enumerate}
+    \item[5.1] Ingreso mediante el teclado
+    \item[5.2] Lectura de archivos
+    \item[5.3] Escritura de archivos
+    \item[5.4] Accediendo a datos de la web
   \end{enumerate}
   \item {\Large Funciones}
     \begin{enumerate}
-    \item[5.1] Funciones internas
-    \item[5.2] Creación de funciones
-    \item[5.3] Edición de funciones
-    \item[5.4] Almacenamiento de funciones
+    \item[6.1] Funciones de R
+    \item[6.2] Estructuras de control
+    \item[6.3] Creación de funciones
+    \item[6.4] Edición de funciones
+    \item[6.5] Almacenamiento de funciones
   \end{enumerate}
 \end{enumerate}
-
-
 
 
 \end{document}
