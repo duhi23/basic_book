@@ -7,16 +7,12 @@ por una gran cantidad de colaboradores internacionales.
 
 ```
 Contenidos
+
+1. Introducción
+2. Instalación y actualización
+3. Estructura de datos
+4. Escritura y lectura de datos
+4. Funciones
 ```
 
-1) Introducción
-
-2) Instalación y actualización
-
-3) Conceptos básicos de programación
-
-4) Funciones
-
-
-Source Stat Lab Ec
-
+`Source Stat Lab Ec`

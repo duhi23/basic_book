@@ -1,8 +1,8 @@
 \documentclass[12pt,a4paper,oneside]{article}
 \usepackage{amsmath,amsthm,amsfonts,amssymb}
 \usepackage{pst-eucl,pstricks,pstricks-add}
-%\usepackage[utf8]{inputenc}
-\usepackage[latin1]{inputenc}
+\usepackage[utf8]{inputenc}
+%\usepackage[latin1]{inputenc}
 \usepackage[spanish,activeacute]{babel}
 \usepackage[a4paper,margin=2.5cm]{geometry}
 \usepackage{times}
@@ -286,24 +286,6 @@ Iniciaremos explicando  la barra de herramientas, la misma que consta de las sec
     \end{itemize}
 \end{itemize}
 
-\subsubsection{Área de trabajo}
-El área de trabajo de R
-<<>>=
-options(width=40)
-rnorm(10)
-@
-
-<<>>=
-options(width=55)
-rnorm(10)
-@
-
-<<>>=
-options(width=70)
-rnorm(10)
-@
-
-
 
 \subsection{Instalación de paquetes}
 
@@ -393,18 +375,11 @@ La instalación y sincronización de Github con RStudio se realiza de la siguien
   \item Descargar e instalar la plataforma específica de Git\footnote{http://www.git-scm.com/} (no Github) con las opciones por default.
   \item Configurar Git con los comandos globales a través de la versión bash, teclear lo siguiente:
   \begin{center}
-<<<<<<< HEAD
   git config –-global user.name ''nombre de la cuenta de Github''\\
   git config –-global user.email ''Github-Email@something.com''
-=======
-  git config $–-$global user.name ''nombre de la cuenta de Github''\\
-  git config $–-$global user.email ''Github-Email@something.com''
->>>>>>> 558d2c42e0a79f4bff8379fc1f120880c7c82f63
   \end{center}
   \item Abrir RStudio y configurar la ruta del ejecutable de Git. Ir a Tools > Options > Git/SVN.
 \end{enumerate}
-
-
 
 
 En la actualidad gran cantidad de usuarios R han alojado sus proyectos en el sistema de control de versiones GitHub, Inc. por lo cual se hace necesario contar con una solución al momento de instalar algún paquete alojado en dicho sistema. Nuestra solución consiste en lo siguiente:
@@ -481,11 +456,12 @@ Iniciamos instalando el paquete \textbf{installr}, acto seguido procedemos a car
 
 En el caso que se desee conocer la versión de R que se encuentra instalada podemos teclear en la consola el comando: \code{\texttt{R.version.string}}.
 
-\subsection{RStudio}
 
-RStudio\footnote{El programa RStudio puede obtenerse libremente de la página \url{http://www.rstudio.org/}} es un entorno IDE (Integrated Development Enviroment) de código abierto lanzado en Febrero 2011 el cual nos ofrece un marco de trabajo más amigable con el software R y lo podemos encontrar para la gran mayoría de plataformas (Windows, Mac, Linux) así como también puede ser ejecutado a través de un navegador web\footnote{Opción válida para la versión \texttt{server}.}.\newline
+\subsection{Entornos de desarrollo}
 
-A continuación elistamos algunas IDE's existentes para R:
+Un entorno de desarrollo integrado, también conocido como IDE (Integrated Development Enviroment) es un programa informático compuesto por un conjunto de herramientas de programación que contiene: un editor, un compilador, un depurador y un constructor de interfaz gráfica (GUI), el mismo que viene empaquetado como un programa \texttt{aplicación} que facilita de sobre manera la realización de operaciones al usuario mediante una serie de menús o mediante interacción con los objetos gráficos que aparecen en pantalla, a través de periféricos como: el ratón y teclado.\newline
+
+Los IDE's fueron desarrollados con el fin de proveer al usuario un marco de trabajo más amigable, a continuación, elistamos algunos IDE's existentes para R:
 \begin{multicols}{2}
 \begin{itemize}
   \item ESS
@@ -498,6 +474,11 @@ A continuación elistamos algunas IDE's existentes para R:
 \end{itemize}
 \end{multicols}
 
+\subsubsection{RStudio}
+
+RStudio\footnote{El programa RStudio puede obtenerse libremente de la página \url{http://www.rstudio.org/}} es un entorno IDE de código abierto lanzado en Febrero 2011 el cual nos ofrece un marco de trabajo más amigable con el software R y lo podemos encontrar para todas las plataformas (Windows, Mac, Linux) así como también puede ser ejecutado a través de un navegador web\footnote{Opción válida para la versión \texttt{server}.}.\newline
+
+RStudio ofrece una amplia integración con ficheros de diversos formatos: R scripts (.R), Markdown (.md), LaTeX (.Rnw) entre otros. La facilidad en la generación de documentos dinámicos con \texttt{RStudio} y \texttt{knitr} han hecho que el programa se convierta en la IDE preferida por muchos usuarios de R.\newline
 
 El programa se encuentra organizado en cuatro ventanas de trabajo distintas:
 \begin{itemize}
@@ -516,6 +497,66 @@ El programa se encuentra organizado en cuatro ventanas de trabajo distintas:
     \item {\bf Help:} Esta última ventana nos ayuda en la búsqueda de información respecto a un comando en específico.
   \end{itemize}
 \end{itemize}
+
+RStudio ofrece varios mecanismos para controlar varios aspectos de la evaluación durante una sesión. La función \texttt{options( )} es empleada para compartir los valores de parámetros entre las funciones.\newline
+
+\paragraph{Ancho de impresión}
+Existen ocasiones en las cuales el usuario desea controlar el ancho de impresión de los resultados que se muestran en la pantalla, como primer paso para modificar el ancho de impresión debemos obtener el parámetro actual mediante:
+<<>>=
+getOption("width")
+@
+
+Una vez conocido el ancho de pantalla actual procedemos a modificar el mismo cambiando el valor del parámetro \texttt{width}, de la siguiente manera:
+
+<<>>=
+options(width=40)
+rnorm(10)
+@
+
+<<>>=
+options(width=55)
+rnorm(10)
+@
+
+<<>>=
+options(width=70)
+rnorm(10)
+@
+
+\paragraph{Prompt}
+Para los usuarios que deseen cambiar el simbolo del prompt \code{\text{$>$}} por otro símbolo diferente como: \code{\text{$->$}} o por su nombre, tenemos el siguiente código:
+<<eval=FALSE>>=
+options(prompt="->")
+options(prompt="diego >")
+@
+
+\paragraph{Decimales}
+Una preocupación adicional para los usuarios es la cantidad de decimales con la cual se muestran los resultados, dicha cantidad de decimales puede ser modificada y debe encontrarse en el rango de 1 a 22.
+<<>>=
+getOption("digits")
+@
+R por default muestran los resultados con 7 decimales, sin embargo los mismos pueden ser modificados como se muestra a continuación:
+<<>>=
+options(digits=2)
+rnorm(3)
+@
+
+<<>>=
+options(digits=5)
+rnorm(3)
+@
+
+<<>>=
+options(digits=10)
+rnorm(3)
+@
+
+Existen opciones adicionales que pueden ser modificadas de acuerdo a las necesidades que tenga el usuario, para ver el listado completo de opciones podemos teclear en la consola el comando:
+<<eval=FALSE>>=
+help(options)
+@
+
+\subsubsection{R Analytic Flow}
 
 \subsection{Obteniendo ayuda}
 

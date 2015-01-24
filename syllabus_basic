@@ -23,7 +23,7 @@
 
 \begin{document}
 \begin{minipage}[d]{95mm}
-%\includegraphics[scale=.55]{logo_source.eps}
+\includegraphics[scale=.55]{logo_source.eps}
 \end{minipage}
 \begin{minipage}[d]{50mm}
 \textsf{\textbf{\sc \scriptsize QUITO:}}\\
@@ -39,14 +39,14 @@ Source Stat Lab (SSL) es una empresa Ecuatoriana con sede en Quito especializada
 
 \section{Historia}
 
-SSL nació en Septiembre 2014 con el propósito de dar servicio y asesoramiento en investigaciones aplicadas que requieran de estudios estadísticos/matemáticos asociado a las mismas.
+SSL nació en Septiembre 2014 con el propósito de dar servicio y asesoramiento en investigaciones aplicadas que requieran de estudios estadísticos/matemáticos asociados a las mismas.
 
 \section{Objetivos}
 
 Entre los objetivos de SSL se encuentran:
 \begin{itemize}
   \item Potenciar las actividades relacionadas con la Estadística que se llevan a cabo en varias universidades Ecuatorianas, así como ofrecer asesoramiento estadístico tanto a grupos de investigación como a particulares y empresas.  Dicho asesoramiento se complementa con cursos de formación adaptados a las necesidades y requerimientos del usuario.
-  \item 
+  \item Fomentar el uso del software estadístico R en actividades académicas, profesionales e investigación.  
 \end{itemize}
  
 
@@ -76,7 +76,10 @@ Dado que la estadística es la herramienta determinante para la toma de decision
 
 
 {\bf \large Descripción:}\newline
-  En el presente curso el estudiante 
+  
+  El curso de R Nivel Básico tiene como objetivo principal proporcionar al estudiante los elementos básicos para iniciarse con el trabajo en el lenguaje de programación R.\newline
+  
+  El enfoque del curso se lo hará sobre el ámbito estadístico, sin embargo, lo anterior no resta méritos para que el estudiante amplie sus posibilidades en diversas áreas. Por tratarse de un curso inicial el estudiante recibirá abundante información la cual le permita profundizar de forma autónoma en la utilización del programa.\newline
   
 {\bf \large Duración:}\newline
   20 Hrs.
@@ -101,11 +104,29 @@ Dado que la estadística es la herramienta determinante para la toma de decision
     \item[2.3] Instalación de paquetes
     \item[2.4] Actualización de paquetes
     \item[2.5] Actualización de R
-    \item[2.6] RStudio
-    \item[2.7] Obteniendo ayuda
+    \item[2.6] Obteniendo ayuda
   \end{enumerate}
   \item {\Large IDE}
+  \begin{enumerate}
+    \item[3.1] RStudio
+    \item[3.2] R Analytic Flow
+    \item[3.3] R Commander
+  \end{enumerate}
   \item {\Large Estructura de datos}
+    \begin{enumerate}
+    \item[4.1] Vectores
+    \item[4.2] Matrices
+    \item[4.3] Arrays
+    \item[4.4] Data Frames
+    \item[4.5] Listas
+  \end{enumerate}
+  \item {\Large Funciones}
+    \begin{enumerate}
+    \item[5.1] Funciones internas
+    \item[5.2] Creación de funciones
+    \item[5.3] Edición de funciones
+    \item[5.4] Almacenamiento de funciones
+  \end{enumerate}
 \end{enumerate}
 
 
