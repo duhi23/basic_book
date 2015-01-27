@@ -201,5 +201,73 @@ Dado que la estadística es la herramienta determinante para la toma de decision
   \end{enumerate}
 \end{enumerate}
 
+%%% R Nivel Avanzado
+
+\newpage
+
+\begin{center}
+{\bf \Large R Nivel Avanzado}
+\end{center}
+
+
+{\bf \large Descripción:}\newline
+  
+  El curso de R Nivel Avanzado tiene como objetivo principal proporcionar al estudiante una visión general del entorno del lenguaje de programación R y sus aplicaciones. Al final del curso, el estudiante se encontrará en la capacidad de crear sus propias funciones, importar y exportar datos. \newline
+  
+ % El enfoque del curso se lo hará sobre el ámbito estadístico, sin embargo, lo anterior no resta méritos para que el estudiante amplie sus posibilidades en diversas áreas. Por tratarse de un curso inicial el estudiante recibirá abundante información la cual le permita profundizar de forma autónoma en la utilización del programa.\newline
+  
+{\bf \large Duración:}\newline
+  20 Hrs.
+  
+{\bf \large Requisitos:}\newline
+  R Nivel Intermedio
+  
+{\bf \large Contenidos del curso:}
+
+\begin{enumerate}
+  \item {\Large Introducción}
+  \begin{enumerate}
+    \item[1.1] Cómo trabaja R
+  \end{enumerate}
+  \item {\Large Ambientes}
+  \begin{enumerate}
+    \item[2.1] Ambientes básicos
+    \item[2.2] Recursividad
+    \item[2.3] Funciones
+    \item[2.4] Ambientes explícitos
+  \end{enumerate}
+  \item {\Large Programación orientada a objetos}
+  \begin{enumerate}
+    \item[3.1] Clases S3
+    \item[3.2] Clases S4
+    \item[3.3] Clases de referencia o R5
+  \end{enumerate}
+  \item {\Large Programación funcional}
+    \begin{enumerate}
+    \item[4.1] Funciones anónimas
+    \item[4.2] Clausuras
+    \item[4.3] Lista de funciones
+  \end{enumerate}
+  \item {\Large Evaluación no estándar}
+  \begin{enumerate}
+    \item[5.1] Captura de expresiones
+    \item[5.2] Llamado desde otra función
+    \item[5.3] Sustitución
+  \end{enumerate}
+  \item {\Large Expresiones}
+    \begin{enumerate}
+    \item[6.1] Estructura
+    \item[6.2] Names
+    \item[6.3] Calls
+    \item[6.4] Parsing $\&$ Deparsing
+  \end{enumerate}
+    \item {\Large Big Data}
+    \begin{enumerate}
+    \item[7.1] Optimización de memoria
+    \item[7.2] Carga de datos en disco
+    \item[7.3] Manipulación de big data
+  \end{enumerate}
+\end{enumerate}
+
 
 \end{document}
