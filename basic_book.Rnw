@@ -593,10 +593,18 @@ apropos("mean")
 En el ejemplo anterior se muestran todas las funciones relacionadas con el término {\bf mean}.
 
 \section{Estructura de datos}
-En las secciones anteriores mencionamos que R es un lenguaje de programación orientada a objetos, por lo que cualquier cosa que exista en R (variables, datos, funciones, etc.) es un objeto. Para conocer los objetos que se tienen en el espacio de trabajo utilizaremos el siguiente comando:
+En las secciones previas hemos mencionado que R es un lenguaje de programación orientada a objetos, por lo que cualquier cosa que exista en R (variables, datos, funciones, etc.) es un objeto. Para conocer los nombres de los objetos presentes en el área de trabajo utilizamos el siguiente comando:
 <<>>=
 ls()
 @
+Ahora si creamos los vectores xvec y yvec, evidenciamos que dichos objetos ya aparecen en nuestra área de trabajo.
+<<>>=
+xvec <- c(1,2,3)
+yvec <- c(4,5,6)
+ls()
+@
+
+
 
 Los nombres que se les asigna a los objetos en R pueden ser de cualquier longitud y éstos pueden combinar letras, números y caracteres especiales (coma, punto, guión bajo, etc.), la única exigencia al momento de asignar un nombre a un objeto es que el mismo inicie con una letra.\newline
 La construcción explícita de un objeto nos proporcionará un mejor entendimiento de su estructura, y nos permitirá ahondar en algunas nociones mencionadas previamente.\newline

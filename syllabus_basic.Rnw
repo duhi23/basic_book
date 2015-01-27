@@ -67,6 +67,7 @@ Dado que la estadística es la herramienta determinante para la toma de decision
 %  \item Modelos lineales y de riesgo
 \end{itemize}
 
+%%% R Nivel Básico
 
 \newpage
 
@@ -134,6 +135,69 @@ Dado que la estadística es la herramienta determinante para la toma de decision
     \item[6.3] Creación de funciones
     \item[6.4] Edición de funciones
     \item[6.5] Almacenamiento de funciones
+  \end{enumerate}
+\end{enumerate}
+
+%%% Reportería dinámica
+
+\newpage
+
+\begin{center}
+{\bf \Large Repotería Dinámica}
+\end{center}
+
+
+{\bf \large Descripción:}\newline
+  
+  El curso de Reportería Dinámica tiene como finalidad proporcionar al estudiante las herramientas necesarias para generar reportes dinámicos. Al final del curso, el estudiante se encontrará en la capacidad de crear sus propios informes dinámicos en varios formatos digitales. \newline
+  
+  %El enfoque del curso se lo hará sobre el ámbito estadístico, sin embargo, lo anterior no resta méritos para que el estudiante amplie sus posibilidades en diversas áreas. Por tratarse de un curso inicial el estudiante recibirá abundante información la cual le permita profundizar de forma autónoma en la utilización del programa.\newline
+  
+{\bf \large Duración:}\newline
+  20 Hrs.
+  
+{\bf \large Requisitos:}\newline
+  R Nivel Básico
+  
+{\bf \large Contenidos del curso:}
+
+\begin{enumerate}
+  \item {\Large Introducción}
+  \begin{enumerate}
+    \item[1.1] Antecedente
+    \item[1.2] Sweave
+  \end{enumerate}
+  \item {\Large Reportería}
+  \begin{enumerate}
+    \item[2.1] Buenas $\&$ malas prácticas
+    \item[2.2] Restricciones
+  \end{enumerate}
+  \item {\Large Editores}
+  \begin{enumerate}
+    \item[3.1] RStudio
+    \item[3.2] LyX
+    \item[3.3] Otros editores
+  \end{enumerate}
+  \item {\Large Mi primer reporte}
+    \begin{enumerate}
+    \item[4.1] Configuraciones básicas
+    \item[4.2] Knitr
+    \item[4.3] LaTeX
+    \item[4.4] Markdown
+  \end{enumerate}
+  \item {\Large Dinamizando la reportería}
+  \begin{enumerate}
+    \item[5.1] Syntaxis
+    \item[5.2] Chunks
+    \item[5.3] R Scripts
+    \item[5.4] Tablas
+    \item[5.5] Gráficos
+    \item[5.6] Publicación en la web
+  \end{enumerate}
+  \item {\Large Cache}
+    \begin{enumerate}
+    \item[6.1] Implementación
+    \item[6.2] Actualización
   \end{enumerate}
 \end{enumerate}
 
