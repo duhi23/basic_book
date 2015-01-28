@@ -368,7 +368,14 @@ Algunos de los paquetes se encuentran en formato binario, para su instalación b
 
 \subsubsection{Github}
 
-GitHub es un repositorio de archivos y proyectos el cual emplea un sistema de control de versiones conocido como Git. Github fue lanzado a inicios del 2010, el código alojado en el repositorio se almacena de forma pública, aunque también se puede almacenar de forma privada siempre y cuando se tenga una cuenta de pago.\newline
+GitHub es un repositorio de archivos y proyectos el cual emplea un sistema de control de versiones conocido como Git. Github fue lanzado a inicios del 2010, el código alojado en el repositorio se almacena de forma pública, aunque también se puede almacenar de forma privada siempre y cuando se tenga una cuenta de pago.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=.45]{github.eps}
+\caption{Logo Github}
+\label{github}
+\end{figure}
 
 La instalación y sincronización de Github con RStudio se realiza de la siguiente manera:
 \begin{enumerate}
