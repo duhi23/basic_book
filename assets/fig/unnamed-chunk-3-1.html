@@ -1,54 +1,28 @@
----
-title       : Gráficos dinámicos con R
-subtitle    : Galería 
-author      : Source Stat Lab
-job         : SSL
-framework   : io2012    # {io2012, html5slides, shower, dzslides, revealjs ...}
-highlighter : prettify  # {highlight.js, prettify, highlight}
-hitheme     : tomorrow      # 
-widgets     : []            # {mathjax, quiz, bootstrap}
-mode        : selfcontained # {standalone, draft}
-knit        : slidify::knit2slides
----
-
-## Quienes sómos ?
-
-**Source Stat Lab** es una empresa Ecuatoriana con sede en Quito especializada en fomentar el avance del conocimiento, misma que presta sus servicios de entrenamiento y capacitación en el *lenguaje de programación R* para profesionales en todas sus verticales (*investigación*, *docencia*, *empresarial*).
-
-<center>
-<img src="logo.png" height="150px" width="700px" align="center" />
-</center>
-
-Source Stat Lab brinda capacitación, reportería y consultoría estadística/matemática con el uso de herramientas de software libre como: R, RStudio, R Analytic Flow & LaTeX a empresas globales y locales, así como instituciones públicas.
-
-
---- .class #id 
-
-## Gráficos dinámicos - Multi Bar Chart
-
-Da click sobre los circulos para modificar el gráfico.
-
-<iframe src=' assets/fig/unnamed-chunk-1-1.html ' scrolling='no' frameBorder='0' seamless class='rChart nvd3 ' id=iframe- chart4be3c02caa ></iframe> <style>iframe.rChart{ width: 100%; height: 400px;}</style>
-
-
---- .class #r
-
-## Gráficos dinámicos - Facetted Scatterplot
-
-Coloque el puntero del mouse sobre los puntos para observar sus etiquetas.
-
-<iframe src=' assets/fig/unnamed-chunk-2-1.html ' scrolling='no' frameBorder='0' seamless class='rChart polycharts ' id=iframe- chart4be8a2dca4 ></iframe> <style>iframe.rChart{ width: 100%; height: 400px;}</style>
-
-
---- .class #rr
-
-## Gráficos dinámicos - Morris
-
-Deslice el puntero del mouse sobre las líneas graficadas.
-
-
-<div id = 'chart2' class = 'rChart morris'></div>
-<script type='text/javascript'>
+<!doctype HTML>
+<meta charset = 'utf-8'>
+<html>
+  <head>
+    <link rel='stylesheet' href='//cdn.oesmith.co.uk/morris-0.4.2.min.css'>
+    
+    <script src='//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js' type='text/javascript'></script>
+    <script src='//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js' type='text/javascript'></script>
+    <script src='//cdn.oesmith.co.uk/morris-0.4.2.min.js' type='text/javascript'></script>
+    
+    <style>
+    .rChart {
+      display: block;
+      margin-left: auto; 
+      margin-right: auto;
+      width: 800px;
+      height: 400px;
+    }  
+    </style>
+    
+  </head>
+  <body >
+    
+    <div id = 'chart2' class = 'rChart morris'></div>    
+    <script type='text/javascript'>
     var chartParams = {
  "element": "chart2",
 "width":            800,
@@ -3892,42 +3866,7 @@ Deslice el puntero del mouse sobre las líneas graficadas.
       chartType = "Line"
     new Morris[chartType](chartParams)
 </script>
-<iframe src=' assets/fig/unnamed-chunk-3-1.html ' scrolling='no' frameBorder='0' seamless class='rChart morris ' id=iframe- chart2 ></iframe> <style>iframe.rChart{ width: 100%; height: 400px;}</style>
-
---- .class #ss
-
-## Quieres aprender a manejar R ?
-
-<center>
-<img src="curso.jpg" height="130px" width="400px" align="center" />
-</center>
-
-#### Ven y preparate con nosotros, garantizamos tu aprendizaje. No pierdas tu inversión y tu tiempo.
-
-<center>
-<img src="programas.jpg" height="140px" width="450px" align="center" />
-</center>
-
-### Próximamente apertura de cursos en la ciudad de Quito.
-
---- .class #ssl
-
-## Agradecimientos
-
-Source Stat Lab agradece a todos sus seguidores en redes sociales, y a la vez invita a ser participes de los siguientes cursos:
-
-- R nivel Básico
-- R nivel Intermedio
-- R nivel Avanzado
-- Reportería Dinámica
-- Gráficos interactivos
-- Gráficos con ggplot2
-- Interfaces web con Shiny
-
-Apertura de cursos próximamente. 
-
-Para más información visita nuestra redes sociales (*Facebook*, *Twitter*) como **SourceStatLab**.
-
-
-
-
+    
+    <script></script>    
+  </body>
+</html>
