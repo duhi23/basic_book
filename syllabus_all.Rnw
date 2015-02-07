@@ -49,7 +49,6 @@ Entre los objetivos de SSL se encuentran:
   \item Fomentar el uso del software estadístico R en actividades académicas, profesionales e investigación.  
 \end{itemize}
  
-
 \section{Cursos}
 
 Durante los últimos años, las nuevas tecnologías han permitido generar, almacenar y difundir grandes cantidades de información. Para poder extraer conocimiento y generar valor, hacen falta herramientas analíticas.\newline
@@ -138,6 +137,7 @@ Dado que la estadística es la herramienta determinante para la toma de decision
 \end{enumerate}
 
 %%%& R Nivel Intermedio
+
 \newpage
 
 \begin{center}
@@ -303,14 +303,14 @@ Uno de los temas a tratarse en este curso comprendende una herramienta muy emple
 
 El objetivo del curso gráficos con {\bf ggplot2} es dotar al estudiante de importantes herramientas empleadas en la generación de gráficos estadísticos de alta calidad y complejidad a través del paquete ggplot2, mismo que en la actualidad es uno de los paquetes gráficos de R más utilizados, la principal ventaja que presenta a diferencia de otros programas es la utilización de un lenguaje estándar que permite describir la forma de visualización de manera sencilla (grámatica de gráficos), conocer la {\bf gramática de los gráficos} permite optimizar la presentación de gráficos estándares y generar gráficos totalmente nuevos e innovadores.
 
-%\begin{figure}[H]
-%\begin{center}
-%    \includegraphics[width=0.41\textwidth]{DiagCajasSPSS.png}
-%    \includegraphics[width=0.55\textwidth]{DiagCajas.png}
-%  \caption{Diagrama de cajas SPSS vs ggplot2.}
-%  \label{spssyg2}
-%\end{center}
-%\end{figure}
+\begin{figure}[H]
+\begin{center}
+    \includegraphics[width=0.41\textwidth]{DiagCajasSPSS.eps}
+    \includegraphics[width=0.55\textwidth]{DiagCajas.eps}
+  \caption{Diagrama de cajas SPSS vs ggplot2.}
+  \label{spssyg2}
+\end{center}
+\end{figure}
 
 Entre los gráficos estadísticos generados con {\bf ggplot2} podemos enumerar los siguientes: histogramas, diagramas de densidad, de cajas y bigotes, de barras, de pastel, de dispersión, etc, adicionalmente, podemos crear {\bf mapas geográficos} en los cuales es posible presentar resúmenes estadísticos por región, provincia, etc (Estadística espacial). En la Figura 1 se muestra un claro ejemplo de la diferencia entre la calidad de un gráfico {\bf ggplot2} y la calidad de un gráfico realizado a través del programa estadístico clásico SPSS.\newline
 
@@ -385,13 +385,13 @@ Entre los gráficos estadísticos generados con {\bf ggplot2} podemos enumerar l
 
 Implementar un algoritmo en R generalmente tiene la finalidad de disminiur el tiempo de ejecución de una determinada tarea que realizarala manualmente conlleva un tiempo de trabajo considerable. Un programador siempre debe tener en mente que sus R-algoritmos serán utilizados por varios usuarios, entre ellos, aquellos que no poseen conocimiento alguno sobre el lenguaje R, es por esta razón que es necesario desarrollar interfaces gráficas mediante las cuales el usuario pueda ejecutar el algoritmo a través de botones y controladores (widgets), sin la necesidad de visualizar las lineas de código.\newline
 
-%\begin{figure}[H]
-%\begin{center}
-%     \includegraphics[width=0.7\textwidth]{gui_sim_var.png}
-%  \caption{Simulación de variables aleatorias.}
-%  \label{simvar}
-%\end{center}
-%\end{figure}
+\begin{figure}[H]
+\begin{center}
+     \includegraphics[width=0.7\textwidth]{gui_sim_var.eps}
+  \caption{Simulación de variables aleatorias.}
+  \label{simvar}
+\end{center}
+\end{figure}
 
 El curso Interfaces de Usuario con Shiny tiene como finalidad proveer al estudiante de un conjunto de herramientas empleadas en la generación de una interfaz gráfica de usuario mediante la utilización de uno de los mejores R-paquetes, Shiny, el mismo que después de comprender su estructura y funcionamiento resulta sencillo e intuitivo utilizarlo. En la Figura 1 se muestra un ejemplo de una interfaz básica mediante la cual se simulan un número de observaciones determinado de las distribuciones de probabilidad clásicas.\newline
 
@@ -404,7 +404,7 @@ El curso Interfaces de Usuario con Shiny tiene como finalidad proveer al estudia
 {\bf \large Contenidos del curso:}
 
 \begin{enumerate}
-   \item{Intruducción a Shiny}
+   \item{Introducción a Shiny}
    \begin{enumerate}
       \item[1.1]{Estructura de una aplicación Shiny.}
       \item[1.2]{Ejecución de una aplicación Shiny.}
