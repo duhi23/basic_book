@@ -302,7 +302,7 @@ El curso de R Nivel Avanzado tiene una visión general de varios temas de invest
 
 {\bf \large Descripción:}\newline
 
-El objetivo del curso gráficos con {\bf ggplot2} es dotar al estudiante de importantes herramientas empleadas en la generación de gráficos estadísticos de alta calidad y complejidad a través del paquete ggplot2, mismo que en la actualidad es uno de los paquetes gráficos de R más utilizados, la principal ventaja que presenta a diferencia de otros programas es la utilización de un lenguaje estándar que permite describir la forma de visualización de manera sencilla (grámatica de gráficos), conocer la {\bf gramática de los gráficos} permite optimizar la presentación de gráficos estándares y generar gráficos totalmente nuevos e innovadores.
+El objetivo del curso gráficos con {\bf ggplot2} es dotar al estudiante de importantes herramientas útiles en la generación de gráficos estadísticos de alta calidad y complejidad a través del paquete ggplot2, mismo que en la actualidad es uno de los paquetes gráficos de R más utilizados, la principal ventaja que presenta a diferencia de otros dispositivos gráficos es la utilización de un lenguaje estándar que permite describir la forma de visualización de manera sencilla (grámatica de gráficos), conocer dicha {\bf gramática de los gráficos} permite al usuario optimizar sus gráficos estándar y la vez generar gráficos totalmente nuevos e innovadores.
 
 \begin{figure}[H]
 \begin{center}
@@ -313,7 +313,7 @@ El objetivo del curso gráficos con {\bf ggplot2} es dotar al estudiante de impo
 \end{center}
 \end{figure}
 
-Entre los gráficos estadísticos generados con {\bf ggplot2} podemos enumerar los siguientes: histogramas, diagramas de densidad, de cajas y bigotes, de barras, de pastel, de dispersión, etc, adicionalmente, podemos crear {\bf mapas geográficos} en los cuales es posible presentar resúmenes estadísticos por región, provincia, etc (Estadística espacial). En la Figura 1 se muestra un claro ejemplo de la diferencia entre la calidad de un gráfico {\bf ggplot2} y la calidad de un gráfico realizado a través del programa estadístico clásico SPSS.\newline
+Entre los gráficos estadísticos generados con {\bf ggplot2} podemos enumerar los siguientes: histogramas, diagramas de densidad, de cajas y bigotes, de barras, de pastel, de dispersión, etc, adicionalmente, podemos crear {\bf mapas geográficos} en los cuales es posible presentar resúmenes estadísticos por región, provincia, etc (Estadística espacial). En la Figura 1 se muestra un claro ejemplo de la diferencia entre la calidad de un gráfico {\bf ggplot2} y de un gráfico realizado a través del programa estadístico clásico SPSS.\newline
 
 {\bf \large Duración:}\newline
   20 Hrs.
@@ -323,53 +323,52 @@ Entre los gráficos estadísticos generados con {\bf ggplot2} podemos enumerar l
   
 {\bf \large Contenidos del curso:}
 \begin{enumerate}
-   \item{Introducción e Instalación del paquete.}
-   \item{La gramática de los gráficos ggplot2.}
+   \item Introducción e instalación del paquete
+   \item La gramática de ggplot2
    \begin{enumerate}
-   \item[2.1]{Generación el primer gráfico ggplot2.}
+   \item[2.1] Generación del primer gráfico ggplot2
    \end{enumerate}
    \item{Gráficos de distribución}
    \begin{enumerate}
-      \item[3.1]{Histogramas.}
-      \item[3.2]{Curvas de densidad.}
-      \item[3.3]{Diagrama de caja-bigotes.}
-      \item[3.4]{Multiples gráficos de distribución.} Se genera los gráficos enumerados anteriormente pero
-      esta vez para los distintos suconjuntos en los que se puede dividir la data original.
+      \item[3.1] Histogramas
+      \item[3.2] Curvas de densidad
+      \item[3.3] Diagrama de caja-bigotes
+      \item[3.4] Multiples gráficos de distribución
    \end{enumerate}
-   \item{Gráficos de lineas}
+   \item{Gráficos de líneas}
    \begin{enumerate}
-      \item[4.1]{Gráfico de linea básico.}
-      \item[4.2]{Gráfico de lineas múltiples.}
-      \item[4.3]{Modificación de apariencia de la linea (color, estilo, forma, etc).}
+      \item[4.1] Gráfico de líneas básicas
+      \item[4.2] Gráfico de líneas múltiples
+      \item[4.3] Apariencias de líneas (color, estilo, forma, etc).
    \end{enumerate}
    \item{Gráficos de dispersión}
    \begin{enumerate}
-      \item[5.1]{Gráfico de dispersión básico.}
-      \item[5.2]{Agrupación puntos con color, forma, etc.}
-      \item[5.3]{Adición de lineas de ajuste de modelos de regresión.}
+      \item[5.1] Gráfico de dispersión básico
+      \item[5.2] Agrupación puntos con color, forma, etc.
+      \item[5.3] Adición de líneas de ajuste de modelos de regresión
    \end{enumerate}
    \item{Mapas geográficos}
    \begin{enumerate}
-      \item[6.1]{Gráfico de mapa geografico básico.}
-      \item[6.2]{Adición de color, tipo de linea, etc. para cada provincia.}
-      \item[6.3]{Adición de resúmenes estadísticos por región, provincia, etc.}
-      \item[6.3]{Adición de escalas de color (por ejemplo población analfabeta por región, provincia, etc.)}
+      \item[6.1] Gráfico de mapa geografico básico
+      \item[6.2] Adición de color, tipo de linea, etc. para cada provincia
+      \item[6.3] Adición de resúmenes estadísticos por región, provincia, etc.
+      \item[6.3] Adición de escalas de color
    \end{enumerate}
    \item{Formato del gráfico}
    \begin{enumerate}
-      \item[7.1]{Modificación de escala, color, letra, etc. de ejes.}
-      \item[7.2]{Modificación de posisión, color, letra, etc. de legendas.}
-      \item[7.3]{Modificación de margenes, color de fondo.}
+      \item[7.1] Modificación de escala, color, letra, etc. de ejes
+      \item[7.2] Modificación de posisión, color, letra, etc. de legendas
+      \item[7.3] Modificación de margenes, color de fondo
    \end{enumerate}
    \item{Color en gráficos}
    \begin{enumerate}
-      \item[8.1]{Escala discreta de colores.}
-      \item[8.2]{Escala continua de colores.}
+      \item[8.1] Escala discreta de colores
+      \item[8.2] Escala continua de colores
    \end{enumerate}
    \item{Facetas}
    \begin{enumerate}
-      \item[9.1]{Generación de gráficos por subgrupo de la data (variable discreta).}
-      \item[9.2]{Generación de gráficos por dos subgrupos de la data (dos variables discretas).}
+      \item[9.1] Generación de gráficos por subgrupo de la data (variable discreta)
+      \item[9.2] Generación de gráficos por dos subgrupos de la data (dos variables discretas)
    \end{enumerate}
 \end{enumerate}
 
