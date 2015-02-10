@@ -149,14 +149,14 @@ Dado que la estadística es la herramienta determinante para la toma de decision
 El curso R nivel Intermedio tiene dos propósitos principales:
 \begin{enumerate}
    \item Proporcionar al estudiante las principales herramientas de R utilizadas en la manipulación,
-   tratamiento y depuración de la información de un conjunto de datos determinado.
-   \item Mostrar al estudiante la forma de como optimizar sus lineas de código tanto en tiempo de ejecución
+   tratamiento y depuración de la información de un conjunto de datos.
+   \item Mostrar al estudiante una forma de optimizar las líneas de código tanto en tiempo de ejecución
    como en apariencia (códigos más compactos).
 \end{enumerate}
 
-Está dirigido a usuarios con un conocimiento básico de R. Se analiza a detalle una enorme gama de R-funciones que resumen algoritmos muy empleados en la práctica, las mismas que permiten acelarar el tiempo de ejecución de ciertas lineas de código y principalmente evitar malgastar el tiempo generando enormes códigos que en R ya se encuentran implementados y de una forma mucho más eficiente.\newline
+Está dirigido a usuarios con un conocimiento básico de R. El curso se inicia analizando a detalle una amplia gama de R-funciones utilizadas en la práctica, mismas que permiten acelarar el tiempo de ejecución del código y a su vez  reducir el tiempo en la generación de grandes códigos que R ya los tiene implementados de forma más eficiente.\newline
 
-Uno de los temas a tratarse en este curso comprendende una herramienta muy empleada, la cual consiste en aplicar una misma función estadística a distintos objetos (vector, matriz, data frames, etc) evitando usar los típicos lazos iterativos {\bf for, while, etc} que por lo general resultan ser poco eficientes.\newline
+Dentro de los temas a tratarse se encuentran las funciones \texttt{apply}, mismas que aplican una función a distintos objetos (vector, matriz, data frames, etc) evitando de esta forma la utilización de los típicos lazos iterativos {\bf for, while, etc} que por lo general resultan ser poco eficientes.\newline
   
 {\bf \large Duración:}\newline
   20 Hrs.
@@ -172,7 +172,7 @@ Uno de los temas a tratarse en este curso comprendende una herramienta muy emple
       \item[1.2]{Unión de bases de datos por columnas comunes}
       \item[1.3]{Valores perdidos y recodificación}
       \item[1.4]{Filtrado y ordenamiento de bases de datos}
-      \item[1.5]{Discretización de data continua}
+      \item[1.5]{Discretización de variables}
       \item[1.6]{Muestras aleatorias}
       %\item[1.1]{Funciones paste(), cbind(), rbind()}
       %\item[1.2]{Funciones merge(), match(), grep(), etc.}
@@ -194,9 +194,9 @@ Uno de los temas a tratarse en este curso comprendende una herramienta muy emple
    \end{enumerate}
    \item{Funciones vectoriales}
    \begin{enumerate}
-      \item[3.1]{Funciones Vectoriales más utilizadas.}
+      \item[3.1]{Funciones vectoriales más utilizadas.}
       %ifelse(), pmin(), pmax(), cumsum(), diff().
-      \item[3.2]{Creación de Funciones Vectoriales.}
+      \item[3.2]{Creación de funciones vectoriales.}
       %Vectorize()
    \end{enumerate}
    \item{R-Funciones brillantes}
@@ -232,9 +232,10 @@ Uno de los temas a tratarse en este curso comprendende una herramienta muy emple
 
 
 {\bf \large Descripción:}\newline
-  
-  El curso de R Nivel Avanzado tiene como objetivo principal proporcionar al estudiante una visión general del entorno del lenguaje de programación R y sus aplicaciones. Al final del curso, el estudiante se encontrará en la capacidad de crear sus propias funciones, importar y exportar datos. \newline
-  
+
+
+El curso de R Nivel Avanzado tiene una visión general de varios temas de investigación avanzada, tales como: ambientes, programación orientada a objetos, big data, etc. El curso se encuentra dirigido a los estudiantes que ya tengan experiencia y conocimiento del programa estadístico R y que se encuentren dispuestos a obtener una perspectiva de mayor profundidad respecto a la programación R con visión en convertirse en un desarrollador.\newline
+
  % El enfoque del curso se lo hará sobre el ámbito estadístico, sin embargo, lo anterior no resta méritos para que el estudiante amplie sus posibilidades en diversas áreas. Por tratarse de un curso inicial el estudiante recibirá abundante información la cual le permita profundizar de forma autónoma en la utilización del programa.\newline
   
 {\bf \large Duración:}\newline
