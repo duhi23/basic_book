@@ -460,27 +460,29 @@ updateR()
 
 Iniciamos instalando el paquete \textbf{installr}, acto seguido procedemos a cargar el paquete a través del comando \texttt{library}, y finalmente, mediante el comando \texttt{updateR} verificamos la versión más reciente del programa  y descargamos la misma.\newline
 
-En el caso que se desee conocer la versión de R que se encuentra instalada podemos teclear en la consola el comando: \code{\texttt{R.version.string}}.
+En el caso que se desee conocer la versión de R que se encuentra instalada podemos teclear en la consola el comando: \texttt{R.version.string} o \texttt{R.version}
+<<>>=
+R.version.string
+@
 
+<<>>=
+R.version
+@
 
-\subsection{Entornos de desarrollo}
+%\section{Interfaces gráficas de usuario}
+\section{Entornos de desarrollo}
 
 Un entorno de desarrollo integrado, también conocido como IDE (Integrated Development Enviroment) es un programa informático compuesto por un conjunto de herramientas de programación que contiene: un editor, un compilador, un depurador y un constructor de interfaz gráfica (GUI), el mismo que viene empaquetado como un programa \texttt{aplicación} que facilita de sobre manera la realización de operaciones al usuario mediante una serie de menús o mediante interacción con los objetos gráficos que aparecen en pantalla, a través de periféricos como: el ratón y teclado.\newline
 
-Los IDE's fueron desarrollados con el fin de proveer al usuario un marco de trabajo más amigable, a continuación, elistamos algunos IDE's existentes para R:
+Los IDE's fueron desarrollados con el fin de proveer al usuario un marco de trabajo más amigable, a continuación describimos las IDE's más populares para los usuarios:
 \begin{multicols}{2}
 \begin{itemize}
-  \item ESS
-  \item Eclipse
-  \item SciViews
-  \item JGR
-  \item Tinn-R
-  \item Notepad ++
-  \item RGui
+  \item RStudio
+  \item R Analytic Flow
 \end{itemize}
 \end{multicols}
 
-\subsubsection{RStudio}
+\subsection{RStudio}
 
 RStudio\footnote{El programa RStudio puede obtenerse libremente de la página \url{http://www.rstudio.org/}} es un entorno IDE de código abierto lanzado en Febrero 2011 el cual nos ofrece un marco de trabajo más amigable con el software R y lo podemos encontrar para todas las plataformas (Windows, Mac, Linux) así como también puede ser ejecutado a través de un navegador web\footnote{Opción válida para la versión \texttt{server}.}.\newline
 
@@ -504,9 +506,9 @@ El programa se encuentra organizado en cuatro ventanas de trabajo distintas:
   \end{itemize}
 \end{itemize}
 
-RStudio ofrece varios mecanismos para controlar varios aspectos de la evaluación durante una sesión. La función \texttt{options( )} es empleada para compartir los valores de parámetros entre las funciones.\newline
+RStudio ofrece varios mecanismos para controlar varios aspectos de la evaluación durante una sesión. La función \texttt{options( )} es empleada para compartir los valores de parámetros entre las funciones.
 
-\paragraph{Ancho de impresión}
+\subsubsection{Ancho de impresión}
 Existen ocasiones en las cuales el usuario desea controlar el ancho de impresión de los resultados que se muestran en la pantalla, como primer paso para modificar el ancho de impresión debemos obtener el parámetro actual mediante:
 <<>>=
 getOption("width")
@@ -529,14 +531,14 @@ options(width=70)
 rnorm(10)
 @
 
-\paragraph{Prompt}
-Para los usuarios que deseen cambiar el simbolo del prompt \code{\text{$>$}} por otro símbolo diferente como: \code{\text{$->$}} o por su nombre, tenemos el siguiente código:
+\subsubsection{Prompt}
+Para los usuarios que deseen cambiar el simbolo \code{\text{$>$}} del prompt o interpretador por otro símbolo diferente como: \code{\text{$->$}} o por un nombre, tenemos el siguiente código:
 <<eval=FALSE>>=
 options(prompt="->")
 options(prompt="diego >")
 @
 
-\paragraph{Decimales}
+\subsubsection{Decimales}
 Una preocupación adicional para los usuarios es la cantidad de decimales con la cual se muestran los resultados, dicha cantidad de decimales puede ser modificada y debe encontrarse en el rango de 1 a 22.
 <<>>=
 getOption("digits")
@@ -562,7 +564,7 @@ Existen opciones adicionales que pueden ser modificadas de acuerdo a las necesid
 help(options)
 @
 
-\subsubsection{R Analytic Flow}
+\subsection{R Analytic Flow}
 
 
 
@@ -609,21 +611,20 @@ example(mean)
 example(range)
 @
 
+
 \section{Estructura de datos}
-En las secciones previas hemos mencionado que R es un lenguaje de programación orientada a objetos, por lo que cualquier cosa que exista en R (variables, datos, funciones, etc.) es un objeto. Para conocer los nombres de los objetos presentes en el área de trabajo utilizamos el siguiente comando:
-<<>>=
-ls()
-@
-Ahora si creamos los vectores xvec y yvec, evidenciamos que dichos objetos ya aparecen en nuestra área de trabajo.
+En las secciones previas hemos mencionado que R es un lenguaje de programación orientada a objetos, por lo que cualquier cosa que exista en R (variables, datos, funciones, etc.) es un objeto. Para conocer los nombres de los objetos presentes en el área de trabajo utilizamos el comando \code{\texttt{ls()}}.\newline
+
+Iniciamos creando los vectores xvec y yvec para evidenciar que dichos objetos ya aparecen en nuestra área de trabajo.
 <<>>=
 xvec <- c(1,2,3)
 yvec <- c(4,5,6)
 ls()
 @
 
-Los nombres que se les asigna a los objetos en R pueden ser de cualquier longitud y éstos pueden combinar letras, números y caracteres especiales (coma, punto, guión bajo, etc.), la única exigencia al momento de asignar un nombre a un objeto es que el mismo inicie con una letra.\newline
-La construcción explícita de un objeto nos proporcionará un mejor entendimiento de su estructura, y nos permitirá ahondar en algunas nociones mencionadas previamente.\newline
+En el ejemplo anterior se utilizó el operador de asignación estándar $<-$ de R, mismo que sirve para asignar un objeto a una variable, en algunas ocasiones los usuarios de R también utilizan el símbolo $=$, sin embargo, esto no es recomendable dado que en algunas situaciones especiales no funciona.\newline
 
+Los nombres que se les asigna a los objetos en R pueden ser de cualquier longitud y éstos pueden combinar letras, números y caracteres especiales (coma, punto, guión bajo, etc.), la única exigencia al momento de asignar un nombre a un objeto es que el mismo inicie con una letra. La construcción explícita de un objeto nos proporcionará un mejor entendimiento de su estructura, y nos permitirá ahondar en algunas nociones mencionadas previamente.\newline
 
 Las estructuras de datos en R pueden ser organizados por su dimensionalidad (1 dimensión, 2 dimensiones o n-dimensiones), así como también por su tipo (homogéneo, heterogéneo) lo anterior da lugar a 5 tipos de estructuras que se resumen a continuación:
 \begin{table}[H]
@@ -637,19 +638,46 @@ Las estructuras de datos en R pueden ser organizados por su dimensionalidad (1 d
 \end{table}
 
 \subsection{Vectores}
-Es la estructura más simple de R que sirve para almacenar un conjunto de valores del mismo tipo llamados \emph{elementos}. 
-
-
-
-y consta de dos parámetros o argumentos: \texttt{mode}, \texttt{length}. El primero de los argumentos especifica el tipo de elementos que serán almacenados de entre los cuales destacan los tipos numéricos, booleanos y caracteres. El segundo argumento especifica la longitud del vector.\newline
-
-Iniciemos creando un vector \texttt{x} que almacene los valores $2.3$ y $5.8$ a través de la concatenación \code{\texttt{c()}}:
+Es la estructura más simple de R que sirve para almacenar un conjunto de valores del mismo tipo llamados \emph{elementos}. Existen 4 tipos de elementos que R puede almacenar dentro de un vector:
+\begin{multicols}{2}
+\begin{itemize}
+   \item logical
+   \item integer
+   \item numeric/double
+   \item character
+\end{itemize}
+\end{multicols}
 
 <<>>=
-x <- c(2.3, 5.8)
-mode(x)
-length(x)
+# Podemos crear vectores logicos tecleando TRUE y FALSE (o T & F).
+logi_var <- c(TRUE, FALSE, TRUE, FALSE)
+logi_var
+# Usamos el sufijo L, para diferenciar un numero entero de un double.
+int_var <- c(2L, 4L, 7L, 5L)
+int_var
+# Usamos el simbolo . para notar los decimales
+dbl_var <- c(2.3, 6.8, 4.1)
+dbl_var
+# Los caracteres deben ir entre comillas
+chr_var <- c("statistical", "model", "test")
+chr_var
 @
+
+Todo vector consta de dos argumentos: \texttt{mode}, \texttt{length}. 
+<<>>=
+mode(logi_var)
+length(logi_var)
+@
+
+El primero de los argumentos especifica el tipo de elementos que almacena el vector, mientras que el segundo argumento especifica la longitud que tiene dicho vector.\newline
+
+Los vectores se encuentran almacenados de forma plana incluso cuando se anidan vectores como se observa:
+<<>>=
+c(2L, c(4L, c(6L, 8L)))
+# obtenemos el mismo resultado mediante
+c(2L, 4L, 6L, 8L)
+@
+
 
 
 
@@ -657,7 +685,7 @@ length(x)
 Son variables en R que tienen un número limitado de valores diferentes, dichas variables se conocen como variables categóricas a menudo; por ejemplo: el conjunto de observaciones acerca del color de ojos de un grupo de personas. 
 
 <<>>=
-ojos <- c("negro", "azul", "negro", "verde", "verde", "café", "negro")
+ojos <- c("negro", "azul", "negro", "verde", "verde", "cafe", "negro")
 table(ojos)
 @
 
