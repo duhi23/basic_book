@@ -135,7 +135,6 @@ Los inconvenientes a los cuales se deben enfrentar los usuarios de R son:
   \item El código en R es interpretado, no compilado, lo cual puede ocasionar una ejecución lenta en ocasiones en las que se realizan simulaciones intensas. Con el fin de remediar lo anterior el grupo R Core Team a partir de la versión 2.14 ha precompilado todas las funciones y librerías de R con el objetivo de acelerar la ejecución.
 \end{itemize}
 
-
 \section{Instalación y actualización}
 
 \subsection{Programa R}
@@ -565,6 +564,8 @@ help(options)
 
 \subsubsection{R Analytic Flow}
 
+
+
 \subsection{Obteniendo ayuda}
 
 Existen algunas funciones en R que nos facilitan la vida al momento de indagar sobre la funcionalidad de ciertos comandos con tan sólo tener disponible una conexión de Internet. Por ejemplo, si nos encontramos interesados en obtener información acerca de la función \code{\texttt{seq()}} podemos escribir en la consola lo siguiente:
@@ -599,6 +600,15 @@ apropos("mean")
 
 En el ejemplo anterior se muestran todas las funciones relacionadas con el término {\bf mean}.
 
+\subsection{Mostrando ejemplos}
+
+La mayoría de archivos que dan ayuda incluyen ejemplos que pueden ser ejecutados en R y facilitan al usuario comprender de mejor manera el uso de cierto comando o función. Para ejecutar los ejemplos usaremos el comando \texttt{example} como se muestra a continuación:
+<<>>=
+example(mean)
+
+example(range)
+@
+
 \section{Estructura de datos}
 En las secciones previas hemos mencionado que R es un lenguaje de programación orientada a objetos, por lo que cualquier cosa que exista en R (variables, datos, funciones, etc.) es un objeto. Para conocer los nombres de los objetos presentes en el área de trabajo utilizamos el siguiente comando:
 <<>>=
@@ -610,8 +620,6 @@ xvec <- c(1,2,3)
 yvec <- c(4,5,6)
 ls()
 @
-
-
 
 Los nombres que se les asigna a los objetos en R pueden ser de cualquier longitud y éstos pueden combinar letras, números y caracteres especiales (coma, punto, guión bajo, etc.), la única exigencia al momento de asignar un nombre a un objeto es que el mismo inicie con una letra.\newline
 La construcción explícita de un objeto nos proporcionará un mejor entendimiento de su estructura, y nos permitirá ahondar en algunas nociones mencionadas previamente.\newline
@@ -629,7 +637,21 @@ Las estructuras de datos en R pueden ser organizados por su dimensionalidad (1 d
 \end{table}
 
 \subsection{Vectores}
-Es la estructura más simple de R que sirven para almacenar un conjunto de valores del mismo tipo llamados \emph{elementos} y consta de dos parámetros o argumentos: \texttt{mode}, \texttt{length}. El primero de los argumentos especifica el tipo de elementos que serán almacenados de entre los cuales destacan los tipos numéricos, booleanos y caracteres. El segundo argumento especifica la longitud del vector.
+Es la estructura más simple de R que sirve para almacenar un conjunto de valores del mismo tipo llamados \emph{elementos}. 
+
+
+
+y consta de dos parámetros o argumentos: \texttt{mode}, \texttt{length}. El primero de los argumentos especifica el tipo de elementos que serán almacenados de entre los cuales destacan los tipos numéricos, booleanos y caracteres. El segundo argumento especifica la longitud del vector.\newline
+
+Iniciemos creando un vector \texttt{x} que almacene los valores $2.3$ y $5.8$ a través de la concatenación \code{\texttt{c()}}:
+
+<<>>=
+x <- c(2.3, 5.8)
+mode(x)
+length(x)
+@
+
+
 
 \subsection{Factores}
 Son variables en R que tienen un número limitado de valores diferentes, dichas variables se conocen como variables categóricas a menudo; por ejemplo: el conjunto de observaciones acerca del color de ojos de un grupo de personas. 
