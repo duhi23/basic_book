@@ -453,12 +453,11 @@ El curso Interfaces de Usuario con Shiny tiene como finalidad proveer al estudia
 {\bf \Large Repotería Dinámica}
 \end{center}
 
-
 {\bf \large Descripción:}\newline
   
-  El curso de Reportería Dinámica tiene como finalidad proporcionar al estudiante las herramientas necesarias para generar reportes dinámicos. Al final del curso, el estudiante se encontrará en la capacidad de crear sus propios informes dinámicos en varios formatos digitales. \newline
+  El curso de Reportería Dinámica tiene como finalidad integrar R con LaTeX, dichas herramientas permitirán generar reportes que se actualicen automáticamente a medida que los datos cambien. Esto facilita la elaboración de reportes evitando recurrir al famoso copy-paste de todos los resultados y gráficos de un programa a otro.\newline
   
-  %El enfoque del curso se lo hará sobre el ámbito estadístico, sin embargo, lo anterior no resta méritos para que el estudiante amplie sus posibilidades en diversas áreas. Por tratarse de un curso inicial el estudiante recibirá abundante información la cual le permita profundizar de forma autónoma en la utilización del programa.\newline
+  Al final del curso, el estudiante se encontrará en la capacidad de crear sus propios informes dinámicos en varios formatos digitales, mismos que eliminan la posibilidad de cometer errores de transcripción. \newline
   
 {\bf \large Duración:}\newline
   20 Hrs.
