@@ -116,12 +116,16 @@ R es un lenguaje orientado a objetos (OOP\footnote{La programación OOP está ba
 
 El hecho que R sea un lenguaje de programación puede desmotivar a muchos usuarios los cuales piensan que para iniciarse en el programa se necesita \emph{alma de programador} lo cual no es cierto. Primero R es un lenguaje interpretado similar a Java, y segundo no es un lenguaje compilado a diferencia de C, C++, Fortran, Pascal, ect. sino más bien mediante comandos ingresados por teclado los cuales se ejecutan directamente sin necesidad de construir archivos ejecutables.\newline
 
+En su mayoría R se encuentra programado en C++, Python y Fortran, esto implica que R tiene la capacidad de interpretar código externo mediante el uso de ciertas librerías. La utilidad básica de lo anterior se encuentra en elaborar scripts por ejemplo en C++ que emplean menor tiempo de ejecución.\newline 
+
 El programa R incluye 8 bibliotecas o paquetes estándar, sin embargo, las capacidades de R pueden ser ampliadas fácilmente mediante la incorporación de paquetes que se encuentran disponibles en varios repositorios como:
 \begin{multicols}{2}
 \begin{itemize}
   \item CRAN
   \item BioConductor
+  \item Github
   \item Omegahat
+  \item MRAN
   \item RForge, entre otros.
 \end{itemize}
 \end{multicols}
@@ -146,6 +150,7 @@ Entre las principales ventajas que posee el software R podemos anotar lo siguien
   \item Amplia bibliografía tanto en internet como en libros publicados por prestigiosas editoriales como: Springer, Wiley, O'Reilly, Chapman $\&$ Hall/CRC, etc.
   \item Fácil visualización e interpretación de los algoritmos implementados en R con lo cual el usuario puede conocer exactamente lo que el ordenador ejecuta.
   \item Permite visualizar los algoritmos en él implementados, modificarlos y ajustarlos a nuestras necesidades (esto no es permitido en los softwares licenciados).
+  \item Una gran comunidad de usuarios, lo cual permite obtener ayuda de manera fácil de expertos por medio de la R help mailing list entre otros.
 \end{itemize}
 
 \subsection{Desventajas}
@@ -155,6 +160,7 @@ Los inconvenientes a los cuales se deben enfrentar los usuarios de R son:
   \item Al ser un programa libre carece de un departamento de atención al cliente al cual se pueda recurrir en caso de que se reporte un inconveniente con el mismo. Sin embargo existe una comunidad en crecimiento de usuarios de R que se encuentran dispuestos a colaborar desinteresadamente en la resolución de problemas.
   \item El software R como tal no dispone de una interfaz amigable para el usuario, las tareas se llevan a cabo a través de líneas de comando lo cual puede resultar difícil para el usuario común. No obstante con el desarrollo de GUI's se ha facilitado en gran medida la experiencia del programa con el usuario común.
   \item El código en R es interpretado, no compilado, lo cual puede ocasionar una ejecución lenta en ocasiones en las que se realizan simulaciones intensas. Con el fin de remediar lo anterior el grupo R Core Team a partir de la versión 2.14 ha precompilado todas las funciones y librerías de R con el objetivo de acelerar la ejecución.
+  \item R no es particularmente un lenguaje de programación rápido, si a eso sumamos que muchos usuarios escriben pobremente su código obtenemos como resultado un funcionamiento lento.
 \end{itemize}
 
 \section{Instalación y actualización}
@@ -176,7 +182,7 @@ Es muy importante para el usuario de R, conocer su entorno de trabajo, y es prec
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=.5]{console.eps}
+\includegraphics[scale=.35]{console.eps}
 \caption{Entorno de trabajo de R}
 \label{entorno}
 \end{figure}
@@ -224,17 +230,12 @@ Iniciaremos explicando  la barra de herramientas, la misma que consta de las sec
       \item {\bf Copiar y Pegar:} Todo aquello que copiemos, directamente se pegará, de forma inmediata, en la consola. Para acceder de
       forma rápida por teclado se debe pulsar: Ctrl + X.
       \item {\bf Seleccionar todo:} Como su nombre indica, se selecciona todo lo que esté presente en la consola.
-      \item {\bf Limpiar consola:} Se borrarán todo lo que esté presente en la consola, pero ojo, no se borrarán las variables y
-      estructuras definidas. Es útil cuando tenemos en la consola mucha información que ya no es útil. Para acceder de forma rápida por
+      \item {\bf Limpiar consola:} Se borrarán todo lo que esté presente en la consola, pero ojo, no se borrarán las variables y estructuras definidas. Es útil cuando tenemos en la consola mucha información que ya no es útil. Para acceder de forma rápida por
       teclado se debe pulsar: Ctrl + L.
-      \item {\bf Editor de datos:} Podemos definir datos (vectores, estructuras, funciones, etc) y guardarlos para posteriormente
-      llamarlos en la consola. Estos datos estarán definidos en la consola cuando se guarde.
-      \item {\bf Preferencias de la interfaz gráfica:} En esta opción es donde podremos configurar todo lo relacionado a la 
-      visualización de texto reflejado en la consola: tamaño de letra, colores, tipo de letra, etc. También, se puede configurar el
-      entorno de trabajo, para multiventana o una única ventana.
+      \item {\bf Editor de datos:} Podemos definir datos (vectores, estructuras, funciones, etc) y guardarlos para posteriormente llamarlos en la consola. Estos datos estarán definidos en la consola cuando se guarde.
+      \item {\bf Preferencias de la interfaz gráfica:} En esta opción es donde podremos configurar todo lo relacionado a la visualización de texto reflejado en la consola: tamaño de letra, colores, tipo de letra, etc. También, se puede configurar el entorno de trabajo, para multiventana o una única ventana.
     \end{itemize}
-  \item {\bf \Large Visualizar:} Activa la visualización de algunos iconos en la parte superior tales como: Abrir script, Cargar área
-  de trabajo, etc., mismas que ya se detallaron anteriormente.
+  \item {\bf \Large Visualizar:} Activa la visualización de algunos iconos en la parte superior tales como: Abrir script, Cargar área de trabajo, etc., mismas que ya se detallaron anteriormente.
   \begin{figure}[H]
   \centering
   \includegraphics[scale=.35]{visualizar.eps}
@@ -250,16 +251,12 @@ Iniciaremos explicando  la barra de herramientas, la misma que consta de las sec
   \label{misc}
   \end{figure}
     \begin{itemize}
-      \item {\bf Parar computación actual:} Este control es muy interesante y útil, con él, podremos parar cualquier archivo, sentencia
-      o código que esté ejecutando la consola R. Para acceder de forma rápida por teclado se debe pulsar: ESC.
+      \item {\bf Parar computación actual:} Este control es muy interesante y útil, con él, podremos parar cualquier archivo, sentencia o código que esté ejecutando la consola R. Para acceder de forma rápida por teclado se debe pulsar: ESC.
       \item {\bf Salida con buffer:} Para acceder de forma rápida por teclado se debe pulsar: Ctrl + W.
-      \item {\bf Terminar palabra:} Es una ayuda interactiva, que nos ayuda a completar las palabras mientras estamos escribiendo en
-      caso que la consola las reconózca.
+      \item {\bf Terminar palabra:} Es una ayuda interactiva, que nos ayuda a completar las palabras mientras estamos escribiendo en caso que la consola las reconózca.
       \item {\bf Terminar nombre de archivo:} Realiza la misma función que la opción Terminar palabra pero en archivos.
       \item {\bf Listar objetos:} Se nos mostrará por consola los objetos que hasta en este momento hemos definido en la consola.
-      \item {\bf Remover todos los objetos:} Como su nombre indica, elimina de memoria todos los objetos que hayamos definido (datos,
-      variables, matrices, vectores, etc) en la consola de R. Cuando pulsemos sobre dicha opción, el programa, nos preguntará si
-      realmente queremos borrarlos.
+      \item {\bf Remover todos los objetos:} Como su nombre indica, elimina de memoria todos los objetos que hayamos definido (datos, variables, matrices, vectores, etc) en la consola de R. Cuando pulsemos sobre dicha opción, el programa, nos preguntará si realmente queremos borrarlos.
       \item {\bf Listar el camino de búsqueda:} Nos ofrece por consola las librerias y complementos que tenemos instalados en R.
     \end{itemize}
   \item {\bf \Large Paquetes:} Dedicado al manejo de las librerias que posee el programa R.
@@ -306,7 +303,6 @@ Iniciaremos explicando  la barra de herramientas, la misma que consta de las sec
     \end{itemize}
 \end{itemize}
 
-
 \subsection{Instalación de paquetes}
 
 Como habíamos señalado en la sección anterior, una de las principales ventajas de R es su capacidad para incrementar su funcionalidad mediante la incorporación de nuevos paquetes o librerías.\newline
@@ -352,6 +348,12 @@ require('translate2R')
 
 Para mostrar la diferencia entre de los comandos anteriores trataremos de cargar el paquete \texttt{translate2R}, el mismo que no ha sido descargado previamente. Al emplear \texttt{library} observamos que nos arroja un error, mientras que al emplear \texttt{require} únicamente tenemos una advertencia. En el caso puntual que nos encontremos trabajando en un script la segunda opción nos causaría serios problemas dado que permite continuar con la ejecución del proceso sin que el usuario se percate, mientras que la primera opción alerta al usuario. Por todo lo antes mencionado la gran mayoría de usuarios R prefieren usar el comando \texttt{library}.\newline
 
+En el caso que se desee cargar $n$ paquetes se tiene la siguiente solución:
+<<eval=FALSE>>=
+paquetes <- c("pckg_1","pckg_2", ... , "pckg_n")
+lapply(paquetes, FUN=library, character.only=TRUE)
+@
+
 Si deseamos visualizar el listado completo de los paquetes instalados podemos recurrir al comando \code{\texttt{library()}}. Además, si deseamos conocer el lugar en el cual se instalan los paquetes podemos hacer lo siguiente:
 <<>>=
 .libPaths()
@@ -373,7 +375,7 @@ sessionInfo()
 @
 El comando anterior imprime información acerca de la versión y plataforma del ejecutable de R que se encuentra utilizando, adicionalmente muestra información de la localidad y de los paquetes adjuntos o cargados.\newline
 
-Para ocasiones en las cuales se desee eliminar un paquete previamente instalado en R tenemos dos alternativas, la primera consiste básicamente el eliminar la carpeta que contiene dicho paquete del repositorio del computador mientras que la segunda alternativa consiste en emplear el siguiente comando:
+Para ocasiones en las cuales se desee eliminar un paquete previamente instalado en R tenemos dos alternativas: la primera consiste básicamente en eliminar la carpeta que contiene dicho paquete del repositorio del computador mientras que la segunda alternativa consiste en emplear el siguiente comando:
 <<eval=FALSE>>=
 remove.packages("nombre_paquete", "directorio")
 @
@@ -399,7 +401,7 @@ Algunos de los paquetes se encuentran en formato binario, para su instalación b
 
 \subsubsection{Github}
 
-GitHub es un repositorio de archivos y proyectos el cual emplea un sistema de control de versiones conocido como Git. Github fue lanzado a inicios del 2010, el código alojado en el repositorio se almacena de forma pública, aunque también se puede almacenar de forma privada siempre y cuando se tenga una cuenta de pago.
+GitHub es un repositorio de archivos y proyectos el cual emplea un sistema de control de versiones conocido como Git. Github fue lanzado a inicios del 2010, el código alojado en el repositorio se almacena de forma pública aunque también se puede almacenar de forma privada siempre y cuando se tenga una cuenta de pago.
 
 \begin{figure}[H]
 \centering
@@ -408,15 +410,15 @@ GitHub es un repositorio de archivos y proyectos el cual emplea un sistema de co
 \label{github}
 \end{figure}
 
-La instalación y sincronización de Github con RStudio se realiza de la siguiente manera:
+La instalación y sincronización de Git $\&$ Github con RStudio se realiza de la siguiente manera:
 \begin{enumerate}
   \item Descargar e instalar la plataforma específica de Git\footnote{http://www.git-scm.com/} (no Github) con las opciones por default.
-  \item Configurar Git con los comandos globales a través de la versión bash, teclear lo siguiente:
+  \item Configurar Git con los comandos globales a través de la versión bash, esto permitirá que Git tenga conexión con los repositorios de Github para el envió/recepción de archivos, teclear lo siguiente:
   \begin{center}
   git config –-global user.name ''nombre de la cuenta de Github''\\
-  git config –-global user.email ''Github-Email@something.com''
+  git config –-global user.email ''Github-email@something.com''
   \end{center}
-  \item Abrir RStudio y configurar la ruta del ejecutable de Git. Ir a Tools > Options > Git/SVN.
+  \item Por último, abrir RStudio y configurar la ruta del ejecutable de Git:\newline Ir a Tools > Options > Git/SVN.
 \end{enumerate}
 
 
