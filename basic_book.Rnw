@@ -47,18 +47,28 @@
 
 \section{Introducción}
 
-El programa R es un software libre distribuido bajo GNU General Public License  muy utilizado por la comunidad científica el cual es considerado un lenguaje de comandos de manipulación y análisis estadístico debido a la gran variedad de métodos estadísticos que cubre, así como a las capacidades gráficas que ofrece. R fue desarrollado en el año 1993 por los profesores del Departamento de Estadística {\bf Ross Ihaka} y {\bf Robert Gentleman} de la Universidad de Aukland, se distribuye gratuitamente desde 1995 a través del repositorio \emph{Comprehensive R Archive Network} (CRAN) en \url{http://www.r-project.org} su mantenimiento se encuentra a cargo del grupo {\bf R Core Team} desde el año 1997 asistido por una gran cantidad de colaboradores internacionales.
-
+El programa R es un software libre distribuido bajo GNU General Public License muy utilizado por la comunidad científica el cual es considerado un lenguaje de comandos de manipulación y análisis estadístico debido a la gran variedad de métodos estadísticos que cubre, así como a las capacidades gráficas que ofrece.
 \begin{figure}[H]
 \centering
 \includegraphics[scale=.15]{logo_r.eps}
-\caption{Logo del programa R}
+\caption{Logo del proyecto R}
 \label{logo_r}
+\end{figure}
+Dadas sus características R tiene gran potencial para ser utilizado en diferentes áreas de la estadística, finanzas, simulación, reportería dinámica, biomatemática, minería de datos, big data, etc. Al ser un software libre puede ser instalado en diversas plataformas y sistemas operativos: Windows, Linux, Mac OS X y Unix.
+
+\subsection{Historia}
+
+El desarrollo de R inició en el año de 1991 con los profesores del Departamento de Estadística {\bf Ross Ihaka} y {\bf Robert Gentleman} de la Universidad de Aukland, su primer anuncio al público se dio en el año de 1993 mientras que dos años más tarde Martin Machler convence a sus amigos Ross $\&$ Robert que distribuyan R bajo licencia GNU General Public License. Desde entonces el programa se distribuye gratuitamente a través del repositorio \emph{Comprehensive R Archive Network} (CRAN) en \url{http://www.r-project.org} su mantenimiento se encuentra a cargo del grupo {\bf R Core Team} desde el año 1997 asistido por una gran cantidad de colaboradores internacionales.
+
+\begin{figure}[H]
+\centering
+\includegraphics[height=4cm, width=3.2cm]{Robert.eps}
+\includegraphics[height=4cm, width=3.2cm]{Ross.eps}
+\caption{Robert Gentleman $\&$ Ross Ihaka}
+\label{creadores}
 \end{figure}
 
 R es considerado la versión libre del programa comercial S-Plus, el cual fue desarrollado para AT$\&$T Bell Laboratories por John M. Chambers en el año 1988, aunque son evidentes las diferencias entre R y S, la gran mayoría del código escrito para S funciona sin inconvenientes en R.\newline
-
-Dadas su características R tiene gran potencial para ser utilizado en diferentes áreas de la estadística, simulación, reportería dinámica, biomatemática, minería de datos, big data, etc. Al ser un software libre puede ser instalado en diversas plataformas y sistemas operativos: Windows, Linux, Mac OS X y Unix.\newline
 
 El mayor inconveniente para los nuevos usuarios es adaptarse a su interfaz gráfica que para muchos es \emph{poco amigable}, en el sentido que se deben tipear las funciones predefinidas o a su vez programar las funciones nuevas a diferencia de programas clásicos como SPSS, STATA, etc. en los cuales se tienen botones o ventanas que despliegan opciones de análisis para el usuario. \newline
 
@@ -79,6 +89,8 @@ Dada la popularidad que ha adquirido R en los últimos años se han desarrollado
 \end{itemize}
 \end{multicols}
 
+\subsection{Soporte}
+
 R al ser un programa GNU General Public License carece de soporte técnico, sin embargo, en la actualidad existen empresas que proveen varios tipos de soportes para R bajo pago. Entre las más destacadas se encuentran:
 \begin{multicols}{2}
 \begin{itemize}
@@ -87,6 +99,16 @@ R al ser un programa GNU General Public License carece de soporte técnico, sin 
   \item XL - Solutions Corporation.
 \end{itemize}
 \end{multicols}
+
+De las empresas antes mencionadas se destaca de sobremanera Revolution Analytics, Inc. por su modificación del código fuente de R, lo cual ha permitido que R sea multicore, es decir, pueda aprovechar al máximo de  todos los núcleos de los procesadores actuales (Core i5, Core i7, etc.). El impacto inmediato de que R sea multicore se ve reflejado en la mayor velocidad de lectura y escritura de información permitiendo de este modo trabajar con grandes cantidades de datos sin ningún problema.\newline
+
+El programa R optimizado por Revolution Analytics, Inc. puede obtenerse a través de la página web \url{http://www.revolutionanalytics.com} como \emph{Revolution R Open} de forma gratuita, sin embargo en el caso de requerir soporte se puede adquirir la versión pagada \emph{Revolution R Enterprise}.
+\begin{figure}[H]
+\centering
+\includegraphics[scale=.15]{logo_r.eps}
+\caption{Revolution R Open}
+\label{logo_ropen}
+\end{figure}
 
 \subsection{Funcionamiento}
 
@@ -158,7 +180,6 @@ Es muy importante para el usuario de R, conocer su entorno de trabajo, y es prec
 \caption{Entorno de trabajo de R}
 \label{entorno}
 \end{figure}
-%http://unbarquero.blogspot.com/2009/02/r-entorno-de-trabajo.html
 
 Iniciaremos explicando  la barra de herramientas, la misma que consta de las secciones: Archivo, Editar, Visualizar, Misc, Paquetes, Ventanas y Ayuda. Todas serán explicadas con detalle a continuación:
 
@@ -350,7 +371,18 @@ En el caso que se requiera conocer los paquetes que se encuentra cargados en el 
 <<>>=
 sessionInfo()
 @
-El comando anterior imprime información acerca de la versión y plataforma del ejecutable de R que se encuentra utilizando, adicionalmente muestra información de la localidad y de los paquetes adjuntos o cargados.
+El comando anterior imprime información acerca de la versión y plataforma del ejecutable de R que se encuentra utilizando, adicionalmente muestra información de la localidad y de los paquetes adjuntos o cargados.\newline
+
+Para ocasiones en las cuales se desee eliminar un paquete previamente instalado en R tenemos dos alternativas, la primera consiste básicamente el eliminar la carpeta que contiene dicho paquete del repositorio del computador mientras que la segunda alternativa consiste en emplear el siguiente comando:
+<<eval=FALSE>>=
+remove.packages("nombre_paquete", "directorio")
+@
+donde: 
+\begin{itemize}
+   \item {\bf nombre\_ paquete:} Nombre o vector de nombres de los paquetes ha ser eliminados.
+   \item {\bf directorio:} Es un vector de caracteres que proporcionan la dirección del directorio del cual se eliminará el paquete. Si se omite dicho parámetro se asume por default la dirección obtenida por .libPaths().
+\end{itemize}
+
 
 \subsubsection{Repositorios externos}
 
@@ -485,6 +517,19 @@ Los IDE's fueron desarrollados con el fin de proveer al usuario un marco de trab
 \subsection{RStudio}
 
 RStudio\footnote{El programa RStudio puede obtenerse libremente de la página \url{http://www.rstudio.org/}} es un entorno IDE de código abierto lanzado en Febrero 2011 el cual nos ofrece un marco de trabajo más amigable con el software R y lo podemos encontrar para todas las plataformas (Windows, Mac, Linux) así como también puede ser ejecutado a través de un navegador web\footnote{Opción válida para la versión \texttt{server}.}.\newline
+
+Una forma de instalación más técnica de RStudio puede realizarse a partir del siguiente script:
+<<eval=FALSE>>=
+# descarga e instala el paquete installr
+install.packages("installr")
+# cargamos el paquete installr
+library(installr)
+# instalamos RStudio IDE
+install.RStudio()
+@
+
+%install.Rtools()
+%install.git()
 
 RStudio ofrece una amplia integración con ficheros de diversos formatos: R scripts (.R), Markdown (.md), LaTeX (.Rnw) entre otros. La facilidad en la generación de documentos dinámicos con \texttt{RStudio} y \texttt{knitr} han hecho que el programa se convierta en la IDE preferida por muchos usuarios de R.\newline
 
@@ -719,6 +764,9 @@ x <- array (1:24, c(3,4,2))
 produce un arreglo tridimensional: la primera dimensión tiene tres niveles, la segunda tiene cuatro y la tercera tiene dos. Al imprimir el arreglo R comienza con la dimensión mayor y va bajando hacia la dimensión menor, imprimiendo matrices bidimensionales en cada etapa.
 
 \subsection{Data Frames}
+Tipo particular de listas de gran utilidad para el trabajo estadístico.
+
+\subsection{Data Tables}
 Tipo particular de listas de gran utilidad para el trabajo estadístico.
 
 \section{Funciones}
