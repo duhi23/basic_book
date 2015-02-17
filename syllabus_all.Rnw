@@ -181,42 +181,42 @@ Dentro de los temas a tratarse se encuentran las funciones \texttt{apply}, misma
    \end{enumerate}
    \item{Aplicación de una función a cada elemento de un objeto}
    \begin{enumerate}
-      \item[2.1]{Aplicación de una función a una matriz o arreglo.}
+      \item[2.1]{Aplicación de una función a una matriz o arreglo}
       %Función apply()
-      \item[2.2]{Aplicación de una función a una lista, data frame, vector.}
+      \item[2.2]{Aplicación de una función a una lista, data frame, vector}
       % Función lapply(), sapply()
       \item[2.3]{mapply() la versión multivariante de sapply()}
-      \item[2.4]{Aplicación de una función a subgrupos de un vector.}
+      \item[2.4]{Aplicación de una función a subgrupos de un vector}
       %Función tapply()
-      \item[2.5]{Aplicación de una función a subgrupos de un data frame.}
+      \item[2.5]{Aplicación de una función a subgrupos de un data frame}
       %Función by()
       % rowSums(), colSums(), rowMeans(), and colMeans()
    \end{enumerate}
    \item{Funciones vectoriales}
    \begin{enumerate}
-      \item[3.1]{Funciones vectoriales más utilizadas.}
+      \item[3.1]{Funciones vectoriales más utilizadas}
       %ifelse(), pmin(), pmax(), cumsum(), diff().
-      \item[3.2]{Creación de funciones vectoriales.}
+      \item[3.2]{Creación de funciones vectoriales}
       %Vectorize()
    \end{enumerate}
    \item{R-Funciones brillantes}
    \begin{enumerate}
-      \item[4.1]{Funciones lógicas.}
+      \item[4.1]{Funciones lógicas}
       %any(), all(), ifelse(), is.na(), noNA(x)
-      \item[4.2]{Funciones matemáticas.}
+      \item[4.2]{Funciones matemáticas}
       %abs(), acos(), asin(), atan(), beta(), ceil(),
       %ceiling(), choose(), cos(), cosh(), digamma(), exp(), expm1(),
       %factorial(), floor(), gamma(), lbeta(), lchoose(), lfactorial(),
       %lgamma(), log(), log10(), log1p(), pentagamma(), psigamma(), round(),
       %signif(), sin(), sinh(), sqrt(), tan(), tanh(), tetragamma(),
       %trigamma(), trunc().
-      \item[4.3]{Resúmenes escalares.}
+      \item[4.3]{Resumen de escalares}
       %mean(), min(), max(), sum(), sd(), and (for vectors) var().
-      \item[4.4]{Resumenes Vectoriales.}
+      \item[4.4]{Resumen vectorial}
       %cumsum(), diff(), pmin(), and pmax().
-      \item[4.5]{Buscando valores especificos en un objeto.}
+      \item[4.5]{Buscando valores especificos en un objeto}
       %match(), self_match(), which_max(), which_min().
-      \item[4.6]{Eliminación de registros duplicados.}
+      \item[4.6]{Eliminación de registros duplicados}
       %duplicated(), unique().
    \end{enumerate}
 \end{enumerate}
@@ -230,9 +230,7 @@ Dentro de los temas a tratarse se encuentran las funciones \texttt{apply}, misma
 {\bf \Large R Nivel Avanzado}
 \end{center}
 
-
 {\bf \large Descripción:}\newline
-
 
 El curso de R Nivel Avanzado tiene una visión general de varios temas de investigación avanzada, tales como: ambientes, programación orientada a objetos, big data, etc. El curso se encuentra dirigido a los estudiantes que ya tengan experiencia y conocimiento del programa estadístico R y que se encuentren dispuestos a obtener una perspectiva de mayor profundidad respecto a la programación R con visión en convertirse en un desarrollador.\newline
 
@@ -383,17 +381,17 @@ Entre los gráficos estadísticos generados con {\bf ggplot2} podemos enumerar l
 
 {\bf \large Descripción:}\newline
 
-Implementar un algoritmo en R generalmente tiene la finalidad de disminiur el tiempo de ejecución de una determinada tarea que realizarala manualmente conlleva un tiempo de trabajo considerable. Un programador siempre debe tener en mente que sus R-algoritmos serán utilizados por varios usuarios, entre ellos, aquellos que no poseen conocimiento alguno sobre el lenguaje R, es por esta razón que es necesario desarrollar interfaces gráficas mediante las cuales el usuario pueda ejecutar el algoritmo a través de botones y controladores (widgets), sin la necesidad de visualizar las lineas de código.\newline
+Implementar un algoritmo en R permite disminuir considerablemente el tiempo de ejecución de una determinada tarea a diferencia de realizarla manualmente. El usuario de R siempre debe tener en mente que sus algoritmos serán utilizados por otros usuarios, entre ellos se debe considerar un pequeño porcentaje de usuarios que no poseen conocimiento suficiente del lenguaje R, es por esta razón que es necesario desarrollar interfaces gráficas mediante las cuales el usuario pueda ejecutar el algoritmo a través de botones y controladores (widgets), sin la necesidad de visualizar las líneas de código.\newline
 
 \begin{figure}[H]
 \begin{center}
-     \includegraphics[width=0.7\textwidth]{gui_sim_var.eps}
+     \includegraphics[width=0.8\textwidth]{gui_sim_var.eps}
   \caption{Simulación de variables aleatorias.}
   \label{simvar}
 \end{center}
 \end{figure}
 
-El curso Interfaces de Usuario con Shiny tiene como finalidad proveer al estudiante de un conjunto de herramientas empleadas en la generación de una interfaz gráfica de usuario mediante la utilización de uno de los mejores R-paquetes, Shiny, el mismo que después de comprender su estructura y funcionamiento resulta sencillo e intuitivo utilizarlo. En la Figura 1 se muestra un ejemplo de una interfaz básica mediante la cual se simulan un número de observaciones determinado de las distribuciones de probabilidad clásicas.\newline
+El curso \emph{Interfaces de Usuario con Shiny} tiene como finalidad proveer al estudiante un conjunto de herramientas utilizadas en la generación de interfaces gráficas a través del paquete Shiny. Una vez que el estudiante logre comprender su estructura y funcionamiento resultará sencillo e intuitivo su uso. En la Figura 1 mostramos un ejemplo de una interfaz que simula un número de observaciones determinado de algunas distribuciones de probabilidad clásicas.\newline
 
 {\bf \large Duración:}\newline
   20 Hrs.
@@ -406,41 +404,41 @@ El curso Interfaces de Usuario con Shiny tiene como finalidad proveer al estudia
 \begin{enumerate}
    \item{Introducción a Shiny}
    \begin{enumerate}
-      \item[1.1]{Estructura de una aplicación Shiny.}
-      \item[1.2]{Ejecución de una aplicación Shiny.}
-      \item[1.3]{Ejemplos aplicaciones Shiny.}
+      \item[1.1]{Estructura de una aplicación}
+      \item[1.2]{Ejecución de una aplicación}
+      \item[1.3]{Ejemplos}
    \end{enumerate}
    \item{Diseño de la interfaz de usuario}
    \begin{enumerate}
-      \item[2.1]{Construcción de la interfaz de usuario.}
-      \item[2.2]{Funciones y Contenidos HTML.}
-      \item[2.3]{Formato de texto.}
-      \item[2.4]{Adición de imágenes y videos.}
+      \item[2.1]{Construcción de la interfaz de usuario}
+      \item[2.2]{Funciones y contenidos HTML}
+      \item[2.3]{Formato de texto}
+      \item[2.4]{Adición de imágenes y videos}
    \end{enumerate}
-   \item{Añadir widgets de control (Botones)}
+   \item{Añadir widgets de control (botones)}
    \begin{enumerate}
-      \item[3.1]{Widgets de control básicos.}
-      \item[3.2]{Adición de widgets de control.}
+      \item[3.1]{Widgets de control básicos}
+      \item[3.2]{Adición de widgets de control}
    \end{enumerate}
    \item{Objetos de salida reactiva}
    \begin{enumerate}
-      \item[4.1]{Adición de un R objeto a la interfaz de usaurio.}
-      \item[4.2]{Construcción de un objeto reactivo.}
+      \item[4.1]{Adición de un R objeto a la interfaz de usuario}
+      \item[4.2]{Construcción de un objeto reactivo}
       \begin{itemize}
-         \item Textos reactivos.
-         \item Gráficos reactivos.
+         \item Textos reactivos
+         \item Gráficos reactivos
          \item Tablas reactivas, etc.
       \end{itemize}
    \end{enumerate}
    \item{Carga y descargo de archivos}
    \begin{enumerate}
-      \item[5.1]{Carga de archivos y direcciones de archivos.}
-      \item[5.2]{Descarga de archivos de resultados.}
+      \item[5.1]{Carga de archivos y direcciones de archivos}
+      \item[5.2]{Descarga de archivos de resultados}
    \end{enumerate}
    \item{Publicación de aplicaciones Shiny}
    \begin{enumerate}
-      \item[6.1]{Ejecución de Interfaz mediante RStudio.}
-      \item[6.2]{Ejecución de Interfaz mediante un Navegador Web.}
+      \item[6.1]{Ejecución de Interfaz mediante RStudio}
+      \item[6.2]{Ejecución de Interfaz mediante un Navegador Web}
    \end{enumerate}
 \end{enumerate}
 
