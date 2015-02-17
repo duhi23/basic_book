@@ -478,7 +478,6 @@ old.packages()
 El comando anterior nos mostrará la versión del paquete que ha sido instalada y la última versión disponible del mismo.\newline
 
 Para finalizar la sección dejamos un comando útil para los desarrolladores que deseen conocer los autores de los paquetes, así como también las personas que dan mantenimiento a los mismos:
-
 <<eval=FALSE>>=
 lapply(dir(R.home("library")), packageDescription)
 @
@@ -529,9 +528,6 @@ library(installr)
 # instalamos RStudio IDE
 install.RStudio()
 @
-
-%install.Rtools()
-%install.git()
 
 RStudio ofrece una amplia integración con ficheros de diversos formatos: R scripts (.R), Markdown (.md), LaTeX (.Rnw) entre otros. La facilidad en la generación de documentos dinámicos con \texttt{RStudio} y \texttt{knitr} han hecho que el programa se convierta en la IDE preferida por muchos usuarios de R.\newline
 
@@ -642,12 +638,19 @@ En el caso que se requiera un manual de ayuda completo en formato HMTL, empleamo
 help.start()
 @
 
-Por último, existen circunstancias en las cuales se hace indispensable conocer todas las funciones relacionadas a un nombre en específico, en estos casos es de gran utilidad el comando:
+Por último, existen circunstancias en las cuales se hace indispensable conocer todas las funciones relacionadas a un nombre en específico. Primero observamos un ejemplo en el cual se obtienen todas las funciones relacionadas con el término {\bf mean}.
 <<>>=
 apropos("mean")
 @
+Ahora observamos un ejemplo que obtiene todas las funciones que poseen la letra w en sus nombres.
+<<>>=
+apropos("w$")
+@
+Para finalizar observamos un ejemplo que encuentra todos las funciones que tiene un número entre el 4 y 8.
+<<>>=
+apropos("[4-8]")
+@
 
-En el ejemplo anterior se muestran todas las funciones relacionadas con el término {\bf mean}.
 
 \subsection{Mostrando ejemplos}
 
@@ -658,14 +661,17 @@ example(mean)
 example(range)
 @
 
+<<echo=FALSE>>=
+rm(list=ls())
+@
 
 \section{Estructura de datos}
 En las secciones previas hemos mencionado que R es un lenguaje de programación orientada a objetos, por lo que cualquier cosa que exista en R (variables, datos, funciones, etc.) es un objeto. Para conocer los nombres de los objetos presentes en el área de trabajo utilizamos el comando \code{\texttt{ls()}}.\newline
 
 Iniciamos creando los vectores xvec y yvec para evidenciar que dichos objetos ya aparecen en nuestra área de trabajo.
 <<>>=
-xvec <- c(1,2,3)
-yvec <- c(4,5,6)
+x_vec <- c(1,2,3)
+y_vec <- c(4,5,6)
 ls()
 @
 
@@ -685,7 +691,7 @@ Las estructuras de datos en R pueden ser organizados por su dimensionalidad (1 d
 \end{table}
 
 \subsection{Vectores}
-Es la estructura más simple de R que sirve para almacenar un conjunto de valores del mismo tipo llamados \emph{elementos}. Existen 4 tipos de elementos que R puede almacenar dentro de un vector:
+Es la estructura más simple de R que sirve para almacenar un conjunto de valores del mismo o diferente tipo llamados \emph{elementos}. Existen 4 tipos de elementos que R puede almacenar dentro de un vector:
 \begin{multicols}{2}
 \begin{itemize}
    \item logical
@@ -724,6 +730,10 @@ c(2L, c(4L, c(6L, 8L)))
 # obtenemos el mismo resultado mediante
 c(2L, 4L, 6L, 8L)
 @
+
+Los valores perdidos dentro de un vector son especificados con {\bf NA}, el cual es un vector lógico de longitud 1.
+
+\subsubsection{Agregando y eliminando elementos}
 
 
 
