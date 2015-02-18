@@ -58,13 +58,13 @@ Dadas sus características R tiene gran potencial para ser utilizado en diferent
 
 \subsection{Historia}
 
-El desarrollo de R inició en el año de 1991 con los profesores del Departamento de Estadística {\bf Ross Ihaka} y {\bf Robert Gentleman} de la Universidad de Aukland, su primer anuncio al público se dio en el año de 1993 mientras que dos años más tarde Martin Machler convence a sus amigos Ross $\&$ Robert que distribuyan R bajo licencia GNU General Public License. Desde entonces el programa se distribuye gratuitamente a través del repositorio \emph{Comprehensive R Archive Network} (CRAN) en \url{http://www.r-project.org} su mantenimiento se encuentra a cargo del grupo {\bf R Core Team} desde el año 1997 asistido por una gran cantidad de colaboradores internacionales.
+El desarrollo de R inició en el año de 1991 con los profesores del Departamento de Estadística {\bf Ross Ihaka} y {\bf Robert Gentleman} de la Universidad de Aukland, su primer anuncio al público se dio en el año de 1993 (versión alfa) mientras que dos años más tarde Martin Machler convence a sus amigos Ross $\&$ Robert que distribuyan R bajo licencia GNU General Public License, por lo cual en Junio de 1995 aparece la primera versión libre (open source), para Febrero del año 2000 aparece la versión 1.0.0. Desde entonces el programa se distribuye gratuitamente a través del repositorio \emph{Comprehensive R Archive Network} (CRAN) en \url{http://www.r-project.org} su mantenimiento se encuentra a cargo del grupo {\bf R Core Team}\footnote{El R Core Team es el grupo de desarrolladores talentosos y experimentados con permisos para manipular el código fuente de R, en la actualidad lo conforman alrededor de 20 personas que se encuentran en 11 diferentes cuidades.} desde el año 1997 asistido por una gran cantidad de colaboradores internacionales.
 
 \begin{figure}[H]
 \centering
-\includegraphics[height=4cm, width=3.2cm]{Robert.eps}
 \includegraphics[height=4cm, width=3.2cm]{Ross.eps}
-\caption{Robert Gentleman $\&$ Ross Ihaka}
+\includegraphics[height=4cm, width=3.2cm]{Robert.eps}
+\caption{Ross Ihaka $\&$ Robert Gentleman}
 \label{creadores}
 \end{figure}
 
