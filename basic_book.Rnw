@@ -16,7 +16,7 @@
 %\usepackage{lipsum}
 \usepackage{multicol}
 \usepackage{lmodern}
-\newcommand{\code}[1]{\fcolorbox{blue!80}{gray!10}{#1}}
+\newcommand{\code}[1]{\fcolorbox{white}{gray!15}{#1}}
 \parindent=0mm
 \begin{document}
 \pagecolor[gray]{0.95}
@@ -47,7 +47,7 @@
 
 \section{Introducción}
 
-El programa R es un software libre distribuido bajo GNU General Public License muy utilizado por la comunidad científica el cual es considerado un lenguaje de comandos de manipulación y análisis estadístico debido a la gran variedad de métodos estadísticos que cubre, así como a las capacidades gráficas que ofrece.
+Para introducirnos en el mundo de R debemos tener claro dos conceptos: lenguaje de programación y entorno estadístico, pues R integra un conjunto de herramientas y un lenguaje de comandos para la manipulación de datos, la realización de cálculos y análisis de los mismos así como su representación gráfica en alta calidad. El programa R es un software libre distribuido bajo GNU General Public License muy utilizado por la comunidad científica debido a su doble naturaleza, como lenguaje y como entorno.
 \begin{figure}[H]
 \centering
 \includegraphics[scale=.15]{logo_r.eps}
@@ -100,12 +100,12 @@ R al ser un programa GNU General Public License carece de soporte técnico, sin 
 \end{itemize}
 \end{multicols}
 
-De las empresas antes mencionadas se destaca de sobremanera Revolution Analytics, Inc. por su modificación del código fuente de R, lo cual ha permitido que R sea multicore, es decir, pueda aprovechar al máximo de  todos los núcleos de los procesadores actuales (Core i5, Core i7, etc.). El impacto inmediato de que R sea multicore se ve reflejado en la mayor velocidad de lectura y escritura de información permitiendo de este modo trabajar con grandes cantidades de datos sin ningún problema.\newline
+De las empresas antes mencionadas se destaca de sobremanera Revolution Analytics\footnote{Revolution Analytics fue fundada en el año 2007 con la finalidad de dar soporte comercial al software Revolution R, adicionalmente provee componentes tales como: ParallelR, RevoScaleR, RevoDeployR, etc.}, Inc. por su modificación del código fuente de R, lo cual ha permitido que R sea multicore, es decir, pueda aprovechar al máximo de  todos los núcleos de los procesadores actuales (Core i5, Core i7, etc.). El impacto inmediato de que R sea multicore se ve reflejado en la mayor velocidad de lectura y escritura de información permitiendo de este modo trabajar con grandes cantidades de datos sin ningún problema.\newline
 
 El programa R optimizado por Revolution Analytics, Inc. puede obtenerse a través de la página web \url{http://www.revolutionanalytics.com} como \emph{Revolution R Open} de forma gratuita, sin embargo en el caso de requerir soporte se puede adquirir la versión pagada \emph{Revolution R Enterprise}.
 \begin{figure}[H]
 \centering
-\includegraphics[scale=.15]{logo_r.eps}
+\includegraphics[scale=.45]{logo_rro.eps}
 \caption{Revolution R Open}
 \label{logo_ropen}
 \end{figure}
@@ -691,15 +691,38 @@ Las estructuras de datos en R pueden ser organizados por su dimensionalidad (1 d
 \end{table}
 
 \subsection{Vectores}
-Es la estructura más simple de R que sirve para almacenar un conjunto de valores del mismo o diferente tipo llamados \emph{elementos}. Existen 4 tipos de elementos que R puede almacenar dentro de un vector:
+Es la estructura más simple de R que sirve para almacenar un conjunto de valores del mismo o diferente tipo llamados \emph{elementos}. Existen 6 tipos de elementos que R puede almacenar dentro de un vector:
 \begin{multicols}{2}
 \begin{itemize}
    \item logical
    \item integer
-   \item numeric/double
+   \item double
+   \item complex
    \item character
+   \item raw
 \end{itemize}
 \end{multicols}
+
+La siguiente tabla muestra los 6 tipos de vectores, sus respectivos modos y la forma de almacenamiento.
+\begin{table}{H}
+\centering
+\begin{tabular}{ccc}\hline \hline
+{\bf Tipo} & {\bf Modo} & {\bf Almacenamiento} \\ \hline \hline
+logical & logical & logical \\ \hline
+integer & numeric & integer \\ \hline
+double & numeric & double \\ \hline
+complex & complex & complex \\ \hline
+character & character & character \\ \hline
+raw & raw & raw \\ \hline 
+\end{tabular}
+\caption{Tipos de vectores}
+\label{typevec}
+\end{table}
+
+\paragraph{Creación de vectores}
+~\\
+
+Ahora nos enfocaremos en mostrar al lector varias maneras de crear vectores de acuerdo a sus necesidades. Iniciamos generando vectores con ciertos elementos ya conocidos:
 
 <<>>=
 # Podemos crear vectores logicos tecleando TRUE y FALSE (o T & F).
@@ -715,6 +738,19 @@ dbl_var
 chr_var <- c("statistical", "model", "test")
 chr_var
 @
+
+La función \code{\texttt{vector}} permite crear vectores de un tipo y longitud determinada, a continuación mostramos unos ejemplos:
+<<>>=
+# creamos un vector numerico de longitud 5
+vector("numeric", 5)
+# creamos un vector logico de longitud 5
+vector("logical", 5)
+# creamos un vector de caracteres de longitud 5
+vector("character", 5)
+@
+
+
+
 
 Todo vector consta de dos argumentos: \texttt{mode}, \texttt{length}. 
 <<>>=
@@ -733,7 +769,11 @@ c(2L, 4L, 6L, 8L)
 
 Los valores perdidos dentro de un vector son especificados con {\bf NA}, el cual es un vector lógico de longitud 1.
 
+
+
+
 \subsubsection{Agregando y eliminando elementos}
+
 
 
 
