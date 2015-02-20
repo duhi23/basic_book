@@ -611,6 +611,29 @@ help(options)
 
 
 
+%R AnalyticFlow es un software que permite el análisis de datos de estado-of-the-art dibujando diagramas de flujo de análisis. Usted puede compartir con eficacia los procesos de análisis de datos en trabajos colaborativos. El software está disponible de forma gratuita para cualquier propósito.
+
+%Absolutamente, he estado usando R Analítica Flow (RAF, bastante un buen nombre, ¿no?). Lo más hermoso de la Royal Air Force, hasta el momento, es que importa archivo .R y generar una estructura lineal. A continuación, los usuarios pueden manipular la estructura lineal de cualquier forma (órdenes de código en ejecución) que les gusta, y también permite a los usuarios exportar la estructura manipulado como códigos .R.
+
+%Visual.
+%– Easier to think,share and remember. – Once created,anyone can use it.
+%Flexible.
+%– Data analysis is not always straightway. – It can represent branching processes.
+
+%Availability
+%– Freely available!
+%– Open sourced under the BSD license. – Download from:
+%http://www.ef-prime.com/
+
+%About us: Ef-prime, Inc.
+%– A data analysis company • Location: Tokyo, Japan
+%– Services:
+%Data analysis consulting • Software development
+%Training
+%– Ryota Suzuki
+%An author of package pvclust 
+%Running the company with friends
+
 \subsection{Obteniendo ayuda}
 
 Existen algunas funciones en R que nos facilitan la vida al momento de indagar sobre la funcionalidad de ciertos comandos con tan sólo tener disponible una conexión de Internet. Por ejemplo, si nos encontramos interesados en obtener información acerca de la función \code{\texttt{seq()}} podemos escribir en la consola lo siguiente:
