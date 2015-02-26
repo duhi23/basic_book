@@ -30,11 +30,11 @@
 \vspace{4cm}\\
 \textbf{\huge CURSO:} \vspace{0.6cm}\\
 \textbf{\Large Introducción al programa estadístico R} \vspace{4cm}\\
-\textbf{\Large Programa de capacitación para estudiantes universitarios}\vspace{2cm}\\
+\textbf{\Large R Nivel Básico}\vspace{2cm}\\
 \includegraphics[scale=.7]{logo_source.eps}
 \vspace{1.5cm}
 
-\textbf{\Large Quito, Enero 2015}
+\textbf{\Large Quito, Febrero 2015}
 \end{center}
 \end{titlepage}
 \pagecolor{white}
@@ -609,30 +609,25 @@ help(options)
 
 \subsection{R Analytic Flow}
 
+R Analytic Flow (RAF) es una interfaz gráfica de usuario desarrollado por Ryota Suzuki\footnote{Ryota Suzuki es un desarrollador de software orientado al análisis de datos, fundó con sus amigos la empresa Ef-prime, Inc. en Tokyo, además es el creador del paquete \emph{pvclust} de R.}, la cual facilita el análisis de datos a través de diagramas de flujo. El software se encuentra bajo licencia BSD $\&$ GPL, por lo cual puede obtenerse de forma gratuita a través de la página web de Ef-prime, Inc. \url{http://www.ef-prime.com} para las plataformas: Windows, Mac OS X y Linux.
 
+\begin{figure}[H]
+\centering
+\includegraphics[scale=.35]{ranalyticflow.eps}
+\caption{R Analytic Flow}
+\label{RAF}
+\end{figure}
 
-%R AnalyticFlow es un software que permite el análisis de datos de estado-of-the-art dibujando diagramas de flujo de análisis. Usted puede compartir con eficacia los procesos de análisis de datos en trabajos colaborativos. El software está disponible de forma gratuita para cualquier propósito.
+R Analytic Flow permite insertar código de R enmarcado dentro de nodos con la capacidad de ejecutar diferentes rutinas a partir de determinadas conexiones entre nodos.
 
-%Absolutamente, he estado usando R Analítica Flow (RAF, bastante un buen nombre, ¿no?). Lo más hermoso de la Royal Air Force, hasta el momento, es que importa archivo .R y generar una estructura lineal. A continuación, los usuarios pueden manipular la estructura lineal de cualquier forma (órdenes de código en ejecución) que les gusta, y también permite a los usuarios exportar la estructura manipulado como códigos .R.
+%Entre las ventajas que posee la interfaz se encuentra la creación de flujos a través de los cuales se pueden ejecutar diferentes rutinas. Al momento de insertar nodos dentro de la interfaz podemos insertar código R, lo cual hace que dicho nodo  
 
 %Visual.
 %– Easier to think,share and remember. – Once created,anyone can use it.
 %Flexible.
 %– Data analysis is not always straightway. – It can represent branching processes.
 
-%Availability
-%– Freely available!
-%– Open sourced under the BSD license. – Download from:
-%http://www.ef-prime.com/
 
-%About us: Ef-prime, Inc.
-%– A data analysis company • Location: Tokyo, Japan
-%– Services:
-%Data analysis consulting • Software development
-%Training
-%– Ryota Suzuki
-%An author of package pvclust 
-%Running the company with friends
 
 \subsection{Obteniendo ayuda}
 
@@ -813,8 +808,6 @@ table(ojos)
 El uso más importante de los factores se encuentra en el modelamiento estadístico; dado que ciertas variables categóricas ingresan a los modelos de manera diferente a las variables continuas.
 
 Los factores en R se almacenan como un vector de valores enteros con un conjunto correspondiente de valores de caracteres para usar cuando aparezca el factor.
-
-
 
 
 
