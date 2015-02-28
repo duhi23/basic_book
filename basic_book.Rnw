@@ -700,17 +700,17 @@ R Analytic Flow permite insertar código de R enmarcado dentro de nodos con la c
 
 A continuación enumeramos algunas de las ventajas que posee R Analytic Flow:
 \begin{enumerate}
-   \item 
-   \item 
+   \item Facilita ejecutar procesos a través de flujos.
+   \item Facil implementación de tareas en cada nodo.
+   \item El número de usuarios que usan R Analytic Flow va en aumento debido a las facilidades que presenta.
 \end{enumerate}
-La principal ventaja que posee R Analytic Flow sobre el resto de interfaces gráficas es su ventana de diseño de flujo sobre la cual se pueden colocar diversos nodos, los cuales simplifican de sobremanera la complejidad de procesos o script grandes. Esto ha hecho que R Analytic Flow vaya adquiriendo mayor cantidad de usuarios día tras día. 
 
 \subsubsection{Desventajas}
 
 Algunas de las desventajas por las cuales los usuarios no usan R Analytic Flow:
 \begin{enumerate}
    \item Escasa documentación sobre el manejo de la interfaz.
-   \item El código fuente se encuentra administrado únicamente por Ef-prime, Inc.
+   \item El código fuente se encuentra administrado únicamente por Ef-prime, Inc. Esto impide que se pueda seguir optimizando la interfaz con mayor rapidez.
 \end{enumerate}
 
 \section{Estructura de datos}
@@ -764,7 +764,7 @@ character & character & character \\ \hline
 raw & raw & raw \\ \hline 
 \end{tabular}
 \caption{Tipos de vectores}
-\label{typevec}
+%\label{typevec}
 \end{table}
 
 \paragraph{Creación de vectores}
