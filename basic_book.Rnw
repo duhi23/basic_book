@@ -47,18 +47,18 @@
 
 \section{Introducción}
 
-Para introducirnos en el mundo de R debemos tener claro dos conceptos: lenguaje de programación y entorno estadístico, pues R integra un conjunto de herramientas y un lenguaje de comandos para la manipulación de datos, la realización de cálculos y análisis de los mismos así como su representación gráfica en alta calidad. El programa R es un software libre distribuido bajo GNU General Public License muy utilizado por la comunidad científica debido a su doble naturaleza, como lenguaje y como entorno.
+Para introducirnos en el mundo de R debemos tener claro dos conceptos: lenguaje de programación y entorno estadístico, pues R integra un conjunto de herramientas y un lenguaje de comandos para la manipulación de datos, la realización de cálculos y análisis estadísticos, así como su representación gráfica en alta calidad. El programa R es un software libre distribuido bajo GNU General Public License muy utilizado por la comunidad científica debido a su doble naturaleza, como lenguaje y como entorno.
 \begin{figure}[H]
 \centering
 \includegraphics[scale=.15]{logo_r.eps}
 \caption{Logo del proyecto R}
 \label{logo_r}
 \end{figure}
-Dadas sus características R tiene gran potencial para ser utilizado en diferentes áreas de la estadística, finanzas, simulación, reportería dinámica, biomatemática, minería de datos, big data, etc. Al ser un software libre puede ser instalado en diversas plataformas y sistemas operativos: Windows, Linux, Mac OS X y Unix.
+Dadas sus características R tiene gran potencial para ser utilizado en diferentes áreas de la estadística, finanzas, simulación, reportería dinámica, biomatemática, minería de datos, big data, etc. Al ser un software libre puede ser instalado en diversas plataformas y sistemas operativos tales como: Windows, Linux, Mac OS X y Unix.
 
 \subsection{Historia}
 
-El desarrollo de R inició en el año de 1991 con los profesores del Departamento de Estadística {\bf Ross Ihaka} y {\bf Robert Gentleman} de la Universidad de Aukland, su primer anuncio al público se dio en el año de 1993 (versión alfa) mientras que dos años más tarde Martin Machler convence a sus amigos Ross $\&$ Robert que distribuyan R bajo licencia GNU General Public License, por lo cual en Junio de 1995 aparece la primera versión libre (open source), para Febrero del año 2000 aparece la versión 1.0.0. Desde entonces el programa se distribuye gratuitamente a través del repositorio \emph{Comprehensive R Archive Network} (CRAN) en \url{http://www.r-project.org} su mantenimiento se encuentra a cargo del grupo {\bf R Core Team}\footnote{El R Core Team es el grupo de desarrolladores talentosos y experimentados con permisos para manipular el código fuente de R, en la actualidad lo conforman alrededor de 20 personas que se encuentran en 11 diferentes cuidades.} desde el año 1997 asistido por una gran cantidad de colaboradores internacionales.
+El desarrollo de R inició en el año de 1991 con los profesores del Departamento de Estadística {\bf Ross Ihaka} y {\bf Robert Gentleman} de la Universidad de Aukland, su primer anuncio al público se dio en el año de 1993 (versión alfa) mientras que dos años más tarde Martin Machler convence a sus amigos Ross $\&$ Robert que distribuyan R bajo licencia GNU General Public License, por lo cual en Junio de 1995 aparece la primera versión libre (open source), para Febrero del año 2000 aparece la versión 1.0.0. Desde entonces el programa se distribuye gratuitamente a través del repositorio \emph{Comprehensive R Archive Network} (CRAN) en \url{http://www.r-project.org} su mantenimiento se encuentra a cargo del grupo {\bf R Core Team}\footnote{El R Core Team es el grupo de desarrolladores talentosos y experimentados con permisos para manipular el código fuente de R, en la actualidad lo conforman alrededor de 20 personas que se encuentran en 11 diferentes cuidades del mundo.} desde el año 1997 asistido por una gran cantidad de colaboradores internacionales.
 
 \begin{figure}[H]
 \centering
@@ -502,6 +502,62 @@ R.version.string
 R.version
 @
 
+\subsection{Obteniendo ayuda}
+
+Existen algunas funciones en R que nos facilitan la vida al momento de indagar sobre la funcionalidad de ciertos comandos con tan sólo tener disponible una conexión de Internet. Por ejemplo, si nos encontramos interesados en obtener información acerca de la función \code{\texttt{seq()}} podemos escribir en la consola lo siguiente:
+<<eval=FALSE>>=
+help(seq)
+@
+Una forma alternativa es
+<<eval=FALSE>>=
+?seq
+@
+Para el caso que se encuentren trabajando con funciones especificadas por caracteres especiales, el argumento debería ir entre comillas, con el fin de transformarlo en una \emph{cadena de caracteres}:
+<<eval=FALSE>>=
+help("[[")
+@
+Se pueden utilizar tanto comillas simples como dobles sin que esto conlleve problemas a posteriori.\newline
+
+Adicionalmente, si nos encontramos interesados en buscar información relacionada al término "normal", o algún otro término en específico podemos teclear lo siguiente:
+<<eval=FALSE>>=
+help.search("normal")
+help.search("termino_especifico")
+@
+
+En el caso que se requiera un manual de ayuda completo en formato HMTL, empleamos el comando:
+<<eval=FALSE>>=
+help.start()
+@
+
+Por último, existen circunstancias en las cuales se hace indispensable conocer todas las funciones relacionadas a un nombre en específico. Primero observamos un ejemplo en el cual se obtienen todas las funciones relacionadas con el término {\bf mean}.
+<<>>=
+apropos("mean")
+@
+Ahora observamos un ejemplo que obtiene todas las funciones que poseen la letra w en sus nombres.
+<<>>=
+apropos("w$")
+@
+Para finalizar observamos un ejemplo que encuentra todos las funciones que tiene un número entre el 4 y 8.
+<<>>=
+apropos("[4-8]")
+@
+
+
+\subsection{Mostrando ejemplos}
+
+La mayoría de archivos que dan ayuda incluyen ejemplos que pueden ser ejecutados en R y facilitan al usuario comprender de mejor manera el uso de cierto comando o función. Para ejecutar los ejemplos usaremos el comando \texttt{example} como se muestra a continuación:
+<<>>=
+example(mean)
+
+example(range)
+@
+
+<<echo=FALSE>>=
+rm(list=ls())
+@
+
+
+
 %\section{Interfaces gráficas de usuario}
 \section{Entornos de desarrollo}
 
@@ -607,6 +663,26 @@ Existen opciones adicionales que pueden ser modificadas de acuerdo a las necesid
 help(options)
 @
 
+\subsubsection{Respaldando información}
+
+Un tema importante dentro del análisis de datos es el respaldo de información que se pueda dar sobre ciertos resultados obtenidos, en este punto R consta de dos comandos muy útiles: \code{\texttt{save()}} $\&$ \code{\texttt{load()}}.\newline
+
+El primero de ellos permite almacenar en disco los objetos que desee el usuario (almacenamiento parcial), dicho comando puede ser configuraado de tal manera que almacene todos los objetos que se encuentra válidos en el área de trabajo.
+<<eval=FALSE>>=
+# si deseamos guardar el objeto "datos_banco" con el nombre "base" 
+save(datos_banco, file = "base.RData")
+# para el caso que se desee almacenar todo con el nombre "info"
+save(list = ls(all = TRUE), file = "info.RData")
+@
+
+El segundo comando nos va a permitir cargar los objetos guardados en el área de trabajo actual o en un ambiente determinado.
+<<eval=FALSE>>=
+# cargamos el objeto base en el area de trabajo
+load("base.RData")
+# ahora cargamos "info" en un ambiente determinado "env"
+load("info.RData", envir = env)
+@
+
 \subsection{R Analytic Flow}
 
 R Analytic Flow (RAF) es una interfaz gráfica de usuario desarrollado por Ryota Suzuki\footnote{Ryota Suzuki es un desarrollador de software orientado al análisis de datos, fundó con sus amigos la empresa Ef-prime, Inc. en Tokyo, además es el creador del paquete \emph{pvclust} de R.}, la cual facilita el análisis de datos a través de diagramas de flujo. El software se encuentra bajo licencia BSD $\&$ GPL, por lo cual puede obtenerse de forma gratuita a través de la página web de Ef-prime, Inc. \url{http://www.ef-prime.com} para las plataformas: Windows, Mac OS X y Linux.
@@ -620,68 +696,22 @@ R Analytic Flow (RAF) es una interfaz gráfica de usuario desarrollado por Ryota
 
 R Analytic Flow permite insertar código de R enmarcado dentro de nodos con la capacidad de ejecutar diferentes rutinas a partir de determinadas conexiones entre nodos.
 
-%Entre las ventajas que posee la interfaz se encuentra la creación de flujos a través de los cuales se pueden ejecutar diferentes rutinas. Al momento de insertar nodos dentro de la interfaz podemos insertar código R, lo cual hace que dicho nodo  
+\subsubsection{Ventajas}
 
-%Visual.
-%– Easier to think,share and remember. – Once created,anyone can use it.
-%Flexible.
-%– Data analysis is not always straightway. – It can represent branching processes.
+A continuación enumeramos algunas de las ventajas que posee R Analytic Flow:
+\begin{enumerate}
+   \item 
+   \item 
+\end{enumerate}
+La principal ventaja que posee R Analytic Flow sobre el resto de interfaces gráficas es su ventana de diseño de flujo sobre la cual se pueden colocar diversos nodos, los cuales simplifican de sobremanera la complejidad de procesos o script grandes. Esto ha hecho que R Analytic Flow vaya adquiriendo mayor cantidad de usuarios día tras día. 
 
+\subsubsection{Desventajas}
 
-
-\subsection{Obteniendo ayuda}
-
-Existen algunas funciones en R que nos facilitan la vida al momento de indagar sobre la funcionalidad de ciertos comandos con tan sólo tener disponible una conexión de Internet. Por ejemplo, si nos encontramos interesados en obtener información acerca de la función \code{\texttt{seq()}} podemos escribir en la consola lo siguiente:
-<<eval=FALSE>>=
-help(seq)
-@
-Una forma alternativa es
-<<eval=FALSE>>=
-?seq
-@
-Para el caso que se encuentren trabajando con funciones especificadas por caracteres especiales, el argumento debería ir entre comillas, con el fin de transformarlo en una \emph{cadena de caracteres}:
-<<eval=FALSE>>=
-help("[[")
-@
-Se pueden utilizar tanto comillas simples como dobles sin que esto conlleve problemas a posteriori.\newline
-
-Adicionalmente, si nos encontramos interesados en buscar información relacionada al término "normal", o algún otro término en específico podemos teclear lo siguiente:
-<<eval=FALSE>>=
-help.search("normal")
-help.search("termino_especifico")
-@
-
-En el caso que se requiera un manual de ayuda completo en formato HMTL, empleamos el comando:
-<<eval=FALSE>>=
-help.start()
-@
-
-Por último, existen circunstancias en las cuales se hace indispensable conocer todas las funciones relacionadas a un nombre en específico. Primero observamos un ejemplo en el cual se obtienen todas las funciones relacionadas con el término {\bf mean}.
-<<>>=
-apropos("mean")
-@
-Ahora observamos un ejemplo que obtiene todas las funciones que poseen la letra w en sus nombres.
-<<>>=
-apropos("w$")
-@
-Para finalizar observamos un ejemplo que encuentra todos las funciones que tiene un número entre el 4 y 8.
-<<>>=
-apropos("[4-8]")
-@
-
-
-\subsection{Mostrando ejemplos}
-
-La mayoría de archivos que dan ayuda incluyen ejemplos que pueden ser ejecutados en R y facilitan al usuario comprender de mejor manera el uso de cierto comando o función. Para ejecutar los ejemplos usaremos el comando \texttt{example} como se muestra a continuación:
-<<>>=
-example(mean)
-
-example(range)
-@
-
-<<echo=FALSE>>=
-rm(list=ls())
-@
+Algunas de las desventajas por las cuales los usuarios no usan R Analytic Flow:
+\begin{enumerate}
+   \item Escasa documentación sobre el manejo de la interfaz.
+   \item El código fuente se encuentra administrado únicamente por Ef-prime, Inc.
+\end{enumerate}
 
 \section{Estructura de datos}
 En las secciones previas hemos mencionado que R es un lenguaje de programación orientada a objetos, por lo que cualquier cosa que exista en R (variables, datos, funciones, etc.) es un objeto. Para conocer los nombres de los objetos presentes en el área de trabajo utilizamos el comando \code{\texttt{ls()}}.\newline
