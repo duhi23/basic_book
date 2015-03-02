@@ -760,7 +760,9 @@ Es la estructura más simple de R que sirve para almacenar un conjunto de valore
 \end{itemize}
 \end{multicols}
 
-\paragraph{Creación de vectores}
+\subsubsection{Creación}
+
+\paragraph{Vectores homogéneos}
 ~\\
 
 Para la creación de vectores recurriremos a una función interna de R, dicha función es conocida con \emph{concatenación} y es denotada por la letra \code{\texttt{c()}}. Iniciamos mostrando al lector la creación de vectores donde todos sus elementos son del mismo tipo.
@@ -800,6 +802,9 @@ mode(var)
 # mostramos la longitud del vector
 length(var)
 @
+
+\paragraph{Vectores heterogéneos}
+~\\
 
 El usuario tiene toda la facilidad de crear un vector con diferentes tipos de elementos, sin embargo, debido al conflicto que se genera internamente por la \emph{coerción} de los distintos elementos tenemos la siguiente jerarquía:
 \begin{table}[H]
@@ -851,16 +856,25 @@ sum(vec)
 mean(vec)
 @
 
-Para la coerción contamos con varias funciones que nos facilitan el trabajo tales como: \code{\texttt{as.character()}}, \code{\texttt{as.double()}}, \code{\texttt{as.integer()}}, \code{\texttt{as.logical()}}.
+Para la coerción contamos con varias funciones que nos facilitan el trabajo tales como: \code{\texttt{as.character()}}, \code{\texttt{as.double()}}, \code{\texttt{as.integer()}}, \code{\texttt{as.logical()}}.\newline
 
+\paragraph{Almacenamiento de vectores}
+~\\
 
-
-Los vectores se encuentran almacenados de forma plana incluso cuando se anidan vectores como se observa:
+Una característica importante de los vectores es que se encuentran almacenados de forma plana incluso cuando se anidan vectores como se observa:
 <<>>=
 c(2L, c(4L, c(6L, 8L)))
 # obtenemos el mismo resultado mediante
 c(2L, 4L, 6L, 8L)
 @
+
+\paragraph{Valores perdidos}
+~\\
+
+\subsubsection{Operaciones}
+
+
+
 
 Los valores perdidos dentro de un vector son especificados con {\bf NA}, el cual es un vector lógico de longitud 1.
 
