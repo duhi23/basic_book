@@ -15,6 +15,7 @@
 \usepackage{graphicx}
 %\usepackage{lipsum}
 \usepackage{multicol}
+\usepackage{float}
 \usepackage{lmodern}
 \newcommand{\code}[1]{\fcolorbox{white}{gray!15}{#1}}
 \parindent=0mm
@@ -713,30 +714,38 @@ Algunas de las desventajas por las cuales los usuarios no usan R Analytic Flow:
    \item El código fuente se encuentra administrado únicamente por Ef-prime, Inc. Esto impide que se pueda seguir optimizando la interfaz con mayor rapidez.
 \end{enumerate}
 
-\section{Estructura de datos}
-En las secciones previas hemos mencionado que R es un lenguaje de programación orientada a objetos, por lo que cualquier cosa que exista en R (variables, datos, funciones, etc.) es un objeto. Para conocer los nombres de los objetos presentes en el área de trabajo utilizamos el comando \code{\texttt{ls()}}.\newline
 
-Iniciamos creando los vectores xvec y yvec para evidenciar que dichos objetos ya aparecen en nuestra área de trabajo.
+
+\section{Estructura de datos}
+En las secciones anteriores mencionamos que R es un lenguaje de programación orientado a objetos, por lo que cualquier cosa que exista en R (variables, datos, funciones, etc.) es un objeto. Para conocer los nombres de los objetos presentes en el área de trabajo utilizamos el comando \code{\texttt{ls()}}.\newline
+
+Iniciemos creando los vectores xvec y yvec para evidenciar que dichos objetos aparecen en nuestra área de trabajo una vez creados.
 <<>>=
+# Inicialmente el area de trabajo se encuentra vacia
+ls()
+# Generamos 2 vectores
 x_vec <- c(1,2,3)
 y_vec <- c(4,5,6)
+# Los vectores creados ya se encuentran en el area de trabajo
 ls()
 @
 
-En el ejemplo anterior se utilizó el operador de asignación estándar $<-$ de R, mismo que sirve para asignar un objeto a una variable, en algunas ocasiones los usuarios de R también utilizan el símbolo $=$, sin embargo, esto no es recomendable dado que en algunas situaciones especiales no funciona.\newline
+En el ejemplo anterior se utilizó el operador de \emph{asignación estándar} "$\leftarrow$", el cual asigna un valor a una variable, en algunas ocasiones los usuarios principiantes de R utilizan el símbolo "$=$", sin embargo, esto no es recomendable dado que en algunas situaciones podemos tener conflictos de interpretabilidad.\newline
 
-Los nombres que se les asigna a los objetos en R pueden ser de cualquier longitud y éstos pueden combinar letras, números y caracteres especiales (coma, punto, guión bajo, etc.), la única exigencia al momento de asignar un nombre a un objeto es que el mismo inicie con una letra. La construcción explícita de un objeto nos proporcionará un mejor entendimiento de su estructura, y nos permitirá ahondar en algunas nociones mencionadas previamente.\newline
+Los nombres que se les asigna a los objetos en R pueden ser de cualquier longitud, y a su vez pueden combinar letras, números y caracteres especiales (coma, punto, guión bajo, etc.), la única exigencia al momento de asignar un nombre a un objeto es que el mismo inicie con una letra (R diferencia mayúsculas de minúsculas). La construcción explícita de un objeto nos proporcionará un mejor entendimiento de su estructura, y nos permitirá ahondar en algunas nociones mencionadas previamente.\newline
 
-Las estructuras de datos en R pueden ser organizados por su dimensionalidad (1 dimensión, 2 dimensiones o n-dimensiones), así como también por su tipo (homogéneo, heterogéneo) lo anterior da lugar a 5 tipos de estructuras que se resumen a continuación:
+Las estructuras de datos en R pueden ser organizados por su dimensionalidad (1 dimensión, 2 dimensiones o n-dimensiones), así como también por su tipo (homogéneo, heterogéneo) lo anterior da lugar a 6 tipos de estructuras que se resumen a continuación:
 \begin{table}[H]
 \centering
 \begin{tabular}{cccc}\hline
 {\bf Dimensión} & {\bf 1-d} & {\bf 2-d} & {\bf n-d} \\ \hline
 {\bf Homogéneo} & Vector & Matriz & Array \\ \hline
-{\bf Heterogéneo} & Lista & Data Frame & \\ \hline
+{\bf Heterogéneo} & Lista & Data Frame / Data Table & \\ \hline
 \end{tabular}
 \caption{Estructura de datos}
 \end{table}
+
+En la actualidad ha tomado fuerza el uso de los data tables a diferencias de los data frames, esto debido a las diversas facilidades que poseen los primeras sobre la manipulación de grandes cantidades de información (incorporación del almacenamiento en disco). 
 
 \subsection{Vectores}
 Es la estructura más simple de R que sirve para almacenar un conjunto de valores del mismo o diferente tipo llamados \emph{elementos}. Existen 6 tipos de elementos que R puede almacenar dentro de un vector:
@@ -751,26 +760,10 @@ Es la estructura más simple de R que sirve para almacenar un conjunto de valore
 \end{itemize}
 \end{multicols}
 
-La siguiente tabla muestra los 6 tipos de vectores, sus respectivos modos y la forma de almacenamiento.
-\begin{table}{H}
-\centering
-\begin{tabular}{ccc}\hline \hline
-{\bf Tipo} & {\bf Modo} & {\bf Almacenamiento} \\ \hline \hline
-logical & logical & logical \\ \hline
-integer & numeric & integer \\ \hline
-double & numeric & double \\ \hline
-complex & complex & complex \\ \hline
-character & character & character \\ \hline
-raw & raw & raw \\ \hline 
-\end{tabular}
-\caption{Tipos de vectores}
-%\label{typevec}
-\end{table}
-
 \paragraph{Creación de vectores}
 ~\\
 
-Ahora nos enfocaremos en mostrar al lector varias maneras de crear vectores de acuerdo a sus necesidades. Iniciamos generando vectores con ciertos elementos ya conocidos:
+Para la creación de vectores recurriremos a una función interna de R, dicha función es conocida con \emph{concatenación} y es denotada por la letra \code{\texttt{c()}}. Iniciamos mostrando al lector la creación de vectores donde todos sus elementos son del mismo tipo.
 
 <<>>=
 # Podemos crear vectores logicos tecleando TRUE y FALSE (o T & F).
@@ -796,17 +789,71 @@ vector("logical", 5)
 # creamos un vector de caracteres de longitud 5
 vector("character", 5)
 @
+Observamos que la función \code{\texttt{vector}} genera vectores con sus valores por default, es decir, para el caso de vectores númericos los inicializa en 0, para el caso de vectores lógicos los inicializa en FALSE, mientras que para los vectores de caracteres los inicializa en vacíos.\newline
 
-
-
-
-Todo vector consta de dos argumentos: \texttt{mode}, \texttt{length}. 
+Todo vector consta de dos argumentos: \code{\texttt{mode}} $\&$ \code{\texttt{length}}. El primero de ellos especifica el tipo de elementos que almacena el vector, mientras que el segundo argumento especifica la longitud o número de elementos que tiene dicho vector.
 <<>>=
-mode(logi_var)
-length(logi_var)
+# creamos un vector numerico
+var <- c(3, 6, 8, 9)
+# verificamos el tipo de vector
+mode(var)
+# mostramos la longitud del vector
+length(var)
 @
 
-El primero de los argumentos especifica el tipo de elementos que almacena el vector, mientras que el segundo argumento especifica la longitud que tiene dicho vector.\newline
+El usuario tiene toda la facilidad de crear un vector con diferentes tipos de elementos, sin embargo, debido al conflicto que se genera internamente por la \emph{coerción} de los distintos elementos tenemos la siguiente jerarquía:
+\begin{table}[H]
+\centering
+\begin{tabular}{ccccccc} 
+$-$ & & & & & & $+$\\ \hline
+{\bf logical} & $<$ & {\bf integer} & $<$ & {\bf double} & $<$ & {\bf character} \\ \hline
+\end{tabular}
+\caption{Flexibilidad de los elementos}
+\end{table}
+
+La coerción se produce automáticamente, por tanto, al momento de crear un vector es importante revisar el tipo de elemento de mayor flexibilidad con el fin de conocer a que tipo de vector coercionará el resultado, revisamos algunos ejemplos:
+<<>>=
+var1 <- c(TRUE, 3L, FALSE, 5L)
+mode(var1)
+
+var2 <- c(2+5i, 6L, 8.14701)
+mode(var2)
+
+var3 <- c(FALSE, 4L, 3.67012, -4+9i, "model")
+mode(var3)
+@
+
+Posiblemente al lector le llamó la atención el primer ejemplo \texttt{var1}, debido que el mismo contiene elementos \texttt{logical} $\&$ \texttt{integer} y al momento de conocer el tipo de vector obtenemos \texttt{numeric} en lugar de \texttt{logical}. Esto se debe básicamente a la manera como R almacena y reconoce los diferentes elementos, la siguiente tabla resume lo expuesto.
+\begin{table}[H]
+\centering
+\begin{tabular}{ccc}\hline \hline
+{\bf Tipo} & {\bf Modo} & {\bf Almacenamiento} \\ \hline \hline
+logical & logical & logical \\ \hline
+integer & numeric & integer \\ \hline
+double & numeric & double \\ \hline
+complex & complex & complex \\ \hline
+character & character & character \\ \hline
+raw & raw & raw \\ \hline 
+\end{tabular}
+\caption{Tipos de vectores}
+%\label{typevec}
+\end{table}
+
+Dentro de la coerción un evento importante se produce cuando un vector logical coerciona a un vector integer o double, pues en estos casos el TRUE se convierte en 1 y el FALSE en 0. Esto es muy útil en conjunción con las funciones \code{\texttt{sum()}} y \code{\texttt{mean()}}.
+<<>>=
+# creamos un vector logico
+vec <- c(TRUE, FALSE, TRUE, TRUE, FALSE)
+# coercionamos a numerico
+as.numeric(vec)
+# numero de TRUE's
+sum(vec)
+# Proporcion de TRUE's
+mean(vec)
+@
+
+Para la coerción contamos con varias funciones que nos facilitan el trabajo tales como: \code{\texttt{as.character()}}, \code{\texttt{as.double()}}, \code{\texttt{as.integer()}}, \code{\texttt{as.logical()}}.
+
+
 
 Los vectores se encuentran almacenados de forma plana incluso cuando se anidan vectores como se observa:
 <<>>=
@@ -868,7 +915,9 @@ Tipo particular de listas de gran utilidad para el trabajo estadístico.
 Tipo particular de listas de gran utilidad para el trabajo estadístico.
 
 \section{Funciones}
-Objetos que pueden ser creados por el usuario y reutilizados para realizar operaciones específicas.
+
+
+
 
 
 \end{document}
