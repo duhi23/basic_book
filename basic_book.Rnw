@@ -48,16 +48,25 @@
 
 \section{Introducción}
 
-Para introducirnos en el mundo de R debemos tener claro dos conceptos: lenguaje de programación y entorno estadístico, pues R integra un conjunto de herramientas y un lenguaje de comandos para la manipulación de datos, la realización de cálculos y análisis estadísticos, así como su representación gráfica en alta calidad. El programa R es un software libre distribuido bajo GNU General Public License muy utilizado por la comunidad científica debido a su doble naturaleza, como lenguaje y como entorno.
+Para introducirnos en el mundo de R debemos tener claro dos conceptos: lenguaje de programación y entorno estadístico, pues R integra un conjunto de herramientas y un lenguaje de comandos para la manipulación de datos, la realización de cálculos y análisis estadísticos, así como su representación gráfica en alta calidad.\newline
+
+R se encuentra enmarcado como un programa estadístico flexible, potente y profesional que se distribuye bajo GNU General Public License como \emph{software libre}, y en la actualidad es muy utilizado por la comunidad científica debido a su doble naturaleza, como lenguaje y como entorno.
 \begin{figure}[H]
 \centering
 \includegraphics[scale=.15]{logo_r.eps}
 \caption{Logo del proyecto R}
 \label{logo_r}
 \end{figure}
-Dadas sus características R tiene gran potencial para ser utilizado en diferentes áreas de la estadística, finanzas, simulación, reportería dinámica, biomatemática, minería de datos, big data, etc. Al ser un software libre puede ser instalado en diversas plataformas y sistemas operativos tales como: Windows, Linux, Mac OS X y Unix.
+Dadas sus características R tiene gran potencial para ser utilizado en diferentes áreas de la estadística, finanzas, simulación, reportería dinámica, biomatemática, minería de datos, big data, etc. R puede ser instalado en diversas plataformas y sistemas operativos tales como: Windows, Linux, Mac OS X y Unix.
 
 \subsection{Historia}
+
+El proyecto R se inició como un experimento en tratar de utilizar métodos de Lisp en la construcción de un pequeño banco de pruebas que sirvan para evaluar posibles construcciones de entornos estadísticos. Desde el inicio del proyecto se decidió usar la syntaxis de S, la misma que con el transcurso del tiempo se volvió irresistible.\newline
+
+El proyecto R se inicia con Ross Ihaka tras haber obtenido acceso a cierta información importante sobre el lenguaje S, misma que fue publicada por John Chambers y Rick Becker. En un corto tiempo, Ross nota las similitudes existentes entre S y Scheme, y en su afán de mostrarse ante Alan Zaslavsky le propone indicar el uso del ámbito léxico para la obtención de variables propias. Sin ninguna copia de Scheme trata de mostrarle usando S, sin embargo sus intentos fracasan debido a las diferencias entre las reglas de asignación que tienen S y Scheme, esto le llevó a darse cuenta que S requería ciertas funcionalidades extras para lograr convertirse en un entorno estadístico.\newline
+
+Tiempo más tarde, Robert Gentleman $\&$ Ross Ihaka llegan a ser colegas en la Universidad de Auckland\footnote{Universidad pública situada en Auckland. Fue fundada en 1883 como parte de la Universidad de Nueva Zelanda.} ambos mostrando interés en temas de Estadística Computacional, como profesores del Departamento de Estadística ven la necesidad de mejorar un ambiente del laboratorio de computación e inician el desarrollo de su interpretador. Su primer interpretador consistía de 1000 líneas de código en C \newline 
+
 
 El desarrollo de R inició en el año de 1991 con los profesores del Departamento de Estadística {\bf Ross Ihaka} y {\bf Robert Gentleman} de la Universidad de Aukland, su primer anuncio al público se dio en el año de 1993 (versión alfa) mientras que dos años más tarde Martin Machler convence a sus amigos Ross $\&$ Robert que distribuyan R bajo licencia GNU General Public License, por lo cual en Junio de 1995 aparece la primera versión libre (open source), para Febrero del año 2000 aparece la versión 1.0.0. Desde entonces el programa se distribuye gratuitamente a través del repositorio \emph{Comprehensive R Archive Network} (CRAN) en \url{http://www.r-project.org} su mantenimiento se encuentra a cargo del grupo {\bf R Core Team}\footnote{El R Core Team es el grupo de desarrolladores talentosos y experimentados con permisos para manipular el código fuente de R, en la actualidad lo conforman alrededor de 20 personas que se encuentran en 11 diferentes cuidades del mundo.} desde el año 1997 asistido por una gran cantidad de colaboradores internacionales.
 
