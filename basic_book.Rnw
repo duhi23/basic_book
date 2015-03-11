@@ -61,31 +61,50 @@ Dadas sus características R tiene gran potencial para ser utilizado en diferent
 
 \subsection{Historia}
 
-El proyecto R se inició como un experimento en tratar de utilizar métodos de Lisp en la construcción de un pequeño banco de pruebas que sirvan para evaluar posibles construcciones de entornos estadísticos. Desde el inicio del proyecto se decidió usar la syntaxis de S, la misma que con el transcurso del tiempo se volvió irresistible.\newline
+El proyecto R se inició como un experimento para utilizar métodos de Lisp en la construcción de un pequeño banco de pruebas que sirvan para evaluar posibles construcciones de entornos estadísticos. Desde el inicio del proyecto se decidió usar la syntaxis de S, la misma que con el transcurso del tiempo se volvió irresistible.\newline
 
-El proyecto R se inicia con Ross Ihaka tras haber obtenido acceso a cierta información importante sobre el lenguaje S, misma que fue publicada por John Chambers y Rick Becker. En un corto tiempo, Ross nota las similitudes existentes entre S y Scheme, y en su afán de mostrarse ante Alan Zaslavsky le propone indicar el uso del ámbito léxico para la obtención de variables propias. Sin ninguna copia de Scheme trata de mostrarle usando S, sin embargo sus intentos fracasan debido a las diferencias entre las reglas de asignación que tienen S y Scheme, esto le llevó a darse cuenta que S requería ciertas funcionalidades extras para lograr convertirse en un entorno estadístico.\newline
+Ross Ihaka inicia el proyecto R tras haber obtenido acceso a cierta información importante sobre el lenguaje S, misma que fue publicada por John Chambers y Rick Becker. En corto tiempo, Ross nota las similitudes existentes entre S y Scheme, en su afán de mostrarse ante Alan Zaslavsky le propone indicar el uso del ámbito léxico para la obtención de variables propias. Sin ninguna copia de Scheme trata de mostrarle usando S, sin embargo sus intentos fracasan debido a las diferencias entre las reglas de asignación que tiene S y Scheme, esto le llevó a darse cuenta que S requería ciertas funcionalidades extras para lograr convertirse en un entorno estadístico.\newline
 
-Tiempo más tarde, Ross Ihaka $\&$ Robert Gentleman llegan a ser colegas en la Universidad de Auckland\footnote{Universidad pública situada en Auckland. Fue fundada en 1883 como parte de la Universidad de Nueva Zelanda.}, y ambos muestran interés en temas de Estadística Computacional, como profesores del Departamento de Estadística ven la necesidad de mejorar un ambiente del laboratorio de computación e inician su trabajo con la visión de crear un lenguaje similar al S pero con más funcionalidades, mismas que ya fueron identificadas por Ross previamente en su intento de incluir ambientes léxicos.\newline 
-
-El desarrollo de R como tal inició en el año de 1991, el progreso fue bastante bueno por lo que en Agosto de 1993 decidieron colocar algunas copias binarias de R en Statlib, y a la vez anunciar al público por medio de la lista de noticias de S (S news mailing list). De manera sorpresiva un gran número de personas ofrecieron retroalimentación de la versión alfa que habían liberado, entre ellos el más persistente fue Martin Machler que los animó a liberar el código fuente de manera que R se distribuya bajo licencia GNU General Public License, por lo cual en Junio de 1995 aparece la primera versión libre (open source), el interés por R creció rapidamente al punto que para Marzo de 1996 fue necesario crear la propia lista de noticias y un año más tarde se tuvo que reemplazar por listas específicas: R-announce, R-help $\&$ R-devel, esto debido a la gran cantidad de consultas que realizaban los usuarios en varios temas. 
-
-
-
-Para Febrero del año 2000 aparece la versión 1.0.0. Desde entonces el programa se distribuye gratuitamente a través del repositorio \emph{Comprehensive R Archive Network} (CRAN) en \url{http://www.r-project.org} su mantenimiento se encuentra a cargo del grupo {\bf R Core Team}\footnote{El R Core Team es el grupo de desarrolladores talentosos y experimentados con permisos para manipular el código fuente de R, en la actualidad lo conforman alrededor de 20 personas que se encuentran en 11 diferentes cuidades del mundo.} desde el año 1997 asistido por una gran cantidad de colaboradores internacionales.
+Tiempo más tarde, Ross Ihaka $\&$ Robert Gentleman llegan a ser colegas en la Universidad de Auckland\footnote{Universidad pública situada en Auckland. Fue fundada en 1883 como parte de la Universidad de Nueva Zelanda.}, y ambos muestran interés en temas de Estadística Computacional, como profesores del Departamento de Estadística ven la necesidad de mejorar un ambiente del laboratorio de computación e inician su trabajo con la visión de crear un lenguaje similar al S pero con más funcionalidades, mismas que ya fueron identificadas por Ross previamente en su intento de incluir los ámbitos léxicos.
 
 \begin{figure}[H]
 \centering
-\includegraphics[height=4cm, width=3.2cm]{Ross.eps}
-\includegraphics[height=4cm, width=3.2cm]{Robert.eps}
+\includegraphics[height=4.5cm, width=3.5cm]{Ross.eps}
+\includegraphics[height=4.5cm, width=3.5cm]{Robert.eps}
 \caption{Ross Ihaka $\&$ Robert Gentleman}
 \label{creadores}
 \end{figure}
 
+El desarrollo de R como tal inició en el año de 1991, el progreso fue bastante bueno por lo que para Agosto de 1993 decidieron colocar algunas copias binarias de R en Statlib y a su vez anunciaron al público el lanzamiento de la versión alfa del programa por medio de la lista de noticias de S (\emph{S news mailing list}). De manera sorpresiva un gran número de personas ofrecieron su retroalimentación sobre la versión que habían liberado, entre ellos el más persistente fue su amigo Martin Machler que los animó a liberar el código fuente de manera que R se distribuya bajo licencia GNU General Public License, por lo cual en Junio de 1995 aparece la primera versión libre (\emph{open source}), el interés por R creció rapidamente al punto que para Marzo de 1996 fue necesario crear la propia lista de noticias y un año más tarde se tuvo que reemplazar por listas específicas: R-announce, R-help $\&$ R-devel, esto debido a la gran cantidad de consultas que realizaban los usuarios en varios temas relacionados.\newline
+
+Para a mediados de 1997 se estableció el {\bf R Core Group} o {\bf R Core Team}, un grupo de desarrolladores talentosos y experimentados con permisos para manipular el código fuente de R, en sus inicios lo conformaban:
+\begin{multicols}{3}
+\begin{itemize}
+   \item Ross Ihaka
+   \item Robert Gentleman
+   \item Martin Machler
+   \item Doug Bates
+   \item Peter Dalgaard
+   \item Kurt Hornik
+   \item Friedrich Leisch
+   \item Thomas Lumley
+   \item Paul Murrell
+   \item Heiner Schwarte
+   \item Luke Tierney
+\end{itemize}
+\end{multicols}
+
+Entre sus tareas iniciales se encontraba realizar los cambios en el código fuente de acuerdo a los bugs reportados por los usuarios, todas las tareas se realizaban de manera voluntaria pues el grupo se formó sin fines de lucro, en la actualidad lo conforman alrededor de 20 personas que se encuentran en 11 diferentes cuidades del mundo.\newline
+
+Para Febrero del año 2000 aparece la versión 1.0.0. Desde entonces el programa se distribuye gratuitamente a través del repositorio \emph{Comprehensive R Archive Network} (CRAN) en \url{http://www.r-project.org} su mantenimiento se encuentra a cargo del grupo R Core Team desde el año 1997 asistido por una gran cantidad de colaboradores internacionales.\newline
+
+El CRAN es fundamental para el uso de R, pues es el lugar desde el cual se obtiene el programa o cualquier paquete que se desee instalar, y con la finalidad de evitar el colapso del \emph{mundo estadístico} no se tiene una única ubicación al que todo mundo tiene acceso, el CRAN se \emph{refleja} en diferentes lugares de todo el mundo de esta manera como residente de Ecuador, podría acceder a una ubicación CRAN en Ecuador\footnote{En Ecuador se cuenta con el CRAN de la Escuela Politécnica del Litoral}, mientras que si se encuentra en un país que no tiene repositorio lo más recomendable es acceder a la copia del repositorio de un país cercano. Los países desarrollados como EEUU, tienen múltiples CRAN's para abastecer a ellos: la filosofía básica es elegir un repositorio que se encuentre geográficamente cercano al usuario.\newline 
+
 R es considerado la versión libre del programa comercial S-Plus, el cual fue desarrollado para AT$\&$T Bell Laboratories por John M. Chambers en el año 1988, aunque son evidentes las diferencias entre R y S, la gran mayoría del código escrito para S funciona sin inconvenientes en R.\newline
 
-El mayor inconveniente para los nuevos usuarios es adaptarse a su interfaz gráfica que para muchos es \emph{poco amigable}, en el sentido que se deben tipear las funciones predefinidas o a su vez programar las funciones nuevas a diferencia de programas clásicos como SPSS, STATA, etc. en los cuales se tienen botones o ventanas que despliegan opciones de análisis para el usuario. \newline
+El mayor inconveniente para los nuevos usuarios de R es adaptarse a su interfaz gráfica que para muchos es \emph{poco amigable}, en el sentido que se deben tipear las funciones predefinidas o a su vez programar las funciones nuevas a diferencia de programas clásicos como SPSS, STATA, etc. en los cuales se tienen botones o ventanas que despliegan opciones de análisis para el usuario. \newline
 
-Dada la popularidad que ha adquirido R en los últimos años se han desarrollado varias interfaces gráficas libres  GUIS's (Grafical User Interface) con el fin de volver más amigable la interacción con el usuario. Entre las interfaces más populares y utilizadas por la comunidad R se encuentran:
+Dada la popularidad que ha adquirido R en los últimos años se han desarrollado varias interfaces gráficas libres  GUIS's (Grafical User Interface) con el fin de volver más amigable la interacción con el usuario. Entre las interfaces más populares y utilizadas por la comunidad se encuentran:
 \begin{multicols}{3}
 \begin{itemize}
   \item RStudio
@@ -102,6 +121,8 @@ Dada la popularidad que ha adquirido R en los últimos años se han desarrollado
 \end{itemize}
 \end{multicols}
 
+%En posteriores secciones mostraremos las funcionalidades de RStudio y R Analitic Flow, 
+
 \subsection{Soporte}
 
 R al ser un programa GNU General Public License carece de soporte técnico, sin embargo, en la actualidad existen empresas que proveen varios tipos de soportes para R bajo pago. Entre las más destacadas se encuentran:
@@ -110,15 +131,16 @@ R al ser un programa GNU General Public License carece de soporte técnico, sin 
   \item RStudio, Inc.
   \item Revolution Analytics, Inc.
   \item XL - Solutions Corporation.
+  \item Quantide, Inc.
 \end{itemize}
 \end{multicols}
 
-De las empresas antes mencionadas se destaca de sobremanera Revolution Analytics\footnote{Revolution Analytics fue fundada en el año 2007 con la finalidad de dar soporte comercial al software Revolution R, adicionalmente provee componentes tales como: ParallelR, RevoScaleR, RevoDeployR, etc.}, Inc. por su modificación del código fuente de R, lo cual ha permitido que R sea multicore, es decir, pueda aprovechar al máximo de  todos los núcleos de los procesadores actuales (Core i5, Core i7, etc.). El impacto inmediato de que R sea multicore se ve reflejado en la mayor velocidad de lectura y escritura de información permitiendo de este modo trabajar con grandes cantidades de datos sin ningún problema.\newline
+De las empresas antes mencionadas se destaca de sobremanera Revolution Analytics\footnote{Revolution Analytics fue fundada en el año 2007 con la finalidad de dar soporte comercial al software Revolution R, adicionalmente provee componentes tales como: ParallelR, RevoScaleR, RevoDeployR, etc.}, Inc. por su modificación del código fuente de R lo cual ha permitido que R sea multicore, es decir, a través de estas modificaciones se logra aprovechar al máximo la funcionalidad de todos los núcleos de los procesadores (16 núcleos para procesadores Core i7, etc.). El impacto inmediato de que R sea multicore se ve reflejado en la mayor velocidad de lectura y escritura de información permitiendo de este modo trabajar con grandes cantidades de datos sin ningún problema, así como también en la reducción del tiempo de ejecución.\newline
 
-El programa R optimizado por Revolution Analytics, Inc. puede obtenerse a través de la página web \url{http://www.revolutionanalytics.com} como \emph{Revolution R Open} de forma gratuita, sin embargo en el caso de requerir soporte se puede adquirir la versión pagada \emph{Revolution R Enterprise}.
+El programa R optimizado por Revolution Analytics, Inc. puede ser obtenido a través de la página web \url{http://www.revolutionanalytics.com} como \emph{Revolution R Open} de forma gratuita, sin embargo en el caso de requerir soporte se puede adquirir la versión pagada \emph{Revolution R Enterprise}.
 \begin{figure}[H]
 \centering
-\includegraphics[scale=.45]{logo_rro.eps}
+\includegraphics[scale=.5]{logo_rro.eps}
 \caption{Revolution R Open}
 \label{logo_ropen}
 \end{figure}
@@ -942,7 +964,22 @@ Tipo particular de listas de gran utilidad para el trabajo estadístico.
 
 \section{Funciones}
 
+\subsection{Componentes}
 
+Todas las funciones constan de tres partes:
+\begin{itemize}
+   \item body(): Corresponde al código que se encuentra dentro de la función.
+   \item formals(): Corresponde a la lista de argumentos que controlan la llamada a la función.
+   \item environment(): Localización de las variables de la función.
+\end{itemize}
+
+\subsection{Funciones primitivas}
+
+\subsection{Lexical Scoping}
+\subsubsection{Name Masking}
+\subsubsection{Function vs Variables}
+\subsubsection{Fresh Start}
+\subsubsection{Dynamic Lookup}
 
 
 
