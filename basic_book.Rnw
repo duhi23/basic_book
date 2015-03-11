@@ -973,9 +973,15 @@ Todas las funciones constan de tres partes:
    \item environment(): Localización de las variables de la función.
 \end{itemize}
 
+SI el ambiente no se visualiza significa que la función fue creada en el ambiente global.
+
+
 \subsection{Funciones primitivas}
 
+Existe un excepción para la regla que todas las funciones tienen 3 componentes; las funciones primitivas tales como sum(), se encuentran construidas en C por lo cual no cumple con lo antes mencionado.
+
 \subsection{Lexical Scoping}
+
 \subsubsection{Name Masking}
 \subsubsection{Function vs Variables}
 \subsubsection{Fresh Start}
