@@ -1,4 +1,4 @@
-\documentclass[12pt,a4paper,oneside]{article}
+\documentclass[12pt,a4paper,oneside]{book}
 \usepackage{amsmath,amsthm,amsfonts,amssymb}
 \usepackage{pst-eucl,pstricks,pstricks-add}
 \usepackage[utf8]{inputenc}
@@ -21,6 +21,39 @@
 \parindent=0mm
 \begin{document}
 \pagecolor[gray]{0.95}
+
+
+\makeatletter
+\def\thickhrulefill{\leavevmode \leaders \hrule height 1ex \hfill \kern \z@}
+\def\@makechapterhead#1{%
+  \reset@font
+  \vspace*{10\p@}%
+  {\parindent \z@ 
+    \begin{flushleft}
+      \reset@font \scshape \bfseries \Huge \thechapter \par
+    \end{flushleft}
+    \hrule
+    \begin{flushleft}
+      \reset@font \LARGE \strut #1\strut \par
+    \end{flushleft}
+    \vskip 100\p@
+  }}
+\def\@makeschapterhead#1{%
+  \reset@font
+  \vspace*{10\p@}%
+  {\parindent \z@ 
+    \begin{flushleft}
+      \reset@font \scshape \bfseries \Huge \vphantom{\thechapter} \par
+    \end{flushleft}
+    \hrule
+    \begin{flushleft}
+      \reset@font \LARGE \strut #1\strut \par
+    \end{flushleft}
+    \vskip 100\p@
+  }}
+
+
+
 
 % Portada
 \begin{titlepage}
@@ -46,7 +79,7 @@
 \tableofcontents
 \newpage
 
-\section{Introducción}
+\chapter{Introducción}
 
 Para introducirnos en el mundo de R debemos tener claro dos conceptos: lenguaje de programación y entorno estadístico, pues R integra un conjunto de herramientas y un lenguaje de comandos para la manipulación de datos, la realización de cálculos y análisis estadísticos, así como su representación gráfica en alta calidad.\newline
 
@@ -59,7 +92,7 @@ R se encuentra enmarcado como un programa estadístico flexible, potente y profe
 \end{figure}
 Dadas sus características R tiene gran potencial para ser utilizado en diferentes áreas de la estadística, finanzas, simulación, reportería dinámica, biomatemática, minería de datos, big data, etc. R puede ser instalado en diversas plataformas y sistemas operativos tales como: Windows, Linux, Mac OS X y Unix.
 
-\subsection{Historia}
+\section{Historia}
 
 El proyecto R se inició como un experimento para utilizar métodos de Lisp en la construcción de un pequeño banco de pruebas que sirvan para evaluar posibles construcciones de entornos estadísticos. Desde el inicio del proyecto se decidió usar la syntaxis de S, la misma que con el transcurso del tiempo se volvió irresistible.\newline
 
@@ -123,7 +156,7 @@ Dada la popularidad que ha adquirido R en los últimos años se han desarrollado
 
 %En posteriores secciones mostraremos las funcionalidades de RStudio y R Analitic Flow, 
 
-\subsection{Soporte}
+\section{Soporte}
 
 R al ser un programa GNU General Public License carece de soporte técnico, sin embargo, en la actualidad existen empresas que proveen varios tipos de soportes para R bajo pago. Entre las más destacadas se encuentran:
 \begin{multicols}{2}
@@ -145,7 +178,7 @@ El programa R optimizado por Revolution Analytics, Inc. puede ser obtenido a tra
 \label{logo_ropen}
 \end{figure}
 
-\subsection{Funcionamiento}
+\section{Funcionamiento}
 
 R es un lenguaje orientado a objetos (OOP\footnote{La programación OOP está basada en varias técnicas: herencia, clasificación, identidad, polimorfismo y encapsulamiento.}) dise\~nado en un entorno auténtico bajo el cual esconde su simplicidad y flexibilidad, lo cual permite a sus usuarios a\~nadir funcionalidad mediante la definición de nuevas \emph{funciones}. El término \emph{orientado a objetos} hace referencia a un paradigma de la programación que emplea objetos en sus interacciones y diseño de aplicaciones. R almacena sus variables, datos, funciones, resultados, etc., en la memoria activa del computador en forma de objetos con un nombre específico y pueden ser modificados o manipulados por el usuario mediante operadores y funciones. El uso y funcionamiento de los operadores en R es bastante intuitivo y se lo verá a detalle más adelante.\newline
 
@@ -173,7 +206,7 @@ search()
 
 En la actualidad\footnote{Información obtenida al 21 de Diciembre 2014.} existen 6129 paquetes válidos en el repositorio CRAN, los cuáles se encuentran ordenados por fecha de publicación o alfabéticamente agrupadas en diversas líneas de investigación.
 
-\subsection{Ventajas}
+\section{Ventajas}
 
 Entre las principales ventajas que posee el software R podemos anotar lo siguiente:
 \begin{itemize}
@@ -188,7 +221,7 @@ Entre las principales ventajas que posee el software R podemos anotar lo siguien
   \item Una gran comunidad de usuarios, lo cual permite obtener ayuda de manera fácil de expertos por medio de la R help mailing list entre otros.
 \end{itemize}
 
-\subsection{Desventajas}
+\section{Desventajas}
 
 Los inconvenientes a los cuales se deben enfrentar los usuarios de R son:
 \begin{itemize}
@@ -198,9 +231,9 @@ Los inconvenientes a los cuales se deben enfrentar los usuarios de R son:
   \item R no es particularmente un lenguaje de programación rápido, si a eso sumamos que muchos usuarios escriben pobremente su código obtenemos como resultado un funcionamiento lento.
 \end{itemize}
 
-\section{Instalación y actualización}
+\chapter{Instalación y actualización}
 
-\subsection{Programa R}
+\section{Programa R}
 
 La instalación del programa R se describe en los siguientes pasos:
 \begin{enumerate}
@@ -212,7 +245,7 @@ La instalación del programa R se describe en los siguientes pasos:
 
 En la actualidad, el software R puede ser instalado incluso sobre la plataforma Android\footnote{\url{https://play.google.com/store/apps/details?id=com.appsopensource.R&hl=es_419}}, esto permite que muchos usuarios puedan tener el programa al alcance y en todo momento con tan sólo tener un smartphone operativo.
 
-\subsection{Entorno de trabajo}
+\section{Entorno de trabajo}
 Es muy importante para el usuario de R, conocer su entorno de trabajo, y es precisamente lo que trataremos en esta sección. Antes de iniciar, debemos aclarar que el presente documento está enfocado en la plataforma \texttt{Windows}, sin embargo en los diferentes sistemas operativos no existe mayor diferencia.
 
 \begin{figure}[H]
@@ -338,13 +371,13 @@ Iniciaremos explicando  la barra de herramientas, la misma que consta de las sec
     \end{itemize}
 \end{itemize}
 
-\subsection{Instalación de paquetes}
+\section{Instalación de paquetes}
 
 Como habíamos señalado en la sección anterior, una de las principales ventajas de R es su capacidad para incrementar su funcionalidad mediante la incorporación de nuevos paquetes o librerías.\newline
 
 Para entender de mejor manera la necesidad de emplear paquetes en R usaremos la siguiente metáfora: Imaginemos que tener instalado el programa en el computador es como haber adquirido un auto nuevo el cual cumple con ciertas funciones principales y no trae contratiempos, una vez que lo empezamos a rodar nos vamos dando cuenta de la necesidad de mejorar el rendimiento de ciertos mecanismos ya existentes del auto debido que lo vamos exponiendo a diferentes ambientes y condiciones. Lo anterior pasa exactamente con R, cuando  descargamos e instalamos el sotfware contamos con ciertas características y paquetes básicos pero existen miles de paquetes adicionales que pueden ser agregados para lograr mejorar su funcionalidad y a la vez realizar cosas estupendas.
 
-\subsubsection{Repositorio CRAN}
+\subsection{Repositorio CRAN}
 
 La instalación de paquetes en R desde el repositorio CRAN es sencillo, una vez conocido el nombre del paquete ha ser instalado basta con introducir el siguiente comando en la consola:
 <<eval=FALSE>>=
@@ -421,7 +454,7 @@ donde:
 \end{itemize}
 
 
-\subsubsection{Repositorios externos}
+\subsection{Repositorios externos}
 
 Habiamos comentado sobre la existencia de varios repositorios adicionales al CRAN de entre los cuales destacan R-Forge\footnote{Sistema para el desarrollo y versionamiento de paquetes en R.}, BioConductor\footnote{Subproyecto dedicado a la investigación en bioestadística.} y Omegahat\footnote{Subproyecto dedicado al desarrollo de interfaces para la programación estadística basado en Java.}, dentro de estos repositorios se pueden encontrar paquetes que no se encuentran en el CRAN, o bien, versiones más actualizadas de los mismos.\newline
 
@@ -434,7 +467,7 @@ install.packages("pckgname", repos="http://www.bioconductor.org/
 @
 Algunos de los paquetes se encuentran en formato binario, para su instalación basta adicionar el parámetro \texttt{type="source"}.
 
-\subsubsection{Github}
+\subsection{Github}
 
 GitHub es un repositorio de archivos y proyectos el cual emplea un sistema de control de versiones conocido como Git. Github fue lanzado a inicios del 2010, el código alojado en el repositorio se almacena de forma pública aunque también se puede almacenar de forma privada siempre y cuando se tenga una cuenta de pago.
 
@@ -500,7 +533,7 @@ citation("foreign")
 ##  }
 @
 
-\subsection{Actualización de paquetes}
+\section{Actualización de paquetes}
 
 En el caso que se desee actualizar todos los paquetes previamente instalados contamos con el comando \texttt{update.packages}, el mismo que revisa las actualizaciones de los paquetes. El anterior comando nos preguntará si deseamos actualizar uno por uno los paquetes, lo cual es tedioso pues si contamos con un gran número de paquetes nos demandará bastante tiempo aprobar la actualización de los mismos. Para subsanar lo anterior basta añadir el parámetro \texttt{ask = TRUE}.
 <<eval=FALSE>>=
@@ -517,7 +550,7 @@ Para finalizar la sección dejamos un comando útil para los desarrolladores que
 lapply(dir(R.home("library")), packageDescription)
 @
 
-\subsection{Actualización de R}
+\section{Actualización de R}
 
 Mantener actualizado R y sus paquetes es relativamente fácil a través del tecleo de los siguientes comandos en la consola, los mismos que se detallan a continuación:
 <<eval=FALSE>>=
@@ -537,7 +570,7 @@ R.version.string
 R.version
 @
 
-\subsection{Obteniendo ayuda}
+\section{Obteniendo ayuda}
 
 Existen algunas funciones en R que nos facilitan la vida al momento de indagar sobre la funcionalidad de ciertos comandos con tan sólo tener disponible una conexión de Internet. Por ejemplo, si nos encontramos interesados en obtener información acerca de la función \code{\texttt{seq()}} podemos escribir en la consola lo siguiente:
 <<eval=FALSE>>=
@@ -578,7 +611,7 @@ apropos("[4-8]")
 @
 
 
-\subsection{Mostrando ejemplos}
+\section{Mostrando ejemplos}
 
 La mayoría de archivos que dan ayuda incluyen ejemplos que pueden ser ejecutados en R y facilitan al usuario comprender de mejor manera el uso de cierto comando o función. Para ejecutar los ejemplos usaremos el comando \texttt{example} como se muestra a continuación:
 <<>>=
@@ -594,7 +627,7 @@ rm(list=ls())
 
 
 %\section{Interfaces gráficas de usuario}
-\section{Entornos de desarrollo}
+\chapter{Entornos de desarrollo}
 
 Un entorno de desarrollo integrado, también conocido como IDE (Integrated Development Enviroment) es un programa informático compuesto por un conjunto de herramientas de programación que contiene: un editor, un compilador, un depurador y un constructor de interfaz gráfica (GUI), el mismo que viene empaquetado como un programa \texttt{aplicación} que facilita de sobre manera la realización de operaciones al usuario mediante una serie de menús o mediante interacción con los objetos gráficos que aparecen en pantalla, a través de periféricos como: el ratón y teclado.\newline
 
@@ -606,7 +639,7 @@ Los IDE's fueron desarrollados con el fin de proveer al usuario un marco de trab
 \end{itemize}
 \end{multicols}
 
-\subsection{RStudio}
+\section{RStudio}
 
 RStudio\footnote{El programa RStudio puede obtenerse libremente de la página \url{http://www.rstudio.org/}} es un entorno IDE de código abierto lanzado en Febrero 2011 el cual nos ofrece un marco de trabajo más amigable con el software R y lo podemos encontrar para todas las plataformas (Windows, Mac, Linux) así como también puede ser ejecutado a través de un navegador web\footnote{Opción válida para la versión \texttt{server}.}.\newline
 
@@ -642,7 +675,7 @@ El programa se encuentra organizado en cuatro ventanas de trabajo distintas:
 
 RStudio ofrece varios mecanismos para controlar varios aspectos de la evaluación durante una sesión. La función \texttt{options( )} es empleada para compartir los valores de parámetros entre las funciones.
 
-\subsubsection{Ancho de impresión}
+\subsection{Ancho de impresión}
 Existen ocasiones en las cuales el usuario desea controlar el ancho de impresión de los resultados que se muestran en la pantalla, como primer paso para modificar el ancho de impresión debemos obtener el parámetro actual mediante:
 <<>>=
 getOption("width")
@@ -665,14 +698,14 @@ options(width=70)
 rnorm(10)
 @
 
-\subsubsection{Prompt}
+\subsection{Prompt}
 Para los usuarios que deseen cambiar el simbolo \code{\text{$>$}} del prompt o interpretador por otro símbolo diferente como: \code{\text{$->$}} o por un nombre, tenemos el siguiente código:
 <<eval=FALSE>>=
 options(prompt="->")
 options(prompt="diego >")
 @
 
-\subsubsection{Decimales}
+\subsection{Decimales}
 Una preocupación adicional para los usuarios es la cantidad de decimales con la cual se muestran los resultados, dicha cantidad de decimales puede ser modificada y debe encontrarse en el rango de 1 a 22.
 <<>>=
 getOption("digits")
@@ -698,7 +731,7 @@ Existen opciones adicionales que pueden ser modificadas de acuerdo a las necesid
 help(options)
 @
 
-\subsubsection{Respaldando información}
+\subsection{Respaldando información}
 
 Un tema importante dentro del análisis de datos es el respaldo de información que se pueda dar sobre ciertos resultados obtenidos, en este punto R consta de dos comandos muy útiles: \code{\texttt{save()}} $\&$ \code{\texttt{load()}}.\newline
 
@@ -718,7 +751,7 @@ load("base.RData")
 load("info.RData", envir = env)
 @
 
-\subsection{R Analytic Flow}
+\section{R Analytic Flow}
 
 R Analytic Flow (RAF) es una interfaz gráfica de usuario desarrollado por Ryota Suzuki\footnote{Ryota Suzuki es un desarrollador de software orientado al análisis de datos, fundó con sus amigos la empresa Ef-prime, Inc. en Tokyo, además es el creador del paquete \emph{pvclust} de R.}, la cual facilita el análisis de datos a través de diagramas de flujo. El software se encuentra bajo licencia BSD $\&$ GPL, por lo cual puede obtenerse de forma gratuita a través de la página web de Ef-prime, Inc. \url{http://www.ef-prime.com} para las plataformas: Windows, Mac OS X y Linux.
 
@@ -731,7 +764,7 @@ R Analytic Flow (RAF) es una interfaz gráfica de usuario desarrollado por Ryota
 
 R Analytic Flow permite insertar código de R enmarcado dentro de nodos con la capacidad de ejecutar diferentes rutinas a partir de determinadas conexiones entre nodos.
 
-\subsubsection{Ventajas}
+\subsection{Ventajas}
 
 A continuación enumeramos algunas de las ventajas que posee R Analytic Flow:
 \begin{enumerate}
@@ -740,7 +773,7 @@ A continuación enumeramos algunas de las ventajas que posee R Analytic Flow:
    \item El número de usuarios que usan R Analytic Flow va en aumento debido a las facilidades que presenta.
 \end{enumerate}
 
-\subsubsection{Desventajas}
+\subsection{Desventajas}
 
 Algunas de las desventajas por las cuales los usuarios no usan R Analytic Flow:
 \begin{enumerate}
@@ -750,7 +783,7 @@ Algunas de las desventajas por las cuales los usuarios no usan R Analytic Flow:
 
 
 
-\section{Estructura de datos}
+\chapter{Estructura de datos}
 En las secciones anteriores mencionamos que R es un lenguaje de programación orientado a objetos, por lo que cualquier cosa que exista en R (variables, datos, funciones, etc.) es un objeto. Para conocer los nombres de los objetos presentes en el área de trabajo utilizamos el comando \code{\texttt{ls()}}.\newline
 
 Iniciemos creando los vectores xvec y yvec para evidenciar que dichos objetos aparecen en nuestra área de trabajo una vez creados.
@@ -781,7 +814,7 @@ Las estructuras de datos en R pueden ser organizados por su dimensionalidad (1 d
 
 En la actualidad ha tomado fuerza el uso de los data tables a diferencias de los data frames, esto debido a las diversas facilidades que poseen los primeras sobre la manipulación de grandes cantidades de información (incorporación del almacenamiento en disco). 
 
-\subsection{Vectores}
+\section{Vectores}
 Es la estructura más simple de R que sirve para almacenar un conjunto de valores del mismo o diferente tipo llamados \emph{elementos}. Existen 6 tipos de elementos que R puede almacenar dentro de un vector:
 \begin{multicols}{2}
 \begin{itemize}
@@ -794,7 +827,7 @@ Es la estructura más simple de R que sirve para almacenar un conjunto de valore
 \end{itemize}
 \end{multicols}
 
-\subsubsection{Creación}
+\subsection{Creación}
 
 \paragraph{Vectores homogéneos}
 ~\\
@@ -915,13 +948,13 @@ Los valores perdidos dentro de un vector son especificados con {\bf NA}, el cual
 
 
 
-\subsubsection{Agregando y eliminando elementos}
+\subsection{Agregando y eliminando elementos}
 
 
 
 
 
-\subsection{Factores}
+\section{Factores}
 Son variables en R que tienen un número limitado de valores diferentes, dichas variables se conocen como variables categóricas a menudo; por ejemplo: el conjunto de observaciones acerca del color de ojos de un grupo de personas. 
 
 <<>>=
@@ -929,20 +962,20 @@ ojos <- c("negro", "azul", "negro", "verde", "verde", "cafe", "negro")
 table(ojos)
 @
 
-\subsubsection{Uso de factores}
+\subsection{Uso de factores}
 El uso más importante de los factores se encuentra en el modelamiento estadístico; dado que ciertas variables categóricas ingresan a los modelos de manera diferente a las variables continuas.
 
 Los factores en R se almacenan como un vector de valores enteros con un conjunto correspondiente de valores de caracteres para usar cuando aparezca el factor.
 
 
 
-\subsection{Matrices}
+\section{Matrices}
 Colección de datos a los que se accede por varios índices enteros (dimensiones).
 
-\subsection{Listas}
+\section{Listas}
 Colección ordenada de objetos, en la que los elementos pueden ser de distinto tipo.
 
-\subsection{Arrays}
+\section{Arrays}
 Un arreglo (array) de datos es un objeto que puede ser concebido como una matriz multidimensional (hasta 8 dimensiones). Una ventaja de este tipo de objeto es que sigue las reglas que hemos descrito para las matrices. La sintaxis para definir un arreglo es
 <<eval=FALSE>>=
 array(data, dim)
@@ -956,15 +989,15 @@ x <- array (1:24, c(3,4,2))
 
 produce un arreglo tridimensional: la primera dimensión tiene tres niveles, la segunda tiene cuatro y la tercera tiene dos. Al imprimir el arreglo R comienza con la dimensión mayor y va bajando hacia la dimensión menor, imprimiendo matrices bidimensionales en cada etapa.
 
-\subsection{Data Frames}
+\section{Data Frames}
 Tipo particular de listas de gran utilidad para el trabajo estadístico.
 
-\subsection{Data Tables}
+\section{Data Tables}
 Tipo particular de listas de gran utilidad para el trabajo estadístico.
 
-\section{Funciones}
+\chapter{Funciones}
 
-\subsection{Componentes}
+\section{Componentes}
 
 Todas las funciones constan de tres partes:
 \begin{itemize}
@@ -976,16 +1009,16 @@ Todas las funciones constan de tres partes:
 SI el ambiente no se visualiza significa que la función fue creada en el ambiente global.
 
 
-\subsection{Funciones primitivas}
+\section{Funciones primitivas}
 
 Existe un excepción para la regla que todas las funciones tienen 3 componentes; las funciones primitivas tales como sum(), se encuentran construidas en C por lo cual no cumple con lo antes mencionado.
 
-\subsection{Lexical Scoping}
+\section{Lexical Scoping}
 
-\subsubsection{Name Masking}
-\subsubsection{Function vs Variables}
-\subsubsection{Fresh Start}
-\subsubsection{Dynamic Lookup}
+\subsection{Name Masking}
+\subsection{Function vs Variables}
+\subsection{Fresh Start}
+\subsection{Dynamic Lookup}
 
 
 
