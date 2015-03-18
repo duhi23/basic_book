@@ -858,7 +858,7 @@ Para la creación de vectores recurriremos a una función interna de R, dicha fu
 # Podemos crear vectores logicos tecleando TRUE y FALSE (o T & F).
 logi_var <- c(TRUE, FALSE, TRUE, FALSE)
 logi_var
-# Usamos el sufijo L, para diferenciar un numero entero de un double.
+# Usamos el sufijo L, para diferenciar un numero entero
 int_var <- c(2L, 4L, 7L, 5L)
 int_var
 # Usamos el simbolo . para notar los decimales
@@ -957,6 +957,15 @@ c(2L, 4L, 6L, 8L)
 
 \paragraph{Valores perdidos}
 ~\\
+
+En ocasiones puede que no todos los elementos de un vector sean conocidos por diferentes motivos, en este caso nos hacen falta dichos elementos, lo cuales se denominan datos perdidos o faltantes. 
+
+%En ocasiones puede que no todas las componentes de un vector sean conocidas. Cuando falta un elemento, lo que se denomina ’valor faltante’4, se le asigna un valor especial, NA5. En general, casi cualquier operaci ́on donde intervenga un valor NA da por resultado NA. La justificacio ́n es sencilla: Si no se puede especificar completamente la operaci ́on, el resultado no podra ́ ser conocido, y por tanto no estar ́a disponible.
+%La funcio ́n is.na(x) crea un vector l ́ogico del taman ̃o de x cuyos elementos s ́olo valdra ́n T si el elemento correspondiente de x es NA, y F en caso contrario.
+%     > z <- c(1:3,NA);  ind <- is.na(z)
+%N ́otese que la expresi ́on lo ́gica x == NA es distinta de is.na(x) puesto que NA no es realmente un valor, sino un indicador de una cantidad que no est ́a disponible. Por tanto x == NA es un vector de la misma longitud de x con todos sus elementos NA puesto que la expresi ́on l ́ogica es incompleta.
+
+
 
 \subsubsection{Operaciones}
 
