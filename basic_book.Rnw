@@ -22,7 +22,7 @@
 \begin{document}
 \pagecolor[gray]{0.95}
 
-
+%%% modificacion preambulo
 \makeatletter
 \def\thickhrulefill{\leavevmode \leaders \hrule height 1ex \hfill \kern \z@}
 \def\@makechapterhead#1{%
@@ -36,7 +36,7 @@
     \begin{flushleft}
       \reset@font \LARGE \strut #1\strut \par
     \end{flushleft}
-    \vskip 100\p@
+    \vskip 80\p@
   }}
 \def\@makeschapterhead#1{%
   \reset@font
@@ -49,11 +49,9 @@
     \begin{flushleft}
       \reset@font \LARGE \strut #1\strut \par
     \end{flushleft}
-    \vskip 100\p@
+    \vskip 80\p@
   }}
-
-
-
+%%%
 
 % Portada
 \begin{titlepage}
@@ -784,20 +782,42 @@ Algunas de las desventajas por las cuales los usuarios no usan R Analytic Flow:
 
 
 \chapter{Estructura de datos}
-En las secciones anteriores mencionamos que R es un lenguaje de programación orientado a objetos, por lo que cualquier cosa que exista en R (variables, datos, funciones, etc.) es un objeto. Para conocer los nombres de los objetos presentes en el área de trabajo utilizamos el comando \code{\texttt{ls()}}.\newline
 
-Iniciemos creando los vectores xvec y yvec para evidenciar que dichos objetos aparecen en nuestra área de trabajo una vez creados.
+En las secciones anteriores mencionamos que R es un lenguaje de programación orientado a objetos, por lo que cualquier cosa que exista en R (variables, datos, funciones, etc.) es un objeto. En este capítulo trataremos los diferentes tipos de objetos que R crea y manipula, incluso revisaremos estructuras de almacenamiento de datos más complejas construidas a partir de otras más sencillas.\newline
+
+
+Durante una sesión de trabajo los objetos de R que se crean se almacenan por nombre por que para enlistar dichos objetos es necesario recurrir al comando \code{\texttt{ls()}} o su equivalente \code{\texttt{objects()}}. La colección de objetos almacenados se denomina espacio de trabajo (\emph{workspace}).
 <<>>=
 # Inicialmente el area de trabajo se encuentra vacia
 ls()
 # Generamos 2 vectores
-x_vec <- c(1,2,3)
-y_vec <- c(4,5,6)
+x_vec <- c(1, 2, 3)
+y_vec <- c(4, 5, 6)
 # Los vectores creados ya se encuentran en el area de trabajo
+objects()
+@
+
+Vale la pena advertir que el operador de asignación '<-', no es equivalente al operador habitual '=' que se reserva para otro propósito, sino que consiste en dos caracteres '<' (\emph{menor que}) y '-' (\emph{guión}) que obligatoriamente deben ir unidos, además deben apuntar al objeto que recibe el valor de la expresión. Los usuarios principiantes de R suelen confundir estos dos conceptos por lo que en ciertas ocasiones presentan conflictos de interpretabilidad.\newline
+
+La asignación puede realizarse también mediante la función \code{\texttt{assign()}}, la cual es una forma equivalente a la asignación anterior.
+<<>>=
+# Generamos 2 vectores nuevos
+assign("x_new", c(2, 4, 6)) 
+assign("y_new", c(3, 5, 7)) 
+# Revisamos sus elementos
+x_new
+y_new
+# Verificamos los objetos del espacio de trabajo
 ls()
 @
 
-En el ejemplo anterior se utilizó el operador de \emph{asignación estándar} "$\leftarrow$", el cual asigna un valor a una variable, en algunas ocasiones los usuarios principiantes de R utilizan el símbolo "$=$", sin embargo, esto no es recomendable dado que en algunas situaciones podemos tener conflictos de interpretabilidad.\newline
+En ocasiones los usuarios de R suelen realizar las asignaciones apuntando la flecha a la derecha '->', realizando el cambio obvio en la asignación. Esto no es muy recomendable debido que en la actualidad la tendencia es estandarizar la forma de escritura en R.
+<<>>=
+# Creamos un nuevo vector
+c(5,10,15) -> x_mul
+# Revisamos los elementos del vector
+x_mul
+@
 
 Los nombres que se les asigna a los objetos en R pueden ser de cualquier longitud, y a su vez pueden combinar letras, números y caracteres especiales (coma, punto, guión bajo, etc.), la única exigencia al momento de asignar un nombre a un objeto es que el mismo inicie con una letra (R diferencia mayúsculas de minúsculas). La construcción explícita de un objeto nos proporcionará un mejor entendimiento de su estructura, y nos permitirá ahondar en algunas nociones mencionadas previamente.\newline
 
