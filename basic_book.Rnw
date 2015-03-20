@@ -77,6 +77,20 @@
 \tableofcontents
 \newpage
 
+% Dedicatoria
+\setcounter{page}{0}
+\cleardoublepage
+\vspace*{\stretch{1}}
+\hfill
+\begin{minipage}[t]{0.66\textwidth}
+\raggedleft
+\thispagestyle{empty}
+\textit{Un aporte de Source Stat Lab Ecuador a la sociedad.}
+\end{minipage}
+\vspace*{\stretch{3}}
+\clearpage
+
+
 \chapter{Introducción}
 
 Para introducirnos en el mundo de R debemos tener claro dos conceptos: lenguaje de programación y entorno estadístico, pues R integra un conjunto de herramientas y un lenguaje de comandos para la manipulación de datos, la realización de cálculos y análisis estadísticos, así como su representación gráfica en alta calidad.\newline
