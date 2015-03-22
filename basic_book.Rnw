@@ -972,7 +972,24 @@ c(2L, 4L, 6L, 8L)
 \paragraph{Valores perdidos}
 ~\\
 
-En ocasiones puede que no todos los elementos de un vector sean conocidos por diferentes motivos, en este caso nos hacen falta dichos elementos, lo cuales se denominan datos perdidos o faltantes. 
+En ocasiones puede que no todos los elementos de un vector sean conocidos por diferentes motivos, en este caso nos hacen falta dichos elementos, lo cuales se denominan datos perdidos o faltantes. R permite que el usuario establezca dichos valores perdidos a través del término NA.
+<<>>=
+#Generamos un vector cuyo tercer elemento es un dato perdido
+vec <- c(2, 3, NA, 8)
+vec
+@
+
+Debido a los distintos tipos de elementos que existen en R, se ha creado terminología para datos perdidos de acuero al tipo, es por ello que tenemos: 
+<<>>=
+#NA para elementos numericos
+NA_real_
+#NA para elementos enteros
+NA_integer_
+#NA para elementos caracteres
+NA_character_
+#NA para elementos complejos
+NA_complex_
+@
 
 %En ocasiones puede que no todas las componentes de un vector sean conocidas. Cuando falta un elemento, lo que se denomina ’valor faltante’4, se le asigna un valor especial, NA5. En general, casi cualquier operaci ́on donde intervenga un valor NA da por resultado NA. La justificacio ́n es sencilla: Si no se puede especificar completamente la operaci ́on, el resultado no podra ́ ser conocido, y por tanto no estar ́a disponible.
 %La funcio ́n is.na(x) crea un vector l ́ogico del taman ̃o de x cuyos elementos s ́olo valdra ́n T si el elemento correspondiente de x es NA, y F en caso contrario.
