@@ -991,26 +991,20 @@ NA_character_
 NA_complex_
 @
 
+Lo anterior evitará que coercionen los elementos de un vector por algún motivo.
+
 %En ocasiones puede que no todas las componentes de un vector sean conocidas. Cuando falta un elemento, lo que se denomina ’valor faltante’4, se le asigna un valor especial, NA5. En general, casi cualquier operaci ́on donde intervenga un valor NA da por resultado NA. La justificacio ́n es sencilla: Si no se puede especificar completamente la operaci ́on, el resultado no podra ́ ser conocido, y por tanto no estar ́a disponible.
 %La funcio ́n is.na(x) crea un vector l ́ogico del taman ̃o de x cuyos elementos s ́olo valdra ́n T si el elemento correspondiente de x es NA, y F en caso contrario.
 %     > z <- c(1:3,NA);  ind <- is.na(z)
 %N ́otese que la expresi ́on lo ́gica x == NA es distinta de is.na(x) puesto que NA no es realmente un valor, sino un indicador de una cantidad que no est ́a disponible. Por tanto x == NA es un vector de la misma longitud de x con todos sus elementos NA puesto que la expresi ́on l ́ogica es incompleta.
 
-
-
 \subsubsection{Operaciones}
-
-
 
 
 Los valores perdidos dentro de un vector son especificados con {\bf NA}, el cual es un vector lógico de longitud 1.
 
 
-
-
 \subsection{Agregando y eliminando elementos}
-
-
 
 
 
