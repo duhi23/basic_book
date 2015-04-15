@@ -18,9 +18,24 @@ output:
 
 Source Stat Lab es una empresa Ecuatoriana con sede en Quito especializada en fomentar el avance del conocimiento estadístico, la cual presta sus servicios de capacitación en el lenguaje estadístico R para profesionales y estudiantes en todas sus verticales (investigación, docencia, empresas, etc.).
 
-<p align="center"> <img src="logo.jpg" border="0" width="800" height="200"> </p>
+<p align="center"> <img src="logo_ssl_new.jpeg" border="0" width="700" height="280"> </p>
 
 Source Stat Lab brinda capacitación, reportería y consultoría estadística/matemática con el uso de herramientas de software libre como: R, RStudio, R Analytic Flow & LaTeX a empresas globales y locales, así como instituciones públicas.
+
+## Historia
+
+- R inicia como un experimento para utilizar métodos de Lisp en la construcción de un pequeño banco de pruebas que sirvan para evaluar posibles construcciones de entornos estadísticos.
+
+- Ross Ihaka inicia el proyecto R tras haber obtenido acceso a cierta información importante sobre el lenguaje S, misma que fue publicada por John Chambers y Rick Becker.
+
+- Tiempo más tarde, Ross Ihaka $\&$ Robert Gentleman llegan a ser colegas en la Universidad de Auckland, como profesores del Departamento de Estadística ven la necesidad de mejorar un ambiente del laboratorio de computación e inician su trabajo con la visión de crear un lenguaje similar al S pero con más funcionalidades.
+
+- El desarrollo de R como tal inició en el año de 1991, el progreso fue bastante bueno por lo que para Agosto de 1993 decidieron colocar algunas copias binarias de R en Statlib.
+
+- De manera sorpresiva un gran número de personas ofrecieron su retroalimentación sobre la versión que habían liberado, entre ellos el más persistente fue su amigo Martin Machler que los animó a liberar el código fuente de manera que R se distribuya bajo licencia GNU General Public License, por lo cual en Junio de 1995 aparece la primera versión libre.
+
+
+
 
 ## <b> <font color=SteelBlue face=Cambria size=7> Sistemas gráficos de R </font> </b>
 R actualmente constituye una de las principales herramientas empleada en la generación de gráficos estadísticos de alta calidad y complejidad. Presenta características muy superiores a los clásicos softwares estadísticos generalmente utilizados.
