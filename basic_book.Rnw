@@ -266,7 +266,7 @@ La instalación del programa R se describe en los siguientes pasos:
   
   \begin{figure}[H]
     \centering
-    \includegraphics[scale=.25]{install2.eps}
+    \includegraphics[width=4.5cm,height=1.5cm]{install2.eps}
     \caption{Repositorio Espol}
     \label{respol}
   \end{figure}
@@ -275,13 +275,29 @@ La instalación del programa R se describe en los siguientes pasos:
   
   \begin{figure}[H]
     \centering
-    \includegraphics[scale=.35]{install3.eps}
+    \includegraphics[width=8cm,height=3.5cm]{install3.eps}
     \caption{Selección Sistema Operativo}
     \label{soperativo}
   \end{figure}
   
-  \item A continuación elegimos entre los 2 subdirectorios: \texttt{base} y \texttt{control}. Damos click sobre \texttt{base}.
+  \item A continuación elegimos entre los 3 subdirectorios: \texttt{base}, \texttt{contrib} y \texttt{RTools}. Damos click sobre \texttt{base}.
+  
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=9cm,height=4cm]{install4.eps}
+    \caption{Subdirectorios}
+    \label{subdirectorio}
+  \end{figure}
+  
   \item Finalmente, en la pantalla damos click sobre \texttt{Download R X.Y.Z for Windows}, con lo cual descargamos la versión de R más reciente.
+  
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=7.5cm,height=2.5cm]{install5.eps}
+    \caption{Descarga programa}
+    \label{download}
+  \end{figure}
+  
 \end{enumerate}
 
 En la actualidad, el software R puede ser instalado incluso sobre la plataforma Android\footnote{\url{https://play.google.com/store/apps/details?id=com.appsopensource.R&hl=es_419}}, esto permite que muchos usuarios puedan tener el programa al alcance y en todo momento con tan sólo tener un smartphone operativo.
