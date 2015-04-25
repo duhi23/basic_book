@@ -108,7 +108,7 @@ Dadas sus características R tiene gran potencial para ser utilizado en diferent
 
 El proyecto R se inició como un experimento para utilizar métodos de Lisp en la construcción de un pequeño banco de pruebas que sirvan para evaluar posibles construcciones de entornos estadísticos. Desde el inicio del proyecto se decidió usar la syntaxis de S, la misma que con el transcurso del tiempo se volvió irresistible.\newline
 
-Ross Ihaka inicia el proyecto R tras haber obtenido acceso a cierta información importante sobre el lenguaje S, misma que fue publicada por John Chambers y Rick Becker. En corto tiempo, Ross nota las similitudes existentes entre S y Scheme, en su afán de mostrarse ante Alan Zaslavsky le propone indicar el uso del ámbito léxico para la obtención de variables propias. Sin ninguna copia de Scheme trata de mostrarle usando S, sin embargo sus intentos fracasan debido a las diferencias entre las reglas de asignación que tiene S y Scheme, esto le llevó a darse cuenta que S requería ciertas funcionalidades extras para lograr convertirse en un entorno estadístico.\newline
+Ross Ihaka inicia el proyecto R tras haber obtenido acceso a cierta información importante sobre el lenguaje S, misma que fue publicada por John Chambers y Rick Becker. En corto tiempo, Ross nota las similitudes existentes entre S y Scheme, en su afán de mostrarse ante Alan Zaslavsky\footnote{Alan M. Zaslavsky, PhD, es profesor de estadística en el Departamento de Cuidado de la Salud en la Escuela Médica de Harvard.} le propone indicar el uso del ámbito léxico para la obtención de variables propias. Sin ninguna copia de Scheme trata de mostrarle usando S, sin embargo sus intentos fracasan debido a las diferencias entre las reglas de asignación que tiene S y Scheme, esto le llevó a darse cuenta que S requería ciertas funcionalidades extras para lograr convertirse en un entorno estadístico.\newline
 
 Tiempo más tarde, Ross Ihaka $\&$ Robert Gentleman llegan a ser colegas en la Universidad de Auckland\footnote{Universidad pública situada en Auckland. Fue fundada en 1883 como parte de la Universidad de Nueva Zelanda.}, y ambos muestran interés en temas de Estadística Computacional, como profesores del Departamento de Estadística ven la necesidad de mejorar un ambiente del laboratorio de computación e inician su trabajo con la visión de crear un lenguaje similar al S pero con más funcionalidades, mismas que ya fueron identificadas por Ross previamente en su intento de incluir los ámbitos léxicos.
 
@@ -243,14 +243,43 @@ Los inconvenientes a los cuales se deben enfrentar los usuarios de R son:
   \item R no es particularmente un lenguaje de programación rápido, si a eso sumamos que muchos usuarios escriben pobremente su código obtenemos como resultado un funcionamiento lento.
 \end{itemize}
 
+
+
 \chapter{Instalación y actualización}
+
+En esta sección mostraremos los pasos a seguir para la instalación, actualización del programa y sus paquetes. Asumiremos que el usuario se encuentra trabajando sobre un computador con sistema Windows, sin embargo, no existe mayor diferencia en los pasos a seguir en el caso que el usuario use un sistema operativo diferente.
 
 \section{Programa R}
 
 La instalación del programa R se describe en los siguientes pasos:
 \begin{enumerate}
-  \item Accedemos al repositorio de la CRAN a través de un navegador tecleando la dirección: \url{http://cran.es.r-project.org/}.
+  \item Accedemos a la página web del R Project a través de un navegador tecleando la dirección: \url{http://www.r-project.org}.
+  
+  \begin{figure}[H]
+    \centering
+    \includegraphics[scale=.4]{install1.eps}
+    \caption{Página web R-Project}
+    \label{rproject}
+  \end{figure}
+  
+  \item Ingresamos a la CRAN para elegir un repositorio cercano a nuestra localidad. En nuestro caso seleccionamos el repositorio de la Escuela Politécnica de Litoral.
+  
+  \begin{figure}[H]
+    \centering
+    \includegraphics[scale=.25]{install2.eps}
+    \caption{Repositorio Espol}
+    \label{respol}
+  \end{figure}
+  
   \item Nos dirigimos a la parte superior de la página, y nos ubicamos en \texttt{Download and install R} seguido elegimos el sistema operativo. Para nuestro caso hacemos click en \texttt{Windows}.
+  
+  \begin{figure}[H]
+    \centering
+    \includegraphics[scale=.35]{install3.eps}
+    \caption{Selección Sistema Operativo}
+    \label{soperativo}
+  \end{figure}
+  
   \item A continuación elegimos entre los 2 subdirectorios: \texttt{base} y \texttt{control}. Damos click sobre \texttt{base}.
   \item Finalmente, en la pantalla damos click sobre \texttt{Download R X.Y.Z for Windows}, con lo cual descargamos la versión de R más reciente.
 \end{enumerate}
