@@ -1063,23 +1063,68 @@ is.na(x)
 is.na(y)
 @
 
-\subsection{Modificación de elementos}
+\subsection{Modificación de vectores}
 
-Los vectores en R son almacenados como arreglos lineales, la ventaja de aquello es que sus elementos se encuentran indexados. Para modificar los elementos de un vector es suficiente conocer la posición de los mismos como se muestra en el siguiente ejemplo:
+Los vectores en R son almacenados como arreglos lineales, la ventaja de aquello es que sus elementos se encuentran indexados. 
 <<>>=
 # creamos un vector
 vec <- c(2, 4, 6, 8, 10)
+vec
+# accedemos al elemento de la posicion 3
+vec[3]
+# visualizamos los elementos de la posicion 2 y 5
+vec[c(2, 5)]
+@
+
+\paragraph{Añadiendo elementos}
+~\\
+
+Sabemos que el tamaño de un vector es determinado en su creación, por lo que si se desea añadir o eliminar elementos es necesario reasignar el vector.
+<<>>=
+# agregamos los elementos 15, 18 al final
+vec <- c(vec, c(15, 18))
+vec
+# agregamos el valor de -1 al inicio
+vec <- c(-1, vec)
+vec
+@
+
+En el caso que se desee añadir elementos en posiciones intermedias del vector es necesario conocer las posiciones de sus elementos.
+<<>>=
+# agregamos el elemento -4 en la posicion 5
+vec <- c(vec[1:4], -4, vec[5:8])
+vec
+@
+
+\paragraph{Eliminando elementos}
+~\\
+
+Para eliminar los elementos de un vector usaremos el signo '-' adelante de la posición, como se muestra en el siguiente ejemplo:
+<<>>=
+# eliminamos el valor de la posicion 2
+vec <- vec[-2]
+vec
+# eliminamos los elementos de las posiciones 4, 7
+vec <- vec[-c(4, 7)]
+vec
+@
+
+\paragraph{Modificando elementos}
+~\\
+
+Para modificar los elementos de un vector es suficiente conocer la posición de los mismos como se muestra en el siguiente ejemplo:
+<<>>=
 # modificamos el primer elemento por 0
 vec[1] <- 0
 # visualizamos el vector modificado
 vec
+# modificamos las posiciones 2 y 5
+vec[c(2, 5)] <- c(5, 9)
+vec
 @
 
-Sabemos que el tamaño de un vector es determinado en su creación, 
-
-
-
 \subsection{Operaciones}
+
 
 
 
