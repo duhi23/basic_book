@@ -712,6 +712,13 @@ install.RStudio()
 
 RStudio ofrece una amplia integración con ficheros de diversos formatos: R scripts (.R), Markdown (.md), LaTeX (.Rnw) entre otros. La facilidad en la generación de documentos dinámicos con \texttt{RStudio} y \texttt{knitr} han hecho que el programa se convierta en la IDE preferida por muchos usuarios de R.\newline
 
+\begin{figure}[H]
+\centering
+\includegraphics[scale=.40]{rstudio.eps}
+\caption{R Studio}
+\label{rstudio}
+\end{figure}
+
 El programa se encuentra organizado en cuatro ventanas de trabajo distintas:
 \begin{itemize}
   \item {\bf Editor de código fuente:} Se encuentra en la zona superior izquierda, esta ventana nos permite abrir  y editar ficheros con código R.
@@ -792,11 +799,11 @@ help(options)
 
 Un tema importante dentro del análisis de datos es el respaldo de información que se pueda dar sobre ciertos resultados obtenidos, en este punto R consta de dos comandos muy útiles: \code{\texttt{save()}} $\&$ \code{\texttt{load()}}.\newline
 
-El primero de ellos permite almacenar en disco los objetos que desee el usuario (almacenamiento parcial), dicho comando puede ser configuraado de tal manera que almacene todos los objetos que se encuentra válidos en el área de trabajo.
+El primero de ellos permite almacenar en disco los objetos que desee el usuario (almacenamiento parcial), dicho comando puede ser configurado de tal manera que almacene todos los objetos que se encuentra válidos en el área de trabajo.
 <<eval=FALSE>>=
 # si deseamos guardar el objeto "datos_banco" con el nombre "base" 
 save(datos_banco, file = "base.RData")
-# para el caso que se desee almacenar todo con el nombre "info"
+# para el caso que se desee almacenar todos los objetos con el nombre "info"
 save(list = ls(all = TRUE), file = "info.RData")
 @
 
@@ -826,7 +833,8 @@ R Analytic Flow permite insertar código de R enmarcado dentro de nodos con la c
 A continuación enumeramos algunas de las ventajas que posee R Analytic Flow:
 \begin{enumerate}
    \item Facilita ejecutar procesos a través de flujos.
-   \item Facil implementación de tareas en cada nodo.
+   \item Fácil implementación de tareas en cada nodo.
+   \item Reduce la complejidad a la hora de programar varias funciones que se relacionen entre sí.
    \item El número de usuarios que usan R Analytic Flow va en aumento debido a las facilidades que presenta.
 \end{enumerate}
 
