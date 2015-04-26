@@ -698,9 +698,18 @@ Los IDE's fueron desarrollados con el fin de proveer al usuario un marco de trab
 
 \section{RStudio}
 
-RStudio\footnote{El programa RStudio puede obtenerse libremente de la página \url{http://www.rstudio.org/}} es un entorno IDE de código abierto lanzado en Febrero 2011 el cual nos ofrece un marco de trabajo más amigable con el software R y lo podemos encontrar para todas las plataformas (Windows, Mac, Linux) así como también puede ser ejecutado a través de un navegador web\footnote{Opción válida para la versión \texttt{server}.}.\newline
+RStudio es un entorno IDE de código abierto lanzado en Febrero 2011 el cual nos ofrece un marco de trabajo más amigable con el software R y lo podemos encontrar para todas las plataformas (Windows, Mac, Linux) así como también puede ser ejecutado a través de un navegador web\footnote{Opción válida para la versión \texttt{server}.}.
 
-Una forma de instalación más técnica de RStudio puede realizarse a partir del siguiente script:
+\begin{figure}[H]
+\centering
+\includegraphics[width=5cm, height=3cm]{rstudio_install.eps}
+\caption{Descarga RStudio}
+\label{drstudio}
+\end{figure}
+
+RStudio puede ser obtenido libremente desde su página web \url{http://www.rstudio.org/}. Una vez obtenido el archivo ejecutable la instalación se la realiza de manera simple e intuitiva.\newline
+
+Una forma de descarga e instalación más técnica de RStudio puede realizarse a partir del siguiente script:
 <<eval=FALSE>>=
 # descarga e instala el paquete installr
 install.packages("installr")
@@ -715,7 +724,7 @@ RStudio ofrece una amplia integración con ficheros de diversos formatos: R scri
 \begin{figure}[H]
 \centering
 \includegraphics[scale=.40]{rstudio.eps}
-\caption{R Studio}
+\caption{Interfaz de RStudio}
 \label{rstudio}
 \end{figure}
 
@@ -847,13 +856,12 @@ Algunas de las desventajas por las cuales los usuarios no usan R Analytic Flow:
 \end{enumerate}
 
 
-
 \chapter{Estructura de datos}
 
-En las secciones anteriores mencionamos que R es un lenguaje de programación orientado a objetos, por lo que cualquier cosa que exista en R (variables, datos, funciones, etc.) es un objeto. En este capítulo trataremos los diferentes tipos de objetos que R crea y manipula, incluso revisaremos estructuras de almacenamiento de datos más complejas construidas a partir de otras más sencillas.\newline
+En las secciones anteriores mencionamos que R es un lenguaje de programación orientado a objetos, por lo que cualquier cosa que exista en él tales como: variables, datos, funciones, etc. son objetos. En este capítulo trataremos los diferentes tipos de objetos que R crea y manipula, incluso revisaremos estructuras de almacenamiento de datos más complejas construidas a partir de otras más sencillas.\newline
 
 
-Durante una sesión de trabajo los objetos de R que se crean se almacenan por nombre por que para enlistar dichos objetos es necesario recurrir al comando \code{\texttt{ls()}} o su equivalente \code{\texttt{objects()}}. La colección de objetos almacenados se denomina espacio de trabajo (\emph{workspace}).
+Durante una sesión de trabajo los objetos que se crean son almacenados por nombre, para enlistar dichos objetos es necesario recurrir al comando \code{\texttt{ls()}} o su equivalente \code{\texttt{objects()}}. La colección de objetos almacenados se denomina espacio de trabajo (\emph{workspace}).
 <<>>=
 # Inicialmente el area de trabajo se encuentra vacia
 ls()
@@ -998,16 +1006,18 @@ raw & raw & raw \\ \hline
 %\label{typevec}
 \end{table}
 
-Dentro de la coerción un evento importante se produce cuando un vector logical coerciona a un vector integer o double, pues en estos casos el TRUE se convierte en 1 y el FALSE en 0. Esto es muy útil en conjunción con las funciones \code{\texttt{sum()}} y \code{\texttt{mean()}}.
+Dentro de la coerción un evento importante se produce cuando un vector logical coerciona a un vector integer o double, pues en estos casos el TRUE se convierte en 1 y el FALSE en 0. 
+%Esto es muy útil en conjunción con las funciones \code{\texttt{sum()}} y \code{\texttt{mean()}}.
+% # numero de TRUE's
+%sum(vec)
+%# Proporcion de TRUE's
+%mean(vec)
+%
 <<>>=
 # creamos un vector logico
 vec <- c(TRUE, FALSE, TRUE, TRUE, FALSE)
 # coercionamos a numerico
 as.numeric(vec)
-# numero de TRUE's
-sum(vec)
-# Proporcion de TRUE's
-mean(vec)
 @
 
 Para la coerción contamos con varias funciones que nos facilitan el trabajo tales como: \code{\texttt{as.character()}}, \code{\texttt{as.double()}}, \code{\texttt{as.integer()}}, \code{\texttt{as.logical()}}.\newline
@@ -1022,8 +1032,7 @@ c(2L, c(4L, c(6L, 8L)))
 c(2L, 4L, 6L, 8L)
 @
 
-\paragraph{Valores perdidos}
-~\\
+\subsection{Valores perdidos}
 
 En ocasiones puede que no todos los elementos de un vector sean conocidos por diferentes motivos, en este caso nos hacen falta dichos elementos, lo cuales se denominan datos perdidos o faltantes. R permite que el usuario establezca dichos valores perdidos a través del término NA.
 <<>>=
@@ -1032,7 +1041,7 @@ vec <- c(2, 3, NA, 8)
 vec
 @
 
-Debido a los distintos tipos de elementos que existen en R, se ha creado terminología para datos perdidos de acuero al tipo, es por ello que tenemos: 
+Debido a los distintos tipos de elementos que existen en R, se han creado terminologías para los datos perdidos de acuerdo al tipo de elemento, es por ello que tenemos: 
 <<>>=
 #NA para elementos numericos
 NA_real_
@@ -1044,20 +1053,45 @@ NA_character_
 NA_complex_
 @
 
-Lo anterior evitará que coercionen los elementos de un vector por algún motivo.
+Lo anterior evitará que coercionen los elementos de un vector por algún motivo. Para conocer si un vector contiene valores perdidas usaremos la función \code{\texttt{is.na( )}}.
+<<>>=
+# creamos dos vectores
+x <- c(2, 4, 7, 9)
+y <- c(3, NA, 8, 13)
+# evaluamos si existen valores perdidos
+is.na(x)
+is.na(y)
+@
 
-%En ocasiones puede que no todas las componentes de un vector sean conocidas. Cuando falta un elemento, lo que se denomina ’valor faltante’4, se le asigna un valor especial, NA5. En general, casi cualquier operaci ́on donde intervenga un valor NA da por resultado NA. La justificacio ́n es sencilla: Si no se puede especificar completamente la operaci ́on, el resultado no podra ́ ser conocido, y por tanto no estar ́a disponible.
-%La funcio ́n is.na(x) crea un vector l ́ogico del taman ̃o de x cuyos elementos s ́olo valdra ́n T si el elemento correspondiente de x es NA, y F en caso contrario.
-%     > z <- c(1:3,NA);  ind <- is.na(z)
-%N ́otese que la expresi ́on lo ́gica x == NA es distinta de is.na(x) puesto que NA no es realmente un valor, sino un indicador de una cantidad que no est ́a disponible. Por tanto x == NA es un vector de la misma longitud de x con todos sus elementos NA puesto que la expresi ́on l ́ogica es incompleta.
+\subsection{Modificación de elementos}
 
-\subsubsection{Operaciones}
+Los vectores en R son almacenados como arreglos lineales, la ventaja de aquello es que sus elementos se encuentran indexados. Para modificar los elementos de un vector es suficiente conocer la posición de los mismos como se muestra en el siguiente ejemplo:
+<<>>=
+# creamos un vector
+vec <- c(2, 4, 6, 8, 10)
+# modificamos el primer elemento por 0
+vec[1] <- 0
+# visualizamos el vector modificado
+vec
+@
+
+Sabemos que el tamaño de un vector es determinado en su creación, 
 
 
-Los valores perdidos dentro de un vector son especificados con {\bf NA}, el cual es un vector lógico de longitud 1.
+
+\subsection{Operaciones}
 
 
-\subsection{Agregando y eliminando elementos}
+
+
+
+
+
+
+
+
+
+
 
 
 
