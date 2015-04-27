@@ -1123,17 +1123,58 @@ vec[c(2, 5)] <- c(5, 9)
 vec
 @
 
-\subsection{Operaciones}
+\subsection{Operaciones con vectores}
 
+Ahora revisaremos algunas operaciones comúnes relacionadas con los vectores. Cubriremos las operaciones aritméticas y lógicas más utilizadas. 
 
+\paragraph{Operaciones aritméticas}
+~\\
 
+Recordemos que R es un lenguaje funcional, por lo que cualquier operador, incluido '+' es una función. Veamos un ejemplo:
+<<>>=
+# sumamos 2 elementos 
+3 + 5
+# otra alternativa
+"+" (3, 5)
+# creamos dos vectores
+x <- c(1, 3, 5, 7, 9)
+y <- c(2, 4, 6, 8, 10)
+# sumamos los vectores
+x + y
+# segunda alternativa para la suma
+"+" (x, y)
+@
 
+Cuando aplicamos una operación a dos vectores se requiere que tengan la misma longitud, caso contrario, R \emph{recicla} o repite los elementos con el fin que los vectores tengan la misma longitud.
+<<>>=
+# suma de vectores longitud 2 y 3
+c(2, 4) + c(3, 6, 9)
+# suma de vectores longitud 3 y 6
+c(1, 2, 3) + c(1, 2, 3, 4, 5, 6)
+@
 
+El primer ejemplo muestra una advertencia debido que el vector más pequeño no es multiplo del vector más grande, lo cual no ocurre en el segundo ejemplo. Observamos que en ambos casos el vector más pequeño fue reciclado para que se realice la operación.\newline
 
+Si el usuario se encuentra familiarizado con el álgebra lineal se verá sorprendido al ver lo que sucede cuando se multiplica dos vectores.
+<<>>=
+# calculamos el producto de los vectores x, y
+x*y
+# otra alternativa para la multiplicacion
+"*" (x, y)
+@
 
+El ejemplo anterior muestra que el producto entre vectores de igual longitud se da entre elementos. En el caso que se multiplique un vector por un escalar el resultado es el siguiente:
+<<>>=
+# Producto
+2 * c(1, 3, 5, 7)
+c(3, 4) * c(1, 3, 5, 7)
+# Division
+c(2, 4, 6, 8) / 2
+c(24, 16, 15, 8) / c(4, 8, 3, 2)
+@
 
-
-
+\paragraph{Operaciones lógicas}
+~\\
 
 
 
