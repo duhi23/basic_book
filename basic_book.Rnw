@@ -1123,13 +1123,39 @@ vec[c(2, 5)] <- c(5, 9)
 vec
 @
 
+\paragraph{Generación de secuencias}
+~\\
+
+Ahora mostramos algunos operadores que son útiles para crear vectores. Iniciamos con el operador ':', el cual genera un vector que abarca un rango de números con salto uniforme de amplitud 1.
+<<>>=
+1:12
+7:-5
+@
+
+El segundo operador que revisaremos es \code{\texttt{seq( )}}, mismo que tiene tres parámetros que controlan el inicio, final y salto de la secuencia.
+<<>>=
+seq(from = 1, to = 12, by = 1)
+seq(from = -2, to = 3, by = 0.7)
+seq(from = -4, to = 4, length = 12)
+@
+
+Por último, la function \code{\texttt{rep( )}} nos permite repetir un objeto un número de veces especificado, a continuación mostramos algunos ejemplos:
+<<>>=
+rep(3, 8)
+rep(c(3, 6, 9), 2)
+rep(1:2, 4)
+rep(c(2, 4, 6), each = 3)
+rep(c("Source", "Stat", "Ecuador"), 2)
+@
+
+
 \subsection{Operaciones con vectores}
 
 Ahora revisaremos algunas operaciones comúnes relacionadas con los vectores. Cubriremos las operaciones aritméticas y lógicas más utilizadas. 
 
 \begin{table}[H]
 \centering
-\begin{tabular}{cl}\hline \hline
+\begin{tabular}{ll}\hline \hline
 {\bf Operación} & {\bf Descripción}\\ \hline \hline
 a + b & Suma \\ \hline
 a - b & Resta \\ \hline
@@ -1139,6 +1165,7 @@ x $\land$ y & Potencia \\ \hline
 x \%\% y & Módulo \\ \hline
 x \%/\% y & División entera \\ \hline
 x == y & Test de igualdad \\ \hline
+x != y & Test de desigualdad \\ \hline
 x <= y & Test menor o igual que \\ \hline
 x >= y & Test mayor o igual que \\ \hline
 x \&\& y & Conjunción para escalares \\ \hline
@@ -1155,12 +1182,15 @@ x | y & Disyunción para vectores \\ \hline
 \paragraph{Operaciones aritméticas}
 ~\\
 
-Recordemos que R es un lenguaje funcional, por lo que cualquier operador, incluido '+' es una función. Veamos un ejemplo:
+Recordemos que R es un lenguaje funcional, por lo que cualquier operador es una función. Veamos un ejemplo:
 <<>>=
-# sumamos 2 elementos 
+# suma de 2 elementos 
 3 + 5
+# Division entera
+8 %/% 3
 # otra alternativa
 "+" (3, 5)
+"%/%" (8, 3)
 # creamos dos vectores
 x <- c(1, 3, 5, 7, 9)
 y <- c(2, 4, 6, 8, 10)
@@ -1198,8 +1228,32 @@ c(2, 4, 6, 8) / 2
 c(24, 16, 15, 8) / c(4, 8, 3, 2)
 @
 
+
 \paragraph{Operaciones lógicas}
 ~\\
+
+Ahora revisaremos las expresiones lógicas o booleanas\footnote{George Boole (1815–1864)}, las cuales son utilizadas con frecuencia en distintos lenguajes de programación para verificar si un objeto cumplen ciertas condiciones deseadas.
+<<>>=
+# verificamos la siguientes expresiones
+2 == 6
+7 <= 10
+(1 < 3) * (4 >= 2)
+(8 >= 5) == 1
+# generamos un vector entre 1 y 9
+x <- seq(1,9)
+# verificamos los elementos mayores a 5
+x > 5
+@
+
+Las funciones \code{\texttt{any( )}} y \code{\texttt{all( )}} nos reportan cuando al menos uno o todos sus argumentos son verdaderos.
+<<>>=
+# verificamos si algun elemento es mayor a 5
+any(x>5)
+# verificamos si todos los elementos son mayores a 5
+all(x>5)
+@
+
+
 
 
 
