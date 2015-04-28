@@ -1127,6 +1127,31 @@ vec
 
 Ahora revisaremos algunas operaciones comúnes relacionadas con los vectores. Cubriremos las operaciones aritméticas y lógicas más utilizadas. 
 
+\begin{table}[H]
+\centering
+\begin{tabular}{cl}\hline \hline
+{\bf Operación} & {\bf Descripción}\\ \hline \hline
+a + b & Suma \\ \hline
+a - b & Resta \\ \hline
+a * b & Multiplicación \\ \hline
+x / y & División \\ \hline
+x $\land$ y & Potencia \\ \hline
+x \%\% y & Módulo \\ \hline
+x \%/\% y & División entera \\ \hline
+x == y & Test de igualdad \\ \hline
+x <= y & Test menor o igual que \\ \hline
+x >= y & Test mayor o igual que \\ \hline
+x \&\& y & Conjunción para escalares \\ \hline
+x || y & Disyunción para escalares \\ \hline
+x \& y & Conjunción para vectores \\ \hline
+x | y & Disyunción para vectores \\ \hline
+!x & Negación \\ \hline
+\end{tabular}
+\caption{Operaciones básicas}
+%\label{oper}
+\end{table}
+
+
 \paragraph{Operaciones aritméticas}
 ~\\
 
@@ -1163,7 +1188,7 @@ x*y
 "*" (x, y)
 @
 
-El ejemplo anterior muestra que el producto entre vectores de igual longitud se da entre elementos. En el caso que se multiplique un vector por un escalar el resultado es el siguiente:
+El ejemplo anterior muestra que el producto entre vectores de igual longitud se da entre elementos de la misma posición. En el caso que se multiplique un vector por un escalar el resultado es el siguiente:
 <<>>=
 # Producto
 2 * c(1, 3, 5, 7)
