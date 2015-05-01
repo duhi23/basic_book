@@ -1063,7 +1063,28 @@ is.na(x)
 is.na(y)
 @
 
-\subsection{Modificación de vectores}
+\subsection{Eliminación}
+
+En el caso que se desee eliminar ciertas variables u objetos innecesarios del área de trabajo usamos la funcion \code{\texttt{rm()}}. 
+<<>>=
+# Mostramos los objetos actuales
+ls()
+# Eliminamos las variables: var, var1, var2, var3
+rm(var, var1, var2, var3)
+# Revisamos los objetos restantes
+ls()
+@
+
+Para eliminar todo los objetos del área de trabajo usaremos el comando:
+<<>>=
+# Elimina todo los objetos
+rm(list=ls())
+# Verificamos
+ls()
+@
+
+
+\subsection{Modificación}
 
 Los vectores en R son almacenados como arreglos lineales, la ventaja de aquello es que sus elementos se encuentran indexados. 
 <<>>=
@@ -1149,7 +1170,7 @@ rep(c("Source", "Stat", "Ecuador"), 2)
 @
 
 
-\subsection{Operaciones con vectores}
+\subsection{Operaciones}
 
 Ahora revisaremos algunas operaciones comúnes relacionadas con los vectores. Cubriremos las operaciones aritméticas y lógicas más utilizadas. 
 
