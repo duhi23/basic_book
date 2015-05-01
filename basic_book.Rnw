@@ -1065,21 +1065,29 @@ is.na(y)
 
 \subsection{Eliminación}
 
-En el caso que se desee eliminar ciertas variables u objetos innecesarios del área de trabajo usamos la funcion \code{\texttt{rm()}}. 
+En el caso que se desee eliminar ciertas variables u objetos innecesarios del área de trabajo usamos los comandos \code{\texttt{rm()}} o \code{\texttt{remove()}}. 
 <<>>=
 # Mostramos los objetos actuales
 ls()
+# Iniciamos eliminando los vectores: chr_var, dbl_var, int_var, logi_var
+remove(chr_var, dbl_var, int_var, logi_var)
+# Mostramos los objetos restantes
+ls()
+@
+
+Cuando el usuario desea eliminar los objetos cuyos nombres cumple con algún patrón en común, usamos lo siguiente:
+<<>>=
 # Eliminamos las variables: var, var1, var2, var3
-rm(var, var1, var2, var3)
+rm(list = ls(pattern = 'var'))
 # Revisamos los objetos restantes
 ls()
 @
 
-Para eliminar todo los objetos del área de trabajo usaremos el comando:
+Finalmente, para eliminar todos los objetos del área de trabajo usaremos:
 <<>>=
-# Elimina todo los objetos
+# Elimina todos los objetos existentes
 rm(list=ls())
-# Verificamos
+# Verificamos el area de trabajo
 ls()
 @
 
@@ -1172,7 +1180,7 @@ rep(c("Source", "Stat", "Ecuador"), 2)
 
 \subsection{Operaciones}
 
-Ahora revisaremos algunas operaciones comúnes relacionadas con los vectores. Cubriremos las operaciones aritméticas y lógicas más utilizadas. 
+Ahora revisaremos algunas operaciones comúnes relacionadas con los vectores. Cubriremos las operaciones aritméticas y lógicas más utilizadas.
 
 \begin{table}[H]
 \centering
@@ -1183,6 +1191,11 @@ a - b & Resta \\ \hline
 a * b & Multiplicación \\ \hline
 x / y & División \\ \hline
 x $\land$ y & Potencia \\ \hline
+sqrt(x) & Raíz cuadrada \\ \hline
+abs(x) & Valor absoluto \\ \hline
+exp(x) & Exponencial \\ \hline
+log(x, base=n) & Logaritmo en base n \\ \hline
+factorial(x) & Factorial \\ \hline
 x \%\% y & Módulo \\ \hline
 x \%/\% y & División entera \\ \hline
 x == y & Test de igualdad \\ \hline
@@ -1209,9 +1222,12 @@ Recordemos que R es un lenguaje funcional, por lo que cualquier operador es una 
 3 + 5
 # Division entera
 8 %/% 3
+# Logaritmo en base 3
+log(24, base=3)
 # otra alternativa
 "+" (3, 5)
 "%/%" (8, 3)
+"log" (24, 3)
 # creamos dos vectores
 x <- c(1, 3, 5, 7, 9)
 y <- c(2, 4, 6, 8, 10)
