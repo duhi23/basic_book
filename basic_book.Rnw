@@ -57,16 +57,14 @@
 \begin{titlepage}
 \begin{center}
 ~\\[3cm]
-\textbf{\Huge \textcolor{blue!90}{\fontsize{12mm}{5em}\selectfont SOURCE STAT LAB}}\vspace{0.6cm}\\
-\textbf{\Large \textcolor{blue}{Training, Reporting and Consultancy}}
-\vspace{4cm}\\
-\textbf{\huge CURSO:} \vspace{0.6cm}\\
+\textbf{\Huge \fontsize{13mm}{5em}\selectfont SOURCE STAT LAB}\vspace{0.6cm}\\
+\textbf{\Large Training, Reporting and Consultancy}\\[2cm]
+\includegraphics[scale=2.5]{logo_only.pdf}
+\vspace{2cm}\\
 \textbf{\Large Introducción al programa estadístico R} \vspace{4cm}\\
 \textbf{\Large R Nivel Básico}\vspace{2cm}\\
-\includegraphics[scale=.7]{logo_source.eps}
-\vspace{1.5cm}
 
-\textbf{\Large Quito, Febrero 2015}
+\textbf{\Large Quito, Mayo 2015}
 \end{center}
 \end{titlepage}
 \pagecolor{white}
@@ -300,7 +298,7 @@ La instalación del programa R se describe en los siguientes pasos:
   
 \end{enumerate}
 
-En la actualidad, el software R puede ser instalado incluso sobre la plataforma Android\footnote{\url{https://play.google.com/store/apps/details?id=com.appsopensource.R&hl=es_419}}, esto permite que muchos usuarios puedan tener el programa al alcance y en todo momento con tan sólo tener un smartphone operativo.
+En la actualidad, el software R puede ser instalado incluso sobre la plataforma Android\footnote{\url{https://play.google.com/store/apps/details?id=com.appsopensource.R&hl=es_419}}, esto permite que muchos usuarios puedan tener acceso al programa en todo momento con tan sólo contar con un smartphone operativo.
 
 \section{Entorno de trabajo}
 Es muy importante para el usuario de R, conocer su entorno de trabajo, y es precisamente lo que trataremos en esta sección. Antes de iniciar, debemos aclarar que el presente documento está enfocado en la plataforma \texttt{Windows}, sin embargo en los diferentes sistemas operativos no existe mayor diferencia.
@@ -1091,7 +1089,6 @@ rm(list=ls())
 ls()
 @
 
-
 \subsection{Modificación}
 
 Los vectores en R son almacenados como arreglos lineales, la ventaja de aquello es que sus elementos se encuentran indexados. 
@@ -1177,7 +1174,6 @@ rep(c(2, 4, 6), each = 3)
 rep(c("Source", "Stat", "Ecuador"), 2)
 @
 
-
 \subsection{Operaciones}
 
 Ahora revisaremos algunas operaciones comúnes relacionadas con los vectores. Cubriremos las operaciones aritméticas y lógicas más utilizadas.
@@ -1211,7 +1207,6 @@ x | y & Disyunción para vectores \\ \hline
 \caption{Operaciones básicas}
 %\label{oper}
 \end{table}
-
 
 \paragraph{Operaciones aritméticas}
 ~\\
@@ -1265,7 +1260,6 @@ c(2, 4, 6, 8) / 2
 c(24, 16, 15, 8) / c(4, 8, 3, 2)
 @
 
-
 \paragraph{Operaciones lógicas}
 ~\\
 
@@ -1292,8 +1286,6 @@ all(x>5)
 
 
 
-
-
 \subsection{Atributos}
 
 Todos los objetos en R tienen una lista de atributos, misma que es utilizada para almacenar la metadata\footnote{La Metadata es data que describe otra data. Es información que describe el contenido un archivo u objeto.} de los objetos 
@@ -1301,7 +1293,6 @@ Todos los objetos en R tienen una lista de atributos, misma que es utilizada par
 
 Todos los objetos de R tienen una lista de atributos y es esto lo que hace que el usuario Lista R amable y tener algunas de las propiedades de un sistema de objetos tipo basado. Es decir, cada lista en I tiene una lista de atributos asociada que es de hecho una forma ligeramente especializado de la Lista - un PARLIST. Básicamente atributos son listas de pares de valores de nombre en lugar de una simple lista indexada. Atributos sirven para ampliar el camino Listas trabajan. Hay un conjunto estándar de atributos pero se puede añadir a esto si es necesario.
 Por ejemplo, los nombres de los atributos se pueden utilizar para almacenar un conjunto de cadenas que se utilizan para etiquetar los elementos de una lista. Para definir un atributo se puede asignar a la función de la attr (objeto, atributo), aunque por lo general R ofrece maneras más simples y naturales para lograr el mismo resultado.
-
 
 
 
