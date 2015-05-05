@@ -1,0 +1,97 @@
+\documentclass[11pt,a4paper,oneside]{article}
+\usepackage{amsmath,amsthm,amsfonts,amssymb}
+\usepackage{pst-eucl,pstricks,pstricks-add}
+\usepackage[utf8]{inputenc}
+%\usepackage[latin1]{inputenc}
+\usepackage[spanish,activeacute]{babel}
+\usepackage[a4paper,margin=2cm]{geometry}
+\usepackage{times}
+\usepackage[T1]{fontenc}
+\usepackage{titlesec}
+\usepackage{color}
+\usepackage{url}
+\usepackage{float}
+\usepackage{cite}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{lmodern}
+\usepackage{setspace}
+%\doublespace %para doble espacio
+\onehalfspace %para espacio y medio
+\newcommand{\code}[1]{\fcolorbox{blue!80}{gray!10}{#1}}
+\parindent=0mm
+
+\begin{document}
+\begin{minipage}[d]{115mm}
+\includegraphics[height=2.5cm, width=7.5cm]{logo_ult.pdf}
+\end{minipage}
+\begin{minipage}[d]{70mm}
+\textsf{\textbf{\sc \tiny {\bf QUITO}: Fernando Oviedo E8-65 y José Barba}}\\
+%\textsf{\textbf{\sc \tiny \qquad  Sector El Dorado}}\\
+\textsf{\textbf{\sc \tiny {\bf CONTACTOS}: (02) 2 559-703 / (02) 2 602-560\\ Movistar: 0998428362 / 0998890021}}
+\end{minipage}\\
+\vspace{0.4cm}
+
+\begin{center}
+{\bf \Large Curso: R Nivel Básico}
+\end{center}
+
+{\bf \large Descripción:}\newline
+  
+  El curso de R Nivel Básico tiene como objetivo principal proporcionar al estudiante una visión general del entorno del lenguaje de programación R y sus aplicaciones. Al final del curso, el estudiante se encontrará en la capacidad de crear sus propias funciones, importar y exportar datos. \newline
+  
+{\bf \large Duración:}\newline
+  20 Hrs.
+
+{\bf \large Contenidos del curso:}\newline
+
+\begin{multicols}{2}
+
+\begin{enumerate}
+  \item {\Large Introducción}
+  \begin{enumerate}
+    \item[1.1] Funcionamiento
+    \item[1.2] Ventajas $\&$ Desventajas
+  \end{enumerate}
+  \item {\Large Instalación y actualización}
+  \begin{enumerate}
+    \item[2.1] Entorno de trabajo
+    \item[2.2] Instalación de paquetes
+    \item[2.3] Actualización de paquetes
+    \item[2.4] Uso de Git $\&$ Github
+    \item[2.5] Instalación RRO
+  \end{enumerate}
+  \item {\Large Interfaces de usuario}
+  \begin{enumerate}
+    \item[3.1] RStudio
+    \item[3.2] R Analytic Flow
+  \end{enumerate}
+  \item {\Large Estructura de datos}
+    \begin{enumerate}
+    \item[4.1] Vectores atómicos $\&$ Listas
+    \item[4.2] Matrices $\&$ Arrays
+    \item[4.3] Factores
+    \item[4.4] Data Frames $\&$ Data Tables
+    \item[4.5] Coerción
+  \end{enumerate}
+  \item {\Large Lectura y escritura de datos}
+  \begin{enumerate}
+    \item[5.1] Ingreso mediante el teclado
+    \item[5.2] Lectura de archivos
+    \item[5.3] Escritura de archivos
+    \item[5.4] Accediendo a datos de la web
+    \item[5.6] Paquetes \texttt{haven}, \texttt{readr}, \texttt{readxl}
+  \end{enumerate}
+  \item {\Large Funciones}
+    \begin{enumerate}
+    \item[6.1] Funciones de R
+    \item[6.2] Estructuras de control
+    \item[6.3] Creación de funciones
+    \item[6.4] Ámbitos léxicos (Lexical Scoping)
+    \item[6.5] Ambientes (Environments)
+  \end{enumerate}
+\end{enumerate}
+
+\end{multicols}
+
+\end{document}
