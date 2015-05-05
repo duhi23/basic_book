@@ -1291,8 +1291,8 @@ all(x>5)
 Todos los objetos en R tienen una lista de atributos, misma que es utilizada para almacenar la metadata\footnote{La Metadata es data que describe otra data. Es información que describe el contenido un archivo u objeto.} de los objetos 
 
 
-Todos los objetos de R tienen una lista de atributos y es esto lo que hace que el usuario Lista R amable y tener algunas de las propiedades de un sistema de objetos tipo basado. Es decir, cada lista en I tiene una lista de atributos asociada que es de hecho una forma ligeramente especializado de la Lista - un PARLIST. Básicamente atributos son listas de pares de valores de nombre en lugar de una simple lista indexada. Atributos sirven para ampliar el camino Listas trabajan. Hay un conjunto estándar de atributos pero se puede añadir a esto si es necesario.
-Por ejemplo, los nombres de los atributos se pueden utilizar para almacenar un conjunto de cadenas que se utilizan para etiquetar los elementos de una lista. Para definir un atributo se puede asignar a la función de la attr (objeto, atributo), aunque por lo general R ofrece maneras más simples y naturales para lograr el mismo resultado.
+%Todos los objetos de R tienen una lista de atributos y es esto lo que hace que el usuario Lista R amable y tener algunas de las propiedades de un sistema de objetos tipo basado. Es decir, cada lista en I tiene una lista de atributos asociada que es de hecho una forma ligeramente especializado de la Lista - un PARLIST. Básicamente atributos son listas de pares de valores de nombre en lugar de una simple lista indexada. Atributos sirven para ampliar el camino Listas trabajan. Hay un conjunto estándar de atributos pero se puede añadir a esto si es necesario.
+%Por ejemplo, los nombres de los atributos se pueden utilizar para almacenar un conjunto de cadenas que se utilizan para etiquetar los elementos de una lista. Para definir un atributo se puede asignar a la función de la attr (objeto, atributo), aunque por lo general R ofrece maneras más simples y naturales para lograr el mismo resultado.
 
 
 
@@ -1336,9 +1336,97 @@ produce un arreglo tridimensional: la primera dimensión tiene tres niveles, la 
 \section{Data Frames}
 Tipo particular de listas de gran utilidad para el trabajo estadístico.
 
-\section{Data Tables}
-Tipo particular de listas de gran utilidad para el trabajo estadístico.
 
+
+\section{Data Table}
+
+El paquete \texttt{data.table} fue creado por Matt Dowle conjuntamente con grupo de contribuidores y fue publicado en el año 2015. El paquete ofrece una versión mejorada de los \texttt{data.frame}, a continuación enumeramos las mejoras:
+
+\begin{enumerate}
+   \item Rápida agregación para datos de gran tamaño (por ejemplo: 100 GB en RAM).
+   \item Lectura rápida y amigable para archivos a través de la función \texttt{fread}.
+   \item Añade, modifica y elimina variables sin utilizar copias en absoluto.
+   \item Rápido ordenamiento de variables: hacia adelante, hacia atrás. 
+\end{enumerate}
+
+La syntaxis básica de data.table no es difícil de dominar debido que los autores se preocuparon en reducir el tiempo que le toma al usuario programar:
+
+\begin{center}
+{\Large DT[where, select | group by]}
+\end{center}
+
+Existe una similitud entre la syntaxis de SQL y R, misma que se resume a continuación: 
+\begin{center}
+\begin{tabular}{llll}
+{\bf SQL:} & where & select & group by\\
+{\bf R:} & i & j & by\\
+\end{tabular}
+\end{center}
+
+\subsection{Creación}
+
+En las siguientes líneas revisamos como crear un objeto data.table:
+<<>>=
+library(data.table) 
+set.seed(12345)
+base <- data.table(B1=1:12, B2=LETTERS[1:4], B3=round(rnorm(3), 4), 
+                   B4=c(2L, 5L, 8L))
+dim(base)
+@
+
+\subsection{Filtrado}
+
+\paragraph{Filtrado de filas}
+~\\
+
+Para seleccionar las filas de un data.table se debe especificar la posición de la fila:
+<<>>=
+base[3, ]
+base[9:12, ]
+base[c(3, 9, 12), ]
+@
+
+Para filtrar variables que cumplen una cierta condición realizamos lo siguiente:
+<<>>=
+base[B4==5L]
+base[B2=="D"]
+base[B2 %in% c("A","B")]
+@
+
+\paragraph{Filtrado de columnas}
+~\\
+
+
+<<>>=
+base[,B2]
+@
+
+La selección de dos o más variables se realizada anteponiendo \code{\texttt{.()}} o su equivalente \code{\texttt{list()}}
+
+<<>>=
+base[,.(B2,B3)]
+@
+
+Calculamos el promedio de la variable B3.
+<<>>=
+base[,mean(B3)]
+@
+
+
+<<>>=
+base[,list(SUMA=sum(B4), DESVIACION=sd(B3))]
+@
+
+Reciclado de resultados
+<<>>=
+base[,.(B2, Sd.B3 = sd(B3))]
+@
+
+<<fig.height=3.5, fig.width=6.5, fig.align='center'>>=
+base[,{print(B1)
+     plot(B3, xlab='Casos', ylab='Valor', col='red', type='b')
+     NULL}]
+@
 
 
 
