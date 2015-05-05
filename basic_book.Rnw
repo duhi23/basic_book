@@ -1339,23 +1339,102 @@ Tipo particular de listas de gran utilidad para el trabajo estadístico.
 \section{Data Tables}
 Tipo particular de listas de gran utilidad para el trabajo estadístico.
 
+
+
+
 \chapter{Funciones}
 
-\section{Componentes}
+En los capítulos anteriores ya hemos hecho uso de una variedad de funciones que vienen con R. En este capítulo abordaremos el diseño y construcción de funciones propias para el usuario, la posibilidad de programar de una manera sencilla una serie de análisis que puedan ser ejecutados de manera sucesiva da una gran ventaja a R sobre el resto de programas estadísticos.\\
 
-Todas las funciones constan de tres partes:
+%Aunque la mayoría de los tipos de variables son para el almacenamiento de datos, funciones permiten a hacer cosas con las de datos que son "verbos" en lugar de "sustantivos". Al igual que los entornos, no son más que otro tipo de datos que podemos asignar y manipular e incluso pasar a otras funciones.
+
+\section{Creación}
+
+El comando \code{\texttt{function()}} tiene como tarea crear funciones a partir de ciertos argumentos\footnote{Valores iniciales necesarios para la ejecución de las funciones.}.
+
+<<eval=FALSE>>=
+NombreFuncion <- function (Argumento1,..., ArgumentoN)
+{
+ expresión 1
+ ...
+ expresión N
+ } 
+@
+
+Procedemos a crear nuestra primera función:
+
+<<>>=
+f <- function(x){
+   return(2*x)
+}
+@
+La función f recibe un objeto x y arroja como resultado el objeto x multiplicado por 2.
+<<>>=
+f(2)
+f(c(3,5))
+@
+
+Las funciones en R también son objetos, de esta manera podemos trabajar al igual que lo hacíamos con otros tipos de objetos.
+
+\subsection{Componentes}
+
+Todas las funciones en R constan de tres partes fundamentales:
+
 \begin{itemize}
    \item body(): Corresponde al código que se encuentra dentro de la función.
+   <<>>=
+body(f)
+@
    \item formals(): Corresponde a la lista de argumentos que controlan la llamada a la función.
+   <<>>=
+formals(f)
+@
    \item environment(): Localización de las variables de la función.
+   <<>>=
+environment(f)
+@
 \end{itemize}
 
-SI el ambiente no se visualiza significa que la función fue creada en el ambiente global.
+Si el ambiente no se visualiza significa que la función fue creada en el ambiente global.\\
+
+Para evidencia la inclusión de dos o más argumentos dentro de una función, crearemos una función que nos calcule la hipotenusa de un triángulo rectánculo, dicha función consta de dos argumentos (catetos):
+<<>>=
+hipotenusa <- function(x,y){
+   h <- sqrt(x^2 + y^2)
+   return(h)
+} 
+@
+
+La salida de la función es la hipotenusa del triángulo rectangulo, contrastamos los resultados:
+<<>>=
+hipotenusa(4,3)
+hipotenusa(12, 16)
+@
+
+\subsection{Estructuras de control}
 
 
 \section{Funciones primitivas}
 
-Existe un excepción para la regla que todas las funciones tienen 3 componentes; las funciones primitivas tales como sum(), se encuentran construidas en C por lo cual no cumple con lo antes mencionado.
+Existe un excepción para la regla que todas las funciones tienen 3 componentes; las funciones primitivas tales como: \texttt{any}, \texttt{sum}, \texttt{for}, etc. se encuentran construidas en \texttt{C}, \texttt{C++} o \texttt{Phyton}, por lo cual no cumple con lo antes mencionado.
+<<>>=
+# Funcion any
+any
+body(any)
+formals(any)
+environment(any)
+@
+
+En el caso que el usuario desee conocer todas las funciones primitivas del paquete \texttt{base}, lo puede hacer por medio de la siguiente línea de comando:
+<<eval=FALSE>>=
+ls("package:base")
+@
+
+Las funciones primitivas son creadas únicamente con el R Core Team, y en la actualidad se hace lo posible para no crear más funciones primitivas a excepción que no exista otra opción.
+
+\section{Funciones genéricas}
+
+
 
 \section{Lexical Scoping}
 
