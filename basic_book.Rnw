@@ -1395,6 +1395,8 @@ base[B2 %in% c("A","B")]
 \paragraph{Filtrado de columnas}
 ~\\
 
+Ahora revisaremos como seleccionar ciertas variables de la base inicial
+
 
 <<>>=
 base[,B2]
@@ -1411,7 +1413,6 @@ Calculamos el promedio de la variable B3.
 base[,mean(B3)]
 @
 
-
 <<>>=
 base[,list(SUMA=sum(B4), DESVIACION=sd(B3))]
 @
@@ -1426,7 +1427,6 @@ base[,{print(B1)
      plot(B3, xlab='Casos', ylab='Valor', col='red', type='b')
      NULL}]
 @
-
 
 
 \chapter{Funciones}
