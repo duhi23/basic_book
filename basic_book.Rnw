@@ -13,7 +13,6 @@
 \usepackage{float}
 \usepackage{cite}
 \usepackage{graphicx}
-%\usepackage{lipsum}
 \usepackage{multicol}
 \usepackage{float}
 \usepackage{lmodern}
@@ -1501,6 +1500,8 @@ hipotenusa(12, 16)
 
 \subsection{Estructuras de control}
 
+Las estructuras de control 
+
 
 \section{Funciones primitivas}
 
@@ -1523,12 +1524,14 @@ Las funciones primitivas son creadas únicamente con el R Core Team, y en la act
 \section{Funciones genéricas}
 
 
-
 \section{Lexical Scoping}
 
 \subsection{Name Masking}
+
 \subsection{Function vs Variables}
+
 \subsection{Fresh Start}
+
 \subsection{Dynamic Lookup}
 
 
