@@ -667,7 +667,7 @@ apropos("[4-8]")
 
 \section{Mostrando ejemplos}
 
-La mayoría de archivos que dan ayuda incluyen ejemplos que pueden ser ejecutados en R y facilitan al usuario comprender de mejor manera el uso de cierto comando o función. Para ejecutar los ejemplos usaremos el comando \texttt{example} como se muestra a continuación:
+La mayoría de funciones incluyen ejemplos que pueden ser ejecutados y facilitan al usuario comprender de mejor manera su uso. Para ejecutar los ejemplos usaremos el comando \texttt{example} como se muestra a continuación:
 <<>>=
 example(mean)
 
@@ -1523,8 +1523,11 @@ Las funciones primitivas son creadas únicamente con el R Core Team, y en la act
 
 \section{Funciones genéricas}
 
+Hemos observado que una gran mayoría de las funciones usadas hasta el momento se encuentran albergadas dentro de los paquetes base. 
 
 \section{Lexical Scoping}
+
+
 
 \subsection{Name Masking}
 
