@@ -90,7 +90,7 @@
 
 \chapter{Introducción}
 
-Para introducirnos en el mundo de R debemos tener claro dos conceptos: lenguaje de programación y entorno estadístico, pues R integra un conjunto de herramientas y un lenguaje de comandos para la manipulación de datos, la realización de cálculos y análisis estadísticos, así como su representación gráfica en alta calidad.\newline
+Para introducirnos en el \emph{mundo de R} debemos tener claro la doble naturaleza de \emph{programa o entorno} y \emph{lenguaje de programación}, pues R integra un conjunto de herramientas y un lenguaje de comandos para la manipulación de datos, la realización de cálculos y análisis estadísticos, así como su representación gráfica en alta calidad.\newline
 
 R se encuentra enmarcado como un programa estadístico flexible, potente y profesional que se distribuye bajo GNU General Public License como \emph{software libre}, y en la actualidad es muy utilizado por la comunidad científica debido a su doble naturaleza, como lenguaje y como entorno.
 \begin{figure}[H]
@@ -103,7 +103,7 @@ Dadas sus características R tiene gran potencial para ser utilizado en diferent
 
 \section{Historia}
 
-El proyecto R se inició como un experimento para utilizar métodos de Lisp en la construcción de un pequeño banco de pruebas que sirvan para evaluar posibles construcciones de entornos estadísticos. Desde el inicio del proyecto se decidió usar la syntaxis de S, la misma que con el transcurso del tiempo se volvió irresistible.\newline
+El proyecto R se inició como un experimento para utilizar métodos de Lisp en la construcción de un pequeño banco de pruebas que sirvan para evaluar posibles construcciones de entornos estadísticos. Desde el inicio del proyecto se decidió usar la sintaxis de S. Como consecuencia, la sintaxis de R es similar al lenguaje S, pero la semántica, que aparentemente es parecida a la de S, en realidad es sensiblemente diferente, sobre todo en los detalles un poco más profundos de la programación.\newline
 
 Ross Ihaka inicia el proyecto R tras haber obtenido acceso a cierta información importante sobre el lenguaje S, misma que fue publicada por John Chambers y Rick Becker. En corto tiempo, Ross nota las similitudes existentes entre S y Scheme, en su afán de mostrarse ante Alan Zaslavsky\footnote{Alan M. Zaslavsky, PhD, es profesor de estadística en el Departamento de Cuidado de la Salud en la Escuela Médica de Harvard.} le propone indicar el uso del ámbito léxico para la obtención de variables propias. Sin ninguna copia de Scheme trata de mostrarle usando S, sin embargo sus intentos fracasan debido a las diferencias entre las reglas de asignación que tiene S y Scheme, esto le llevó a darse cuenta que S requería ciertas funcionalidades extras para lograr convertirse en un entorno estadístico.\newline
 
