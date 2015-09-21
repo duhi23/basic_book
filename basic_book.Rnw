@@ -109,7 +109,7 @@ El proyecto R se inició como un experimento para utilizar métodos de Lisp en l
 
 Ross Ihaka inicia el proyecto R tras haber obtenido acceso a cierta información importante sobre el lenguaje S, misma que fue publicada por John Chambers y Rick Becker. En corto tiempo, Ross nota las similitudes existentes entre S y Scheme, en su afán de mostrarse ante Alan Zaslavsky\footnote{Alan M. Zaslavsky, PhD, es profesor de estadística en el Departamento de Cuidado de la Salud en la Escuela Médica de Harvard.} le propone indicar el uso del ámbito léxico para la obtención de variables propias. Sin ninguna copia de Scheme trata de mostrarle usando S, sin embargo sus intentos fracasan debido a las diferencias entre las reglas de asignación que tiene S y Scheme, esto le llevó a darse cuenta que S requería ciertas funcionalidades extras para lograr convertirse en un entorno estadístico.\newline
 
-Tiempo más tarde, Ross Ihaka $\&$ Robert Gentleman llegan a ser colegas en la Universidad de Auckland\footnote{Universidad pública situada en Auckland. Fue fundada en 1883 como parte de la Universidad de Nueva Zelanda.}, y ambos muestran interés en temas de Estadística Computacional, como profesores del Departamento de Estadística ven la necesidad de mejorar un ambiente del laboratorio de computación e inician su trabajo con la visión de crear un lenguaje similar al S pero con más funcionalidades, mismas que ya fueron identificadas por Ross previamente en su intento de incluir los ámbitos léxicos.
+Tiempo más tarde, Ross Ihaka $\&$ Robert Gentleman llegan a ser colegas en la Universidad de Auckland\footnote{Universidad pública situada en Auckland. Fue fundada en 1883 como parte de la Universidad de Nueva Zelanda.}, y ambos muestran interés en temas de Estadística Computacional. Como profesores del Departamento de Estadística ven la necesidad de mejorar un ambiente del laboratorio de computación e inician su trabajo con la visión de crear un lenguaje similar al S pero con más funcionalidades, mismas que ya fueron identificadas por Ross previamente en su intento de incluir los ámbitos léxicos.
 
 \begin{figure}[H]
 \centering
@@ -140,13 +140,13 @@ Para a mediados de 1997 se estableció el {\bf R Core Group} o {\bf R Core Team}
 
 Entre sus tareas iniciales se encontraba realizar los cambios en el código fuente de acuerdo a los bugs reportados por los usuarios, todas las tareas se realizaban de manera voluntaria pues el grupo se formó sin fines de lucro, en la actualidad lo conforman alrededor de 20 personas que se encuentran en 11 diferentes cuidades del mundo.\newline
 
-Para Febrero del año 2000 aparece la versión 1.0.0. Desde entonces el programa se distribuye gratuitamente a través del repositorio \emph{Comprehensive R Archive Network} (CRAN) en \url{http://www.r-project.org} su mantenimiento se encuentra a cargo del grupo R Core Team desde el año 1997 asistido por una gran cantidad de colaboradores internacionales.\newline
+Para Febrero del año 2000 aparece la versión 1.0.0. Desde entonces el programa se distribuye gratuitamente a través del repositorio \emph{Comprehensive R Archive Network} (CRAN) en \url{http://www.r-project.org}, su mantenimiento se encuentra a cargo del grupo R Core Team desde el año 1997 asistido por una gran cantidad de colaboradores internacionales.\newline
 
-El CRAN es fundamental para el uso de R, pues es el lugar desde el cual se obtiene el programa o cualquier paquete que se desee instalar, y con la finalidad de evitar el colapso del \emph{mundo estadístico} no se tiene una única ubicación al que todo mundo tiene acceso, el CRAN se \emph{refleja} en diferentes lugares de todo el mundo de esta manera como residente de Ecuador, podría acceder a una ubicación CRAN en Ecuador\footnote{En Ecuador se cuenta con el CRAN de la Escuela Politécnica del Litoral}, mientras que si se encuentra en un país que no tiene repositorio lo más recomendable es acceder a la copia del repositorio de un país cercano. Los países desarrollados como EEUU, tienen múltiples CRAN's para abastecer a ellos: la filosofía básica es elegir un repositorio que se encuentre geográficamente cercano al usuario.\newline 
+El CRAN es fundamental para el uso de R, pues es el lugar desde el cual se obtiene el programa o cualquier paquete que se desee instalar, y con la finalidad de evitar el colapso del \emph{mundo estadístico} no se tiene una única ubicación al que todo mundo tiene acceso, el CRAN se \emph{refleja} en diferentes lugares de todo el mundo, de esta manera como residente de Ecuador, podría acceder a una ubicación CRAN en Ecuador\footnote{En Ecuador se cuenta con el CRAN de la Escuela Politécnica del Litoral}, mientras que si se encuentra en un país que no tiene repositorio lo más recomendable es acceder a la copia del repositorio de un país cercano. Los países desarrollados como EEUU, tienen múltiples CRAN's para abastecer a ellos: la filosofía básica es elegir un repositorio que se encuentre geográficamente cercano al usuario.\newline 
 
 R es considerado la versión libre del programa comercial S-Plus, el cual fue desarrollado para AT$\&$T Bell Laboratories por John M. Chambers en el año 1988, aunque son evidentes las diferencias entre R y S, la gran mayoría del código escrito para S funciona sin inconvenientes en R.\newline
 
-El mayor inconveniente para los nuevos usuarios de R es adaptarse a su interfaz gráfica que para muchos es \emph{poco amigable}, en el sentido que se deben tipear las funciones predefinidas o a su vez programar las funciones nuevas a diferencia de programas clásicos como SPSS, STATA, etc. en los cuales se tienen botones o ventanas que despliegan opciones de análisis para el usuario. \newline
+El mayor inconveniente para los nuevos usuarios de R es adaptarse a su interfaz gráfica que para muchos es \emph{poco amigable}, en el sentido que se deben tipear las funciones predefinidas o a su vez programar las funciones nuevas a diferencia de programas clásicos como SPSS, STATA, etc., en los cuales se tienen botones o ventanas que despliegan opciones de análisis para el usuario. \newline
 
 Dada la popularidad que ha adquirido R en los últimos años se han desarrollado varias interfaces gráficas libres  GUIS's (Grafical User Interface) con el fin de volver más amigable la interacción con el usuario. Entre las interfaces más populares y utilizadas por la comunidad se encuentran:
 \begin{multicols}{3}
@@ -193,9 +193,9 @@ El programa R optimizado por Revolution Analytics, Inc. puede ser obtenido a tra
 
 R es un lenguaje orientado a objetos (OOP\footnote{La programación OOP está basada en varias técnicas: herencia, clasificación, identidad, polimorfismo y encapsulamiento.}) dise\~nado en un entorno auténtico bajo el cual esconde su simplicidad y flexibilidad, lo cual permite a sus usuarios a\~nadir funcionalidad mediante la definición de nuevas \emph{funciones}. El término \emph{orientado a objetos} hace referencia a un paradigma de la programación que emplea objetos en sus interacciones y diseño de aplicaciones. R almacena sus variables, datos, funciones, resultados, etc., en la memoria activa del computador en forma de objetos con un nombre específico y pueden ser modificados o manipulados por el usuario mediante operadores y funciones. El uso y funcionamiento de los operadores en R es bastante intuitivo y se lo verá a detalle más adelante.\newline
 
-El hecho que R sea un lenguaje de programación puede desmotivar a muchos usuarios los cuales piensan que para iniciarse en el programa se necesita \emph{alma de programador} lo cual no es cierto. Primero R es un lenguaje interpretado similar a Java, y segundo no es un lenguaje compilado a diferencia de C, C++, Fortran, Pascal, ect. sino más bien mediante comandos ingresados por teclado los cuales se ejecutan directamente sin necesidad de construir archivos ejecutables.\newline
+El hecho que R sea un lenguaje de programación puede desmotivar a muchos usuarios, los cuales piensan que para iniciarse en el programa se necesita \emph{alma de programador} lo cual no es cierto. Primero R es un lenguaje interpretado similar a Java, y segundo no es un lenguaje compilado a diferencia de C, C++, Fortran, Pascal, ect. sino más bien mediante comandos ingresados por teclado los cuales se ejecutan directamente sin necesidad de construir archivos ejecutables.\newline
 
-En su mayoría R se encuentra programado en C++, Python y Fortran, esto implica que R tiene la capacidad de interpretar código externo mediante el uso de ciertas librerías. La utilidad básica de lo anterior se encuentra en elaborar scripts por ejemplo en C++ que emplean menor tiempo de ejecución.\newline 
+En su mayoría R se encuentra programado en C++, Python y Fortran, esto implica que R tiene la capacidad de interpretar código externo mediante el uso de ciertas librerías. La utilidad básica de lo anterior se encuentra en elaborar scripts, por ejemplo en C++, que emplean menor tiempo de ejecución.\newline 
 
 El programa R incluye 8 bibliotecas o paquetes estándar, sin embargo, las capacidades de R pueden ser ampliadas fácilmente mediante la incorporación de paquetes que se encuentran disponibles en varios repositorios como:
 \begin{multicols}{2}
@@ -215,31 +215,31 @@ Los paquetes estándar de R pueden ser visualizados a través del siguiente coma
 search()
 @
 
-En la actualidad\footnote{Información obtenida al 21 de Diciembre 2014.} existen 6129 paquetes válidos en el repositorio CRAN, los cuáles se encuentran ordenados por fecha de publicación o alfabéticamente agrupadas en diversas líneas de investigación.
+En la actualidad\footnote{Información obtenida al 21 de Diciembre 2014.} existen 6129 paquetes válidos en el repositorio CRAN, que se encuentran ordenados por fecha de publicación o alfabéticamente agrupadas en diversas líneas de investigación.
 
 \section{Ventajas}
 
 Entre las principales ventajas que posee el software R podemos anotar lo siguiente:
 \begin{itemize}
   \item Al tratarse de un software libre el costo es nulo.
-  \item Se han implementado una gran cantidad de métodos estadísticos desde los más básicos hasta los más avanzados y modernos. Todos los métodos se encuentran organizados en librerías, las cuales se encuentran en constante crecimiento.
-  \item Capacidad para acceder a datos de múltiples formatos. En la actualidad existen varias librerias para leer datos desde SPSS, SAS, STATA, MySQL, Excel, etc.
+  \item Se han implementado una gran cantidad de métodos estadísticos desde los más básicos hasta los más avanzados y modernos. Todos los métodos se encuentran organizados en librerías, que se encuentran en constante crecimiento.
+  \item Capacidad para acceder a datos de múltiples formatos. En la actualidad existen varias librerías para leer datos desde SPSS, SAS, STATA, MySQL, Excel, etc.
   \item Gran capacidad para la manipulación de datos y funciones, así como para la generación de gráficos de alta calidad.
   \item Facilidad para enlazarse con LaTeX y generar reportes dinámicos.
   \item Amplia bibliografía tanto en internet como en libros publicados por prestigiosas editoriales como: Springer, Wiley, O'Reilly, Chapman $\&$ Hall/CRC, etc.
   \item Fácil visualización e interpretación de los algoritmos implementados en R con lo cual el usuario puede conocer exactamente lo que el ordenador ejecuta.
   \item Permite visualizar los algoritmos en él implementados, modificarlos y ajustarlos a nuestras necesidades (esto no es permitido en los softwares licenciados).
-  \item Una gran comunidad de usuarios, lo cual permite obtener ayuda de manera fácil de expertos por medio de la R help mailing list entre otros.
+  \item Una gran comunidad de usuarios, lo cual permite obtener ayuda de manera fácil de expertos por medio de la R help mailing list, entre otros.
 \end{itemize}
 
 \section{Desventajas}
 
 Los inconvenientes a los cuales se deben enfrentar los usuarios de R son:
 \begin{itemize}
-  \item Al ser un programa libre carece de un departamento de atención al cliente al cual se pueda recurrir en caso de que se reporte un inconveniente con el mismo. Sin embargo existe una comunidad en crecimiento de usuarios de R que se encuentran dispuestos a colaborar desinteresadamente en la resolución de problemas.
+  \item Al ser un programa libre carece de un departamento de atención al cliente al cual se pueda recurrir en caso de que se reporte un inconveniente con el mismo. Sin embargo, existe una comunidad en crecimiento de usuarios de R que se encuentran dispuestos a colaborar desinteresadamente en la resolución de problemas.
   \item El software R como tal no dispone de una interfaz amigable para el usuario, las tareas se llevan a cabo a través de líneas de comando lo cual puede resultar difícil para el usuario común. No obstante con el desarrollo de GUI's se ha facilitado en gran medida la experiencia del programa con el usuario común.
   \item El código en R es interpretado, no compilado, lo cual puede ocasionar una ejecución lenta en ocasiones en las que se realizan simulaciones intensas. Con el fin de remediar lo anterior el grupo R Core Team a partir de la versión 2.14 ha precompilado todas las funciones y librerías de R con el objetivo de acelerar la ejecución.
-  \item R no es particularmente un lenguaje de programación rápido, si a eso sumamos que muchos usuarios escriben pobremente su código obtenemos como resultado un funcionamiento lento.
+  \item R no es particularmente un lenguaje de programación rápido, si a eso sumamos que muchos usuarios escriben pobremente su código, obtenemos como resultado un funcionamiento lento.
 \end{itemize}
 
 
@@ -270,7 +270,7 @@ La instalación del programa R se describe en los siguientes pasos:
     \label{respol}
   \end{figure}
   
-  \item Nos dirigimos a la parte superior de la página, y nos ubicamos en \texttt{Download and install R} seguido elegimos el sistema operativo. Para nuestro caso hacemos click en \texttt{Windows}.
+  \item Nos dirigimos a la parte superior de la página, y nos ubicamos en \texttt{Download and install R}, seguido elegimos el sistema operativo. Para nuestro caso hacemos click en \texttt{Windows}.
   
   \begin{figure}[H]
     \centering
@@ -331,7 +331,7 @@ Iniciaremos explicando  la barra de herramientas, la misma que consta de las sec
       \item {\bf Guardar área de trabajo:} Cuando se haya configurado el entorno de consola de R, colores, tipo de letra, tamaño, etc, podemos guardarlo para cargarlo posteriormente en futuras aplicaciones ya que el propio programa R no guarda, de momento, dicha configuración. El formato del entorno de trabajo es .RData.
       \item {\bf Cargar Histórico:} Podemos cargar el archivo de comandos que se hayan ejecutado en una sesión previamente guardada. El formato de salida es .history.
       \item {\bf Guardar Histórico:} Con él, podemos guardar los comandos que hayamos instroducido por consola en una sesión. El formato de guardado es .history.
-      \item {\bf Cambiar dir:} Podemos configurar el directorio de trabajo que está definido por defecto cuando se instalo el programa.
+      \item {\bf Cambiar dir:} Podemos configurar el directorio de trabajo que está definido por defecto cuando se instaló el programa.
       \item {\bf Imprimir:} Podemos configurar e imprimir el entorno de trabajo de R, la consola.
       \item {\bf Guardar en archivo:} Se guardará todo lo que se haya escrito por la consola en formato .txt que después podremos recuperar.
       \item {\bf Salir:} Sirve para salir del programa R, antes nos preguntará si queremos guardar el área de trabajo.
@@ -377,13 +377,13 @@ Iniciaremos explicando  la barra de herramientas, la misma que consta de las sec
     \begin{itemize}
       \item {\bf Parar computación actual:} Este control es muy interesante y útil, con él, podremos parar cualquier archivo, sentencia o código que esté ejecutando la consola R. Para acceder de forma rápida por teclado se debe pulsar: ESC.
       \item {\bf Salida con buffer:} Para acceder de forma rápida por teclado se debe pulsar: Ctrl + W.
-      \item {\bf Terminar palabra:} Es una ayuda interactiva, que nos ayuda a completar las palabras mientras estamos escribiendo en caso que la consola las reconózca.
+      \item {\bf Terminar palabra:} Es una ayuda interactiva, que nos ayuda a completar las palabras mientras estamos escribiendo en caso que la consola las reconozca.
       \item {\bf Terminar nombre de archivo:} Realiza la misma función que la opción Terminar palabra pero en archivos.
       \item {\bf Listar objetos:} Se nos mostrará por consola los objetos que hasta en este momento hemos definido en la consola.
       \item {\bf Remover todos los objetos:} Como su nombre indica, elimina de memoria todos los objetos que hayamos definido (datos, variables, matrices, vectores, etc) en la consola de R. Cuando pulsemos sobre dicha opción, el programa, nos preguntará si realmente queremos borrarlos.
       \item {\bf Listar el camino de búsqueda:} Nos ofrece por consola las librerias y complementos que tenemos instalados en R.
     \end{itemize}
-  \item {\bf \Large Paquetes:} Dedicado al manejo de las librerias que posee el programa R.
+  \item {\bf \Large Paquetes:} Dedicado al manejo de las librerías que posee el programa R.
   \begin{figure}[H]
   \centering
   \includegraphics[scale=.35]{paquetes.eps}
@@ -391,12 +391,12 @@ Iniciaremos explicando  la barra de herramientas, la misma que consta de las sec
   \label{paquetes}
   \end{figure}
     \begin{itemize}
-      \item {\bf Cargar paquete:} Con él, podemos cargar en la consola cualquier libreria que tengamos instalada.
-      \item {\bf Seleccionar espejo CRAN:} Sirve para configurar el servidor de librerias.
+      \item {\bf Cargar paquete:} Con él, podemos cargar en la consola cualquier librería que tengamos instalada.
+      \item {\bf Seleccionar espejo CRAN:} Sirve para configurar el servidor de librerías.
       \item {\bf Seleccionar repositórios:} En consola nos mostrará los repositorios que tenemos instalados y nos pedirá cual usar para la sesión activa.
-      \item {\bf Instalar paquetes(s):} Podremos actualizar o instalar librerias nuevas en red, para ello, debemos elegir un servidor.
-      \item {\bf Actualizar paquetes(s):} Podemos actualizar las librerias que tengamos instaladas en caso de haber una actualización reciente por red, para ello, debemos seleccionar un servidor
-      \item {\bf Instalar paquetes(s) a partir de archivos zip locales:} En caso de haber descargado una libreria y tenerla en nuestro ordenador, podemos instalarlo mediante esta opción.
+      \item {\bf Instalar paquetes(s):} Podremos actualizar o instalar librerías nuevas en red, para ello, debemos elegir un servidor.
+      \item {\bf Actualizar paquetes(s):} Podemos actualizar las librerías que tengamos instaladas en caso de haber una actualización reciente por red, para ello, debemos seleccionar un servidor
+      \item {\bf Instalar paquetes(s) a partir de archivos zip locales:} En caso de haber descargado una librería y tenerla en nuestro ordenador, podemos instalarlo mediante esta opción.
     \end{itemize}
   \item {\bf \Large Ventanas:} Permite configurar la visualización de las ventanas: consola, área de gráficos y editor de script en modo vertical, horizontal, etc.
   \begin{figure}[H]
@@ -435,7 +435,7 @@ Para entender de mejor manera la necesidad de emplear paquetes en R usaremos la 
 
 \subsection{Repositorio CRAN}
 
-La instalación de paquetes en R desde el repositorio CRAN es sencillo, una vez conocido el nombre del paquete ha ser instalado basta con introducir el siguiente comando en la consola:
+La instalación de paquetes en R desde el repositorio CRAN es sencillo, una vez conocido el nombre del paquete a ser instalado basta con introducir el siguiente comando en la consola:
 <<eval=FALSE>>=
 install.packages("nombre_paquete")
 @
@@ -488,7 +488,7 @@ En algunas ocasiones los usuarios desean descargar los paquetes de R en una carp
 install.packages("pckgs", destdir="C:/pckg_down", lib="D:/pckg_inst")
 library("pckgs",lib.loc="D:/pckg_inst")
 @
-Conocer la totalidad de paquetes que se encuentran albergados en la CRAN, y a su vez verificar cuales de ellos se encuentran válidos y disponibles para su uso es posible mediante los siguientes comandos:
+Conocer la totalidad de paquetes que se encuentran albergados en la CRAN, y a su vez verificar cuáles de ellos se encuentran válidos y disponibles para su uso es posible mediante los siguientes comandos:
 <<eval=FALSE>>=
 installed.packages()
 available.packages()
@@ -505,14 +505,14 @@ remove.packages("nombre_paquete", "directorio")
 @
 donde: 
 \begin{itemize}
-   \item {\bf nombre\_ paquete:} Nombre o vector de nombres de los paquetes ha ser eliminados.
+   \item {\bf nombre\_ paquete:} Nombre o vector de nombres de los paquetes a ser eliminados.
    \item {\bf directorio:} Es un vector de caracteres que proporcionan la dirección del directorio del cual se eliminará el paquete. Si se omite dicho parámetro se asume por default la dirección obtenida por .libPaths().
 \end{itemize}
 
 
 \subsection{Repositorios externos}
 
-Habiamos comentado sobre la existencia de varios repositorios adicionales al CRAN de entre los cuales destacan R-Forge\footnote{Sistema para el desarrollo y versionamiento de paquetes en R.}, BioConductor\footnote{Subproyecto dedicado a la investigación en bioestadística.} y Omegahat\footnote{Subproyecto dedicado al desarrollo de interfaces para la programación estadística basado en Java.}, dentro de estos repositorios se pueden encontrar paquetes que no se encuentran en el CRAN, o bien, versiones más actualizadas de los mismos.\newline
+Habíamos comentado sobre la existencia de varios repositorios adicionales al CRAN de entre los cuales destacan R-Forge\footnote{Sistema para el desarrollo y versionamiento de paquetes en R.}, BioConductor\footnote{Subproyecto dedicado a la investigación en bioestadística.} y Omegahat\footnote{Subproyecto dedicado al desarrollo de interfaces para la programación estadística basado en Java.}, dentro de estos repositorios se pueden encontrar paquetes que no se encuentran en el CRAN, o bien, versiones más actualizadas de los mismos.\newline
 
 Para instalar los paquetes desde los repositorios externos antes mencionados basta la siguiente sentencia:
 <<eval=FALSE>>=
@@ -669,7 +669,7 @@ apropos("[4-8]")
 
 \section{Mostrando ejemplos}
 
-La mayoría de funciones incluyen ejemplos que pueden ser ejecutados y facilitan al usuario comprender de mejor manera su uso. Para ejecutar los ejemplos usaremos el comando \texttt{example} como se muestra a continuación:
+La mayoría de funciones incluyen ejemplos que pueden ser ejecutados y facilitan al usuario comprender de mejor manera su uso. Para ejecutar los ejemplos usaremos el comando \texttt{example}, como se muestra a continuación:
 <<>>=
 example(mean)
 
@@ -825,7 +825,7 @@ load("info.RData", envir = env)
 
 \section{R Analytic Flow}
 
-R Analytic Flow (RAF) es una interfaz gráfica de usuario desarrollado por Ryota Suzuki\footnote{Ryota Suzuki es un desarrollador de software orientado al análisis de datos, fundó con sus amigos la empresa Ef-prime, Inc. en Tokyo, además es el creador del paquete \emph{pvclust} de R.}, la cual facilita el análisis de datos a través de diagramas de flujo. El software se encuentra bajo licencia BSD $\&$ GPL, por lo cual puede obtenerse de forma gratuita a través de la página web de Ef-prime, Inc. \url{http://www.ef-prime.com} para las plataformas: Windows, Mac OS X y Linux.
+R Analytic Flow (RAF) es una interfaz gráfica de usuario desarrollado por Ryota Suzuki\footnote{Ryota Suzuki es un desarrollador de software orientado al análisis de datos, fundó con sus amigos la empresa Ef-prime, Inc. en Tokyo, además es el creador del paquete \emph{pvclust} de R.}, que facilita el análisis de datos a través de diagramas de flujo. El software se encuentra bajo licencia BSD $\&$ GPL, por lo cual puede obtenerse de forma gratuita a través de la página web de Ef-prime, Inc. \url{http://www.ef-prime.com} para las plataformas: Windows, Mac OS X y Linux.
 
 \begin{figure}[H]
 \centering
