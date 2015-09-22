@@ -1,4 +1,4 @@
-\documentclass[12pt,a4paper,oneside]{book}
+\documentclass[11pt,a4paper,oneside]{book}
 \usepackage{amsmath,amsthm,amsfonts,amssymb}
 \usepackage{pst-eucl,pstricks,pstricks-add}
 \usepackage[utf8]{inputenc}
@@ -19,6 +19,7 @@
 \newcommand{\code}[1]{\fcolorbox{white}{gray!15}{#1}}
 \parindent=0mm
 \begin{document}
+
 \pagecolor[gray]{0.95}
 
 %%% modificacion preambulo
@@ -58,7 +59,7 @@
 ~\\[3cm]
 \textbf{\Huge \fontsize{13mm}{5em}\selectfont SOURCE STAT LAB}\vspace{0.6cm}\\
 \textbf{\Large Training, Reporting and Consultancy}\\[2cm]
-\includegraphics[scale=2.5]{logo_only.pdf}
+\includegraphics[scale=2.5]{figuras/logo_only.pdf}
 \vspace{2cm}\\
 \textbf{\Large Introducción al programa estadístico R} \vspace{4cm}\\
 \textbf{\Large R Nivel Básico}\vspace{2cm}\\
@@ -69,7 +70,6 @@
 \pagecolor{white}
 
 %Derechos
-
 
 
 % Contenidos
@@ -97,7 +97,7 @@ Para introducirnos en el \emph{mundo de R} debemos tener claro la doble naturale
 R se encuentra enmarcado como un programa estadístico flexible, potente y profesional que se distribuye bajo GNU General Public License como \emph{software libre}, y en la actualidad es muy utilizado por la comunidad científica debido a su doble naturaleza, como lenguaje y como entorno.
 \begin{figure}[H]
 \centering
-\includegraphics[scale=.15]{logo_r.eps}
+\includegraphics[scale=.6]{figuras/logo_r.eps}
 \caption{Logo del proyecto R}
 \label{logo_r}
 \end{figure}
@@ -113,8 +113,8 @@ Tiempo más tarde, Ross Ihaka $\&$ Robert Gentleman llegan a ser colegas en la U
 
 \begin{figure}[H]
 \centering
-\includegraphics[height=4.5cm, width=3.5cm]{Ross.eps}
-\includegraphics[height=4.5cm, width=3.5cm]{Robert.eps}
+\includegraphics[height=4.5cm, width=3.5cm]{figuras/Ross.eps}
+\includegraphics[height=4.5cm, width=3.5cm]{figuras/Robert.eps}
 \caption{Ross Ihaka $\&$ Robert Gentleman}
 \label{creadores}
 \end{figure}
@@ -184,7 +184,7 @@ De las empresas antes mencionadas se destaca de sobremanera Revolution Analytics
 El programa R optimizado por Revolution Analytics, Inc. puede ser obtenido a través de la página web \url{http://www.revolutionanalytics.com} como \emph{Revolution R Open} de forma gratuita, sin embargo en el caso de requerir soporte se puede adquirir la versión pagada \emph{Revolution R Enterprise}.
 \begin{figure}[H]
 \centering
-\includegraphics[scale=.5]{logo_rro.eps}
+\includegraphics[scale=.6]{figuras/logo_rro.eps}
 \caption{Revolution R Open}
 \label{logo_ropen}
 \end{figure}
@@ -215,7 +215,7 @@ Los paquetes estándar de R pueden ser visualizados a través del siguiente coma
 search()
 @
 
-En la actualidad\footnote{Información obtenida al 21 de Diciembre 2014.} existen 6129 paquetes válidos en el repositorio CRAN, que se encuentran ordenados por fecha de publicación o alfabéticamente agrupadas en diversas líneas de investigación.
+En la actualidad\footnote{Información obtenida al 21 de Septiembre 2015.} existen 7190 paquetes válidos en el repositorio CRAN, que se encuentran ordenados por fecha de publicación o alfabéticamente agrupadas en diversas líneas de investigación.
 
 \section{Ventajas}
 
@@ -256,7 +256,7 @@ La instalación del programa R se describe en los siguientes pasos:
   
   \begin{figure}[H]
     \centering
-    \includegraphics[scale=.4]{install1.eps}
+    \includegraphics[scale=.4]{figuras/install1.eps}
     \caption{Página web R-Project}
     \label{rproject}
   \end{figure}
@@ -265,7 +265,7 @@ La instalación del programa R se describe en los siguientes pasos:
   
   \begin{figure}[H]
     \centering
-    \includegraphics[width=4.5cm,height=1.5cm]{install2.eps}
+    \includegraphics[width=4.5cm,height=1.5cm]{figuras/install2.eps}
     \caption{Repositorio Espol}
     \label{respol}
   \end{figure}
@@ -274,7 +274,7 @@ La instalación del programa R se describe en los siguientes pasos:
   
   \begin{figure}[H]
     \centering
-    \includegraphics[width=8cm,height=3.5cm]{install3.eps}
+    \includegraphics[width=8cm,height=3.5cm]{figuras/install3.eps}
     \caption{Selección Sistema Operativo}
     \label{soperativo}
   \end{figure}
@@ -283,7 +283,7 @@ La instalación del programa R se describe en los siguientes pasos:
   
   \begin{figure}[H]
     \centering
-    \includegraphics[width=9cm,height=4cm]{install4.eps}
+    \includegraphics[width=9cm,height=4cm]{figuras/install4.eps}
     \caption{Subdirectorios}
     \label{subdirectorio}
   \end{figure}
@@ -292,7 +292,7 @@ La instalación del programa R se describe en los siguientes pasos:
   
   \begin{figure}[H]
     \centering
-    \includegraphics[width=7.5cm,height=2.5cm]{install5.eps}
+    \includegraphics[width=7.5cm,height=2.5cm]{figuras/install5.eps}
     \caption{Descarga programa}
     \label{download}
   \end{figure}
@@ -306,7 +306,7 @@ Es muy importante para el usuario de R, conocer su entorno de trabajo, y es prec
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=.35]{console.eps}
+\includegraphics[scale=.35]{figuras/console.eps}
 \caption{Entorno de trabajo de R}
 \label{entorno}
 \end{figure}
@@ -317,7 +317,7 @@ Iniciaremos explicando  la barra de herramientas, la misma que consta de las sec
   \item {\bf \Large Archivo:} En esta sección se podrá tratar todo lo relacionado con el manejo de archivos y salir del programa. Los elementos que lo componen son los siguientes:
   \begin{figure}[H]
   \centering
-  \includegraphics[scale=.35]{archivo.eps}
+  \includegraphics[scale=.35]{figuras/archivo.eps}
   \caption{Sección Archivo}
   \label{archivo}
   \end{figure}
@@ -340,7 +340,7 @@ Iniciaremos explicando  la barra de herramientas, la misma que consta de las sec
   \begin{itemize}
   \begin{figure}[H]
   \centering
-  \includegraphics[scale=.35]{editar.eps}
+  \includegraphics[scale=.35]{figuras/editar.eps}
   \caption{Sección Editar}
   \label{editar}
   \end{figure}
@@ -362,7 +362,7 @@ Iniciaremos explicando  la barra de herramientas, la misma que consta de las sec
   \item {\bf \Large Visualizar:} Activa la visualización de algunos iconos en la parte superior tales como: Abrir script, Cargar área de trabajo, etc., mismas que ya se detallaron anteriormente.
   \begin{figure}[H]
   \centering
-  \includegraphics[scale=.35]{visualizar.eps}
+  \includegraphics[scale=.35]{figuras/visualizar.eps}
   \caption{Sección Visualizar}
   \label{visualizar}
   \end{figure}
@@ -370,7 +370,7 @@ Iniciaremos explicando  la barra de herramientas, la misma que consta de las sec
   \item {\bf \Large Misc:} Esta es la sección denominada misceláneas, donde hay más de un control interesante.
   \begin{figure}[H]
   \centering
-  \includegraphics[scale=.35]{misc.eps}
+  \includegraphics[scale=.35]{figuras/misc.eps}
   \caption{Sección Misc}
   \label{misc}
   \end{figure}
@@ -386,7 +386,7 @@ Iniciaremos explicando  la barra de herramientas, la misma que consta de las sec
   \item {\bf \Large Paquetes:} Dedicado al manejo de las librerías que posee el programa R.
   \begin{figure}[H]
   \centering
-  \includegraphics[scale=.35]{paquetes.eps}
+  \includegraphics[scale=.35]{figuras/paquetes.eps}
   \caption{Sección Paquetes}
   \label{paquetes}
   \end{figure}
@@ -401,7 +401,7 @@ Iniciaremos explicando  la barra de herramientas, la misma que consta de las sec
   \item {\bf \Large Ventanas:} Permite configurar la visualización de las ventanas: consola, área de gráficos y editor de script en modo vertical, horizontal, etc.
   \begin{figure}[H]
   \centering
-  \includegraphics[scale=.35]{ventanas.eps}
+  \includegraphics[scale=.35]{figuras/ventanas.eps}
   \caption{Sección Ventanas}
   \label{ventanas}
   \end{figure}
@@ -409,7 +409,7 @@ Iniciaremos explicando  la barra de herramientas, la misma que consta de las sec
   \item {\bf \Large Ayuda:} Es un apartado que debemos tenerlo siempre presente, ya que en él se dispone al usuario, los manuales de utilización y específicos de R.
   \begin{figure}[H]
   \centering
-  \includegraphics[scale=.35]{ayuda.eps}
+  \includegraphics[scale=.35]{figuras/ayuda.eps}
   \caption{Sección Ayuda}
   \label{ayuda}
   \end{figure}
@@ -529,7 +529,7 @@ GitHub es un repositorio de archivos y proyectos el cual emplea un sistema de co
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=.45]{github.eps}
+\includegraphics[scale=.45]{figuras/github.eps}
 \caption{Logo Github}
 \label{github}
 \end{figure}
@@ -701,7 +701,7 @@ RStudio es un entorno IDE de código abierto lanzado en Febrero 2011 el cual nos
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=5cm, height=3cm]{rstudio_install.eps}
+\includegraphics[width=5cm, height=3cm]{figuras/rstudio_install.eps}
 \caption{Descarga RStudio}
 \label{drstudio}
 \end{figure}
@@ -722,7 +722,7 @@ RStudio ofrece una amplia integración con ficheros de diversos formatos: R scri
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=.40]{rstudio.eps}
+\includegraphics[scale=.40]{figuras/rstudio.eps}
 \caption{Interfaz de RStudio}
 \label{rstudio}
 \end{figure}
@@ -829,7 +829,7 @@ R Analytic Flow (RAF) es una interfaz gráfica de usuario desarrollado por Ryota
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=.35]{ranalyticflow.eps}
+\includegraphics[scale=.35]{figuras/ranalyticflow.eps}
 \caption{R Analytic Flow}
 \label{RAF}
 \end{figure}
