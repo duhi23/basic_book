@@ -22,15 +22,15 @@
 \parindent=0mm
 
 \begin{document}
-\begin{minipage}[d]{110mm}
-\includegraphics[scale=.55]{logo_source.eps}
+\begin{minipage}[d]{115mm}
+\includegraphics[height=2.5cm, width=7.5cm]{logo_ult.pdf}
 \end{minipage}
-\begin{minipage}[d]{65mm}
-\textsf{\textbf{\sc \tiny QUITO: Fernando Oviedo E8-65 y José Barba,}}\\
-\textsf{\textbf{\sc \tiny \qquad  Sector El Dorado}}\\
-\textsf{\textbf{\sc \tiny Contacto: (02) 2 559 703 / (593) 0998890021}}
+\begin{minipage}[d]{70mm}
+\textsf{\textbf{\sc \tiny {\bf QUITO}: Fernando Oviedo E8-65 y José Barba}}\\
+%\textsf{\textbf{\sc \tiny \qquad  Sector El Dorado}}\\
+\textsf{\textbf{\sc \tiny {\bf CONTACTOS}: (02) 2 559-703 / (02) 2 602-560\\ Movistar: 0998428362 / 0998890021}}
 \end{minipage}\\
-\vspace{0.6cm}
+\vspace{0.4cm}
 %\rule[1mm]{150mm}{0.5mm}
 
 \section{Quiénes somos ?}
