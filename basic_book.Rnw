@@ -79,7 +79,6 @@
 % Contenidos
 \tableofcontents
 
-
 <<child-intro, child='Capitulos/intro.Rnw'>>=
 @
 
