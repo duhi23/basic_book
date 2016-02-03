@@ -28,7 +28,7 @@
 \begin{minipage}[d]{70mm}
 \textsf{\textbf{\sc \tiny {\bf QUITO}: Fernando Oviedo E8-65 y José Barba}}\\
 %\textsf{\textbf{\sc \tiny \qquad  Sector El Dorado}}\\
-\textsf{\textbf{\sc \tiny {\bf CONTACTOS}: (02) 2 559-703 / (02) 2 602-560\\ Movistar: 0998428362 / 0998890021}}
+\textsf{\textbf{\sc \tiny {\bf CONTACTOS}: (02) 2 559-703 / (02) 2 602-560\\ Movistar: 0998890021 / 0992700250}}
 \end{minipage}\\
 \vspace{0.4cm}
 
@@ -36,14 +36,11 @@
 {\bf \Large Curso: R Nivel Básico}
 \end{center}
 
-{\bf \large Descripción:}\newline
+\section{Descripción}
   
-  El curso de R Nivel Básico tiene como objetivo principal proporcionar al estudiante una visión general del entorno del lenguaje de programación R y sus aplicaciones. Al final del curso, el estudiante se encontrará en la capacidad de crear sus propias funciones, importar y exportar datos. \newline
-  
-{\bf \large Duración:}\newline
-  20 Hrs.
+El curso de R Nivel Básico tiene como objetivo principal proporcionar al estudiante una visión general del entorno del lenguaje de programación R y sus aplicaciones. Al final del curso, el estudiante se encontrará en la capacidad de crear sus propias funciones, importar y exportar datos.
 
-{\bf \large Contenidos del curso:}\newline
+\section{Contenidos del curso}
 
 \begin{multicols}{2}
 
@@ -93,5 +90,25 @@
 \end{enumerate}
 
 \end{multicols}
+
+\section{Duración del curso}
+  
+El curso tiene una duración de 20 horas, mismas que serán distribuidas en 4 sesiones (Sábados, a partir del 07 de Noviembre) en el horario de 8:00 a 13:00, en el Laboratorio 04 del Departamento de Matemática.
+
+\section{Costos}
+
+El costo del curso se detalla a continuación:
+
+\begin{center}
+\begin{tabular}{|c|c|c|}\hline
+{\bf Grupo} & {\bf Costo}\\ \hline
+Estudiantes EPN & 40 dólares \\ \hline
+Particulares & 50 dólares\\ \hline
+\end{tabular}
+\end{center}
+
+\section{Lugar}
+
+Escuela Politécnica Nacional, Departamento de Matemática, Edificio Administrativo, Séptimo Piso, Laboratorio 04.
 
 \end{document}
