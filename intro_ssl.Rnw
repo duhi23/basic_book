@@ -1,0 +1,111 @@
+\documentclass[12pt,a4paper,oneside]{article}
+\usepackage{amsmath,amsthm,amsfonts,amssymb}
+\usepackage{pst-eucl,pstricks,pstricks-add}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,activeacute]{babel}
+\usepackage[a4paper,margin=2.5cm]{geometry}
+\usepackage{times}
+\usepackage[T1]{fontenc}
+\usepackage{titlesec}
+\usepackage{color}
+\usepackage{url}
+\usepackage{float}
+\usepackage{cite}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{lmodern}
+\usepackage{setspace}
+%\doublespace %para doble espacio
+\onehalfspace %para espacio y medio
+\newcommand{\code}[1]{\fcolorbox{blue!80}{gray!10}{#1}}
+\parindent=0mm
+
+\begin{document}
+\begin{minipage}[d]{115mm}
+\includegraphics[height=2.5cm, width=7.5cm]{logo_ult.pdf}
+\end{minipage}
+\begin{minipage}[d]{70mm}
+\textsf{\textbf{\sc \tiny {\bf QUITO}: Fernando Oviedo E8-65 y José Barba}}\\
+%\textsf{\textbf{\sc \tiny \qquad  Sector El Dorado}}\\
+\textsf{\textbf{\sc \tiny {\bf CONTACTOS}: (02) 2 559-703 / (02) 2 602-560\\ Movistar: 0998428362 / 0998890021}}
+\end{minipage}\\
+\vspace{0.4cm}
+%\rule[1mm]{150mm}{0.5mm}
+
+\section{Quiénes somos ?}
+
+Source Stat Lab (SSL) es una empresa Ecuatoriana con sede en Quito especializada en fomentar el avance del conocimiento, misma que presta sus servicios de entrenamiento y capacitación en el lenguaje de programación R para profesionales en todas sus verticales (investigación, docencia, empresarial). SSL brinda capacitación, reportería y consultoría estadística/matemática con el uso de herramientas de software libre como: R, RStudio, R Analytic Flow $\&$ LaTeX a empresas globales y locales, así como instituciones públicas.
+
+\section{Historia}
+
+SSL nació en Septiembre 2014 con el propósito de dar servicio y asesoramiento en investigaciones aplicadas que requieran de estudios estadísticos/matemáticos asociados a las mismas.
+
+\section{Objetivos}
+
+Entre los objetivos de SSL se encuentran:
+\begin{itemize}
+  \item Potenciar las actividades relacionadas con la Estadística que se llevan a cabo en varias universidades Ecuatorianas, así como ofrecer asesoramiento estadístico tanto a grupos de investigación como a particulares y empresas.  Dicho asesoramiento se complementa con cursos de formación adaptados a las necesidades y requerimientos del usuario.
+  \item Fomentar el uso del software estadístico R en actividades académicas, profesionales e investigación.  
+\end{itemize}
+ 
+\section{Cursos}
+
+Durante los últimos años, las nuevas tecnologías han permitido generar, almacenar y difundir grandes cantidades de información. Para poder extraer conocimiento y generar valor, hacen falta herramientas analíticas.\newline
+
+Dado que la estadística es la herramienta determinante para la toma de decisiones y la obtención de conocimiento, SSL ofrece los siguientes cursos:
+\begin{multicols}{2}
+\begin{itemize}
+  \item {\bf R Nivel Básico}
+  \item {\bf R Nivel Intermedio}
+  \item {\bf R Nivel Avanzado}
+  \item Gráficos con ggplot2
+  \item Interfaces Web con Shiny
+  \item Reportería Dinámica
+  \item Series Temporales
+  \item Minería de datos
+  \item Modelos Lineales
+  \item Econometría
+  \item Técnicas Multivariantes
+  \item Modelos Scoring
+\end{itemize}
+\end{multicols}
+
+\section{Costos}
+
+Los cursos ofertados tienen una duración de 20 horas. En el caso que se desee añadir una mayor carga horaria o a su vez, ampliar algún tema se debe informar con anterioridad al inicio del curso por medio de la dirección: \url{sourcestatlab@hotmail.com} 
+
+\begin{itemize}
+   \item {\bf Especialización Programación en R}: Este programa consta de 3 cursos con una duración total de 60 horas de capacitación:
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|}\hline
+{\bf Curso} & {\bf Costo/Hora} & {\bf No. Horas} & {\bf Costo Total}\\ \hline \hline
+{\bf Nivel Básico} & 2 usd & 20 hrs & 40 usd\\ \hline
+{\bf Nivel Intermedio} & 2.5 usd & 20 hrs & 50 usd\\ \hline
+{\bf Nivel Avanzado} & 3 usd & 20 hrs & 60 usd\\ \hline
+\multicolumn{2}{c|}{} & {\bf Inversión} & {\bf 150 usd}\\ \cline{3-4}
+\end{tabular}
+\end{table}
+
+El costo por cada hora adicional dentro del curso de especialización se encuentra fijado en 3 usd/participante.
+
+   \item {\bf Cursos adicionales}: Estos cursos tienen como finalidad vincular R a las respectivas áreas profesionales.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|}\hline
+{\bf Curso} & {\bf Costo/Hora} & {\bf No. Horas} & {\bf Costo Total}\\ \hline \hline
+{\bf Especialización} & 5 usd & 20 hrs & 100 usd\\ \hline
+\end{tabular}
+\end{table}
+
+El costo por cada hora adicional dentro de un curso adicional se encuentra fijado en 5 usd/participante.\newline
+
+{\bf NOTA:} Los valores indicados no incluyen IVA (en caso de requerir factura se cobrará este valor).
+
+\end{itemize}
+
+
+
+
+\end{document}
