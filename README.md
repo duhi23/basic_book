@@ -12,7 +12,11 @@ Contenidos
 2. Instalación y actualización
 3. Estructura de datos
 4. Escritura y lectura de datos
-4. Funciones
+5. Funciones
+6. Manejo de datos
+  6.1 Paquete dplyr
+  6.2 Paquete data.table
+7. Visualización de datos
 ```
 
 `Source Stat Lab Ec`
