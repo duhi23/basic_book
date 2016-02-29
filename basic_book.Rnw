@@ -79,20 +79,25 @@
 % Contenidos
 \tableofcontents
 
-<<child-intro, child='Capitulos/intro.Rnw'>>=
+<<echo=FALSE>>=
+suppressMessages(library(dplyr))
+suppressMessages(library(data.table))
 @
 
-<<child-install, child='Capitulos/install.Rnw'>>=
-@
+%<<child-intro, child='Capitulos/intro.Rnw'>>=
+%@
 
-<<child-interface, child='Capitulos/interface.Rnw'>>=
-@
+%<<child-install, child='Capitulos/install.Rnw'>>=
+%@
 
-<<child-objects, child='Capitulos/objects.Rnw'>>=
-@
+%<<child-interface, child='Capitulos/interface.Rnw'>>=
+%@
 
-<<child-functions, child='Capitulos/functions.Rnw'>>=
-@
+%<<child-objects, child='Capitulos/objects.Rnw'>>=
+%@
+
+%<<child-functions, child='Capitulos/functions.Rnw'>>=
+%@
 
 <<child-pipe, child='Capitulos/pipe.Rnw'>>=
 @
