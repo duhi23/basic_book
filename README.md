@@ -12,7 +12,13 @@ Contenidos
 2. Instalación y actualización
 3. Estructura de datos
 4. Escritura y lectura de datos
-4. Funciones
+5. Funciones
+6. Operador de asignación
+7. Manejo de datos
+  7.1 Paquete dplyr
+  7.2 Paquete data.table
+8. Visualización de datos
+9. Integración R & C++
 ```
 
 `Source Stat Lab Ec`
