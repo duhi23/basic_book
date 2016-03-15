@@ -1,0 +1,12 @@
+\select@language {spanish}
+\contentsline {section}{\numberline {1}Presentaci\IeC {\'o}n}{3}
+\contentsline {section}{\numberline {2}Descripci\IeC {\'o}n}{3}
+\contentsline {section}{\numberline {3}Software R}{3}
+\contentsline {section}{\numberline {4}Certificaci\IeC {\'o}n}{3}
+\contentsline {section}{\numberline {5}R Nivel B\IeC {\'a}sico}{4}
+\contentsline {subsection}{\numberline {5.1}Contenidos}{4}
+\contentsline {subsection}{\numberline {5.2}Duraci\IeC {\'o}n}{5}
+\contentsline {subsection}{\numberline {5.3}Costos}{5}
+\contentsline {subsection}{\numberline {5.4}Lugar}{5}
+\contentsline {section}{\numberline {6}Instructores}{5}
+\contentsline {section}{\numberline {7}Contactos}{6}
