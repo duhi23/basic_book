@@ -12,7 +12,9 @@
 \usepackage{url}
 \usepackage{float}
 \usepackage{cite}
-\usepackage{picinpar, graphicx}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{lipsum}
 \usepackage{multicol}
 \usepackage{float}
 \usepackage{lmodern}
@@ -62,19 +64,19 @@ suppressMessages(library(data.table))
 <<child-intro, child='Capitulos/intro.Rnw'>>=
 @
 
-%<<child-install, child='Capitulos/install.Rnw'>>=
-%@
+<<child-install, child='Capitulos/install.Rnw'>>=
+@
 
-%<<child-interface, child='Capitulos/interface.Rnw'>>=
-%@
+<<child-interface, child='Capitulos/interface.Rnw'>>=
+@
 
-%<<child-objects, child='Capitulos/objects.Rnw'>>=
-%@
+<<child-objects, child='Capitulos/objects.Rnw'>>=
+@
 
-%<<child-functions, child='Capitulos/functions.Rnw'>>=
-%@
+<<child-functions, child='Capitulos/functions.Rnw'>>=
+@
 
-%<<child-pipe, child='Capitulos/pipe.Rnw'>>=
-%@
+<<child-pipe, child='Capitulos/pipe.Rnw'>>=
+@
 
 \end{document}
