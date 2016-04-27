@@ -57,10 +57,6 @@
 % Contenidos
 \tableofcontents
 
-<<echo=FALSE>>=
-suppressMessages(library(dplyr))
-suppressMessages(library(data.table))
-@
 
 <<child-intro, child='Capitulos/intro.Rnw'>>=
 @
@@ -69,6 +65,11 @@ suppressMessages(library(data.table))
 @
 
 <<child-interface, child='Capitulos/interface.Rnw'>>=
+@
+
+<<echo=FALSE>>=
+suppressMessages(library(dplyr))
+suppressMessages(library(data.table))
 @
 
 %<<child-objects, child='Capitulos/objects.Rnw'>>=
