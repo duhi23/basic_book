@@ -1,0 +1,36 @@
+%%% Portada inicial
+
+% \begin{titlepage}
+% \begin{center}
+% ~\\[3cm]
+% \textbf{\Huge \fontsize{13mm}{5em}\selectfont SOURCE STAT LAB}\vspace{0.6cm}\\
+% \textbf{\Large Training, Reporting and Consultancy}\\[2cm]
+% \includegraphics[scale=2.5]{figuras/logo_only.pdf}
+% \vspace{2cm}\\
+% \textbf{\Large Introducción al programa estadístico R} \vspace{4cm}\\
+% \textbf{\Large R Nivel Básico}\vspace{2cm}\\
+% 
+% \textbf{\Large Quito, Mayo 2015}
+% \end{center}
+% \end{titlepage}
+% \pagecolor{white}
+
+%%% Portada Actualizada
+
+\newcommand*{\titleBOOK}{\begingroup
+\raggedleft
+%\centering
+\vspace*{\baselineskip}
+{\Huge\scshape Análisis y Tratamiento \\[5mm]
+de Datos con R} \\ [\baselineskip]
+{\itshape Con ejemplos e ilustraciones}\\[40mm]
+{\Large\bfseries Primera Edición}\\[0.3 \textheight]
+{\Large Diego Paul Huaraca S.}\\
+{\large\scshape MS-PLUS, Inc.}\par
+\vfill
+\begin{flushleft}
+{\Large \includegraphics[scale=0.4]{figuras/msplus.eps}}\\
+\rule{\textwidth}{0.5pt}
+\end{flushleft}
+\vspace*{\baselineskip}
+\endgroup}
