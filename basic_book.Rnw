@@ -58,27 +58,22 @@
 \tableofcontents
 
 
-<<child-intro, child='Capitulos/intro.Rnw'>>=
-@
-
-<<child-install, child='Capitulos/install.Rnw'>>=
-@
-
-<<child-interface, child='Capitulos/interface.Rnw'>>=
-@
-
-<<echo=FALSE>>=
-suppressMessages(library(dplyr))
-suppressMessages(library(data.table))
-@
-
-%<<child-objects, child='Capitulos/objects.Rnw'>>=
+%<<child-intro, child='Capitulos/intro.Rnw'>>=
 %@
 
-%<<child-functions, child='Capitulos/functions.Rnw'>>=
+%<<child-install, child='Capitulos/install.Rnw'>>=
 %@
 
-%<<child-pipe, child='Capitulos/pipe.Rnw'>>=
+%<<child-interface, child='Capitulos/interface.Rnw'>>=
 %@
+
+<<child-objects, child='Capitulos/objects.Rnw'>>=
+@
+
+<<child-functions, child='Capitulos/functions.Rnw'>>=
+@
+
+<<child-pipe, child='Capitulos/pipe.Rnw'>>=
+@
 
 \end{document}
