@@ -24,6 +24,7 @@
 \definecolor{rosa}{rgb}{0.99, 0.76, 0.8}
 \definecolor{tomate}{rgb}{0.98, 0.84, 0.65}
 \definecolor{celeste}{rgb}{0.69, 0.88, 0.9}
+\definecolor{gris}{rgb}{0.7, 0.75, 0.71}
 \parindent=0mm
 
 \begin{document}
@@ -57,7 +58,6 @@
 % Contenidos
 \tableofcontents
 
-
 %<<child-intro, child='Capitulos/intro.Rnw'>>=
 %@
 
@@ -67,13 +67,13 @@
 %<<child-interface, child='Capitulos/interface.Rnw'>>=
 %@
 
-<<child-objects, child='Capitulos/objects.Rnw'>>=
-@
+%<<child-objects, child='Capitulos/objects.Rnw'>>=
+%@
 
 <<child-functions, child='Capitulos/functions.Rnw'>>=
 @
 
-<<child-pipe, child='Capitulos/pipe.Rnw'>>=
-@
+%<<child-pipe, child='Capitulos/pipe.Rnw'>>=
+%@
 
 \end{document}
