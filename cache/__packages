@@ -3,3 +3,7 @@ knitr
 dplyr
 data.table
 foreign
+proto
+gsubfn
+RSQLite
+sqldf
