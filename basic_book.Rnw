@@ -76,7 +76,7 @@
 <<child-functions, child='Capitulos/functions.Rnw'>>=
 @
 
-%<<child-pipe, child='Capitulos/pipe.Rnw'>>=
-%@
+<<child-pipe, child='Capitulos/pipe.Rnw'>>=
+@
 
 \end{document}
