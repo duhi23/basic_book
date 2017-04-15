@@ -1,105 +1,46 @@
 \select@language {spanish}
-\contentsline {chapter}{\numberline {1}Introducción}{5}
-\contentsline {section}{\numberline {1.1}Lenguaje R}{5}
-\contentsline {subsection}{\numberline {1.1.1}Historia}{6}
-\contentsline {subsection}{\numberline {1.1.2}R Core Group}{8}
-\contentsline {section}{\numberline {1.2}CRAN}{8}
-\contentsline {section}{\numberline {1.3}Soporte}{9}
-\contentsline {section}{\numberline {1.4}Funcionamiento}{10}
-\contentsline {section}{\numberline {1.5}Ventajas}{12}
-\contentsline {section}{\numberline {1.6}Desventajas}{13}
-\contentsline {section}{\numberline {1.7}Usuarios en el mundo}{13}
-\contentsline {subsection}{\numberline {1.7.1}UseR!}{14}
-\contentsline {subsection}{\numberline {1.7.2}R User Groups}{15}
-\contentsline {subsection}{\numberline {1.7.3}Usuarios de R Ecuador}{15}
-\contentsline {chapter}{\numberline {2}Instalación y actualización}{16}
-\contentsline {section}{\numberline {2.1}Instalación de R}{16}
-\contentsline {section}{\numberline {2.2}Entorno de trabajo}{21}
-\contentsline {subsection}{\numberline {2.2.1}Archivo}{21}
-\contentsline {subsection}{\numberline {2.2.2}Editar}{22}
-\contentsline {subsection}{\numberline {2.2.3}Visualizar}{23}
-\contentsline {subsection}{\numberline {2.2.4}Misc}{24}
-\contentsline {subsection}{\numberline {2.2.5}Paquetes}{25}
-\contentsline {subsection}{\numberline {2.2.6}Ventanas}{26}
-\contentsline {subsection}{\numberline {2.2.7}Ayuda}{26}
-\contentsline {section}{\numberline {2.3}Instalación de paquetes}{27}
-\contentsline {subsection}{\numberline {2.3.1}Repositorio CRAN}{27}
-\contentsline {subsection}{\numberline {2.3.2}Repositorios externos}{30}
-\contentsline {subsection}{\numberline {2.3.3}Github}{30}
-\contentsline {section}{\numberline {2.4}Actualización de paquetes}{32}
-\contentsline {section}{\numberline {2.5}Actualización de R}{32}
-\contentsline {section}{\numberline {2.6}Obteniendo ayuda}{33}
-\contentsline {section}{\numberline {2.7}Mostrando ejemplos}{34}
-\contentsline {chapter}{\numberline {3}Entornos de desarrollo}{36}
-\contentsline {section}{\numberline {3.1}RStudio}{36}
-\contentsline {subsection}{\numberline {3.1.1}Instalación y actualización}{37}
-\contentsline {subsection}{\numberline {3.1.2}Funcionamiento}{37}
-\contentsline {subsection}{\numberline {3.1.3}Ancho de impresión}{38}
-\contentsline {subsection}{\numberline {3.1.4}Prompt}{39}
-\contentsline {subsection}{\numberline {3.1.5}Decimales}{39}
-\contentsline {subsection}{\numberline {3.1.6}Respaldando información}{40}
-\contentsline {section}{\numberline {3.2}R Analytic Flow}{40}
-\contentsline {subsection}{\numberline {3.2.1}Ventajas}{41}
-\contentsline {subsection}{\numberline {3.2.2}Desventajas}{41}
-\contentsline {chapter}{\numberline {4}Estructura de datos}{42}
-\contentsline {section}{\numberline {4.1}Workspace}{42}
-\contentsline {section}{\numberline {4.2}Vectores}{44}
-\contentsline {subsection}{\numberline {4.2.1}Creación}{44}
-\contentsline {paragraph}{Vectores homogéneos}{44}
-\contentsline {paragraph}{Vectores heterogéneos}{46}
-\contentsline {paragraph}{Almacenamiento de vectores}{47}
-\contentsline {subsection}{\numberline {4.2.2}Valores perdidos}{48}
-\contentsline {subsection}{\numberline {4.2.3}Eliminación}{49}
-\contentsline {subsection}{\numberline {4.2.4}Modificación}{49}
-\contentsline {paragraph}{Añadiendo elementos}{50}
-\contentsline {paragraph}{Eliminando elementos}{50}
-\contentsline {paragraph}{Modificando elementos}{51}
-\contentsline {paragraph}{Generación de secuencias}{51}
-\contentsline {subsection}{\numberline {4.2.5}Operaciones}{52}
-\contentsline {paragraph}{Operaciones aritméticas}{52}
-\contentsline {paragraph}{Operaciones lógicas}{56}
-\contentsline {paragraph}{Ordenando elementos}{57}
-\contentsline {subsection}{\numberline {4.2.6}Atributos}{57}
-\contentsline {section}{\numberline {4.3}Factores}{59}
-\contentsline {subsection}{\numberline {4.3.1}Creación}{59}
-\contentsline {subsection}{\numberline {4.3.2}Modificación}{60}
-\contentsline {section}{\numberline {4.4}Matrices}{62}
-\contentsline {subsection}{\numberline {4.4.1}Creación}{62}
-\contentsline {subsection}{\numberline {4.4.2}Submatrices}{63}
-\contentsline {subsection}{\numberline {4.4.3}Modificación}{64}
-\contentsline {subsection}{\numberline {4.4.4}Operaciones}{65}
-\contentsline {subsection}{\numberline {4.4.5}Atributos}{68}
-\contentsline {section}{\numberline {4.5}Listas}{68}
-\contentsline {subsection}{\numberline {4.5.1}Creación}{69}
-\contentsline {subsection}{\numberline {4.5.2}Modificación}{70}
-\contentsline {subsection}{\numberline {4.5.3}Concatenación}{73}
-\contentsline {section}{\numberline {4.6}Arrays}{75}
-\contentsline {section}{\numberline {4.7}Data Frames}{75}
-\contentsline {section}{\numberline {4.8}Data Table}{75}
-\contentsline {subsection}{\numberline {4.8.1}Creación}{75}
-\contentsline {subsection}{\numberline {4.8.2}Filtrado de filas}{76}
-\contentsline {subsection}{\numberline {4.8.3}Selección de variables}{77}
-\contentsline {subsection}{\numberline {4.8.4}Agrupación}{79}
-\contentsline {subsection}{\numberline {4.8.5}Actualizando variables}{80}
-\contentsline {subsection}{\numberline {4.8.6}Añadiendo variables}{80}
-\contentsline {subsection}{\numberline {4.8.7}Eliminando variables}{81}
-\contentsline {section}{\numberline {4.9}Consultas mediante sentencias SQL}{83}
-\contentsline {chapter}{\numberline {5}Funciones}{84}
-\contentsline {section}{\numberline {5.1}Creación}{84}
-\contentsline {subsection}{\numberline {5.1.1}Componentes}{85}
-\contentsline {subsection}{\numberline {5.1.2}Estructuras de control}{86}
-\contentsline {section}{\numberline {5.2}Funciones primitivas}{87}
-\contentsline {section}{\numberline {5.3}Funciones genéricas}{88}
-\contentsline {section}{\numberline {5.4}Lexical Scoping}{88}
-\contentsline {subsection}{\numberline {5.4.1}Name Masking}{88}
-\contentsline {subsection}{\numberline {5.4.2}Function vs Variables}{88}
-\contentsline {subsection}{\numberline {5.4.3}Fresh Start}{88}
-\contentsline {subsection}{\numberline {5.4.4}Dynamic Lookup}{88}
-\contentsline {chapter}{\numberline {6}Manipulación de datos}{89}
-\contentsline {section}{\numberline {6.1}Operadores de encadenamiento}{89}
-\contentsline {section}{\numberline {6.2}Exploración de datos}{91}
-\contentsline {subsection}{\numberline {6.2.1}Selección de variables}{92}
-\contentsline {subsection}{\numberline {6.2.2}Creación de nuevas variables}{94}
-\contentsline {subsection}{\numberline {6.2.3}Filtrado}{94}
-\contentsline {subsection}{\numberline {6.2.4}Ordenando las observaciones}{95}
-\contentsline {subsection}{\numberline {6.2.5}Calculando estadísticos}{95}
+\contentsline {chapter}{\numberline {1}Estructura de datos}{3}
+\contentsline {section}{\numberline {1.1}Workspace}{3}
+\contentsline {section}{\numberline {1.2}Vectores}{5}
+\contentsline {subsection}{\numberline {1.2.1}Creación}{5}
+\contentsline {paragraph}{Vectores homogéneos}{5}
+\contentsline {paragraph}{Vectores heterogéneos}{7}
+\contentsline {paragraph}{Almacenamiento de vectores}{9}
+\contentsline {subsection}{\numberline {1.2.2}Valores perdidos}{9}
+\contentsline {subsection}{\numberline {1.2.3}Eliminación}{10}
+\contentsline {subsection}{\numberline {1.2.4}Modificación}{11}
+\contentsline {paragraph}{Añadiendo elementos}{11}
+\contentsline {paragraph}{Eliminando elementos}{11}
+\contentsline {paragraph}{Modificando elementos}{12}
+\contentsline {paragraph}{Generación de secuencias}{12}
+\contentsline {subsection}{\numberline {1.2.5}Operaciones}{13}
+\contentsline {paragraph}{Operaciones aritméticas}{14}
+\contentsline {paragraph}{Operaciones lógicas}{17}
+\contentsline {paragraph}{Ordenando elementos}{19}
+\contentsline {subsection}{\numberline {1.2.6}Atributos}{19}
+\contentsline {section}{\numberline {1.3}Factores}{20}
+\contentsline {subsection}{\numberline {1.3.1}Creación}{21}
+\contentsline {subsection}{\numberline {1.3.2}Modificación}{22}
+\contentsline {section}{\numberline {1.4}Matrices}{24}
+\contentsline {subsection}{\numberline {1.4.1}Creación}{24}
+\contentsline {subsection}{\numberline {1.4.2}Submatrices}{25}
+\contentsline {subsection}{\numberline {1.4.3}Modificación}{26}
+\contentsline {subsection}{\numberline {1.4.4}Operaciones}{27}
+\contentsline {subsection}{\numberline {1.4.5}Atributos}{30}
+\contentsline {section}{\numberline {1.5}Listas}{31}
+\contentsline {subsection}{\numberline {1.5.1}Creación}{31}
+\contentsline {subsection}{\numberline {1.5.2}Modificación}{32}
+\contentsline {subsection}{\numberline {1.5.3}Concatenación}{35}
+\contentsline {section}{\numberline {1.6}Arrays}{37}
+\contentsline {subsection}{\numberline {1.6.1}Creación}{37}
+\contentsline {subsection}{\numberline {1.6.2}Modificación}{39}
+\contentsline {section}{\numberline {1.7}Data Frames}{41}
+\contentsline {section}{\numberline {1.8}Data Table}{41}
+\contentsline {subsection}{\numberline {1.8.1}Creación}{42}
+\contentsline {subsection}{\numberline {1.8.2}Filtrado de filas}{42}
+\contentsline {subsection}{\numberline {1.8.3}Selección de variables}{44}
+\contentsline {subsection}{\numberline {1.8.4}Agrupación}{45}
+\contentsline {subsection}{\numberline {1.8.5}Actualizando variables}{46}
+\contentsline {subsection}{\numberline {1.8.6}Añadiendo variables}{47}
+\contentsline {subsection}{\numberline {1.8.7}Eliminando variables}{47}
+\contentsline {section}{\numberline {1.9}Consultas mediante sentencias SQL}{49}
