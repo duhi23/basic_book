@@ -1,4 +1,4 @@
-\documentclass[11pt,a4paper,oneside]{book}
+\documentclass[11pt,a5paper,oneside]{book}
 \usepackage{amsmath,amsthm,amsfonts,amssymb}
 \usepackage{pst-eucl,pstricks,pstricks-add,multido, pst-plot}
 \usepackage[utf8]{inputenc}
@@ -21,6 +21,7 @@
 \usepackage{epstopdf}
 \usepackage{colortbl}
 \usepackage{fp,siunitx}
+\usepackage{venndiagram, tikz}
 \newcommand{\code}[1]{\fcolorbox{white}{gray!15}{#1}}
 \definecolor{lila}{rgb}{0.82, 0.62, 0.91}
 \definecolor{rosa}{rgb}{0.99, 0.76, 0.8}
@@ -61,17 +62,17 @@
 % Contenidos
 \tableofcontents
 
-<<child-intro, child='Capitulos/intro.Rnw'>>=
-@
+%<<child-intro, child='Capitulos/intro.Rnw'>>=
+%@
 
-<<child-install, child='Capitulos/install.Rnw'>>=
-@
+%<<child-install, child='Capitulos/install.Rnw'>>=
+%@
 
-<<child-interface, child='Capitulos/interface.Rnw'>>=
-@
+%<<child-interface, child='Capitulos/interface.Rnw'>>=
+%@
 
-<<child-objects, child='Capitulos/objects.Rnw'>>=
-@
+%<<child-objects, child='Capitulos/objects.Rnw'>>=
+%  @
 
 <<child-functions, child='Capitulos/functions.Rnw'>>=
 @
