@@ -71,11 +71,11 @@
 <<child-interface, child='Capitulos/interface.Rnw'>>=
 @
 
-%<<child-objects, child='Capitulos/objects.Rnw'>>=
-%@
+<<child-objects, child='Capitulos/objects.Rnw'>>=
+@
 
-%<<child-functions, child='Capitulos/functions.Rnw'>>=
-%@
+<<child-functions, child='Capitulos/functions.Rnw'>>=
+@
 
 %<<child-pipe, child='Capitulos/pipe.Rnw'>>=
 %@
