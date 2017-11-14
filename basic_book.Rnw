@@ -62,14 +62,14 @@
 % Contenidos
 \tableofcontents
 
-%<<child-intro, child='Capitulos/intro.Rnw'>>=
-%@
+<<child-intro, child='Capitulos/intro.Rnw'>>=
+@
 
 %<<child-install, child='Capitulos/install.Rnw'>>=
 %@
 
-<<child-interface, child='Capitulos/interface.Rnw'>>=
-@
+%<<child-interface, child='Capitulos/interface.Rnw'>>=
+%@
 
 %<<child-objects, child='Capitulos/objects.Rnw'>>=
 %@
